@@ -1,0 +1,8 @@
+<?php
+
+Route::post('loadList', '{{MODULE_NAME}}Controller@loadList');   
+
+Route::resources([
+    '{{MODULE_NAME_LOWER}}' => {{MODULE_NAME}}Controller::class,
+]);
+    

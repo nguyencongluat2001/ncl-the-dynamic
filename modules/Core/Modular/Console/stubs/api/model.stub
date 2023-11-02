@@ -1,0 +1,48 @@
+<?php 
+
+namespace Modules\Api\Models{{ADMIN_FOLDER}};
+
+use Illuminate\Database\Eloquent\Model;
+
+/**
+ * Model of {{MODULE_NAME}}
+ *
+ *
+ * @OA\Schema(
+ *     schema="{{MODULE_NAME_LOWER}}Model",
+ *     @OA\Property(property="id", type="string", format="uuid"),
+ *     @OA\Property(property="created_at", type="datetime",example="Ngày tạo: Y-m-d H:i:s"),
+ * ),
+ *
+ */
+class {{MODULE_NAME}}Model extends Model
+{
+	/**
+     * Tên của bảng tưng ứng trong database.
+     *
+     * @var string
+     */
+	protected $table = '';
+
+     protected $fillable = [
+        'id',
+    ];
+
+     /**
+     * @param mixed $query
+     * @param mixed $param
+     * @param mixed $value
+     *
+     * @return Query
+     */
+    private $value;
+
+    public function filter($query, $param, $value)
+    {
+        switch ($param) {
+            case 'id':
+                return $query->where("id", $value);
+        }
+    }
+
+}

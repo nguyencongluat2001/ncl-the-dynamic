@@ -1,0 +1,118 @@
+<?php 
+
+namespace Modules\{{LAYOUT_NAME}}\{{MODULE_NAME}}\Controllers;
+
+use Modules\{{LAYOUT_NAME}}\{{MODULE_NAME}}\Requests\{{MODULE_NAME}}Request;
+use App\Http\Controllers\Controller;
+use Modules\Core\Efy\Library;
+use Modules\{{LAYOUT_NAME}}\{{MODULE_NAME}}\Services\{{MODULE_NAME}}Service;
+
+/**
+ * Mô tả về class...
+ *
+ * @author ...
+ */
+class {{MODULE_NAME}}Controller extends Controller
+{
+
+    protected ${{MODULE_NAME_LOWER}}Service;
+
+    public function __construct({{MODULE_NAME}}Services ${{MODULE_NAME_LOWER}}Service)
+    {   
+        
+        $this->{{MODULE_NAME_LOWER}}Service = ${{MODULE_NAME_LOWER}}Service;
+    }
+
+	/**
+     * khởi tạo dữ liệu mẫu, Load các file js, css của đối tượng
+     *
+     * @return view
+     */
+	public function index()
+	{
+		$objLibrary = new Library();
+		$arrResult = array();
+          $arrResult =  $objLibrary->_getAllFileJavaScriptCssArray('js','{{LAYOUT_NAME}}/{{MODULE_NAME}}/Js_{{MODULE_NAME}}.js',',',$arrResult);
+          $data['strJsCss'] = json_encode($arrResult);
+		return view("{{MODULE_NAME}}::index",$data);
+	}
+
+	/**
+     * loadlist {{MODULE_NAME_LOWER}}
+     *
+     * @param Request $request
+     *
+     * @return @json
+     */
+	public function loadlist(Requests $request)
+	{
+		$currentPage = $request->currentPage;
+        $perPage = $request->perPage;
+        // du lieu tra ve dang json
+        return array('success'=> true,'message' => 'success');
+	}
+
+	/**
+     * create {{MODULE_NAME_LOWER}}
+     *
+     * @param
+     *
+     * @return
+     */
+	public function create()
+	{
+		//
+	}
+
+	/**
+     * edit {{MODULE_NAME_LOWER}}
+     *
+     * @param $id: Id {{MODULE_NAME_LOWER}}
+     *
+     * @return
+     */
+	public function show($id)
+	{
+		$item = $this->{{MODULE_NAME_LOWER}}Service->find($id);
+	}
+
+	/**
+     * store {{MODULE_NAME_LOWER}}
+     *
+     * @param
+     *
+     * @return
+     */
+	public function store(Request $request)
+	{
+		$input = $request->all();
+          $result = $this->{{MODULE_NAME_LOWER}}Service->create($input);
+	}
+
+     /**
+     * update {{MODULE_NAME_LOWER}}
+     *
+     * @param ....
+     *
+     * @return ....
+     */
+	public function update(Request $request, $id)
+	{
+		$input = $request->all();
+          $item = $this->{{MODULE_NAME_LOWER}}Service->find($id);
+          $result = $this->{{MODULE_NAME_LOWER}}Service->update($item, $input);
+	}
+
+	/**
+     * destroy {{MODULE_NAME_LOWER}}
+     *
+     * @param ....
+     *
+     * @return ....
+     */
+	public function destroy($id)
+	{
+	    $item = $this->{{MODULE_NAME_LOWER}}Service->find($id);
+         $result = $this->{{MODULE_NAME_LOWER}}Service->delete($item);
+	}
+}

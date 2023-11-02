@@ -1,0 +1,15 @@
+<?php
+
+namespace Modules\Api\Repositories{{ADMIN_FOLDER}};
+
+use Modules\Core\Efy\Http\BaseRepository;
+use Modules\Api\Models{{ADMIN_FOLDER}}\{{MODULE_NAME}}Model;
+
+class {{MODULE_NAME}}Repository extends BaseRepository
+{   
+    
+    public function model(){
+        return {{MODULE_NAME}}Model::class;
+    }
+   
+}

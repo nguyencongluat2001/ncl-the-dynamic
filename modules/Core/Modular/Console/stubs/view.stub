@@ -1,0 +1,37 @@
+@extends('{{LAYOUT_NAME}}.layouts.index')
+@section('content')
+
+<!-- /.content  --> 
+<script type="text/javascript">
+    var arrJsCss = $.parseJSON('<?php echo $strJsCss; ?>');
+    EfyLib.loadfileJsCss(arrJsCss);
+</script>
+<form action="index" method="POST" id="frm{{MODULE_NAME}}_index">
+<input type="hidden" name="_token" value="{{ csrf_token() }}">
+<div class="breadcrumb-input-fix d-sm-flex align-items-center justify-content-between">
+	<ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">{{MODULE_NAME}}</a></li>
+	</ol>
+</div>
+<section class="content-wrapper">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<!-- Màn hình danh sách -->
+            <div class="row" id="table-container"></div>
+            <!-- Phân trang dữ liệu -->
+            <div class="row" id="pagination"></div>
+		</div>
+    </div>
+</section>
+</form>
+<!-- Hien thi modal -->
+<div class="modal fade" id="add{{MODULE_NAME}}" role="dialog">
+</div>
+<script type="text/javascript">
+    var baseUrl = '{{ url("") }}';
+    var Js_{{MODULE_NAME}} = new Js_{{MODULE_NAME}}(baseUrl,'admin','{{MODULE_NAME_LOWER}}');
+    jQuery(document).ready(function($) {
+        Js_{{MODULE_NAME}}.loadIndex();
+})
+</script>
+@endsection

@@ -1,0 +1,21 @@
+<?php
+
+namespace Modules\{{LAYOUT_NAME}}\{{MODULE_NAME}}\Services;
+
+use Modules\Core\Efy\Http\BaseService;
+use Modules\{{LAYOUT_NAME}}\{{MODULE_NAME}}\Repositories\{{MODULE_NAME}}Repository;
+
+class {{MODULE_NAME}}Service extends BaseService
+{
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    public function repository()
+    {
+        return {{MODULE_NAME}}Repository::class;
+    }
+
+}

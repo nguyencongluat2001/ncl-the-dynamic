@@ -1,0 +1,180 @@
+<?php 
+
+namespace Modules\Api\Controllers{{ADMIN_FOLDER}};
+
+use Illuminate\Http\Request;
+use Modules\Core\Efy\Http\Controllers\ApiController;
+use Modules\{{LAYOUT_NAME}}\Services{{ADMIN_FOLDER}}\{{MODULE_NAME}}Service;
+use Modules\Api\Resources{{ADMIN_FOLDER}}\{{MODULE_NAME}}Resource;
+
+/**
+ * Mô tả về class...
+ *
+ * @author ...
+ */
+class {{MODULE_NAME}}Controller extends ApiController
+{
+
+    protected ${{MODULE_NAME_LOWER}}Service;
+
+    public function __construct({{MODULE_NAME}}Service ${{MODULE_NAME_LOWER}}Service)
+    {   
+        
+        $this->{{MODULE_NAME_LOWER}}Service = ${{MODULE_NAME_LOWER}}Service;
+    }
+
+	/**
+     * index {{MODULE_NAME}}
+     * @OA\GET(
+     *      path="/api/{{MODULE_NAME_LOWER}}",
+     *      operationId="index",
+     *      tags={"{{MODULE_NAME}}"},
+     *      operationId="",
+     *      summary="get all {{MODULE_NAME}}",
+     *      description="get all {{MODULE_NAME}}",
+     *      @OA\Parameter(ref="#/components/parameters/search"),
+     *      @OA\Parameter(ref="#/components/parameters/limit"),
+     *      @OA\Parameter(ref="#/components/parameters/offset"),
+     *      @OA\Response(
+     *           response=200,
+     *           description="Kết quả trả về thành công",
+     *           @OA\JsonContent(
+     *           @OA\Property(property="status",type="string",example="true"),
+     *           @OA\Property(property="message",type="string",example="Kết quả trả về thành công "),
+     *           @OA\Property(property="data",type="array",@OA\Items(ref="#/components/schemas/{{MODULE_NAME_LOWER}}Model",)),
+     *           @OA\Property(property="total",type="integer",),
+     *           @OA\Property(property="limit",type="integer",),
+     *           @OA\Property(property="offset",type="integer",),
+     *          ),
+     *      ),
+     *  )
+     */
+	public function index(Request $request)
+	{
+		$input = $request->all();
+          $items = $this->{{MODULE_NAME_LOWER}}Service->filter($input);
+          $result = {{MODULE_NAME}}Resource::collection($items);
+          return $this->response($result)->success();
+	}
+
+	/**
+     * show {{MODULE_NAME}}
+     * @OA\GET(
+     *      path="/api/{{MODULE_NAME_LOWER}}/{id}",
+     *      operationId="show",
+     *      tags={"{{MODULE_NAME}}"},
+     *      summary="show {{MODULE_NAME}}",
+     *      description="show {{MODULE_NAME}}",
+     *      @OA\Parameter(name="id",in="path",description="id {{MODULE_NAME_LOWER}}",required=true,),
+     *      @OA\Response(
+     *          response=200,
+     *          description="Kết quả trả về thành công",
+     *          @OA\JsonContent(
+     *         @OA\Property(property="status",type="string",example="true"),
+     *         @OA\Property(property="message",type="string",example=" Thông tin {{MODULE_NAME_LOWER}} "),
+     *          @OA\Property(property="data",ref="#/components/schemas/{{MODULE_NAME_LOWER}}Model"),
+     *          ),
+     *      ),
+     *  )
+     */
+
+    public function show($id)
+    {
+
+        $item = $this->{{MODULE_NAME_LOWER}}Service->find($id);
+        $result = new {{MODULE_NAME}}Resource($item);
+        return $this->response($result)->success();
+    }
+
+    /**
+     * store {{MODULE_NAME}}
+     *
+     * @OA\Post(
+     *      path="/api/{{MODULE_NAME_LOWER}}",
+     *      operationId="store",
+     *      tags={"{{MODULE_NAME}}"},
+     *      operationId="{{MODULE_NAME_LOWER}}",
+     *      summary="store {{MODULE_NAME}}",
+     *      description="store {{MODULE_NAME}}",    
+     *      @OA\RequestBody(
+     *          required=true,
+     *          @OA\JsonContent(ref="#/components/schemas/{{MODULE_NAME_LOWER}}Model"),
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="Thêm hiện thành công",
+     *          @OA\JsonContent(
+     *         @OA\Property(property="status",type="string",example="true"),
+     *         @OA\Property(property="message",type="string",example="Thêm thành công"),
+     *             @OA\Property(property="data",ref="#/components/schemas/{{MODULE_NAME_LOWER}}Model"),
+     *          ),
+     *      ),
+     *  )
+     */
+    public function store(Request $request)
+    {
+        $input = $request->all();
+
+        $result = $this->{{MODULE_NAME_LOWER}}Service->create($input);
+
+        return $this->response($result)->success();
+    }
+
+    /**
+     * store {{MODULE_NAME}}
+     * @OA\Put(
+     *      path="/api/{{MODULE_NAME_LOWER}}/{id}",
+     *      operationId="update",
+     *      tags={"{{MODULE_NAME}}"},
+     *      summary=" update {{MODULE_NAME}}",
+     *      description="update {{MODULE_NAME}}",
+     *      @OA\Parameter(name="id",in="path",description="id {{MODULE_NAME}}",required=true,),
+     *      @OA\RequestBody(
+     *          required=true,
+     *          @OA\JsonContent(ref="#/components/schemas/{{MODULE_NAME_LOWER}}Model"),
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="Kết quả trả về thành công",
+     *          @OA\JsonContent(
+     *         @OA\Property(property="status",type="string",example="true"),
+     *         @OA\Property(property="message",type="string",example="Cập nhật thành công"),
+     *          @OA\Property(property="data",ref="#/components/schemas/{{MODULE_NAME_LOWER}}Model"),
+     *          ),
+     *      ),
+     *  )
+     */
+    public function update(Request $request, $id)
+    {
+        $input = $request->all();
+        $item = $this->{{MODULE_NAME_LOWER}}Service->find($id);
+        $result = $this->{{MODULE_NAME_LOWER}}Service->update($item, $input);
+        return $this->response($result)->success();
+    }
+
+    /**
+     * destroy {{MODULE_NAME}}
+     * @OA\Delete(
+     *      path="/api/{{MODULE_NAME_LOWER}}/{id}",
+     *      operationId="destroy",
+     *      tags={"{{MODULE_NAME}}"},
+     *      summary="destroy {{MODULE_NAME}}",
+     *      description="destroy {{MODULE_NAME}}",
+     *      @OA\Parameter(name="id",in="path",description="id {{MODULE_NAME}}",required=true,),
+     *      @OA\Response(
+     *          response=200,
+     *          description="Kết quả trả về thành công",
+     *          @OA\JsonContent(
+     *         @OA\Property(property="status",type="string",example="true"),
+     *         @OA\Property(property="message",type="string",example="Xóa thành công"),
+     *          ),
+     *      ),
+     *  )
+     */
+    public function destroy($id)
+    {
+        $item = $this->{{MODULE_NAME_LOWER}}Service->find($id);
+        $result = $this->{{MODULE_NAME_LOWER}}Service->delete($item);
+        return $this->response()->success();
+    }
+}
