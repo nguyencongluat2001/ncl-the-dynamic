@@ -30,7 +30,7 @@
     <script src="{{ asset('/resources/assets/bootstrap-5.2.3-dist/js/bootstrap.min.js') }}"></script>
 
     <script src="{{ asset('/resources/js/assets/nanobar.min.js') }}"></script>
-    <script src="{{ asset('/resources/js/assets/EfyLibrary.js') }}"></script>
+    <script src="{{ asset('/resources/js/assets/NclLibrary.js') }}"></script>
     <script type="text/jscript"  src="{{ asset('/resources/js/assets/CoreTable.js') }}"></script>
     <script src="{{ asset('/resources/js/assets/TableXml.js') }}"></script>
     <script src="{{ asset('/resources/js/assets/ckeditor/ckeditor.js') }}"></script>

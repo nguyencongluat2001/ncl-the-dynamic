@@ -87,7 +87,7 @@
                         <?php
                         $filename = $arrSingle['C_FILE_NAME'];
                         $arrFileName = explode(',', $filename);
-                        $objLib = new Modules\Core\EFY\Library();
+                        $objLib = new Modules\Core\Ncl\Library();
                         if ($arrFileName[0] != '' & $arrFileName[0] != null) {
                             foreach ($arrFileName as $value) {
                                 $urlfile = url('public/cms_attach_file/' . $objLib->_getfolderbyfilename($value));

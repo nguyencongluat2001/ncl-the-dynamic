@@ -3,7 +3,7 @@
 namespace Modules\Frontend\Repositories;
 
 use Illuminate\Support\Str;
-use Modules\Core\Efy\Http\BaseRepository;
+use Modules\Core\Ncl\Http\BaseRepository;
 use Modules\Frontend\Models\ExamDetailModel;
 use Modules\Frontend\Models\ExamModel;
 

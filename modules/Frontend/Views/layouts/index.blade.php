@@ -13,11 +13,38 @@
   <link rel="stylesheet" href="../vendors/nice-select/nice-select.css">
   <link rel="stylesheet" href="../vendors/owl-carousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="../vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/assets/sweetalert2.min.css">
+
+  <script src="../js/assets/jquery-3.7.0.min.js"></script>
+  <script src="../js/assets/popper.min.js"></script>
+  <script src="../assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+  <script src="../assets/fontawesome-free-5.15.4-web/js/all.min.js"></script>
+  <script src="../js/assets/chosen/chosen.jquery.min.js"></script>
+  <script src="../js/assets/sweetalert2.min.js"></script>
+  <script src="../js/assets/NclLibrary.js"></script>
 
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/templatemo.css">
 
+  <script type="text/javascript">
+        // Page has finished loading, hide the loading container
+        window.onload = function() {
+            document.getElementById("loading").style.display = "none";
+        };
+        jQuery.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        jQuery(document).ajaxSend(function() {
+            NclLib.showmainloadding();
+        });
+        jQuery(document).ajaxStop(function() {
+            NclLib.successLoadImage();
+        });
+    </script>
 
+    @yield('style')
 </head>
 <body>
   <!--================ Start Header Menu Area =================-->
@@ -42,5 +69,14 @@
   <script src="../vendors/jquery.ajaxchimp.min.js"></script>
   <script src="../vendors/mail-script.js"></script>
   <script src="../js/main.js"></script>
+
+  <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+
+    @yield('script')
 </body>
 </html>

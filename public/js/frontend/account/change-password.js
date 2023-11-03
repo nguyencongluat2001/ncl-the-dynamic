@@ -1,7 +1,7 @@
 /**
  * Đổi mật khẩu
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ChangePassword {
     module;
@@ -24,15 +24,15 @@ class ChangePassword {
      */
     updatePassword() {
         if ($("#password").val() == '') {
-            EfyLib.swalAlert('Mật khẩu không được để trống!', '', '#ff9429', '#ffffff');
+            NclLib .swalAlert('Mật khẩu không được để trống!', '', '#ff9429', '#ffffff');
             return false;
         }
         if ($("#new_password").val() == '') {
-            EfyLib.swalAlert('Mật khẩu mới không được để trống!', '', '#ff9429', '#ffffff');
+            NclLib .swalAlert('Mật khẩu mới không được để trống!', '', '#ff9429', '#ffffff');
             return false;
         }
         if ($("#re_password").val() == '') {
-            EfyLib.swalAlert('Chưa nhập mật khẩu mới!', '', '#ff9429', '#ffffff');
+            NclLib .swalAlert('Chưa nhập mật khẩu mới!', '', '#ff9429', '#ffffff');
             return false;
         }
 
@@ -46,12 +46,12 @@ class ChangePassword {
             data: data,
             success: function (response) {
                 if (response.data.success == true) {
-                    EfyLib.swalAlert(response.data.message, '', '#24dd00', '#ffffff');
+                    NclLib .swalAlert(response.data.message, '', '#24dd00', '#ffffff');
                     setTimeout(() => {
                         window.location.href = myClass.urlPath;
                     }, 1000);
                 } else {
-                    EfyLib.swalAlert(response.data.message, '', '#ff9429', '#ffffff');
+                    NclLib .swalAlert(response.data.message, '', '#ff9429', '#ffffff');
                 }
             }
         });

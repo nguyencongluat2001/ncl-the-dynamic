@@ -2,7 +2,7 @@
 
 namespace Modules\{{LAYOUT_NAME}}\{{MODULE_NAME}}\Services;
 
-use Modules\Core\Efy\Http\BaseService;
+use Modules\Core\Ncl\Http\BaseService;
 use Modules\{{LAYOUT_NAME}}\{{MODULE_NAME}}\Repositories\{{MODULE_NAME}}Repository;
 
 class {{MODULE_NAME}}Service extends BaseService

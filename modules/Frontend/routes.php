@@ -8,7 +8,7 @@ use Modules\Frontend\Controllers\ContactController;
 
 Route::controller(AuthController::class)->group(function ($router) {
     $router->get('login', 'getSignIn');
-    $router->post('dang-nhap', 'signIn');
+    $router->post('checkLogin', 'signIn');
     $router->get('register', 'getSignUp');
     $router->post('dang-ky', 'signUp');
     $router->get('quen-mat-khau', 'getForgotPassword');

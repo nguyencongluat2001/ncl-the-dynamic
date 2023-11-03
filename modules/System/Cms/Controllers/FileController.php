@@ -3,7 +3,7 @@
 namespace Modules\System\Cms\Controllers;
 
 use App\Http\Controllers\Controller;
-use Modules\Core\EFY\Library;
+use Modules\Core\Ncl\Library;
 use Illuminate\Http\Request;
 use DB;
 

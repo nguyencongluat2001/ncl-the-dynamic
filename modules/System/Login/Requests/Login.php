@@ -2,7 +2,7 @@
 
 namespace Modules\System\Login\Requests;
 
-use Modules\Core\Efy\Http\Requests\Request;
+use Modules\Core\Ncl\Http\Requests\Request;
 
 class Login extends Request
 {

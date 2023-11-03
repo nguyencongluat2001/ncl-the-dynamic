@@ -2,7 +2,7 @@
 
 namespace Modules\Api\Services\Admin;
 
-use Modules\Core\Efy\Http\BaseService;
+use Modules\Core\Ncl\Http\BaseService;
 use Modules\Api\Repositories\Admin\PermissionUserRepository;
 use Modules\Api\Models\Admin\ActionModel;
 use Modules\Api\Models\Admin\ModuleModel;

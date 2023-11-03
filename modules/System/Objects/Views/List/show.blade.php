@@ -1,5 +1,5 @@
 @php
-    use Modules\Core\Efy\FunctionHelper;
+    use Modules\Core\Ncl\FunctionHelper;
 @endphp
 @php
     use Modules\System\ListType\Models\ListModel;

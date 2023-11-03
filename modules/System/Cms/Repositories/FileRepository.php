@@ -2,7 +2,7 @@
 
 namespace Modules\System\Cms\Repositories;
 
-use Modules\Core\Efy\Http\BaseRepository;
+use Modules\Core\Ncl\Http\BaseRepository;
 use Modules\System\Cms\Models\FileModel;
 
 class FileRepository extends BaseRepository

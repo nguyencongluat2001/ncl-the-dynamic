@@ -8,7 +8,7 @@ function JS_Tree(baseUrl, module, controller, objTree) {
 	this.module = module;
 	this.baseUrl = baseUrl;
 	this.controller = controller;
-	this.loadding = EfyLib.loadding();
+	this.loadding = NclLib .loadding();
 	this.urlPath = baseUrl + '/' + module + '/' + controller;//Biên public lưu tên module
 }
 
@@ -120,7 +120,7 @@ JS_Tree.prototype.zendUser = function (node) {
 	var idunit = node.id;
 	var node_lv =4;
 	if (idunit !== '' && idunit !== '#' && node_lv > 0) {
-		EfyLib.showmainloadding();
+		NclLib .showmainloadding();
 		data = {
 			idunit: idunit,
 			node_lv: node_lv
@@ -137,7 +137,7 @@ JS_Tree.prototype.zendUser = function (node) {
 				$('#check_add').val(arrResult['type']);
 				JS_Tree.ClosedNodeTree(node);
 				Js_User.loadEvenTree();
-				EfyLib.successLoadImage();
+				NclLib .successLoadImage();
 			}
 		});
 	}

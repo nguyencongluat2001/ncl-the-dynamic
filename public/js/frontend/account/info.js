@@ -137,7 +137,7 @@ class Info {
                 let icon = '';
                 let color = '#24dd00';
                 let background = '#ffffff';
-                EfyLib.swalAlert(nameMessage, icon, color, background);
+                NclLib .swalAlert(nameMessage, icon, color, background);
                 window.location.reload();
             }
         });

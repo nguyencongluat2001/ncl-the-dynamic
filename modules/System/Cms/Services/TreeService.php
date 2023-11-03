@@ -2,7 +2,7 @@
 
 namespace Modules\System\Cms\Services;
 
-use Modules\Core\Efy\Http\BaseService;
+use Modules\Core\Ncl\Http\BaseService;
 use Modules\System\Cms\Helpers\CategoriesHelper;
 use Modules\System\Cms\Helpers\TreeHelper;
 

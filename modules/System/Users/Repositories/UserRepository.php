@@ -5,7 +5,7 @@ namespace Modules\System\Users\Repositories;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-use Modules\Core\Efy\Http\BaseRepository;
+use Modules\Core\Ncl\Http\BaseRepository;
 use Modules\System\Users\Models\UserModel;
 
 class UserRepository extends BaseRepository

@@ -34,7 +34,7 @@
 }
 </style>
 @php
-    use Modules\Core\Efy\FunctionHelper;
+    use Modules\Core\Ncl\FunctionHelper;
 @endphp
 
 <form id="frmAdd" role="form" action="" method="POST">

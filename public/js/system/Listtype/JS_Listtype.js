@@ -13,10 +13,10 @@ function Js_Listtype(baseUrl, module, controller) {
 // Load su kien tren man hinh index
 Js_Listtype.prototype.loadIndex = function () {
     $(document).ajaxSend(function () {
-        EfyLib.showmainloadding();
+        NclLib .showmainloadding();
     });
     $(document).ajaxStop(function () {
-        EfyLib.successLoadImage();
+        NclLib .successLoadImage();
     });
     var myClass = this;
     var oForm = 'form#frmlisttype_index';
@@ -77,7 +77,7 @@ Js_Listtype.prototype.loadevent = function (oForm) {
 
 // Lay du lieu cho man hinh danh sach
 Js_Listtype.prototype.loadList = function (oForm, currentPage = 1, perPage = 15) {
-    var loadding = EfyLib.loadding();
+    var loadding = NclLib .loadding();
     loadding.go(20);
     var myClass = this;
     var url = myClass.urlPath + '/loadList';
@@ -151,11 +151,11 @@ Js_Listtype.prototype.edit = function (oForm) {
         }
     });
     if (listitem == '') {
-        EfyLib.alertMessage('danger', 'Thông báo', "Bạn chưa chọn danh mục cần sửa");
+        NclLib .alertMessage('danger', 'Thông báo', "Bạn chưa chọn danh mục cần sửa");
         return false;
     }
     if (i > 1) {
-        EfyLib.alertMessage('danger', 'Thông báo', "Bạn chỉ được chọn một danh mục để sửa");
+        NclLib .alertMessage('danger', 'Thông báo', "Bạn chỉ được chọn một danh mục để sửa");
         return false;
     }
     data += '&itemId=' + listitem;
@@ -188,7 +188,7 @@ Js_Listtype.prototype.delete = function (oForm) {
         }
     });
     if (listitem == '') {
-        EfyLib.alertMessage('danger', 'Thông báo', "Bạn chưa chọn danh mục cần xóa");
+        NclLib .alertMessage('danger', 'Thông báo', "Bạn chưa chọn danh mục cần xóa");
         return false;
     }
     var data = $(oForm).serialize();
@@ -210,13 +210,13 @@ Js_Listtype.prototype.delete = function (oForm) {
                         success: function (arrResult) {
                             if (arrResult['success']) {
                                 myClass.loadList('form#frmlisttype_index');
-                                EfyLib.alertMessage('success', 'Thành công', 'Xóa thành công');
+                                NclLib .alertMessage('success', 'Thành công', 'Xóa thành công');
                             } else {
-                                EfyLib.alertMessage('danger', 'Thất bại', arrResult['message'], 6000);
+                                NclLib .alertMessage('danger', 'Thất bại', arrResult['message'], 6000);
                             }
                         },
                         error: function (arrResult) {
-                            EfyLib.alertMessage('warning', 'Lỗi', arrResult.responseJSON);
+                            NclLib .alertMessage('warning', 'Lỗi', arrResult.responseJSON);
                         }
                     });
                 }
@@ -250,13 +250,13 @@ Js_Listtype.prototype.update = function (oForm) {
             if (arrResult['success']) {
                 $('#addListypeModal').modal('hide');
                 myClass.loadList('form#frmlisttype_index');
-                EfyLib.alertMessage('success', 'Thành công', arrResult['message']);
+                NclLib .alertMessage('success', 'Thành công', arrResult['message']);
             } else {
-                EfyLib.alertMessage('danger', 'Thất bại', arrResult['message']);
+                NclLib .alertMessage('danger', 'Thất bại', arrResult['message']);
             }
         },
         error: function (arrResult) {
-            EfyLib.alertMessage('warning', 'Lỗi', arrResult.responseJSON, 6000);
+            NclLib .alertMessage('warning', 'Lỗi', arrResult.responseJSON, 6000);
         }
     });
 }
@@ -266,7 +266,7 @@ Js_Listtype.prototype.exportcache = function (oForm) {
     var url = this.urlPath + '/exportcache';
     var myClass = this;
     var data = $(oForm).serialize();
-    EfyLib.showmainloadding();
+    NclLib .showmainloadding();
     $.ajax({
         url: url,
         type: "POST",
@@ -276,15 +276,15 @@ Js_Listtype.prototype.exportcache = function (oForm) {
             if (arrResult['success']) {
                 $('#addListypeModal').modal('hide');
                 myClass.loadList('form#frmlisttype_index');
-                EfyLib.alertMessage('success', 'Thành công', arrResult['message']);
+                NclLib .alertMessage('success', 'Thành công', arrResult['message']);
             } else {
-                EfyLib.alertMessage('danger', 'Thất bại', arrResult['message']);
+                NclLib .alertMessage('danger', 'Thất bại', arrResult['message']);
             }
-            EfyLib.successLoadImage();
+            NclLib .successLoadImage();
         },
         error: function (arrResult) {
-            EfyLib.alertMessage('warning', 'Lỗi', arrResult.responseJSON);
-            EfyLib.successLoadImage();
+            NclLib .alertMessage('warning', 'Lỗi', arrResult.responseJSON);
+            NclLib .successLoadImage();
         }
     });
 }
@@ -320,23 +320,23 @@ Js_Listtype.prototype.sendToUnit = function (oForm) {
         listunit += ',' + $(this).val();
     });
     if (listunit == '') {
-        EfyLib.alertMessage('warning', 'Thông báo', 'Chưa chọn đơn vị');
+        NclLib .alertMessage('warning', 'Thông báo', 'Chưa chọn đơn vị');
         return false;
     }
     data += '&listID=' + listunit;
-    EfyLib.showmainloadding();
+    NclLib .showmainloadding();
     $.ajax({
         url: url,
         type: 'POST',
         data: data,
         success: function (result) {
             if (result.success) {
-                EfyLib.alertMessage('success', 'Thành công', result.message);
+                NclLib .alertMessage('success', 'Thành công', result.message);
                 $('#addListypeModal').modal('hide');
             } else {
-                EfyLib.alertMessage('danger', 'Thất bại', 'Có lỗi xảy ra!');
+                NclLib .alertMessage('danger', 'Thất bại', 'Có lỗi xảy ra!');
             }
-            EfyLib.successLoadImage();
+            NclLib .successLoadImage();
         }
     })
 }

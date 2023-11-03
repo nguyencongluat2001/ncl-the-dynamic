@@ -3,7 +3,7 @@
 namespace Modules\Api\Controllers{{ADMIN_FOLDER}};
 
 use Illuminate\Http\Request;
-use Modules\Core\Efy\Http\Controllers\ApiController;
+use Modules\Core\Ncl\Http\Controllers\ApiController;
 use Modules\{{LAYOUT_NAME}}\Services{{ADMIN_FOLDER}}\{{MODULE_NAME}}Service;
 use Modules\Api\Resources{{ADMIN_FOLDER}}\{{MODULE_NAME}}Resource;
 

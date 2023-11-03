@@ -4,10 +4,10 @@ namespace Modules\Api\Helpers;
 
 use Modules\Api\Models\Portal\FilesModel;
 use Modules\Api\Services\FileService;
-use Modules\Core\Efy\File\FileFactory;
-use Modules\Core\Efy\FileServerPDO;
-use Modules\Core\Efy\Library;
-use Modules\Core\Efy\LoggerHelpers;
+use Modules\Core\Ncl\File\FileFactory;
+use Modules\Core\Ncl\FileServerPDO;
+use Modules\Core\Ncl\Library;
+use Modules\Core\Ncl\LoggerHelpers;
 
 /**
  * Xử lý file

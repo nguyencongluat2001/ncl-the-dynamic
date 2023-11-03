@@ -2,7 +2,7 @@
 
 namespace Modules\Api\Requests\{{MODULE_NAME}};
 
-use Modules\Core\Efy\Http\Requests\ApiRequest;
+use Modules\Core\Ncl\Http\Requests\ApiRequest;
 
 class {{MODULE_NAME}}Request extends ApiRequest
 {

@@ -3,16 +3,16 @@
 namespace Modules\System\Exams\Services;
 
 use Illuminate\Support\Facades\DB;
-use Modules\Core\Efy\Library;
-use Modules\Core\Efy\LoggerHelpers;
-use Modules\Core\Efy\Xml;
+use Modules\Core\Ncl\Library;
+use Modules\Core\Ncl\LoggerHelpers;
+use Modules\Core\Ncl\Xml;
 use Modules\System\ListType\Models\ListTypeModel;
 use Modules\System\ListType\Models\ListModel;
 use Modules\System\Exams\Models\ExamsModel;
 use Modules\System\Exams\Repositories\ExamsRepository;
 use Modules\System\Users\Models\UnitModel;
 use Str;
-use Modules\Core\Efy\Http\BaseService;
+use Modules\Core\Ncl\Http\BaseService;
 use Carbon\Carbon;
 use Modules\Frontend\Repositories\QuestionRepository;
 use Modules\System\Exams\Models\ExamDetailModel;

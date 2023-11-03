@@ -8,10 +8,10 @@ function JS_Objects(baseUrl, module, action) {
 JS_Objects.prototype.loadIndex = function () {
     console.log(222)
     $(document).ajaxSend(function () {
-        EfyLib.showmainloadding();
+        NclLib .showmainloadding();
     });
     $(document).ajaxStop(function () {
-        EfyLib.successLoadImage();
+        NclLib .successLoadImage();
     });
     var myClass = this;
     var oForm = 'form#frmlist_index';
@@ -83,7 +83,7 @@ JS_Objects.prototype.loadevent = function (oForm) {
 JS_Objects.prototype.loadList = function (oForm, currentPage = 1, perPage = 15) {
     var oForm = 'form#frmlist_index';
     var myClass = this;
-    var loadding = EfyLib.loadding();
+    var loadding = NclLib .loadding();
     loadding.go(20);
     var url = myClass.urlPath + '/loadList';
     var dirxml = myClass.baseUrl + '/xml/System/list/quan_tri_doi_tuong_danh_muc.xml';
@@ -150,32 +150,32 @@ JS_Objects.prototype.store = function (oFormCreate) {
     var data = $(oFormCreate).serialize();
     if ($("#ten").val() == '') {
         var nameMessage = 'Tên danh mục không được để trống!';
-        EfyLib.alertMessage('warning', 'Cảnh báo', nameMessage);
+        NclLib .alertMessage('warning', 'Cảnh báo', nameMessage);
         return false;
     }
     if ($("#nam").val() == '') {
         var nameMessage = 'Hội thi năm không được để trống!';
-        EfyLib.alertMessage('warning', 'Cảnh báo', nameMessage);
+        NclLib .alertMessage('warning', 'Cảnh báo', nameMessage);
         return false;
     }
     if ($("#ngay_bat_dau").val() == '') {
         var nameMessage = 'Ngày bắt đầu không được để trống!';
-        EfyLib.alertMessage('warning', 'Cảnh báo', nameMessage);
+        NclLib .alertMessage('warning', 'Cảnh báo', nameMessage);
         return false;
     }
     if ($("#ngay_ket_thuc").val() == '') {
         var nameMessage = 'Ngày kết thúc không được để trống!';
-        EfyLib.alertMessage('warning', 'Cảnh báo', nameMessage);
+        NclLib .alertMessage('warning', 'Cảnh báo', nameMessage);
         return false;
     }
     if ($("#thoi_gian_lam_bai").val() == '') {
         var nameMessage = 'Thười gian làm bài không được để trống!';
-        EfyLib.alertMessage('warning', 'Cảnh báo', nameMessage);
+        NclLib .alertMessage('warning', 'Cảnh báo', nameMessage);
         return false;
     }
     if ($("#trang_thai").val() == '') {
         var nameMessage = 'Trạng thái là bắt buộc';
-        EfyLib.alertMessage('warning', 'Cảnh báo', nameMessage);
+        NclLib .alertMessage('warning', 'Cảnh báo', nameMessage);
         return false;
     }
     $.ajax({
@@ -186,12 +186,12 @@ JS_Objects.prototype.store = function (oFormCreate) {
             console.log(arrResult);
             if (arrResult['success'] == true) {
                   var nameMessage = 'Cập nhật thành công!';
-                  EfyLib.alertMessage('success', 'Thành công', 'Xóa thành công');
+                  NclLib .alertMessage('success', 'Thành công', 'Xóa thành công');
                   $('#addModal').modal('hide');
                   myClass.loadList(oFormCreate);
 
             } else {
-                  EfyLib.alertMessage('danger', 'Thất bại', arrResult['message']);
+                  NclLib .alertMessage('danger', 'Thất bại', arrResult['message']);
                 }
         }
     });
@@ -215,11 +215,11 @@ JS_Objects.prototype.edit = function (oForm) {
         }
     });
     if (listitem == '') {
-        EfyLib.alertMessage('danger', 'Thông báo', "Bạn chưa chọn đối cần sửa");
+        NclLib .alertMessage('danger', 'Thông báo', "Bạn chưa chọn đối cần sửa");
         return false;
     }
     if (i > 1) {
-        EfyLib.alertMessage('danger', 'Thông báo', "Bạn chỉ được chọn một đối để sửa");
+        NclLib .alertMessage('danger', 'Thông báo', "Bạn chỉ được chọn một đối để sửa");
         return false;
     }
     data += '&itemId=' + listitem;
@@ -253,7 +253,7 @@ JS_Objects.prototype.delete = function (oForm) {
         }
     });
     if (listitem == '') {
-        EfyLib.alertMessage('danger', 'Thông báo', "Bạn chưa chọn danh mục cần xóa");
+        NclLib .alertMessage('danger', 'Thông báo', "Bạn chưa chọn danh mục cần xóa");
         return false;
     }
     var data = $(oForm).serialize();
@@ -277,9 +277,9 @@ JS_Objects.prototype.delete = function (oForm) {
                         success: function (arrResult) {
                             if (arrResult['success']) {
                                 myClass.loadList(oForm);
-                                EfyLib.alertMessage('success', 'Thành công', 'Xóa thành công');
+                                NclLib .alertMessage('success', 'Thành công', 'Xóa thành công');
                             } else {
-                                EfyLib.alertMessage('danger', 'Thất bại', arrResult['message']);
+                                NclLib .alertMessage('danger', 'Thất bại', arrResult['message']);
                             }
                         }
                     });

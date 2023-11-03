@@ -3,7 +3,7 @@
 @section('script')
     <script type="text/javascript">
         var arrJsCss = $.parseJSON('<?php echo $stringJsCss; ?>');
-        EfyLib.loadFileJsCss(arrJsCss);
+        NclLib .loadFileJsCss(arrJsCss);
 
         var forgot = new ForgotPassword('{{ url('') }}', 'quen-mat-khau');
         jQuery(document).ready(function($) {

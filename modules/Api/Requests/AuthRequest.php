@@ -2,7 +2,7 @@
 
 namespace Modules\Api\Requests;
 
-use Modules\Core\Efy\Http\Requests\ApiRequest;
+use Modules\Core\Ncl\Http\Requests\ApiRequest;
 
 class AuthRequest extends ApiRequest
 {

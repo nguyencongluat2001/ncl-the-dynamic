@@ -58,7 +58,7 @@ JS_CitizenIdea.prototype.loadevent = function (oForm) {
 JS_CitizenIdea.prototype.loadList = function (oForm, currentPage = 1, perPage = 15) {
     oForm = 'form#frmCitizenIdeaIndex';
     var myClass = this;
-    var loadding = EFYLib.loadding();
+    var loadding = NclLib .loadding();
     loadding.go(20);
     var url = myClass.urlPath + '/loadlist';
     var data = $(oForm).serialize();
@@ -136,11 +136,11 @@ JS_CitizenIdea.prototype.edit = function (oForm) {
         }
     });
     if (listitem == '') {
-        EFYLib.alertMessage('danger', "Bạn chưa chọn góp ý để xem/sửa");
+        NclLib .alertMessage('danger', "Bạn chưa chọn góp ý để xem/sửa");
         return false;
     }
     if (i > 1) {
-        EFYLib.alertMessage('danger', "Bạn chỉ được chọn một góp ý để xem/sửa");
+        NclLib .alertMessage('danger', "Bạn chỉ được chọn một góp ý để xem/sửa");
         return false;
     }
     data += '&itemId=' + listitem;
@@ -180,13 +180,13 @@ JS_CitizenIdea.prototype.update = function (oForm) {
                 $('#modalCitizenIdea').html('');
                 $('#frmCitizenIdeaIndex').show();
                 $('#modalCitizenIdea').hide();
-                EFYLib.alertMessage('success', arrResult['message']);
+                NclLib .alertMessage('success', arrResult['message']);
             } else {
-                EFYLib.alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
+                NclLib .alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
             }
         },
         error: function (arrResult) {
-            EFYLib.alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
+            NclLib .alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
         }
     });
 }
@@ -206,7 +206,7 @@ JS_CitizenIdea.prototype.delete = function (oForm) {
         }
     });
     if (listitem == '') {
-        EFYLib.alertMessage('danger', "Bạn chưa chọn mục cần xóa");
+        NclLib .alertMessage('danger', "Bạn chưa chọn mục cần xóa");
         return false;
     }
     var data = $(oForm).serialize();
@@ -220,9 +220,9 @@ JS_CitizenIdea.prototype.delete = function (oForm) {
         success: function (arrResult) {
             if (arrResult['success']) {
                 myClass.loadList(oForm);
-                EFYLib.alertMessage('success', arrResult['message']);
+                NclLib .alertMessage('success', arrResult['message']);
             } else {
-                EFYLib.alertMessage('danger', arrResult['message']);
+                NclLib .alertMessage('danger', arrResult['message']);
             }
         }
     });

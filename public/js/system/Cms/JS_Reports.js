@@ -62,7 +62,7 @@ JS_Reports.prototype.loadevent = function (oForm) {
 JS_Reports.prototype.loadList = function (oForm, currentPage = 1, perPage = 15) {
     oForm = 'form#frmReportsIndex';
     var myClass = this;
-    var loadding = EFYLib.loadding();
+    var loadding = NclLib .loadding();
     loadding.go(20);
     var url = myClass.urlPath + '/loadlist';
     var data = $(oForm).serialize();
@@ -132,9 +132,9 @@ JS_Reports.prototype.export_excel = function (oForm) {
         success: function (arrResult) {
             if (arrResult['success']) {
                 window.open(arrResult['urlfile']);
-                EFYLib.alertMessage('success', arrResult['message']);
+                NclLib .alertMessage('success', arrResult['message']);
             } else {
-                EFYLib.alertMessage('danger', arrResult['message']);
+                NclLib .alertMessage('danger', arrResult['message']);
             }
         }
     });

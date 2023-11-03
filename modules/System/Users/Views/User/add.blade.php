@@ -1,5 +1,5 @@
 @php
-    use Modules\Core\Efy\FunctionHelper;
+    use Modules\Core\Ncl\FunctionHelper;
 @endphp
 
 <form id="frmAddUser" role="form" action="" method="POST">

@@ -4,7 +4,7 @@
 <!-- /.content  --> 
 <script type="text/javascript">
     var arrJsCss = $.parseJSON('<?php echo $strJsCss; ?>');
-    EfyLib.loadfileJsCss(arrJsCss);
+    NclLib .loadfileJsCss(arrJsCss);
 </script>
 <form action="index" method="POST" id="frm{{MODULE_NAME}}_index">
 <input type="hidden" name="_token" value="{{ csrf_token() }}">

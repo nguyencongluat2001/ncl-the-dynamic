@@ -65,7 +65,7 @@
                 <div class="col-md-8" id="PreviewFeatureImage">
                     <div class='col-md-3 text-center' id='file_image'>
                         @if (isset($feature_img_base) && $feature_img_base != null && $feature_img_base != '')
-                            @if (strpos('EFY' . $feature_img_base, 'http') > 0)
+                            @if (strpos('Ncl' . $feature_img_base, 'http') > 0)
                                 <img class='img-responsive' src="{{ $feature_img_base}}" width="200px">
                                 <a href="javascript:;" onclick="JS_Articles.deletefile_FeatureImage('xoa')"><i class="fas fa-trash"></i> Xóa</a>
                             @else

@@ -16,10 +16,10 @@ function Js_{{MODULE_NAME}}(baseUrl,module,controller){
  */
 Js_{{MODULE_NAME}}.prototype.loadIndex = function(){
   $(document).ajaxSend(function () {
-        EfyLib.showmainloadding();
+        NclLib .showmainloadding();
     });
     $(document).ajaxStop(function () {
-        EfyLib.successLoadImage();
+        NclLib .successLoadImage();
     });
   var myClass = this;
   var oForm = 'form#frm{{MODULE_NAME}}_index';

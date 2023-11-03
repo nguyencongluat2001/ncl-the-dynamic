@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
   $(document).ajaxSend(function () {
-    EfyLib.showmainloadding();
+    NclLib .showmainloadding();
   });
   $(document).ajaxStop(function () {
-    EfyLib.successLoadImage();
+    NclLib .successLoadImage();
   });
 
   $("#btn_submit").click(function () {

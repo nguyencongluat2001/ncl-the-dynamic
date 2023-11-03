@@ -2,7 +2,7 @@
 
 namespace Modules\Frontend\Services;
 
-use Modules\Core\Efy\Http\BaseService;
+use Modules\Core\Ncl\Http\BaseService;
 use Modules\Frontend\Repositories\ArticlesRepository;
 use Modules\System\Cms\Services\FileService;
 

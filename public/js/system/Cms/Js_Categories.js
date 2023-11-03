@@ -18,10 +18,10 @@
  */
 Js_Categories.prototype.loadIndex = function () {
     $(document).ajaxSend(function () {
-        EfyLib.showmainloadding();
+        NclLib .showmainloadding();
     });
     $(document).ajaxStop(function () {
-        EfyLib.successLoadImage();
+        NclLib .successLoadImage();
     });
     var myClass = this;
     myClass.loadListTree();
@@ -250,7 +250,7 @@ Js_Categories.prototype.saveList = function(id, type){
                 $("#" + id).trigger("chosen:updated");
                 $("#frmAddListType").find('#order').val(parseInt(arrResult['data'].order) + 1);
             } else {
-                EfyLib.alertMessage('danger', 'Thất bại', arrResult['message'], 6000);
+                NclLib .alertMessage('danger', 'Thất bại', arrResult['message'], 6000);
             }
         }
     });
@@ -280,7 +280,7 @@ Js_Categories.prototype.update = function () {
                 node.state.loaded = false;
                 $('#jstree-tree').jstree('create_node', node);
             } else {
-                EfyLib.alertMessage('danger', 'Thất bại', arrResult['message'], 6000);
+                NclLib .alertMessage('danger', 'Thất bại', arrResult['message'], 6000);
                 $("#message-infor").addClass('text-white');
             }
         }
@@ -307,12 +307,12 @@ Js_Categories.prototype.delete = function (name, id, type) {
             data: data,
             success: function (arrResult) {
                 if (arrResult['success']) {
-                    EfyLib.alertMessage('success', 'Thành công', arrResult['message'], 6000);
+                    NclLib .alertMessage('success', 'Thành công', arrResult['message'], 6000);
                     var node = $('#jstree-tree').jstree(true).get_node(arrResult['parent_id']);
                     node.state.loaded = false;
                     $('#jstree-tree').jstree('create_node', node);
                 } else {
-                    EfyLib.alertMessage('danger', 'Thất bại', arrResult['message'], 6000);
+                    NclLib .alertMessage('danger', 'Thất bại', arrResult['message'], 6000);
                 }
             }
         });
@@ -324,27 +324,27 @@ Js_Categories.prototype.delete = function (name, id, type) {
 Js_Categories.prototype.checkValidate = function(){
     var oForm = 'form#frmAddCategories';
     if($(oForm).find("#name").val() == ''){
-        EfyLib.alertMessage('warning', 'Cảnh báo', 'Tên chuyên mục không được để trống!', 5000);
+        NclLib .alertMessage('warning', 'Cảnh báo', 'Tên chuyên mục không được để trống!', 5000);
         $(oForm).find("#name").focus();
         return false;
     }
     if($(oForm).find("#id_menu").val() == ''){
-        EfyLib.alertMessage('warning', 'Cảnh báo', 'ID chuyên mục không được để trống!', 5000);
+        NclLib .alertMessage('warning', 'Cảnh báo', 'ID chuyên mục không được để trống!', 5000);
         $(oForm).find("#id_menu").focus();
         return false;
     }
     if($(oForm).find("#slug").val() == ''){
-        EfyLib.alertMessage('warning', 'Cảnh báo', 'Đường dẫn không được để trống!', 5000);
+        NclLib .alertMessage('warning', 'Cảnh báo', 'Đường dẫn không được để trống!', 5000);
         $(oForm).find("#slug").focus();
         return false;
     }
     if($(oForm).find("#layout").val() == ''){
-        EfyLib.alertMessage('warning', 'Cảnh báo', 'Layout không được để trống!', 5000);
+        NclLib .alertMessage('warning', 'Cảnh báo', 'Layout không được để trống!', 5000);
         $(oForm).find("#layout").focus();
         return false;
     }
     if($(oForm).find("#order").val() == ''){
-        EfyLib.alertMessage('warning', 'Cảnh báo', 'Thứ tự không được để trống!', 5000);
+        NclLib .alertMessage('warning', 'Cảnh báo', 'Thứ tự không được để trống!', 5000);
         $(oForm).find("#order").focus();
         return false;
     }

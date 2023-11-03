@@ -19,10 +19,10 @@ function Js_User(baseUrl, module, controller) {
  */
 Js_User.prototype.loadIndex = function () {
     $(document).ajaxSend(function () {
-        EfyLib.showmainloadding();
+        NclLib .showmainloadding();
     });
     $(document).ajaxStop(function () {
-        EfyLib.successLoadImage();
+        NclLib .successLoadImage();
     });
     var myClass = this;
     myClass.loadList();
@@ -133,11 +133,11 @@ Js_User.prototype.edit = function () {
         }
     });
     if (listitem == '') {
-        EfyLib.alertMessage('danger', 'Thông báo', "Bạn chưa chọn đối tượng cần sửa");
+        NclLib .alertMessage('danger', 'Thông báo', "Bạn chưa chọn đối tượng cần sửa");
         return false;
     }
     if (i > 1) {
-        EfyLib.alertMessage('danger', 'Thông báo', "Bạn chỉ được chọn một đối tượng để sửa");
+        NclLib .alertMessage('danger', 'Thông báo', "Bạn chỉ được chọn một đối tượng để sửa");
         return false;
     }
     var data = {
@@ -199,7 +199,7 @@ Js_User.prototype.update = function () {
                     var perPage = $("#frmUser_index").find('#cbo_nuber_record_page').val();
                     myClass.loadList(page, perPage);
                 } else {
-                    EfyLib.alertMessage('danger', 'Thất bại', arrResult['message'], 6000);
+                    NclLib .alertMessage('danger', 'Thất bại', arrResult['message'], 6000);
                     $("#message-infor").addClass('text-white');
                 }
             }
@@ -225,7 +225,7 @@ Js_User.prototype.delete = function () {
         }
     });
     if (listitem == '') {
-        EfyLib.alertMessage('danger', 'Thông báo', "Bạn chưa chọn đối tượng cần xóa");
+        NclLib .alertMessage('danger', 'Thông báo', "Bạn chưa chọn đối tượng cần xóa");
         return false;
     }
     var data = {
@@ -247,12 +247,12 @@ Js_User.prototype.delete = function () {
                         data: data,
                         success: function (arrResult) {
                             if (arrResult['success']) {
-                                EfyLib.alertMessage('success', 'Thành công', arrResult['message'], 6000);
+                                NclLib .alertMessage('success', 'Thành công', arrResult['message'], 6000);
                                 var page = $("#frmUser_index").find('#_currentPage').val();
                                 var perPage = $("#frmUser_index").find('#cbo_nuber_record_page').val();
                                 myClass.loadList(page, perPage);
                             } else {
-                                EfyLib.alertMessage('danger', 'Thất bại', arrResult['message'], 6000);
+                                NclLib .alertMessage('danger', 'Thất bại', arrResult['message'], 6000);
                             }
                         }
                     });

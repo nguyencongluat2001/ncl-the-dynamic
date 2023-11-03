@@ -56,7 +56,7 @@ JS_Scheduler.prototype.loadList = function (oForm, currentPage = 1, perPage = 15
     oForm = 'form#frmSchedulerIndex';
     $(oForm).submit();return false;
     var myClass = this;
-    var loadding = EFYLib.loadding();
+    var loadding = NclLib .loadding();
     loadding.go(20);
     var url = myClass.urlPath + '/loadlist';
     var data = $(oForm).serialize();
@@ -109,7 +109,7 @@ JS_Scheduler.prototype.genTable = function (arrResult) {
 }
 // Them loai danh muc
 JS_Scheduler.prototype.add = function (oForm) {
-    EFYLib.showmainloadding();
+    NclLib .showmainloadding();
     var url = this.urlPath + '/scheduler_add';
     var myClass = this;
     myClass.countindex = 0;
@@ -120,7 +120,7 @@ JS_Scheduler.prototype.add = function (oForm) {
         //cache: true,
         data: data,
         success: function (arrResult) {
-            EFYLib.successLoadImage();
+            NclLib .successLoadImage();
             $('#modalImages').html(arrResult);
             $('#frmSchedulerIndex').hide();
             $('#modalImages').show();
@@ -191,11 +191,11 @@ JS_Scheduler.prototype.edit = function (oForm) {
         }
     });
     if (listitem == '') {
-        EFYLib.alertMessage('danger', "Bạn chưa chọn bài viết cần sửa");
+        NclLib .alertMessage('danger', "Bạn chưa chọn bài viết cần sửa");
         return false;
     }
     if (i > 1) {
-        EFYLib.alertMessage('danger', "Bạn chỉ được chọn một bài viết để sửa");
+        NclLib .alertMessage('danger', "Bạn chỉ được chọn một bài viết để sửa");
         return false;
     }
     data += '&itemId=' + listitem;
@@ -232,7 +232,7 @@ JS_Scheduler.prototype.delete = function (oForm) {
         }
     });
     if (listitem == '') {
-        EFYLib.alertMessage('danger', "Bạn chưa chọn bài viết cần xóa");
+        NclLib .alertMessage('danger', "Bạn chưa chọn bài viết cần xóa");
         return false;
     }
     var data = $(oForm).serialize();
@@ -246,9 +246,9 @@ JS_Scheduler.prototype.delete = function (oForm) {
         success: function (arrResult) {
             if (arrResult['success']) {
                 myClass.loadList(oForm);
-                EFYLib.alertMessage('success', arrResult['message']);
+                NclLib .alertMessage('success', arrResult['message']);
             } else {
-                EFYLib.alertMessage('danger', arrResult['message']);
+                NclLib .alertMessage('danger', arrResult['message']);
             }
         }
     });
@@ -266,7 +266,7 @@ JS_Scheduler.prototype.preview_scheduler = function ()
         }
         myClass.countindex++;
     } else {
-        EFYLib.alertMessage('warning', 'Thông báo', 'Bạn cần phải chọn đúng file ảnh (.mp4,.avi,...)');
+        NclLib .alertMessage('warning', 'Thông báo', 'Bạn cần phải chọn đúng file ảnh (.mp4,.avi,...)');
     }
 }
 
@@ -288,7 +288,7 @@ JS_Scheduler.prototype.update = function (oForm) {
         myClass.formdata.append('_token', $('#_token').val());
         var data = $(oForm).serialize();
         myClass.formdata.append('data', data);
-        EFYLib.showmainloadding();
+        NclLib .showmainloadding();
         $.ajax({
             url: url,
             type: "POST",
@@ -297,7 +297,7 @@ JS_Scheduler.prototype.update = function (oForm) {
             processData: false,
             contentType: false,
             success: function (arrResult) {
-                EFYLib.successLoadImage();
+                NclLib .successLoadImage();
                 myClass.formdata = new FormData();
                 if (arrResult['success']) {
                     $('#addListModal').modal('hide');
@@ -305,14 +305,14 @@ JS_Scheduler.prototype.update = function (oForm) {
                     $('#modalImages').html('');
                     $('#frmSchedulerIndex').show();
                     $('#modalImages').hide();
-                    EFYLib.alertMessage('success', arrResult['message']);
+                    NclLib .alertMessage('success', arrResult['message']);
                 } else {
-                    EFYLib.alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
+                    NclLib .alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
                 }
             },
             error: function (arrResult) {
-                EFYLib.successLoadImage();
-                EFYLib.alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
+                NclLib .successLoadImage();
+                NclLib .alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
             }
         });
     }

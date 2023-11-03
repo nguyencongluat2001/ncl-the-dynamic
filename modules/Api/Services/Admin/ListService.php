@@ -3,7 +3,7 @@
 namespace Modules\Api\Services\Admin;
 
 use Modules\Api\Repositories\Admin\ListRepository;
-use Modules\Core\Efy\Http\BaseService;
+use Modules\Core\Ncl\Http\BaseService;
 
 class ListService extends BaseService
 {

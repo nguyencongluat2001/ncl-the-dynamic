@@ -4,7 +4,7 @@ namespace Modules\System\Cms\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Modules\Core\EFY\Library;
+use Modules\Core\Ncl\Library;
 use Modules\System\Cms\Models\ImagesBackgroundModel;
 use Modules\System\Listtype\Models\ListModel;
 use DB;

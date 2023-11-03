@@ -4,7 +4,7 @@ namespace Modules\System\Cms\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Modules\Core\EFY\Library;
+use Modules\Core\Ncl\Library;
 use Modules\System\Cms\Models\VideosModel;
 use Modules\System\Listtype\Models\ListModel;
 use Modules\System\Users\Models\UnitModel;

@@ -7,7 +7,7 @@ return [
       |----------------------------------------------------------------------
      */
     'home' => 'Trang chủ',
-    'company_name' => 'EFY Việt Nam',
+    'company_name' => 'Ncl Việt Nam',
     'version' => 'Phiên bản',
     'search' => 'Tìm kiếm',
     'order' => 'Thứ tự',

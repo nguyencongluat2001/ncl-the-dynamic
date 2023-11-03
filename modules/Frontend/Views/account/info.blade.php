@@ -6,7 +6,7 @@
         $('#account_sidebar_history').removeClass('active');
 
         var arrJsCss = $.parseJSON('<?php echo $stringJsCss; ?>');
-        EfyLib.loadFileJsCss(arrJsCss);
+        NclLib .loadFileJsCss(arrJsCss);
 
         var jsInfo = new Info('{{ url('') }}', 'dang-nhap');
         jQuery(document).ready(function($) {

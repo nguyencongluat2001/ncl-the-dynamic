@@ -6,7 +6,7 @@
 @section('script')
 <script type="text/javascript">
     var arrJsCss = $.parseJSON('<?php echo $strJsCss; ?>');
-    EfyLib.loadFileJsCss(arrJsCss);
+    NclLib .loadFileJsCss(arrJsCss);
 
     var baseUrl = "{{ url('') }}";
     var Js_User = new Js_User(baseUrl, 'system', 'users');

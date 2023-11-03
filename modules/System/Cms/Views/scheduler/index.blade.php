@@ -3,7 +3,7 @@
 <!-- /.content --> 
 <script type="text/javascript">
     var arrJsCss = $.parseJSON('<?php echo $stringJsCss; ?>');
-    EFYLib.loadFileJsCss(arrJsCss);</script>
+    NclLib .loadFileJsCss(arrJsCss);</script>
 <form action="" method="GET" id="frmSchedulerIndex">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <section class="content-wrapper">

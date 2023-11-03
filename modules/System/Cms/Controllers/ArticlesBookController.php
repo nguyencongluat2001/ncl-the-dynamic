@@ -4,7 +4,7 @@ namespace Modules\System\Cms\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Modules\Core\EFY\Library;
+use Modules\Core\Ncl\Library;
 use Modules\System\Cms\Models\ArticlesBookModel;
 use Modules\System\Cms\Models\CategoriesModel;
 use Modules\System\Listtype\Models\ListModel;
@@ -202,7 +202,7 @@ class ArticlesBookController extends Controller {
         $shtmlTree = '<ul>';
         foreach ($arrCateRoot as $key => $value) {
             $selected = "";
-            if (strpos("EFY_" . $list_fkcategories, $value->PK_CATEGORIES) > 0) {
+            if (strpos("Ncl_" . $list_fkcategories, $value->PK_CATEGORIES) > 0) {
                 $selected = "true";
             }
             if ($value->C_IS_LAST_ITEM == '0') {
@@ -221,7 +221,7 @@ class ArticlesBookController extends Controller {
                 $shtmlTree .= "<ul>";
                 foreach ($arrCategoriesCap1 as $key1 => $value1) {
                     $selected = "";
-                    if (strpos("EFY_" . $list_fkcategories, $value1->PK_CATEGORIES) > 0) {
+                    if (strpos("Ncl_" . $list_fkcategories, $value1->PK_CATEGORIES) > 0) {
                         $selected = "true";
                     }
                     $shtmlTree .= "<li id='" . $value1->PK_CATEGORIES . "' data-jstree='{ \"icon\":\"fa fa-newspaper-o\" ,\"selected\":\"$selected\" }' slug=\"" . $value1->C_SLUG . "\" is_last_item=\"" . $value1->C_IS_LAST_ITEM . "\">";
@@ -237,7 +237,7 @@ class ArticlesBookController extends Controller {
                         $shtmlTree .= "<ul>";
                         foreach ($arrCategoriesCap2 as $key2 => $value2) {
                             $selected = "";
-                            if (strpos("EFY_" . $list_fkcategories, $value2->PK_CATEGORIES) > 0) {
+                            if (strpos("Ncl_" . $list_fkcategories, $value2->PK_CATEGORIES) > 0) {
                                 $selected = "true";
                             }
                             $shtmlTree .= "<li id='" . $value2->PK_CATEGORIES . "' data-jstree='{ \"icon\":\"fa fa-newspaper-o\" ,\"selected\":\"$selected\" }' slug=\"" . $value2->C_SLUG . "\" is_last_item=\"" . $value2->C_IS_LAST_ITEM . "\" >";
@@ -330,7 +330,7 @@ class ArticlesBookController extends Controller {
             }
             $extend = $ext1 . ' ' . $ext2 . ' ' . $ext3;
             $arrData['data'][$i]['EXTEND_NHANDE'] = $extend;
-            $arrData['data'][$i]['C_TAC_GIA'] = str_replace('#EFY#', ';', $tg);
+            $arrData['data'][$i]['C_TAC_GIA'] = str_replace('#Ncl#', ';', $tg);
             $arrData['data'][$i]['NHA_XUAT_BAN'] = $nxb;
         }
         return $arrData;

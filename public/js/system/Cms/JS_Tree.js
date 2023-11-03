@@ -8,7 +8,7 @@ function JS_Tree(baseUrl, module, controller, objTree) {
     this.module = module;
     this.baseUrl = baseUrl;
     this.controller = controller;
-    this.loadding = EfyLib.loadding();
+    this.loadding = NclLib .loadding();
     this.urlPath = baseUrl + '/' + module + '/' + controller;//Biên public lưu tên module
 }
 

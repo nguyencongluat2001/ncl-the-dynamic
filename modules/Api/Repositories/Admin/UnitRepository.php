@@ -2,7 +2,7 @@
 
 namespace Modules\Api\Repositories\Admin;
 
-use Modules\Core\Efy\Http\BaseRepository;
+use Modules\Core\Ncl\Http\BaseRepository;
 use Modules\Api\Models\Admin\UnitModel;
 
 class UnitRepository extends BaseRepository

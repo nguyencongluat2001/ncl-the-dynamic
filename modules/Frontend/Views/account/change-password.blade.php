@@ -3,7 +3,7 @@
 @section('script-child')
 <script type="text/javascript">
     var arrJsCss = $.parseJSON('<?php echo $stringJsCss; ?>');
-    EfyLib.loadFileJsCss(arrJsCss);
+    NclLib .loadFileJsCss(arrJsCss);
 
     var jsChangePassword = new ChangePassword('{{ url('') }}', 'tai-khoan');
     jQuery(document).ready(function($) {

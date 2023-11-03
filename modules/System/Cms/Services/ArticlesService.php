@@ -3,9 +3,9 @@
 namespace Modules\System\Cms\Services;
 
 use Carbon\Carbon;
-use Modules\Core\Efy\Http\BaseService;
-use Modules\Core\Efy\Library;
-use Modules\Core\Efy\LoggerHelpers;
+use Modules\Core\Ncl\Http\BaseService;
+use Modules\Core\Ncl\Library;
+use Modules\Core\Ncl\LoggerHelpers;
 use Modules\System\Cms\Repositories\ArticlesRepository;
 use Modules\System\Listtype\Helpers\ListtypeHelper;
 use Modules\System\Users\Services\UserService;
@@ -151,7 +151,7 @@ class ArticlesService extends BaseService
         $shtmlTree = '<ul>';
         foreach ($arrCateRoot as $key => $value) {
             $selected = "";
-            if (strpos("EFY_" . $list_fkcategories, $value->id) > 0) {
+            if (strpos("Ncl_" . $list_fkcategories, $value->id) > 0) {
                 $selected = "true";
             }
             if ($value->lastItem == '0') {
@@ -174,7 +174,7 @@ class ArticlesService extends BaseService
                 $shtmlTree .= "<ul>";
                 foreach ($arrCategoriesCap1 as $key1 => $value1) {
                     $selected = "";
-                    if (strpos("EFY_" . $list_fkcategories, $value1->id) > 0) {
+                    if (strpos("Ncl_" . $list_fkcategories, $value1->id) > 0) {
                         $selected = "true";
                     }
                     $shtmlTree .= "<li id='" . $value1->id . "' data-jstree='{ \"icon\":\"fas fa-newspaper\" ,\"selected\":\"$selected\" }' slug=\"" . $value1->slug . "\" is_last_item=\"" . $value1->lastItem . "\">";
@@ -193,7 +193,7 @@ class ArticlesService extends BaseService
                         $shtmlTree .= "<ul>";
                         foreach ($arrCategoriesCap2 as $key2 => $value2) {
                             $selected = "";
-                            if (strpos("EFY_" . $list_fkcategories, $value2->id) > 0) {
+                            if (strpos("Ncl_" . $list_fkcategories, $value2->id) > 0) {
                                 $selected = "true";
                             }
                             $shtmlTree .= "<li id='" . $value2->id . "' data-jstree='{ \"icon\":\"fas fa-newspaper\" ,\"selected\":\"$selected\" }' slug=\"" . $value2->slug . "\" is_last_item=\"" . $value2->lastItem . "\" >";

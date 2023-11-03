@@ -6,7 +6,7 @@
         $('#account_sidebar_history').addClass('active');
 
         var arrJsCss = $.parseJSON('<?php echo $stringJsCss; ?>');
-        EfyLib.loadFileJsCss(arrJsCss);
+        NclLib .loadFileJsCss(arrJsCss);
 
         var jsHistory = new History('{{ url('') }}', 'tai-khoan');
         jQuery(document).ready(function($) {

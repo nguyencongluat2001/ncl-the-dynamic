@@ -4,7 +4,7 @@ namespace Modules\System\Exams\Repositories;
 
 use Illuminate\Pagination\Paginator;
 use Modules\System\Exams\Models\ExamsModel;
-use Modules\Core\Efy\Http\BaseRepository;
+use Modules\Core\Ncl\Http\BaseRepository;
 
 class ExamsRepository extends BaseRepository
 {

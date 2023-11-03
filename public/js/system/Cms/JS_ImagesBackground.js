@@ -54,7 +54,7 @@ JS_ImagesBackground.prototype.loadevent = function (oForm) {
 JS_ImagesBackground.prototype.loadList = function (oForm, currentPage = 1, perPage = 15) {
     oForm = 'form#frmImagesIndex';
     var myClass = this;
-    var loadding = EFYLib.loadding();
+    var loadding = NclLib .loadding();
     loadding.go(20);
     var url = myClass.urlPath + '/loadlist';
     var data = $(oForm).serialize();
@@ -134,7 +134,7 @@ JS_ImagesBackground.prototype.genTableMota = function (arrResult) {
 }
 // Them loai danh muc
 JS_ImagesBackground.prototype.add = function (oForm) {
-    EFYLib.showmainloadding();
+    NclLib .showmainloadding();
     var url = this.urlPath + '/images_add';
     var myClass = this;
     myClass.countindex = 0;
@@ -145,7 +145,7 @@ JS_ImagesBackground.prototype.add = function (oForm) {
         //cache: true,
         data: data,
         success: function (arrResult) {
-            EFYLib.successLoadImage();
+            NclLib .successLoadImage();
             $('#modalImages').html(arrResult);
             $('#frmImagesIndex').hide();
             $('#modalImages').show();
@@ -216,11 +216,11 @@ JS_ImagesBackground.prototype.edit = function (oForm) {
         }
     });
     if (listitem == '') {
-        EFYLib.alertMessage('danger', "Bạn chưa chọn ảnh cần sửa");
+        NclLib .alertMessage('danger', "Bạn chưa chọn ảnh cần sửa");
         return false;
     }
     if (i > 1) {
-        EFYLib.alertMessage('danger', "Bạn chỉ được chọn một ảnh để sửa");
+        NclLib .alertMessage('danger', "Bạn chỉ được chọn một ảnh để sửa");
         return false;
     }
     data += '&itemId=' + listitem;
@@ -258,7 +258,7 @@ JS_ImagesBackground.prototype.delete = function (oForm) {
         }
     });
     if (listitem == '') {
-        EFYLib.alertMessage('danger', "Bạn chưa chọn ảnh cần xóa");
+        NclLib .alertMessage('danger', "Bạn chưa chọn ảnh cần xóa");
         return false;
     }
     var data = $(oForm).serialize();
@@ -272,9 +272,9 @@ JS_ImagesBackground.prototype.delete = function (oForm) {
         success: function (arrResult) {
             if (arrResult['success']) {
                 myClass.loadList(oForm);
-                EFYLib.alertMessage('success', arrResult['message']);
+                NclLib .alertMessage('success', arrResult['message']);
             } else {
-                EFYLib.alertMessage('danger', arrResult['message']);
+                NclLib .alertMessage('danger', arrResult['message']);
             }
         }
     });
@@ -292,7 +292,7 @@ JS_ImagesBackground.prototype.preview_images = function ()
         }
         myClass.countindex++;
     } else {
-        EFYLib.alertMessage('warning', 'Thông báo', 'Bạn cần phải chọn đúng file ảnh (.png,.jpg)');
+        NclLib .alertMessage('warning', 'Thông báo', 'Bạn cần phải chọn đúng file ảnh (.png,.jpg)');
     }
 }
 
@@ -315,10 +315,10 @@ JS_ImagesBackground.prototype.update = function (oForm) {
         var data = $(oForm).serialize();
         myClass.formdata.append('data', data);
         if ($('#filename').val() == '' && $('#images').val() == '') {
-            EFYLib.alertMessage('danger', 'Cảnh báo', 'Ảnh album không được để trống', 6000);
+            NclLib .alertMessage('danger', 'Cảnh báo', 'Ảnh album không được để trống', 6000);
             return false;
         }
-        EFYLib.showmainloadding();
+        NclLib .showmainloadding();
         $.ajax({
             url: url,
             type: "POST",
@@ -327,7 +327,7 @@ JS_ImagesBackground.prototype.update = function (oForm) {
             processData: false,
             contentType: false,
             success: function (arrResult) {
-                EFYLib.successLoadImage();
+                NclLib .successLoadImage();
                 myClass.formdata = new FormData();
                 if (arrResult['success']) {
                     $('#addListModal').modal('hide');
@@ -335,13 +335,13 @@ JS_ImagesBackground.prototype.update = function (oForm) {
                     $('#modalImages').html('');
                     $('#frmImagesIndex').show();
                     $('#modalImages').hide();
-                    EFYLib.alertMessage('success', arrResult['message']);
+                    NclLib .alertMessage('success', arrResult['message']);
                 } else {
-                    EFYLib.alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
+                    NclLib .alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
                 }
             },
             error: function (arrResult) {
-                EFYLib.alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
+                NclLib .alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
             }
         });
     }

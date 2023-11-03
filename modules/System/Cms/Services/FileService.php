@@ -2,8 +2,8 @@
 
 namespace Modules\System\Cms\Services;
 
-use Modules\Core\Efy\Http\BaseService;
-use Modules\Core\Efy\Library;
+use Modules\Core\Ncl\Http\BaseService;
+use Modules\Core\Ncl\Library;
 use Modules\System\Cms\Repositories\FileRepository;
 
 class FileService extends BaseService

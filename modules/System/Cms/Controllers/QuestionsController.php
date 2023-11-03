@@ -4,7 +4,7 @@ namespace Modules\System\Cms\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Modules\Core\EFY\Library;
+use Modules\Core\Ncl\Library;
 use Modules\System\Cms\Models\AnswersModel;
 use Modules\System\Cms\Models\QuestionsModel;
 use Modules\System\Listtype\Helpers\ListtypeHelper;

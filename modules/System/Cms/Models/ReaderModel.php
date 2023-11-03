@@ -3,7 +3,7 @@ namespace Modules\System\Cms\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Pagination\Paginator;
 use DB;
-use Modules\Core\Efy\Library;
+use Modules\Core\Ncl\Library;
 use Uuid;
 
 class ReaderModel extends Model{

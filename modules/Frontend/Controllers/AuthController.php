@@ -9,7 +9,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Modules\Frontend\Services\AuthService;
 use Modules\Frontend\Services\SubjectService;
-use Modules\Core\Efy\Library;
+use Modules\Core\Ncl\Library;
 use Illuminate\Support\Facades\Auth;
 use Modules\Core\Helpers\ForgetPassWordMailHelper;
 use Modules\Frontend\Services\ExamService;

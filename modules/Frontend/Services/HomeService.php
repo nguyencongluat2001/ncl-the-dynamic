@@ -2,7 +2,7 @@
 
 namespace Modules\Frontend\Services;
 
-use Modules\Core\Efy\Date\DateHelper;
+use Modules\Core\Ncl\Date\DateHelper;
 use Modules\Frontend\Services\Admin\ListService;
 
 /**

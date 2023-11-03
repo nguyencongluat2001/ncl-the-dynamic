@@ -2,7 +2,7 @@
 @extends('Frontend::layouts.index')
 @section('body-client')
 <!-- ================ offer section start ================= --> 
-<section class="offer" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 20px 30px" data-top-bottom="background-position: 0 20px">
+<section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
       <div class="container">
         <div class="row">
           <div class="col-xl-5">
@@ -16,6 +16,146 @@
         </div>
       </div>
     </section>
+
+     <!-- ================ Best Selling item  carousel ================= --> 
+     <section class="section-margin calc-60px">
+      <div class="container">
+        <div class="section-intro pb-60px">
+          <p>Mặt hàng phổ biến trên thị trường</p>
+          <h2> <span class="section-intro__style">Bán chạy nhất</span></h2>
+        </div>
+        <div class="owl-carousel owl-theme" id="bestSellerCarousel">
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="../img/product/product1.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Accessories</p>
+              <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="../img/product/product2.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Beauty</p>
+              <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="../img/product/product3.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Decor</p>
+              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="../img/product/product4.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Decor</p>
+              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="../img/product/product1.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Accessories</p>
+              <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="../img/product/product2.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Beauty</p>
+              <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="../img/product/product3.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Decor</p>
+              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="../img/product/product4.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Decor</p>
+              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================ Best Selling item  carousel end ================= --> 
     <!-- <section class="hero-banner">
       <div class="">
         <div id="index_banner">
@@ -149,7 +289,7 @@
       <div class="container">
         <div class="section-intro pb-60px">
           <p>Mặt hàng phổ biến trên thị trường</p>
-          <h2>Sản phẩm  <span class="section-intro__style">thịnh hành</span></h2>
+          <h2>  <span class="section-intro__style">Sản phẩm thịnh hành</span></h2>
         </div>
         <div class="row">
           <div class="col-md-6 col-lg-4 col-xl-3">
@@ -310,146 +450,6 @@
       </div>
     </section>
     <!-- ================ offer section end ================= --> 
-
-    <!-- ================ Best Selling item  carousel ================= --> 
-    <section class="section-margin calc-60px">
-      <div class="container">
-        <div class="section-intro pb-60px">
-          <p>Mặt hàng phổ biến trên thị trường</p>
-          <h2>Bán chạy nhất <span class="section-intro__style"></span></h2>
-        </div>
-        <div class="owl-carousel owl-theme" id="bestSellerCarousel">
-          <div class="card text-center card-product">
-            <div class="card-product__img">
-              <img class="img-fluid" src="../img/product/product1.png" alt="">
-              <ul class="card-product__imgOverlay">
-                <li><button><i class="ti-search"></i></button></li>
-                <li><button><i class="ti-shopping-cart"></i></button></li>
-                <li><button><i class="ti-heart"></i></button></li>
-              </ul>
-            </div>
-            <div class="card-body">
-              <p>Accessories</p>
-              <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
-              <p class="card-product__price">$150.00</p>
-            </div>
-          </div>
-
-          <div class="card text-center card-product">
-            <div class="card-product__img">
-              <img class="img-fluid" src="../img/product/product2.png" alt="">
-              <ul class="card-product__imgOverlay">
-                <li><button><i class="ti-search"></i></button></li>
-                <li><button><i class="ti-shopping-cart"></i></button></li>
-                <li><button><i class="ti-heart"></i></button></li>
-              </ul>
-            </div>
-            <div class="card-body">
-              <p>Beauty</p>
-              <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
-              <p class="card-product__price">$150.00</p>
-            </div>
-          </div>
-
-          <div class="card text-center card-product">
-            <div class="card-product__img">
-              <img class="img-fluid" src="../img/product/product3.png" alt="">
-              <ul class="card-product__imgOverlay">
-                <li><button><i class="ti-search"></i></button></li>
-                <li><button><i class="ti-shopping-cart"></i></button></li>
-                <li><button><i class="ti-heart"></i></button></li>
-              </ul>
-            </div>
-            <div class="card-body">
-              <p>Decor</p>
-              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
-              <p class="card-product__price">$150.00</p>
-            </div>
-          </div>
-
-          <div class="card text-center card-product">
-            <div class="card-product__img">
-              <img class="img-fluid" src="../img/product/product4.png" alt="">
-              <ul class="card-product__imgOverlay">
-                <li><button><i class="ti-search"></i></button></li>
-                <li><button><i class="ti-shopping-cart"></i></button></li>
-                <li><button><i class="ti-heart"></i></button></li>
-              </ul>
-            </div>
-            <div class="card-body">
-              <p>Decor</p>
-              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
-              <p class="card-product__price">$150.00</p>
-            </div>
-          </div>
-
-          <div class="card text-center card-product">
-            <div class="card-product__img">
-              <img class="img-fluid" src="../img/product/product1.png" alt="">
-              <ul class="card-product__imgOverlay">
-                <li><button><i class="ti-search"></i></button></li>
-                <li><button><i class="ti-shopping-cart"></i></button></li>
-                <li><button><i class="ti-heart"></i></button></li>
-              </ul>
-            </div>
-            <div class="card-body">
-              <p>Accessories</p>
-              <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
-              <p class="card-product__price">$150.00</p>
-            </div>
-          </div>
-
-          <div class="card text-center card-product">
-            <div class="card-product__img">
-              <img class="img-fluid" src="../img/product/product2.png" alt="">
-              <ul class="card-product__imgOverlay">
-                <li><button><i class="ti-search"></i></button></li>
-                <li><button><i class="ti-shopping-cart"></i></button></li>
-                <li><button><i class="ti-heart"></i></button></li>
-              </ul>
-            </div>
-            <div class="card-body">
-              <p>Beauty</p>
-              <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
-              <p class="card-product__price">$150.00</p>
-            </div>
-          </div>
-
-          <div class="card text-center card-product">
-            <div class="card-product__img">
-              <img class="img-fluid" src="../img/product/product3.png" alt="">
-              <ul class="card-product__imgOverlay">
-                <li><button><i class="ti-search"></i></button></li>
-                <li><button><i class="ti-shopping-cart"></i></button></li>
-                <li><button><i class="ti-heart"></i></button></li>
-              </ul>
-            </div>
-            <div class="card-body">
-              <p>Decor</p>
-              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
-              <p class="card-product__price">$150.00</p>
-            </div>
-          </div>
-
-          <div class="card text-center card-product">
-            <div class="card-product__img">
-              <img class="img-fluid" src="../img/product/product4.png" alt="">
-              <ul class="card-product__imgOverlay">
-                <li><button><i class="ti-search"></i></button></li>
-                <li><button><i class="ti-shopping-cart"></i></button></li>
-                <li><button><i class="ti-heart"></i></button></li>
-              </ul>
-            </div>
-            <div class="card-body">
-              <p>Decor</p>
-              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
-              <p class="card-product__price">$150.00</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ================ Best Selling item  carousel end ================= --> 
 
     <!-- ================ Blog section start ================= -->  
     <section class="blog">

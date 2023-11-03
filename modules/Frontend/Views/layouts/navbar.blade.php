@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light" style="font-family: serif;">
     <div class="container">
         
         <div style="width:6%">
@@ -33,7 +33,7 @@
         <ul class="nav-shop">
         <li class="nav-item"><button><i class="ti-search"></i></button></li>
         <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
-        <li class="nav-item"><a class="button button-header" href="#">Đăng nhập</a></li>
+        <li class="nav-item"><a class="button button-header" href="login">Đăng nhập</a></li>
         </ul>
     </div>
     </div>

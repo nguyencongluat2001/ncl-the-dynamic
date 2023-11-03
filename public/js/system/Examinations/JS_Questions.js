@@ -8,10 +8,10 @@ function JS_Questions(baseUrl, module, action) {
 JS_Questions.prototype.loadIndex = function () {
     console.log(222)
     $(document).ajaxSend(function () {
-        EfyLib.showmainloadding();
+        NclLib .showmainloadding();
     });
     $(document).ajaxStop(function () {
-        EfyLib.successLoadImage();
+        NclLib .successLoadImage();
     });
     var myClass = this;
     var oForm = 'form#frmQuestion_index';
@@ -71,7 +71,7 @@ JS_Questions.prototype.loadevent = function (oForm) {
 JS_Questions.prototype.loadList = function (oForm, currentPage = 1, perPage = 15) {
     var oForm = 'form#frmQuestion_index';
     var myClass = this;
-    var loadding = EfyLib.loadding();
+    var loadding = NclLib .loadding();
     loadding.go(20);
     var url = myClass.baseUrl+'/system/examinations/questions/loadList';
     var dirxml = myClass.baseUrl + '/xml/System/list/quan_tri_doi_tuong_danh_muc.xml';
@@ -144,37 +144,37 @@ JS_Questions.prototype.store = function (oFormCreate) {
     var data = $(oFormCreate).serialize();
     if (CKEDITOR.instances.ten_cau_hoi.getData() == '') {
         var nameMessage = 'Tên câu hỏi không được để trống!';
-        EfyLib.alertMessage('warning', 'Cảnh báo', nameMessage);
+        NclLib .alertMessage('warning', 'Cảnh báo', nameMessage);
         return false;
     }
     if ($("#dap_an_a").val() == '') {
         var nameMessage = 'Đáp án A không được để trống!';
-        EfyLib.alertMessage('warning', 'Cảnh báo', nameMessage);
+        NclLib .alertMessage('warning', 'Cảnh báo', nameMessage);
         return false;
     }
     if ($("#dap_an_b").val() == '') {
         var nameMessage = 'Đáp án B không được để trống!';
-        EfyLib.alertMessage('warning', 'Cảnh báo', nameMessage);
+        NclLib .alertMessage('warning', 'Cảnh báo', nameMessage);
         return false;
     }
     if ($("#dap_an_c").val() == '') {
         var nameMessage = 'Đáp án C không được để trống!';
-        EfyLib.alertMessage('warning', 'Cảnh báo', nameMessage);
+        NclLib .alertMessage('warning', 'Cảnh báo', nameMessage);
         return false;
     }
     if ($("#dap_an_d").val() == '') {
         var nameMessage = 'Đáp án D không được để trống!';
-        EfyLib.alertMessage('warning', 'Cảnh báo', nameMessage);
+        NclLib .alertMessage('warning', 'Cảnh báo', nameMessage);
         return false;
     }
     if ($("#thu_tu").val() == '') {
         var nameMessage = 'Thứ tự không được để trống!';
-        EfyLib.alertMessage('warning', 'Cảnh báo', nameMessage);
+        NclLib .alertMessage('warning', 'Cảnh báo', nameMessage);
         return false;
     }
     if ($("#trang_thai").val() == '') {
         var nameMessage = 'Trạng thái là bắt buộc';
-        EfyLib.alertMessage('warning', 'Cảnh báo', nameMessage);
+        NclLib .alertMessage('warning', 'Cảnh báo', nameMessage);
         return false;
     }
     var formdata = new FormData();
@@ -207,12 +207,12 @@ JS_Questions.prototype.store = function (oFormCreate) {
             console.log(arrResult);
             if (arrResult['success'] == true) {
                   var nameMessage = 'Cập nhật thành công!';
-                  EfyLib.alertMessage('success', 'Thành công', nameMessage);
+                  NclLib .alertMessage('success', 'Thành công', nameMessage);
                   $('#addModal').modal('hide');
                   myClass.loadList(oFormCreate);
 
             } else {
-                  EfyLib.alertMessage('danger', 'Thất bại', arrResult['message']);
+                  NclLib .alertMessage('danger', 'Thất bại', arrResult['message']);
                 }
         }
     });
@@ -236,11 +236,11 @@ JS_Questions.prototype.edit = function (oForm) {
         }
     });
     if (listitem == '') {
-        EfyLib.alertMessage('danger', 'Thông báo', "Bạn chưa chọn đối cần sửa");
+        NclLib .alertMessage('danger', 'Thông báo', "Bạn chưa chọn đối cần sửa");
         return false;
     }
     if (i > 1) {
-        EfyLib.alertMessage('danger', 'Thông báo', "Bạn chỉ được chọn một đối để sửa");
+        NclLib .alertMessage('danger', 'Thông báo', "Bạn chỉ được chọn một đối để sửa");
         return false;
     }
     data += '&itemId=' + listitem;
@@ -291,7 +291,7 @@ JS_Questions.prototype.delete = function (oForm) {
         }
     });
     if (listitem == '') {
-        EfyLib.alertMessage('danger', 'Thông báo', "Bạn chưa chọn danh mục cần xóa");
+        NclLib .alertMessage('danger', 'Thông báo', "Bạn chưa chọn danh mục cần xóa");
         return false;
     }
     var data = $(oForm).serialize();
@@ -315,9 +315,9 @@ JS_Questions.prototype.delete = function (oForm) {
                         success: function (arrResult) {
                             if (arrResult['success']) {
                                 myClass.loadList(oForm);
-                                EfyLib.alertMessage('success', 'Thành công', 'Xóa thành công');
+                                NclLib .alertMessage('success', 'Thành công', 'Xóa thành công');
                             } else {
-                                EfyLib.alertMessage('danger', 'Thất bại', arrResult['message']);
+                                NclLib .alertMessage('danger', 'Thất bại', arrResult['message']);
                             }
                         }
                     });

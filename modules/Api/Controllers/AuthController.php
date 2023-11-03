@@ -4,7 +4,7 @@ namespace Modules\Api\Controllers;
 
 use Illuminate\Http\JsonResponse;
 use Modules\Api\Resources\Admin\AuthResource;
-use Modules\Core\Efy\Http\Controllers\ApiController;
+use Modules\Core\Ncl\Http\Controllers\ApiController;
 use Illuminate\Support\Facades\DB;
 use Modules\Api\Services\Admin\AuthService;
 use Modules\Api\Requests\AuthRequest;

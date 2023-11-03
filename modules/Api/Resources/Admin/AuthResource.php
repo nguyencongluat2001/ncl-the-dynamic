@@ -2,7 +2,7 @@
 
 namespace Modules\Api\Resources\Admin;
 
-use Modules\Core\Efy\Http\Resource\BaseResource;
+use Modules\Core\Ncl\Http\Resource\BaseResource;
 
 class AuthResource extends  BaseResource
 {

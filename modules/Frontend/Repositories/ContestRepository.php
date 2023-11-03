@@ -2,7 +2,7 @@
 
 namespace Modules\Frontend\Repositories;
 
-use Modules\Core\Efy\Http\BaseRepository;
+use Modules\Core\Ncl\Http\BaseRepository;
 use Modules\Frontend\Models\ContestModel;
 
 /**

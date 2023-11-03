@@ -4,9 +4,9 @@ namespace Modules\System\Cms\Services;
 
 use Modules\Api\Services\Admin\ListService;
 use Modules\Api\Services\Admin\ListTypeService;
-use Modules\Core\Efy\Http\BaseService;
-use Modules\Core\Efy\Library;
-use Modules\Core\Efy\LoggerHelpers;
+use Modules\Core\Ncl\Http\BaseService;
+use Modules\Core\Ncl\Library;
+use Modules\Core\Ncl\LoggerHelpers;
 use Modules\System\Cms\Repositories\CategoriesRepository;
 use Modules\System\Listtype\Helpers\ListtypeHelper;
 use Modules\System\Listtype\Models\ListModel;

@@ -4,7 +4,7 @@
 namespace Modules\Api\Requests\Users;
 
 
-use Modules\Core\Efy\Http\Requests\ApiRequest;
+use Modules\Core\Ncl\Http\Requests\ApiRequest;
 
 class UserRequest extends ApiRequest
 {

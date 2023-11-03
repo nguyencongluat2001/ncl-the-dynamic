@@ -56,7 +56,7 @@
     // console.log(1);return false;
     var oForm = '#frmChangePassword';
     if($(oForm).valid()) {
-      var loadding = EfyLib.loadding();
+      var loadding = NclLib .loadding();
       var data = $(oForm).serialize();
       $.ajax({
           url: $("#urlupdate").val(),
@@ -66,13 +66,13 @@
           success: function(arrResult){
             if(arrResult['success']){
                 $('#addmodal').modal('hide');
-                EfyLib.alertMessage('success',arrResult['message']);
+                NclLib .alertMessage('success',arrResult['message']);
             }else{
-                EfyLib.alertMessage('danger',arrResult['message']);
+                NclLib .alertMessage('danger',arrResult['message']);
             }
           },
           error: function(arrResult) {
-              EfyLib.alertMessage('warning',arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
+              NclLib .alertMessage('warning',arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
           },
       }); 
     }

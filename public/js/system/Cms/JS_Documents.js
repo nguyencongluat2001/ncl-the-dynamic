@@ -55,7 +55,7 @@ JS_Documents.prototype.loadevent = function (oForm) {
 JS_Documents.prototype.loadList = function (oForm, currentPage = 1, perPage = 15) {
     oForm = 'form#frmDocumentsIndex';
     var myClass = this;
-    var loadding = EFYLib.loadding();
+    var loadding = NclLib .loadding();
     loadding.go(20);
     var url = myClass.urlPath + '/loadlist';
     var data = $(oForm).serialize();
@@ -110,7 +110,7 @@ JS_Documents.prototype.genTable = function (arrResult) {
 }
 // Them loai danh muc
 JS_Documents.prototype.add = function (oForm) {
-    EFYLib.showmainloadding();
+    NclLib .showmainloadding();
     var url = this.urlPath + '/documents_add';
     var myClass = this;
     myClass.countindex = 0;
@@ -121,7 +121,7 @@ JS_Documents.prototype.add = function (oForm) {
         //cache: true,
         data: data,
         success: function (arrResult) {
-            EFYLib.successLoadImage();
+            NclLib .successLoadImage();
             $('#modalDocuments').html(arrResult);
             $('#frmDocumentsIndex').hide();
             $('#modalDocuments').show();
@@ -195,11 +195,11 @@ JS_Documents.prototype.edit = function (oForm) {
         }
     });
     if (listitem == '') {
-        EFYLib.alertMessage('danger', "Bạn chưa chọn bài viết cần sửa");
+        NclLib .alertMessage('danger', "Bạn chưa chọn bài viết cần sửa");
         return false;
     }
     if (i > 1) {
-        EFYLib.alertMessage('danger', "Bạn chỉ được chọn một bài viết để sửa");
+        NclLib .alertMessage('danger', "Bạn chỉ được chọn một bài viết để sửa");
         return false;
     }
     data += '&itemId=' + listitem;
@@ -240,7 +240,7 @@ JS_Documents.prototype.delete = function (oForm) {
         }
     });
     if (listitem == '') {
-        EFYLib.alertMessage('danger', "Bạn chưa chọn bài viết cần xóa");
+        NclLib .alertMessage('danger', "Bạn chưa chọn bài viết cần xóa");
         return false;
     }
     var data = $(oForm).serialize();
@@ -254,9 +254,9 @@ JS_Documents.prototype.delete = function (oForm) {
         success: function (arrResult) {
             if (arrResult['success']) {
                 myClass.loadList(oForm);
-                EFYLib.alertMessage('success', arrResult['message']);
+                NclLib .alertMessage('success', arrResult['message']);
             } else {
-                EFYLib.alertMessage('danger', arrResult['message']);
+                NclLib .alertMessage('danger', arrResult['message']);
             }
         }
     });
@@ -316,13 +316,13 @@ JS_Documents.prototype.update = function (oForm) {
                     $('#modalDocuments').html('');
                     $('#frmDocumentsIndex').show();
                     $('#modalDocuments').hide();
-                    EFYLib.alertMessage('success', arrResult['message']);
+                    NclLib .alertMessage('success', arrResult['message']);
                 } else {
-                    EFYLib.alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
+                    NclLib .alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
                 }
             },
             error: function (arrResult) {
-                EFYLib.alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
+                NclLib .alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
             }
         });
     }
@@ -350,13 +350,13 @@ JS_Documents.prototype.updateAndNew = function (oForm) {
                     $('#frmDocumentsIndex').show();
                     $('#modalDocuments').hide();
                      myClass.add(oForm);
-                    EFYLib.alertMessage('success', arrResult['message']);
+                    NclLib .alertMessage('success', arrResult['message']);
                 } else {
-                    EFYLib.alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
+                    NclLib .alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
                 }
             },
             error: function (arrResult) {
-                EFYLib.alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
+                NclLib .alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
             }
         });
     }

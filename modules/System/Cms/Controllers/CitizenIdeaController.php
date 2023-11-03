@@ -4,11 +4,11 @@ namespace Modules\System\Cms\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Modules\Core\EFY\Library;
+use Modules\Core\Ncl\Library;
 use Modules\System\Cms\Models\CitizendIdeaModel;
 use Modules\System\Listtype\Models\ListModel;
 use Modules\System\Cms\Models\DocumentsModel;
-use Modules\Core\EFY\FileServer;
+use Modules\Core\Ncl\FileServer;
 use DB;
 use Uuid;
 

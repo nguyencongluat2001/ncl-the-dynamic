@@ -1,5 +1,5 @@
 @php
-    use Modules\Core\Efy\FunctionHelper;
+    use Modules\Core\Ncl\FunctionHelper;
 @endphp
 <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 

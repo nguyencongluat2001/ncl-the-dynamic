@@ -58,7 +58,7 @@ JS_ArticlesBook.prototype.loadevent = function(oForm) {
 JS_ArticlesBook.prototype.loadList = function(oForm, currentPage = 1, perPage = 15) {
     oForm = 'form#frmArticlesBookIndex';
     var myClass = this;
-    var loadding = EFYLib.loadding();
+    var loadding = NclLib .loadding();
     loadding.go(20);
     var url = myClass.urlPath + '/loadlist';
     var data = $(oForm).serialize();
@@ -112,7 +112,7 @@ JS_ArticlesBook.prototype.genTable = function(arrResult) {
     }
     // Them loai danh muc
 JS_ArticlesBook.prototype.add = function(oForm) {
-    EFYLib.showmainloadding();
+    NclLib .showmainloadding();
     var url = this.urlPath + '/articlesbook_add';
     var myClass = this;
     myClass.countindex = 0;
@@ -123,7 +123,7 @@ JS_ArticlesBook.prototype.add = function(oForm) {
         //cache: true,
         data: data,
         success: function(arrResult) {
-            EFYLib.successLoadImage();
+            NclLib .successLoadImage();
             $('#modalArticlesBook').html(arrResult);
             $('#frmArticlesBookIndex').hide();
             $('#modalArticlesBook').show();
@@ -206,11 +206,11 @@ JS_ArticlesBook.prototype.edit = function(oForm) {
             }
         });
         if (listitem == '') {
-            EFYLib.alertMessage('danger', "Bạn chưa chọn bài viết cần sửa");
+            NclLib .alertMessage('danger', "Bạn chưa chọn bài viết cần sửa");
             return false;
         }
         if (i > 1) {
-            EFYLib.alertMessage('danger', "Bạn chỉ được chọn một bài viết để sửa");
+            NclLib .alertMessage('danger', "Bạn chỉ được chọn một bài viết để sửa");
             return false;
         }
         data += '&itemId=' + listitem;
@@ -251,7 +251,7 @@ JS_ArticlesBook.prototype.delete = function(oForm) {
         }
     });
     if (listitem == '') {
-        EFYLib.alertMessage('danger', "Bạn chưa chọn bài viết cần xóa");
+        NclLib .alertMessage('danger', "Bạn chưa chọn bài viết cần xóa");
         return false;
     }
     var data = $(oForm).serialize();
@@ -265,9 +265,9 @@ JS_ArticlesBook.prototype.delete = function(oForm) {
         success: function(arrResult) {
             if (arrResult['success']) {
                 myClass.loadList(oForm);
-                EFYLib.alertMessage('success', arrResult['message']);
+                NclLib .alertMessage('success', arrResult['message']);
             } else {
-                EFYLib.alertMessage('danger', arrResult['message']);
+                NclLib .alertMessage('danger', arrResult['message']);
             }
         }
     });
@@ -331,7 +331,7 @@ JS_ArticlesBook.prototype.update = function(oForm) {
         var ResultTree = $('#TreeCategories').jstree('get_selected', true);
         var FK_CATEGORY = '';
         if (value == '') {
-            EFYLib.alertMessage('danger', "Nội dung không được để trống");
+            NclLib .alertMessage('danger', "Nội dung không được để trống");
             return false;
         }
         myClass.formdata.append('data', data);
@@ -350,13 +350,13 @@ JS_ArticlesBook.prototype.update = function(oForm) {
                 if (arrResult['success']) {
                     myClass.loadList(oForm);
                     $('#btn_add').click();
-                    EFYLib.alertMessage('success', arrResult['message']);
+                    NclLib .alertMessage('success', arrResult['message']);
                 } else {
-                    EFYLib.alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
+                    NclLib .alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
                 }
             },
             error: function(arrResult) {
-                EFYLib.alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
+                NclLib .alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
             }
         });
     }
@@ -383,7 +383,7 @@ JS_ArticlesBook.prototype.updateComment = function(oForm) {
         var data = $(oForm).serialize();
         myClass.formdataArticle.append('data', data);
         if ($('#g-recaptcha-response').val() == '') {
-            EFYLib.alertMessage('danger', 'Cảnh báo', 'Bạn chưa xác thực người máy', 6000);
+            NclLib .alertMessage('danger', 'Cảnh báo', 'Bạn chưa xác thực người máy', 6000);
             return false;
         }
         $.ajax({
@@ -397,13 +397,13 @@ JS_ArticlesBook.prototype.updateComment = function(oForm) {
                 myClass.formdataArticle = new FormData();
                 if (arrResult['success']) {
                     $('form#frmArticleComment').hide();
-                    EFYLib.alertMessage('success', arrResult['message']);
+                    NclLib .alertMessage('success', arrResult['message']);
                 } else {
-                    EFYLib.alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
+                    NclLib .alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
                 }
             },
             error: function(arrResult) {
-                EFYLib.alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
+                NclLib .alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
             }
         });
     }
@@ -463,11 +463,11 @@ JS_ArticlesBook.prototype.manager_comment = function(oForm) {
         }
     });
     if (listitem == '') {
-        EFYLib.alertMessage('danger', "Bạn chưa chọn bài viết");
+        NclLib .alertMessage('danger', "Bạn chưa chọn bài viết");
         return false;
     }
     if (i > 1) {
-        EFYLib.alertMessage('danger', "Bạn chỉ được chọn một bài viết");
+        NclLib .alertMessage('danger', "Bạn chỉ được chọn một bài viết");
         return false;
     }
     data += '&itemId=' + listitem;
@@ -522,7 +522,7 @@ JS_ArticlesBook.prototype.loadIndexManagerComment = function() {
 JS_ArticlesBook.prototype.loadListComment = function(oForm, currentPage = 1, perPage = 15) {
     oForm = 'form#frmCommentIndex';
     var myClass = this;
-    var loadding = EFYLib.loadding();
+    var loadding = NclLib .loadding();
     loadding.go(20);
     var url = myClass.urlPath + '/loadlist_comment';
     var data = $(oForm).serialize();
@@ -591,11 +591,11 @@ JS_ArticlesBook.prototype.see_comment = function(oForm) {
         }
     });
     if (listitem == '') {
-        EFYLib.alertMessage('danger', "Bạn chưa chọn ảnh cần sửa");
+        NclLib .alertMessage('danger', "Bạn chưa chọn ảnh cần sửa");
         return false;
     }
     if (i > 1) {
-        EFYLib.alertMessage('danger', "Bạn chỉ được chọn một ảnh để sửa");
+        NclLib .alertMessage('danger', "Bạn chỉ được chọn một ảnh để sửa");
         return false;
     }
     $.ajax({
@@ -639,13 +639,13 @@ JS_ArticlesBook.prototype.ApproveComment = function(oForm) {
                     $('#modalRelateImages').html('');
                     $('#frmCommentIndex').show();
                     $('#modalRelateImages').hide();
-                    EFYLib.alertMessage('success', arrResult['message']);
+                    NclLib .alertMessage('success', arrResult['message']);
                 } else {
-                    EFYLib.alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
+                    NclLib .alertMessage('danger', 'Cảnh báo', arrResult['message'], 6000);
                 }
             },
             error: function(arrResult) {
-                EFYLib.alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
+                NclLib .alertMessage('danger', arrResult.responseJSON[Object.keys(arrResult.responseJSON)[0]]);
             }
         });
     }
@@ -666,7 +666,7 @@ JS_ArticlesBook.prototype.delete_comment = function(oForm) {
         }
     });
     if (listitem == '') {
-        EFYLib.alertMessage('danger', "Bạn chưa chọn bình luận cần xóa");
+        NclLib .alertMessage('danger', "Bạn chưa chọn bình luận cần xóa");
         return false;
     }
     var data = $(oForm).serialize();
@@ -680,9 +680,9 @@ JS_ArticlesBook.prototype.delete_comment = function(oForm) {
         success: function(arrResult) {
             if (arrResult['success']) {
                 myClass.loadListComment(oForm);
-                EFYLib.alertMessage('success', arrResult['message']);
+                NclLib .alertMessage('success', arrResult['message']);
             } else {
-                EFYLib.alertMessage('danger', arrResult['message']);
+                NclLib .alertMessage('danger', arrResult['message']);
             }
         }
     });
@@ -744,7 +744,7 @@ JS_ArticlesBook.prototype.search_document = function() {
 JS_ArticlesBook.prototype.load_document = function(oForm, currentPage = 1, perPage = 15) {
     oForm = 'form#frmSearchDocuments';
     var myClass = this;
-    var loadding = EFYLib.loadding();
+    var loadding = NclLib .loadding();
     loadding.go(20);
     var url = myClass.urlPath + '/load_publication';
     var data = $(oForm).serialize();
@@ -818,11 +818,11 @@ JS_ArticlesBook.prototype.submit_document = function(oForm) {
         }
     });
     if (i == 0) {
-        EFYLib.alertMessage('danger', "Bạn chưa chọn văn bản cần thêm");
+        NclLib .alertMessage('danger', "Bạn chưa chọn văn bản cần thêm");
         return false;
     }
     if (i > 1) {
-        EFYLib.alertMessage('danger', "Bạn chỉ được chọn một văn bản để thêm");
+        NclLib .alertMessage('danger', "Bạn chỉ được chọn một văn bản để thêm");
         return false;
     }
     $('form#frmAddArticles #FK_PUBLICATION').val(listitem);

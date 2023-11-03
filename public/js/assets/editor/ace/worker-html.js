@@ -6529,7 +6529,7 @@ exports.SVGAttributeMap = {
 	preserveaspectratio:	'preserveAspectRatio',
 	primitiveunits:	'primitiveUnits',
 	refx:	'refX',
-	refy:	'refY',
+	rNcl:	'rNcl',
 	repeatcount:	'repeatCount',
 	repeatdur:	'repeatDur',
 	requiredextensions:	'requiredExtensions',

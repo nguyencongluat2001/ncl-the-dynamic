@@ -7,10 +7,10 @@ function Js_List(baseUrl, module, action) {
 // Load su kien tren man hinh index
 Js_List.prototype.loadIndex = function () {
     $(document).ajaxSend(function () {
-        EfyLib.showmainloadding();
+        NclLib .showmainloadding();
     });
     $(document).ajaxStop(function () {
-        EfyLib.successLoadImage();
+        NclLib .successLoadImage();
     });
     var myClass = this;
     var oForm = 'form#frmlist_index';
@@ -60,7 +60,7 @@ Js_List.prototype.loadevent = function (oForm) {
 Js_List.prototype.loadList = function (oForm, currentPage = 1, perPage = 15) {
     var oForm = 'form#frmlist_index';
     var myClass = this;
-    var loadding = EfyLib.loadding();
+    var loadding = NclLib .loadding();
     loadding.go(20);
     var url = myClass.urlPath + '/loadList';
     var dirxml = myClass.baseUrl + '/xml/System/list/quan_tri_doi_tuong_danh_muc.xml';
@@ -138,11 +138,11 @@ Js_List.prototype.edit = function (oForm) {
         }
     });
     if (listitem == '') {
-        EfyLib.alertMessage('danger', 'Thông báo', "Bạn chưa chọn danh mục cần sửa");
+        NclLib .alertMessage('danger', 'Thông báo', "Bạn chưa chọn danh mục cần sửa");
         return false;
     }
     if (i > 1) {
-        EfyLib.alertMessage('danger', 'Thông báo', "Bạn chỉ được chọn một danh mục để sửa");
+        NclLib .alertMessage('danger', 'Thông báo', "Bạn chỉ được chọn một danh mục để sửa");
         return false;
     }
     data += '&itemId=' + listitem;
@@ -175,7 +175,7 @@ Js_List.prototype.delete = function (oForm) {
         }
     });
     if (listitem == '') {
-        EfyLib.alertMessage('danger', 'Thông báo', "Bạn chưa chọn danh mục cần xóa");
+        NclLib .alertMessage('danger', 'Thông báo', "Bạn chưa chọn danh mục cần xóa");
         return false;
     }
     var data = $(oForm).serialize();
@@ -197,9 +197,9 @@ Js_List.prototype.delete = function (oForm) {
                         success: function (arrResult) {
                             if (arrResult['success']) {
                                 myClass.loadList(oForm);
-                                EfyLib.alertMessage('success', 'Thành công', 'Xóa thành công');
+                                NclLib .alertMessage('success', 'Thành công', 'Xóa thành công');
                             } else {
-                                EfyLib.alertMessage('danger', 'Thất bại', arrResult['message']);
+                                NclLib .alertMessage('danger', 'Thất bại', arrResult['message']);
                             }
                         }
                     });
@@ -228,13 +228,13 @@ Js_List.prototype.exportCache = function (oForm) {
         success: function (arrResult) {
             if (arrResult['success']) {
                 myClass.loadList(oForm);
-                EfyLib.alertMessage('success', 'Thành công', arrResult['message']);
+                NclLib .alertMessage('success', 'Thành công', arrResult['message']);
             } else {
-                EfyLib.alertMessage('danger', 'Thất bại', arrResult['message'], 6000);
+                NclLib .alertMessage('danger', 'Thất bại', arrResult['message'], 6000);
             }
         },
         error: function (arrResult) {
-            EfyLib.alertMessage('warning', 'Lỗi', arrResult.responseJSON);
+            NclLib .alertMessage('warning', 'Lỗi', arrResult.responseJSON);
         }
     });
 }
@@ -245,7 +245,7 @@ Js_List.prototype.update = function (oForm) {
     var myClass = this;
     var data = $(oForm).serialize();
     var listtype_status = 'KHONG_HOAT_DONG';
-    var stringxml = EfyLib._save_xml_tag_and_value_list(oForm);
+    var stringxml = NclLib ._save_xml_tag_and_value_list(oForm);
     var list_status = 'KHONG_HOAT_DONG'
     if ($(oForm).find('#status').is(':checked')) {
         var list_status = 'HOAT_DONG';
@@ -269,9 +269,9 @@ Js_List.prototype.update = function (oForm) {
                 var page = $(oForm1).find('#_currentPage').val();
                 var perPage = $(oForm1).find('#cbo_nuber_record_page').val();
                 myClass.loadList(oForm, page, perPage);
-                EfyLib.alertMessage('success', 'Thành công', arrResult['message']);
+                NclLib .alertMessage('success', 'Thành công', arrResult['message']);
             } else {
-                EfyLib.alertMessage('danger', 'Thất bại', arrResult['message']);
+                NclLib .alertMessage('danger', 'Thất bại', arrResult['message']);
             }
         }
     });

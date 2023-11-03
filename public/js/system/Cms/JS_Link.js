@@ -9,10 +9,10 @@ function Js_Link(baseUrl, module, action) {
 // Load su kien tren man hinh index
 Js_Link.prototype.loadIndex = function () {
     $(document).ajaxSend(function () {
-        EFYLib.showmainloadding();
+        NclLib .showmainloadding();
     });
     $(document).ajaxStop(function () {
-        EFYLib.successLoadImage();
+        NclLib .successLoadImage();
     });
     var myClass = this;
     var oForm = 'form#frmlist_index';
@@ -59,7 +59,7 @@ Js_Link.prototype.loadevent = function (oForm) {
 Js_Link.prototype.loadList = function (oForm, currentPage = 1, perPage = 15) {
     var oForm = 'form#frmlist_index';
     var myClass = this;
-    var loadding = EFYLib.loadding();
+    var loadding = NclLib .loadding();
     loadding.go(20);
     var url = myClass.urlPath + '/loadList';
     var dirxml = myClass.baseUrl + '/xml/System/list/quan_tri_doi_tuong_danh_muc.xml';
@@ -139,11 +139,11 @@ Js_Link.prototype.edit = function (oForm) {
         }
     });
     if (listitem == '') {
-        EFYLib.alertMessage('danger', "Bạn chưa chọn danh mục cần sửa");
+        NclLib .alertMessage('danger', "Bạn chưa chọn danh mục cần sửa");
         return false;
     }
     if (i > 1) {
-        EFYLib.alertMessage('danger', "Bạn chỉ được chọn một danh mục để sửa");
+        NclLib .alertMessage('danger', "Bạn chỉ được chọn một danh mục để sửa");
         return false;
     }
     data += '&itemId=' + listitem;
@@ -176,7 +176,7 @@ Js_Link.prototype.delete = function (oForm) {
         }
     });
     if (listitem == '') {
-        EFYLib.alertMessage('danger', "Bạn chưa chọn danh mục cần xóa");
+        NclLib .alertMessage('danger', "Bạn chưa chọn danh mục cần xóa");
         return false;
     }
     var data = $(oForm).serialize();
@@ -190,9 +190,9 @@ Js_Link.prototype.delete = function (oForm) {
         success: function (arrResult) {
             if (arrResult['success']) {
                 myClass.loadList(oForm);
-                EFYLib.alertMessage('success', arrResult['message']);
+                NclLib .alertMessage('success', arrResult['message']);
             } else {
-                EFYLib.alertMessage('danger', arrResult['message']);
+                NclLib .alertMessage('danger', arrResult['message']);
             }
         }
     });
@@ -213,13 +213,13 @@ Js_Link.prototype.exportCache = function (oForm) {
         success: function (arrResult) {
             if (arrResult['success']) {
                 myClass.loadList(oForm);
-                EFYLib.alertMessage('success', arrResult['message']);
+                NclLib .alertMessage('success', arrResult['message']);
             } else {
-                EFYLib.alertMessage('danger', arrResult['message'], 6000);
+                NclLib .alertMessage('danger', arrResult['message'], 6000);
             }
         },
         error: function (arrResult) {
-            EFYLib.alertMessage('warning', arrResult.responseJSON);
+            NclLib .alertMessage('warning', arrResult.responseJSON);
         }
     });
 }
@@ -230,7 +230,7 @@ Js_Link.prototype.update = function (oForm) {
     var myClass = this;
     var data = $(oForm).serialize();
     var listtype_status = 'KHONG_HOAT_DONG';
-    var stringxml = EFYLib._save_xml_tag_and_value_list(oForm);
+    var stringxml = NclLib ._save_xml_tag_and_value_list(oForm);
     var list_status = 'KHONG_HOAT_DONG'
     if ($(oForm).find('#status').is(':checked')) {
         var list_status = 'HOAT_DONG';
@@ -255,9 +255,9 @@ Js_Link.prototype.update = function (oForm) {
                 var page = $(oForm1).find('#_currentPage').val();
                 var perPage = $(oForm1).find('#cbo_nuber_record_page').val();
                 myClass.loadList(oForm, page, perPage);
-                EFYLib.alertMessage('success', arrResult['message']);
+                NclLib .alertMessage('success', arrResult['message']);
             } else {
-                EFYLib.alertMessage('danger', arrResult['message']);
+                NclLib .alertMessage('danger', arrResult['message']);
             }
         }
     });

@@ -2,8 +2,8 @@
 
 namespace Modules\Api\Helpers;
 
-use Modules\Core\Efy\LoggerHelpers;
-use Modules\Core\Efy\Mail\SendMailJob;
+use Modules\Core\Ncl\LoggerHelpers;
+use Modules\Core\Ncl\Mail\SendMailJob;
 
 /**
  * Xử lý dữ liệu để gửi mail

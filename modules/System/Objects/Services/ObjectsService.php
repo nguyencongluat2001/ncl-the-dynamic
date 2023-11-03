@@ -3,16 +3,16 @@
 namespace Modules\System\Objects\Services;
 
 use Illuminate\Support\Facades\DB;
-use Modules\Core\Efy\Library;
-use Modules\Core\Efy\LoggerHelpers;
-use Modules\Core\Efy\Xml;
+use Modules\Core\Ncl\Library;
+use Modules\Core\Ncl\LoggerHelpers;
+use Modules\Core\Ncl\Xml;
 use Modules\System\ListType\Models\ListTypeModel;
 use Modules\System\ListType\Models\ListModel;
 use Modules\System\Objects\Models\ObjectsModel;
 use Modules\System\Objects\Repositories\ObjectsRepository;
 use Modules\System\Users\Models\UnitModel;
 use Str;
-use Modules\Core\Efy\Http\BaseService;
+use Modules\Core\Ncl\Http\BaseService;
 use Carbon\Carbon;
 class ObjectsService extends BaseService
 {

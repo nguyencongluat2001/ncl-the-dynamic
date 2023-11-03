@@ -7,17 +7,17 @@
                     <script>
                         document.write(new Date().getFullYear())
                     </script>,
-                    EFY VIỆT NAM
+                    Ncl VIỆT NAM
                 </div>
             </div>
             <div class="col-lg-6">
                 <ul class="nav nav-footer justify-content-center justify-content-lg-end">
                     <li class="nav-item">
-                        <a href="https://efy.com.vn/" class="nav-link text-muted"
+                        <a href="https://Ncl.com.vn/" class="nav-link text-muted"
                             target="_blank">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://efy.com.vn/page/lien-he" class="nav-link text-muted"
+                        <a href="https://Ncl.com.vn/page/lien-he" class="nav-link text-muted"
                             target="_blank">Liên hệ</a>
                     </li>
                 </ul>

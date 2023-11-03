@@ -27,12 +27,12 @@ class Auth {
         let url = this.urlPath;
         let data = $('form#frm_sign_in').serialize();
         data += '&url=' + this.baseUrl;
-        if ($("#email").val() == '') {
-            let nameMessage = 'Email không được để trống!';
+        if ($("#username").val() == '') {
+            let nameMessage = 'Tên tài khoản không được để trống!';
             let icon = '';
             let color = '#ff9429';
             let background = '#ffffff';
-            EfyLib.swalAlert(nameMessage, icon, color, background);
+            NclLib .swalAlert(nameMessage, icon, color, background);
             return false;
         }
         if ($("#password").val() == '') {
@@ -40,7 +40,7 @@ class Auth {
             let icon = '';
             let color = '#ff9429';
             let background = '#ffffff';
-            EfyLib.swalAlert(nameMessage, icon, color, background);
+            NclLib .swalAlert(nameMessage, icon, color, background);
             return false;
         }
         $.ajax({

@@ -4,7 +4,7 @@ namespace Modules\System\Cms\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Modules\Core\EFY\Library;
+use Modules\Core\Ncl\Library;
 use Modules\System\Cms\Models\SchedulerModel;
 use Modules\System\Listtype\Models\ListModel;
 use Modules\System\Users\Models\UnitModel;
@@ -61,11 +61,11 @@ class SchedulerController extends Controller {
     public function scheduler_add() {
         $data = [];
         $listmodel = new ListModel();
-        $ojbEfyLib = new Library();
+        $ojbNclLib  = new Library();
         $objSchedulerModel = new SchedulerModel();
         $iYear = date('Y');
         $iWeek = date("W");
-        $arryWekk = $ojbEfyLib->Generate_weeks_of_year($iYear, -1, $iWeek);
+        $arryWekk = $ojbNclLib ->Generate_weeks_of_year($iYear, -1, $iWeek);
         $arrDayInWeek = $listmodel->_getAllbyCode('DM_NGAY_TRONG_TUAN', false, ['C_CODE', 'C_NAME']);
         $data['PK_SCHEDULE_UNIT'] = '';
         $data['arryWekk'] = $arryWekk;

@@ -3,7 +3,7 @@
 namespace Modules\Api\Services\Admin;
 
 use Illuminate\Support\Facades\Hash;
-use Modules\Core\Efy\Http\BaseService;
+use Modules\Core\Ncl\Http\BaseService;
 use Modules\Api\Repositories\Admin\UserRepository;
 
 class AuthService extends BaseService

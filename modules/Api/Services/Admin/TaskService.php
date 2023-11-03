@@ -2,7 +2,7 @@
 
 namespace Modules\Api\Services\Admin;
 
-use Modules\Core\Efy\Http\BaseService;
+use Modules\Core\Ncl\Http\BaseService;
 use Modules\Api\Repositories\Admin\TaskRepository;
 
 class TaskService extends BaseService

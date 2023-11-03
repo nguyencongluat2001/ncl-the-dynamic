@@ -20,7 +20,7 @@ class Home {
         let myClass = this;
         this.getData();
         $('#btn_thamgia').on('click', function (e) {
-            if (!$(this).data('efy-disabled')) {
+            if (!$(this).data('Ncl-disabled')) {
                 myClass.goToExam();
             }
         });
@@ -59,7 +59,7 @@ class Home {
                 if (response.contest && typeof response.contest.id == 'string' && response.contest.id != '') {
                     myClass.contest = response.contest;
                     $('#btn_thamgia').removeAttr('disabled');
-                    $('#btn_thamgia').attr('data-efy-disabled', false);
+                    $('#btn_thamgia').attr('data-Ncl-disabled', false);
                 }
                 if (response.contests && response.contests.length > 0) {
                     myClass.contests = response.contests;
@@ -146,7 +146,7 @@ class Home {
         // $('#home_countdown_minute').text('--');
         // $('#home_countdown_second').text('--');
         // $('#btn_thamgia').attr('disabled', true);
-        // $('#btn_thamgia').attr('data-efy-disabled', true);
+        // $('#btn_thamgia').attr('data-Ncl-disabled', true);
         window.location.reload();
     }
 
