@@ -1,67 +1,161 @@
 
 @extends('Frontend::layouts.index')
 @section('body-client')
-<section class="hero-banner">
+<!-- ================ offer section start ================= --> 
+<section class="offer" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 20px 30px" data-top-bottom="background-position: 0 20px">
       <div class="container">
-        <div class="row no-gutters align-items-center pt-60px">
-          <div class="col-5 d-none d-sm-block">
-            <div class="hero-banner__img">
-              <img class="img-fluid" src="{{ asset('/resources/img/home/hero-banner')}}.png" alt="">
-            </div>
-          </div>
-          <div class="col-sm-7 col-lg-6 offset-lg-1 pl-4 pl-md-5 pl-lg-0">
-            <div class="hero-banner__content">
-              <h4>Shop is fun</h4>
-              <h1>Browse Our Premium Product</h1>
-              <p>Us which over of signs divide dominion deep fill bring they're meat beho upon own earth without morning over third. Their male dry. They are great appear whose land fly grass.</p>
-              <a class="button button-hero" href="#">Browse Now</a>
+        <div class="row">
+          <div class="col-xl-5">
+            <div class="offer__content text-center">
+              <h3>Giảm giá đến 50%</h3>
+              <h4>Siêu ưu đãi</h4>
+              <p style="color:#ffe51b;font-size: 20px;">Thả ga mua sắm , không lo về giá</p>
+              <a class="button button--active mt-3 mt-xl-4" href="#">Shop Now</a>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- <section class="hero-banner">
+      <div class="">
+        <div id="index_banner">
+          <div class="row no-gutters align-items-center list-hispital-home">
+            <div class="col-sm-12 col-lg-12">
+                <center>
+                    <h2 class="text-title-home">THE LIGHT</h2>
+                    <span class="text-title-h4">Một phong cách thời thượng</span>
+                </center>
+                <center>
+                    <div class="banner-content col-lg-3 col-10 m-lg-auto text-center " style="display: flex ;padding-top:50px">
+                        <div class="col-md-6 mb-4">
+                            <img class="recent-work-img card-img" style="width: 100px;object-fit: cover;" src="../img/home/google-play-badge.svg" alt="Card image">
+                        </div>  
+                        <div class="col-md-6 mb-4">
+                          <img class="recent-work-img card-img" style="width: 93px;object-fit: cover;" src="../img/home/app-store-badge-black.svg" alt="Card image">
+                        </div>
+                    </div>
+                  </center>
+                <center>
+                  <div style="padding-top:70px">
+                      <a class="button button-hero" style="background:#ff9c0e" href="#">Siêu ưu đãi</a>
+                  </div>
+                </center>
+                  <div class=" row d-flex align-items-center" style="padding-top:70px">
+                      <div class="banner-content col-lg-8 offset-1 col-10 m-lg-auto text-center ">
+                        <div class="row g-lg-5 mb-4">
+
+                          <div class="col-md-6 mb-4" style="display: flex; justify-content: space-between; align-items: flex-start;">
+                              <a href="{{ url('/specialty') }}" type="button" class="btn icon-menu-home" style="width:140px;color: #f2ffff;background: none;">
+                                  <div style="width: 100%; display: flex;justify-content: center;align-items: center;">
+                                      <div class="icon-dichvu" style="background-image: url(../../../../assets/images/icon/co-so-y-te.png);background-size: 40px;background-repeat: no-repeat;background-position: center;"></div>
+                                  </div>
+                                  <div style="color: #121213bf;font-weight: 600;font-size: 17px;">Nam</div>
+                              </a>
+                              <a href="{{ url('/facilities') }}" type="button" class="btn icon-menu-home" style="width:140px;color: #f2ffff;background: none;">
+                                  <div style="width: 100%; display: flex;justify-content: center;align-items: center;">
+                                      <div class="icon-dichvu" style="background-image: url(../../../../assets/images/icon/co-so-y-te.png);background-size: 40px;background-repeat: no-repeat;background-position: center;"></div>
+                                  </div>
+                                  <div style="color: #121213bf;font-weight: 600;font-size: 17px;">Nữ</div>
+                              </a>
+                              <a href="{{ url('/client/appointmentathome/indexApointment') }}" type="button" class="btn icon-menu-home" style="width:140px;color: #f2ffff;background: none;">
+                                  <div style="width: 100%; display: flex;justify-content: center;align-items: center;">
+                                      <div class="icon-dichvu" style="background-image: url(../../../../assets/images/icon/xet-nghiem.png);background-size: 40px;background-repeat: no-repeat;background-position: center;"></div>
+                                  </div>
+                                  <div style="color: #121213bf;font-weight: 600;font-size: 17px;">Trẻ em</div>
+                              </a>
+                          </div>
+
+                          <div class="col-md-6 mb-4" style="display: flex; justify-content: space-between; align-items: flex-start;">
+                              <a href="{{ url('/client/appointmentathome/indexInfusion') }}" type="button" class="btn icon-menu-home" style="width:140px;color: #f2ffff;background: none;">
+                                  <div style="width: 100%; display: flex;justify-content: center;align-items: center;">
+                                      <div class="icon-dichvu" style="background-image: url(../../../../assets/images/icon/truyen-dich.png);background-size: 40px;background-repeat: no-repeat;background-position: center;"></div>
+                                  </div>
+                                  <div style="color: #121213bf;font-weight: 600;font-size: 17px;">Cao tuổi</div>
+                              </a>
+                              <a href="{{ url('/searchschedule') }}" type="button" class="btn icon-menu-home" style="width:140px;color: #f2ffff;background: none;">
+                                  <div style="width: 100%; display: flex;justify-content: center;align-items: center;">
+                                      <div class="icon-dichvu" style="background-image: url(../../../../assets/images/icon/tra-cuu.png);background-size: 40px;background-repeat: no-repeat;background-position: center;"></div>
+                                  </div>
+                                  <div style="color: #121213bf;font-weight: 600;font-size: 17px;">Thể thao</div>
+                              </a>
+                              <a href="{{ url('/contact') }}" type="button" class="btn icon-menu-home" style="width:140px;color: #f2ffff;background: none;">
+                                  <div style="width: 100%; display: flex;justify-content: center;align-items: center;">
+                                      <div class="icon-dichvu" style="background-image: url(../../../../assets/images/icon/danh-gia.png);background-size: 40px;background-repeat: no-repeat;background-position: center;"></div>
+                                  </div>
+                                  <div style="color: #121213bf;font-weight: 600;font-size: 17px;">Đánh giá</div>
+                              </a>
+                          </div>
+                      </div>      
+                      </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
     <!--================ Hero banner start =================-->
-
-    <!--================ Hero Carousel start =================-->
-    <section class="section-margin mt-0">
-      <div class="owl-carousel owl-theme hero-carousel">
-        <div class="hero-carousel__slide">
-          <img src="{{ asset('/resources/img/home/hero-slide1')}}.png" alt="" class="img-fluid">
-          <a href="#" class="hero-carousel__slideOverlay">
-            <h3>Wireless Headphone</h3>
-            <p>Accessories Item</p>
-          </a>
+      <!--================Blog Categorie Area =================-->
+  <!-- <section class="blog_categorie_area">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="categories_post">
+                <img class="card-img rounded-0" src="../img/blog/cat-post/cat-post-3.jpg" alt="post">
+                <div class="categories_details">
+                    <div class="categories_text">
+                        <a href="single-blog.html">
+                            <h5>Social Life</h5>
+                        </a>
+                        <div class="border_line"></div>
+                        <p>Enjoy your social life together</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="hero-carousel__slide">
-          <img src="{{ asset('/resources/img/home/hero-slide2')}}.png" alt="" class="img-fluid">
-          <a href="#" class="hero-carousel__slideOverlay">
-            <h3>Wireless Headphone</h3>
-            <p>Accessories Item</p>
-          </a>
+        <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="categories_post">
+            <img class="card-img rounded-0" src="../img/blog/cat-post/cat-post-2.jpg" alt="post">
+            <div class="categories_details">
+              <div class="categories_text">
+                <a href="single-blog.html">
+                    <h5>Politics</h5>
+                </a>
+                <div class="border_line"></div>
+                <p>Be a part of politics</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="hero-carousel__slide">
-          <img src="{{ asset('/resources/img/home/hero-slide3')}}.png" alt="" class="img-fluid">
-          <a href="#" class="hero-carousel__slideOverlay">
-            <h3>Wireless Headphone</h3>
-            <p>Accessories Item</p>
-          </a>
+        <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="categories_post">
+                <img class="card-img rounded-0" src="../img/blog/cat-post/cat-post-1.jpg" alt="post">
+                <div class="categories_details">
+                    <div class="categories_text">
+                        <a href="single-blog.html">
+                            <h5>Food</h5>
+                        </a>
+                        <div class="border_line"></div>
+                        <p>Let the food be finished</p>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
-    </section>
-    <!--================ Hero Carousel end =================-->
-
+    </div>
+  </section> -->
+  <!--================Blog Categorie Area =================-->
     <!-- ================ trending product section start ================= -->  
     <section class="section-margin calc-60px">
       <div class="container">
         <div class="section-intro pb-60px">
-          <p>Popular Item in the market</p>
-          <h2>Trending <span class="section-intro__style">Product</span></h2>
+          <p>Mặt hàng phổ biến trên thị trường</p>
+          <h2>Sản phẩm  <span class="section-intro__style">thịnh hành</span></h2>
         </div>
         <div class="row">
           <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="{{ asset('/resources/img/product/product1.png')}}" alt="">
+                <img class="card-img" src="../img/product/product1.png" alt="">
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -78,7 +172,7 @@
           <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="{{ asset('/resources/img/product/product2.png')}}" alt="">
+                <img class="card-img" src="../img/product/product2.png" alt="">
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -95,7 +189,7 @@
           <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="{{ asset('/resources/img/product/product3.png')}}" alt="">
+                <img class="card-img" src="../img/product/product3.png" alt="">
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -112,7 +206,7 @@
           <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="{{ asset('/resources/img/product/product4.png')}}" alt="">
+                <img class="card-img" src="../img/product/product4.png" alt="">
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -129,7 +223,7 @@
           <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="{{ asset('/resources/img/product/product5.png')}}" alt="">
+                <img class="card-img" src="../img/product/product5.png" alt="">
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -146,7 +240,7 @@
           <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="{{ asset('/resources/img/product/product6.png')}}" alt="">
+                <img class="card-img" src="../img/product/product6.png" alt="">
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -163,7 +257,7 @@
           <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="{{ asset('/resources/img/product/product7.png')}}" alt="">
+                <img class="card-img" src="../img/product/product7.png" alt="">
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -180,7 +274,7 @@
           <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="{{ asset('/resources/img/product/product8.png')}}" alt="">
+                <img class="card-img" src="../img/product/product8.png" alt="">
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -221,13 +315,13 @@
     <section class="section-margin calc-60px">
       <div class="container">
         <div class="section-intro pb-60px">
-          <p>Popular Item in the market</p>
-          <h2>Best <span class="section-intro__style">Sellers</span></h2>
+          <p>Mặt hàng phổ biến trên thị trường</p>
+          <h2>Bán chạy nhất <span class="section-intro__style"></span></h2>
         </div>
         <div class="owl-carousel owl-theme" id="bestSellerCarousel">
           <div class="card text-center card-product">
             <div class="card-product__img">
-              <img class="img-fluid" src="{{ asset('/resources/img/product/product1.png')}}" alt="">
+              <img class="img-fluid" src="../img/product/product1.png" alt="">
               <ul class="card-product__imgOverlay">
                 <li><button><i class="ti-search"></i></button></li>
                 <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -243,7 +337,7 @@
 
           <div class="card text-center card-product">
             <div class="card-product__img">
-              <img class="img-fluid" src="{{ asset('/resources/img/product/product2.png')}}" alt="">
+              <img class="img-fluid" src="../img/product/product2.png" alt="">
               <ul class="card-product__imgOverlay">
                 <li><button><i class="ti-search"></i></button></li>
                 <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -259,7 +353,7 @@
 
           <div class="card text-center card-product">
             <div class="card-product__img">
-              <img class="img-fluid" src="{{ asset('/resources/img/product/product3.png')}}" alt="">
+              <img class="img-fluid" src="../img/product/product3.png" alt="">
               <ul class="card-product__imgOverlay">
                 <li><button><i class="ti-search"></i></button></li>
                 <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -275,7 +369,7 @@
 
           <div class="card text-center card-product">
             <div class="card-product__img">
-              <img class="img-fluid" src="{{ asset('/resources/img/product/product4.png')}}" alt="">
+              <img class="img-fluid" src="../img/product/product4.png" alt="">
               <ul class="card-product__imgOverlay">
                 <li><button><i class="ti-search"></i></button></li>
                 <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -291,7 +385,7 @@
 
           <div class="card text-center card-product">
             <div class="card-product__img">
-              <img class="img-fluid" src="{{ asset('/resources/img/product/product1.png')}}" alt="">
+              <img class="img-fluid" src="../img/product/product1.png" alt="">
               <ul class="card-product__imgOverlay">
                 <li><button><i class="ti-search"></i></button></li>
                 <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -307,7 +401,7 @@
 
           <div class="card text-center card-product">
             <div class="card-product__img">
-              <img class="img-fluid" src="{{ asset('/resources/img/product/product2.png')}}" alt="">
+              <img class="img-fluid" src="../img/product/product2.png" alt="">
               <ul class="card-product__imgOverlay">
                 <li><button><i class="ti-search"></i></button></li>
                 <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -323,7 +417,7 @@
 
           <div class="card text-center card-product">
             <div class="card-product__img">
-              <img class="img-fluid" src="{{ asset('/resources/img/product/product3.png')}}" alt="">
+              <img class="img-fluid" src="../img/product/product3.png" alt="">
               <ul class="card-product__imgOverlay">
                 <li><button><i class="ti-search"></i></button></li>
                 <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -339,7 +433,7 @@
 
           <div class="card text-center card-product">
             <div class="card-product__img">
-              <img class="img-fluid" src="{{ asset('/resources/img/product/product4.png')}}" alt="">
+              <img class="img-fluid" src="../img/product/product4.png" alt="">
               <ul class="card-product__imgOverlay">
                 <li><button><i class="ti-search"></i></button></li>
                 <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -361,15 +455,15 @@
     <section class="blog">
       <div class="container">
         <div class="section-intro pb-60px">
-          <p>Popular Item in the market</p>
-          <h2>Latest <span class="section-intro__style">News</span></h2>
+          <p>Bài viết thời trang phổ biến</p>
+          <h2>Tin tức mới nhất <span class="section-intro__style"></span></h2>
         </div>
 
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="card card-blog">
               <div class="card-blog__img">
-                <img class="card-img rounded-0" src="{{ asset('/resources/img/blog/blog1.png')}}" alt="">
+                <img class="card-img rounded-0" src="../img/blog/blog1.png" alt="">
               </div>
               <div class="card-body">
                 <ul class="card-blog__info">
@@ -386,7 +480,7 @@
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="card card-blog">
               <div class="card-blog__img">
-                <img class="card-img rounded-0" src="{{ asset('/resources/img/blog/blog2.png')}}" alt="">
+                <img class="card-img rounded-0" src="../img/blog/blog2.png" alt="">
               </div>
               <div class="card-body">
                 <ul class="card-blog__info">
@@ -403,7 +497,7 @@
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="card card-blog">
               <div class="card-blog__img">
-                <img class="card-img rounded-0" src="{{ asset('/resources/img/blog/blog3.png')}}" alt="">
+                <img class="card-img rounded-0" src="../img/blog/blog3.png" alt="">
               </div>
               <div class="card-body">
                 <ul class="card-blog__info">
