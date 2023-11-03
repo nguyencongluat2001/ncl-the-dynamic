@@ -1,0 +1,29 @@
+#index_banner {
+    /* background-image: url('../../clients/img/booking-cover-3.jpg'); */
+      background-image: url('../../img/home/image-home3.jpg');
+    background-position: center center; background-size: cover;
+    height: 100%;
+    /* min-height: 60vh; */
+    width: 100%;
+    /* opacity: 0.5; */
+}
+.form-search{
+    position: relative;
+}
+.text-title-home{
+    color: #ffd142f0;
+    font-family: serif;
+    font-weight: 500;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #55fff636; 
+}
+.text-title-h4{
+    color: #fffffff0;
+    font-family: serif;
+    font-size: 25px;
+}
+.list-hispital-home{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 1));
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
