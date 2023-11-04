@@ -11,8 +11,11 @@ use Modules\Frontend\Services\AuthService;
 use Modules\Frontend\Services\SubjectService;
 use Modules\Core\Ncl\Library;
 use Illuminate\Support\Facades\Auth;
-use Modules\Core\Helpers\ForgetPassWordMailHelper;
 use Modules\Frontend\Services\ExamService;
+use Modules\Frontend\Models\UnitsModel;
+use DB;
+use Illuminate\Support\Facades\Http;
+use Str;
 
 /**
  * Controller đăng nhập, đăng ký ở Cổng
@@ -78,7 +81,13 @@ class AuthController
      */
     public function getSignUp(): View
     {
-        return view('Frontend::auth.sign-up');
+        $objLibrary          = new Library();
+        $arrResult           = array();
+        $arrResult           = $objLibrary->_getAllFileJavaScriptCssArray('js', 'frontend/login/auth.js', ',', $arrResult);
+        $arrResult           = $objLibrary->_getAllFileJavaScriptCssArray('js', 'assets/jquery.validate.js', ',', $arrResult);
+        $data['stringJsCss'] = json_encode($arrResult);
+        $data['tinh'] =  UnitsModel::whereNull('code_huyen')->get();
+        return view('Frontend::auth.sign-up',$data);
     }
 
     /**
@@ -89,12 +98,12 @@ class AuthController
      */
     public function signUp(Request $request): JsonResponse
     {
-        try {
+        // try {
             $result = $this->authService->signUp($request->input());
             return response()->json($result);
-        } catch (Exception $e) {
-            return response()->json(['success' => false, 'message' => 'Đăng ký thất bại!']);
-        }
+        // } catch (Exception $e) {
+        //     return response()->json(['success' => false, 'message' => 'Đăng ký thất bại!']);
+        // }
     }
 
     /**
@@ -133,12 +142,105 @@ class AuthController
     public function logOut(Request $request): RedirectResponse
     {
         Auth::guard('frontend')->logout();
-        if (!empty($_SESSION["hoithicchc"]['id'])) {
+        if (!empty($_SESSION['id'])) {
             session_destroy();
         }
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
         return redirect('/');
+    }
+     /**
+     * Lấy đơn vị quốc gia
+     * 
+     */
+    public function getUnitApi(Request $request)
+    {
+        $response = Http::get('https://provinces.open-api.vn/api/?depth=3');
+        $response = $response->getBody()->getContents();
+        $response = json_decode($response,true);
+        foreach($response as $value){
+            // dd($value);
+            // tỉnh
+            $codeTinh = $value['code'];
+            if($codeTinh < 155){
+                $check = UnitsModel::where('code_tinh',$codeTinh)->first();
+                if(!isset($check)){
+                    if(isset($value['districts'])){
+                        $dataTinh = [
+                            'id'=> (string)Str::uuid(),
+                            'code_tinh'=> $codeTinh,
+                            'code_huyen'=> null,
+                            'code_xa'=> null,
+                            'name'=> $value['name'],
+                            'name_type' => $value['division_type']
+                        ];
+                        $createTinh = UnitsModel::insert($dataTinh);
+                    }
+                    // huuyeen
+                    if(isset($value['districts'])){
+                        foreach($value['districts'] as $valueHuyen){
+                            $dataHuyen = [
+                                'id'=> (string)Str::uuid(),
+                                'code_tinh'=> $codeTinh,
+                                'code_huyen'=> $valueHuyen['code'],
+                                'code_xa'=> null,
+                                'name'=> $valueHuyen['name'],
+                                'name_type' => $valueHuyen['division_type']
+                            ];
+                            $createHuyen = UnitsModel::insert($dataHuyen);
+                            // xa
+                                foreach($valueHuyen['wards'] as $valueXa){
+                                    $dataXa = [
+                                        'id'=> (string)Str::uuid(),
+                                        'code_tinh'=> $codeTinh,
+                                        'code_huyen'=> $valueHuyen['code'],
+                                        'code_xa'=> $valueXa['code'],
+                                        'name'=> $valueXa['name'],
+                                        'name_type' => $valueXa['division_type']
+                                    ];
+                                    $createXa = UnitsModel::insert($dataXa);
+                                }
+                        }
+                    }
+                }
+            }
+           
+        }
+        dd('ok');
+    }
+       /// Danh sách huyện
+     /**
+     *
+     * @param Request $request
+     *
+     * @return view
+     */
+    public function getHuyen(Request $request)
+    {
+        $input = $request->all();
+        $datas['huyen'] =  UnitsModel::where('code_tinh',$input['codeTinh'])->whereNull('code_xa')->select('code_huyen','name')->get()->toArray();
+        
+        return response()->json([
+            'data' => $datas,
+            'status' => true
+        ]);
+    }
+      /// Danh sách phường xã
+     /**
+     *
+     * @param Request $request
+     *
+     * @return view
+     */
+    public function getXa(Request $request)
+    {
+        $input = $request->all();
+        $datas['xa'] =  UnitsModel::where('code_huyen',$input['codeHuyen'])->select('code_xa','name')->get()->toArray();
+        
+        return response()->json([
+            'data' => $datas,
+            'status' => true
+        ]);
     }
 }

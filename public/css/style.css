@@ -919,7 +919,8 @@ a {
 
 .offer {
     background: url("../img/home/parallax-bg.png") right center no-repeat;
-    background-size: cover
+    background-size: cover;
+    background-position-x: center;
 }
 
 @media (min-width: 1200px) {
@@ -3623,7 +3624,10 @@ a {
     height: 100%;
     width: 100%;
     content: "";
-    background: #384aeb;
+    /* background: #384aeb; */
+    background-image: url('../../img/login/image-login.jpg');
+    background-size: 100%;
+
     opacity: .9
 }
 
@@ -3687,7 +3691,7 @@ a {
 }
 
 .login_form_inner .login_form {
-    max-width: 385px;
+    max-width: 785px;
     margin: auto
 }
 

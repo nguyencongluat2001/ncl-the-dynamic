@@ -10,13 +10,13 @@ use Laravel\Sanctum\HasApiTokens;
 /**
  * Đối tượng thi
  * 
- * @author khunogtq
+ * @author luatnc
  */
 class SubjectModel extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $table = 'doi_tuong';
+    protected $table = 'client';
     protected $keyType = 'string';
     public $incrementing = false;
 
@@ -27,13 +27,15 @@ class SubjectModel extends Authenticatable
      */
     protected $fillable = [
         'id',
-        'ho_ten',
-        'cmnd',
+        'name',
         'email',
-        'don_vi',
-        'cap_don_vi',
+        'phone',
+        'sex',
+        'address',
+        'date_of_birth',
         'trang_thai',
         'password',
+        'rank',
         'last_login_at',
         'created_at',
         'updated_at',

@@ -39,14 +39,6 @@ class AuthService
         $data = $this->handleSignIn($input);
         if ($data === true) {
             $url = url('');
-            if (isset($input['next_url']) && $input['next_url'] != '') {
-                if (str_contains($input['next_url'], '/bai-thi/')) {
-                    $isTakenTest = $this->examService->checkTakenTest(['contest_id' => preg_replace('/^\/bai-thi\//', '', $input['next_url'])]);
-                    if ($isTakenTest['is_taken_test'] === false) {
-                        $url .= $input['next_url'];
-                    }
-                } else $url .= $input['next_url'];
-            }
             return array('success' => true, 'url' => $url);
         } else {
             return array('success' => false, 'url' => url('dang-nhap'), 'message' => $data['message']);
@@ -61,16 +53,15 @@ class AuthService
      */
     public function handleSignIn(array $input): bool|array
     {
-        $email = $input['email'];
+        $phone = $input['phone'];
         $password = $input['password'];
-        if (Auth::guard('frontend')->attempt(['email' => $email, 'password' => $password])) {
+        if (Auth::guard('frontend')->attempt(['phone' => $phone, 'password' => $password])) {
             $user = Auth::guard('frontend')->user();
-            $_SESSION["hoithicchc"]["id"]         = $user->id;
-            $_SESSION["hoithicchc"]["email"]      = $email;
-            $_SESSION["hoithicchc"]["name"]       = $user->ho_ten;
-            $_SESSION["hoithicchc"]["cmnd"]       = $user->cmnd;
-            $_SESSION["hoithicchc"]["unit"]       = $user->don_vi;
-            $_SESSION["hoithicchc"]["cap_don_vi"] = $user->cap_don_vi;
+            $_SESSION["id"]         = $user->id;
+            $_SESSION["email"]      = $user->email;
+            $_SESSION["name"]       = $user->name;
+            $_SESSION["phone"]      = $user->phone;
+            $_SESSION["address"]    = $user->address;
             return true;
         } else {
             $data['message'] = "Sai tên đăng nhập hoặc mật khẩu!";
@@ -80,27 +71,23 @@ class AuthService
 
     public function signUp(array $input): array
     {
-        if ($input['ho_ten'] == '') return ['success' => false, 'message' => 'Họ tên không được để trống!'];
-        if ($input['cmnd'] == '') return ['success' => false, 'message' => 'Chứng minh nhân dân không được để trống!'];
-        if ($input['email'] == '') return ['success' => false, 'message' => 'Email không được để trống!'];
-        if ($input['cap_don_vi'] == '' || $input['don_vi'] == '') return ['success' => false, 'message' => 'Đơn vị không được để trống!'];
-        if ($input['email'] == '@haiduong.gov.vn' || $input['email'] == '') {
-            return ['success' => false, 'message' => 'Email không được để trống!'];
-        }
-        $getUser = $this->subjectService->where('trang_thai', 1)->where('email', $input['email'])->first();
-        if ($getUser != null) return ['success' => false, 'message' => 'Email đã được đăng ký tài khoản!'];
-        $password = randomString(6);
-        $input['password'] = Hash::make($password);
-        $created = $this->subjectService->create($input);
-        if ($created) {
-            $data['mailto'] = $input['email'];
-            $data['ho_ten'] = $input['ho_ten'];
-            $data['subject'] = 'Hội thi trực tuyến tìm hiểu về công tác CCHC tỉnh Hải Dương thông báo cung cấp tài khoản!';
-            $data['password'] = $password;
-            (new ForgetPassWordMailHelper())->send_otp($data);
-        }
+        if ($input['name'] == '' || $input['name'] == null) return ['success' => false, 'message' => 'Họ tên không được để trống!'];
+        if ($input['phone'] == '' || $input['phone'] == null) return ['success' => false, 'message' => 'Chứng minh nhân dân không được để trống!'];
+        // if ($input['email'] == '' || $input['email'] == null) return ['success' => false, 'message' => 'Email không được để trống!'];
+        if ($input['password'] == '' || $input['password'] == null) return ['success' => false, 'message' => 'password không được để trống!'];
+        if ($input['confirmPassword'] == '' || $input['confirmPassword'] == null) return ['success' => false, 'message' => 'Nhập lại mật khẩu không được để trống!'];
+        if ($input['password'] != $input['confirmPassword'] ) return ['success' => false, 'message' => 'Nhập lại mật khẩu không khớp!'];
 
-        return ['success' => true, 'message' => 'Đăng ký thành công! Vui lòng truy cập email để nhận mật khẩu!'];
+        $getUser = $this->subjectService->where('trang_thai', 1)->where('phone', $input['phone'])->first();
+        if ($getUser != null) return ['success' => false, 'message' => 'Số điện thoại đã được đăng ký tài khoản!'];
+        if(!empty($input['email'])){
+            $getUser = $this->subjectService->where('trang_thai', 1)->where('email', $input['email'])->first();
+            if ($getUser != null) return ['success' => false, 'message' => 'Email đã được đăng ký tài khoản!'];
+        }
+        $input['password'] = Hash::make($input['password']);
+        $created = $this->subjectService->create($input);
+        $url = url('login');
+        return ['success' => true, 'message' => 'Đăng ký thành công!','url' => $url];
     }
 
     /**
