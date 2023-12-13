@@ -1,10 +1,15 @@
 function NclLib(options = null) { }
 
+// NclLib.prototype.loadding = function () {
+//     var loadding = new Nanobar();
+//     return loadding;
+// }
 NclLib.prototype.loadding = function () {
-    var loadding = new Nanobar();
-    return loadding;
-}
-
+    $('#imageLoading').removeClass( "loader_bg_of" );
+    setTimeout(() => {
+        $('#imageLoading').addClass("loader_bg_of");
+    }, 500)
+  }
 NclLib.prototype.showmainloadding = function () {
     $("#loading").show();
 }

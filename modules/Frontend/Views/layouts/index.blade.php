@@ -10,10 +10,11 @@
   <link rel="stylesheet" href="../vendors/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="../vendors/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../vendors/themify-icons/themify-icons.css">
-  <link rel="stylesheet" href="../vendors/nice-select/nice-select.css">
+  <!-- <link rel="stylesheet" href="../vendors/nice-select/nice-select.css"> -->
   <link rel="stylesheet" href="../vendors/owl-carousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="../vendors/owl-carousel/owl.carousel.min.css">
   <link rel="stylesheet" href="../css/assets/sweetalert2.min.css">
+  <link rel="stylesheet" href="../css/assets/chosen.min.css">
 
   <script src="../js/assets/jquery-3.7.0.min.js"></script>
   <script src="../js/assets/popper.min.js"></script>
@@ -45,8 +46,39 @@
     </script>
 
     @yield('style')
+    <style>
+        .loader_bg {
+            position: fixed;
+            z-index: 9999999;
+            /* background: #fff; */
+            width: 100%;
+            height: 100%;
+        }
+
+        .loader {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .loader img {
+            width: 100px;
+        }
+        .loader_bg_of {
+            display: none;
+        }
+    </style>
 </head>
 <body>
+    <div id="imageLoading" class="loader_bg_of">
+        <div class="loader_bg">
+            <div class="loader"><img src="../assets/images/loading.gif" alt="#" /></div>
+        </div>
+    </div>
   <!--================ Start Header Menu Area =================-->
 	<header class="header_area">
     <div class="main_menu">
@@ -61,15 +93,19 @@
 
   @include('Frontend::layouts.footer')
 
-  <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
   <script src="../vendors/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="../vendors/skrollr.min.js"></script>
   <script src="../vendors/owl-carousel/owl.carousel.min.js"></script>
-  <script src="../vendors/nice-select/jquery.nice-select.min.js"></script>
+  <!-- <script src="../vendors/nice-select/jquery.nice-select.min.js"></script> -->
   <script src="../vendors/jquery.ajaxchimp.min.js"></script>
   <script src="../vendors/mail-script.js"></script>
   <script src="../js/main.js"></script>
-
+  <script src="../js/assets/chosen.min.js"></script>
+<script>
+        setTimeout(() => {
+            $('#imageLoading').addClass("loader_bg_of");
+        }, 2000)
+    </script>
   <script>
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {

@@ -33,7 +33,25 @@
         <ul class="nav-shop">
         <li class="nav-item"><button><i class="ti-search"></i></button></li>
         <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
-        <li class="nav-item"><a class="button button-header" href="login">Đăng nhập</a></li>
+        <div class="navbar-text text-end">
+            @if(empty($_SESSION))
+            <a class="text-decoration-none" href="{{ url('login') }}">
+                <span class="topbar-span cursor-pointer">
+                    <li class="nav-item"><a class="button button-header" href="login">Đăng nhập</a></li>
+                </span>
+            </a>
+            @elseif(!empty($_SESSION))
+            <li class="nav-item submenu dropdown">
+                <a href="shop" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false"><i class="fas fa-user-circle"></i> {{$_SESSION['name']}}</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a class="nav-link" href="info">Thông tin tài khoản</a></li>
+                    <li class="nav-item"><a class="nav-link" href="single-product.html">Đổi mật khẩu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="logout">Thoát</a></li>
+                </ul>
+            </li>
+            @endif
+        </div>
         </ul>
     </div>
     </div>

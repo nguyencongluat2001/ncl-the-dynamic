@@ -6,7 +6,7 @@
         var arrJsCss = $.parseJSON('<?php echo $stringJsCss; ?>');
         NclLib.loadFileJsCss(arrJsCss);
 
-        var JS_Auth = new Auth('{{ url('') }}', 'checkLogin');
+        var JS_Auth = new Auth('{{ url('') }}', '');
         jQuery(document).ready(function($) {
             JS_Auth.loadIndex();
         })
@@ -23,17 +23,18 @@
 						<div class="hover">
 							<h4>Mời vào trang web của chúng tôi?</h4>
 							<p>Có những tiến bộ đang được thực hiện hàng ngày trong khoa học và công nghệ, và một ví dụ điển hình cho điều này là</p>
-							<a class="button button-account" href="register.html">Tạo tài khoản</a>
+							<a class="button button-account" style="background:#ffaf00;" href="register">Tạo tài khoản</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="login_form_inner">
-						<h3>ĐĂNG NHẬP</h3>
+						<h4>ĐĂNG NHẬP</h4><br>
 						
 						<form class="row login_form"  action="" id="frm_sign_in" >
+						    <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="username" name="username" placeholder="Tên tài khoản" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tên tài khoản'">
+								<input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại hoặc email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Số điện thoại hoặc email'">
 							</div>
 							<div class="col-md-12 form-group">
 								<input type="text" class="form-control" id="password" name="password" placeholder="Mật khẩu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mật khẩu'">

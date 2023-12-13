@@ -10,16 +10,21 @@ Route::controller(AuthController::class)->group(function ($router) {
     $router->get('login', 'getSignIn');
     $router->post('checkLogin', 'signIn');
     $router->get('register', 'getSignUp');
-    $router->post('dang-ky', 'signUp');
+    $router->post('checkRegister', 'signUp');
     $router->get('quen-mat-khau', 'getForgotPassword');
     $router->post('quen-mat-khau', 'forgotPassword');
-    $router->get('dang-xuat', 'logOut');
+    $router->get('logout', 'logOut');
+    $router->get('getUnitApi', 'getUnitApi');
+    $router->get('getHuyen', 'getHuyen');
+    $router->get('getXa', 'getXa');
+
 });
 
 /** Trang chủ */
 Route::controller(HomeController::class)->group(function ($router) {
     $router->get('', 'index');
     $router->get('/trang-chu', 'index');
+    $router->get('home-data', 'index');
 });
 /** Trang chủ */
 Route::controller(ShopController::class)->group(function ($router) {
