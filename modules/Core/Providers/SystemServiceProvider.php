@@ -45,7 +45,9 @@ class SystemServiceProvider extends ServiceProvider
         if (!isset($_SESSION)) session_start();
         $this->namespace = 'Modules\\' . $layout . '\Controllers';
         $this->modules = $layout;
-        $arrModules = CategoriesModel::select('*')->where('layout', 'LAYOUT_MENU_HEADER')->where('is_display_at_home', 1)->orderBy('order')->get();
+        // $arrModules = CategoriesModel::select('*')->where('layout', 'LAYOUT_MENU_HEADER')->where('is_display_at_home', 1)->orderBy('order')->get();
+        $arrModules = [];
+
         $this->arrModules = $arrModules;
         view()->composer('*', function ($view) {
             $view->with('menuItems', $this->arrModules);
