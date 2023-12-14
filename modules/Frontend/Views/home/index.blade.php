@@ -208,16 +208,20 @@
         <div class="col-50nc col-sm-12 col-xl-3 mb-4 mb-xl-0">
           <div class="single-search-product-wrapper">
             <div class="single-search-product d-flex">
-              <a href="#"><img src="img/product/product-sm-1.png" alt=""></a>
+              <a style="position: relative" href="#"><img src="img/product/product-sm-1.png" alt="">
+                <div style="position: absolute;right:0;top:0;background: #fff1a7;color: #ff1818;font-size: 11px;width:50%;padding-left:5px;border-radius: 3px;">- 15%</div>
+              </a>
               <div class="desc">
-                  <a href="#" class="title">Gray Coffee Cup</a>
+                  <a href="#" class="title">Quần áo nam</a>
                   <div class="price">$170.00</div>
               </div>
             </div>
             <div class="single-search-product d-flex">
-              <a href="#"><img src="img/product/product-sm-2.png" alt=""></a>
+              <a style="position: relative" href="#"><img src="img/product/product-sm-2.png" alt="">
+              <div style="position: absolute;right:0;top:0;background: #fff1a7;color: #ff1818;font-size: 11px;width:50%;padding-left:5px;border-radius: 3px;">- 15%</div>
+              </a>
               <div class="desc">
-                <a href="#" class="title">Gray Coffee Cup</a>
+                <a href="#" class="title">Quần áo nữ</a>
                 <div class="price">$170.00</div>
               </div>
             </div>
@@ -226,16 +230,20 @@
         <div class="col-50nc col-sm-12 col-xl-3 mb-4 mb-xl-0">
           <div class="single-search-product-wrapper">
             <div class="single-search-product d-flex">
-              <a href="#"><img src="img/product/product-sm-4.png" alt=""></a>
+              <a style="position: relative" href="#"><img src="img/product/product-sm-4.png" alt="">
+                <div style="position: absolute;right:0;top:0;background: #fff1a7;color: #ff1818;font-size: 11px;width:50%;padding-left:5px;border-radius: 3px;">- 20%</div>
+              </a>
               <div class="desc">
-                  <a href="#" class="title">Gray Coffee Cup</a>
+                  <a href="#" class="title">Quần áo trẻ em</a>
                   <div class="price">$170.00</div>
               </div>
             </div>
             <div class="single-search-product d-flex">
-              <a href="#"><img src="img/product/product-sm-5.png" alt=""></a>
+              <a style="position: relative" href="#"><img src="img/product/product-sm-5.png" alt="">
+                 <div style="position: absolute;right:0;top:0;background: #fff1a7;color: #ff1818;font-size: 11px;width:50%;padding-left:5px;border-radius: 3px;">- 10%</div>
+              </a>
               <div class="desc">
-                <a href="#" class="title">Gray Coffee Cup</a>
+                <a href="#" class="title">Quần áo lao động</a>
                 <div class="price">$170.00</div>
               </div>
             </div>
@@ -244,16 +252,20 @@
         <div class="col-50nc col-sm-6 col-xl-3 mb-4 mb-xl-0">
           <div class="single-search-product-wrapper">
             <div class="single-search-product d-flex">
-              <a href="#"><img src="img/product/product-sm-7.png" alt=""></a>
+              <a style="position: relative" href="#"><img src="img/product/product-sm-7.png" alt="">
+                <div style="position: absolute;right:0;top:0;background: #fff1a7;color: #ff1818;font-size: 11px;width:50%;padding-left:5px;border-radius: 3px;">- 15%</div>
+              </a>
               <div class="desc">
-                  <a href="#" class="title">Gray Coffee Cup</a>
+                  <a href="#" class="title">Giày dép</a>
                   <div class="price">$170.00</div>
               </div>
             </div>
             <div class="single-search-product d-flex">
-              <a href="#"><img src="img/product/product-sm-8.png" alt=""></a>
+              <a style="position: relative" href="#"><img src="img/product/product-sm-8.png" alt="">
+                <div style="position: absolute;right:0;top:0;background: #fff1a7;color: #ff1818;font-size: 11px;width:50%;padding-left:5px;border-radius: 3px;">- 10%</div>
+              </a>
               <div class="desc">
-                <a href="#" class="title">Gray Coffee Cup</a>
+                <a href="#" class="title">Mũ thời trang</a>
                 <div class="price">$170.00</div>
               </div>
             </div>
@@ -262,16 +274,20 @@
         <div class="col-50nc col-sm-6 col-xl-3 mb-4 mb-xl-0">
           <div class="single-search-product-wrapper">
             <div class="single-search-product d-flex">
-              <a href="#"><img src="img/product/product-sm-1.png" alt=""></a>
+              <a style="position: relative" href="#"><img src="img/product/product-sm-1.png" alt="">
+              <div style="position: absolute;right:0;top:0;background: #fff1a7;color: #ff1818;font-size: 11px;width:50%;padding-left:5px;border-radius: 3px;">- 10%</div>
+              </a>
               <div class="desc">
-                  <a href="#" class="title">Gray Coffee Cup</a>
+                  <a href="#" class="title">Thời trang unisex</a>
                   <div class="price">$170.00</div>
               </div>
             </div>
             <div class="single-search-product d-flex">
-              <a href="#"><img src="img/product/product-sm-2.png" alt=""></a>
+              <a style="position: relative" href="#"><img src="img/product/product-sm-2.png" alt="">
+                <div style="position: absolute;right:0;top:0;background: #fff1a7;color: #ff1818;font-size: 11px;width:50%;padding-left:5px;border-radius: 3px;">- 10%</div>
+              </a>
               <div class="desc">
-                <a href="#" class="title">Gray Coffee Cup</a>
+                <a href="#" class="title">Cặp túi sách</a>
                 <div class="price">$170.00</div>
               </div>
             </div>
