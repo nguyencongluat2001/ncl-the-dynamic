@@ -26,18 +26,22 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-5">
-            <div class="offer__content text-center">
-              <h3>Giảm giá đến 50%</h3>
-              <h4>Siêu ưu đãi</h4>
-              <p style="color:#ffe51b;font-size: 20px;">Mua sắm thả ga, không lo về giá</p>
-              <a class="button button--active mt-3 mt-xl-4" href="#">Shop Now</a>
+            <div class="offer__content text-center" style="padding: 10%;">
+              <div style="background: #ffffffa8;border-radius: 10px;">
+                <div style="padding: 2%;">
+                    <h3 style="color:#ffa600">Giảm giá đến 50%</h3>
+                    <!-- <h4>Siêu ưu đãi</h4> -->
+                    <p style="color:#2b495a;font-size: 20px;">Mua sắm thả ga, không lo về giá</p>
+                    <a style="background:#ffa700" class="button button--active mt-3 mt-xl-4" href="#">Mua ngay</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
     </div>
-    <div class="carousel-item">
+    <!-- <div class="carousel-item">
       <section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
       <div class="container">
         <div class="row">
@@ -66,7 +70,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
     </div>
   </div>
