@@ -14,65 +14,71 @@
 @endsection
 @section('body-client')
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <!-- <div class="carousel-indicators">
+    <!-- <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div> -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <!-- <img src="../img/home/parallax-bg.png" class="d-block w-100" alt="..."> -->
       <section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-5">
-            <div class="offer__content text-center" style="padding: 10%;">
-              <div style="background: #ffffffa8;border-radius: 10px;">
-                <div style="padding: 2%;">
-                    <h3 style="color:#ffa600">Giảm giá đến 50%</h3>
-                    <!-- <h4>Siêu ưu đãi</h4> -->
-                    <p style="color:#2b495a;font-size: 20px;">Mua sắm thả ga, không lo về giá</p>
-                    <a style="background:#ffa700" class="button button--active mt-3 mt-xl-4" href="#">Mua ngay</a>
+        <img src="../img/icon/icon-yeu-thich.png" style="width:50px" class="d-block" alt="...">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5">
+              <div class="offer__content text-center" style="padding: 10%;">
+                <div style="background: #ffffffa8;border-radius: 10px;">
+                  <div style="padding: 2%;">
+                      <h3 style="color:#ffa600">Giảm giá đến 50%</h3>
+                      <!-- <h4>Siêu ưu đãi</h4> -->
+                      <p style="color:#2b495a;font-size: 20px;font-family: emoji;">Mua sắm thả ga, không lo về giá</p>
+                      <a style="background:#ffa700" class="button button--active mt-3 mt-xl-4" href="#">Mua ngay <i style="color: #f6ff82;" class="fas fa-cart-plus"></i></a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </div>
     <!-- <div class="carousel-item">
       <section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-5">
-            <div class="offer__content text-center">
-              <h3>Giảm giá đến 50%</h3>
-              <h4>Siêu ưu đãi</h4>
-              <p style="color:#ffe51b;font-size: 20px;">Mua sắm thả ga, không lo về giá</p>
-              <a class="button button--active mt-3 mt-xl-4" href="#">Shop Now</a>
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-5">
+                <div class="offer__content text-center" style="padding: 10%;">
+                  <div style="background: #ffffffa8;border-radius: 10px;">
+                    <div style="padding: 2%;">
+                        <h3 style="color:#ffa600">Giảm giá đến 50%</h3>
+                        <p style="color:#2b495a;font-size: 20px;">Mua sắm thả ga, không lo về giá</p>
+                        <a style="background:#ffa700" class="button button--active mt-3 mt-xl-4" href="#">Mua ngay</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+      </section>
     </div>
     <div class="carousel-item">
       <section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-5">
-            <div class="offer__content text-center">
-              <h3>Giảm giá đến 50%</h3>
-              <h4>Siêu ưu đãi</h4>
-              <p style="color:#ffe51b;font-size: 20px;">Mua sắm thả ga, không lo về giá</p>
-              <a class="button button--active mt-3 mt-xl-4" href="#">Shop Now</a>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5">
+              <div class="offer__content text-center" style="padding: 10%;">
+                <div style="background: #ffffffa8;border-radius: 10px;">
+                  <div style="padding: 2%;">
+                      <h3 style="color:#ffa600">Giảm giá đến 50%</h3>
+                      <p style="color:#2b495a;font-size: 20px;">Mua sắm thả ga, không lo về giá</p>
+                      <a style="background:#ffa700" class="button button--active mt-3 mt-xl-4" href="#">Mua ngay</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div> -->
-    </section>
-    </div>
+      </section>
+    </div> -->
   </div>
   <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -195,9 +201,9 @@
      <!-- ================ Best Selling item  carousel ================= --> 
      <section class="blog_categorie_area_nc">
       <div class="container">
-        <div class="section-intro pb-60px">
+        <div class="section-intro pb-30px">
           <p>Mặt hàng phổ biến trên thị trường</p>
-          <h2> <span class="section-intro__style">Bán chạy nhất</span></h2>
+          <h5> <span class="section-intro__style">Bán chạy nhất</span></h5>
         </div>
         <div class="row">
           <div class="col-50nc col-md-6 col-lg-4 col-xl-3">
@@ -343,9 +349,9 @@
     <!-- ================ trending product section start ================= -->  
     <section class="section-margin calc-60px">
       <div class="container">
-        <div class="section-intro pb-60px">
+        <div class="section-intro pb-30px">
           <p>Mặt hàng phổ biến trên thị trường</p>
-          <h2>  <span class="section-intro__style">Sản phẩm thịnh hành</span></h2>
+          <h5>  <span class="section-intro__style">Sản phẩm thịnh hành</span></h5>
         </div>
         <div class="row">
           <div class="col-50nc col-md-6 col-lg-4 col-xl-3">
@@ -512,9 +518,8 @@
       <div class="container">
         <div class="section-intro pb-60px">
           <p>Bài viết thời trang phổ biến</p>
-          <h2>Tin tức mới nhất <span class="section-intro__style"></span></h2>
+          <h5>Tin tức mới nhất <span class="section-intro__style"></span></h5>
         </div>
-
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="card card-blog">
@@ -575,7 +580,7 @@
     <section class="subscribe-position">
       <div class="container">
         <div class="subscribe text-center">
-          <h3 class="subscribe__title">Get Update From Anywhere</h3>
+          <h5 class="subscribe__title">Get Update From Anywhere</h5>
           <p>Bearing Void gathering light light his eavening unto dont afraid</p>
           <div id="mc_embed_signup">
             <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe-form form-inline mt-5 pt-1">
