@@ -217,7 +217,7 @@
               </a>
               <div class="desc">
                   <a href="#" class="title">Quần áo nam</a>
-                  <div class="price-buy-nc">Mua ngay</div>
+                  <div class="price-buy-nc">Xem</div>
               </div>
             </div>
             <div class="single-search-product d-flex">
@@ -226,7 +226,7 @@
               </a>
               <div class="desc">
                 <a href="#" class="title">Quần áo nữ</a>
-                <div class="price-buy-nc">Mua ngay</div>
+                <div class="price-buy-nc">Xem</div>
               </div>
             </div>
           </div>
@@ -239,7 +239,7 @@
               </a>
               <div class="desc">
                   <a href="#" class="title">Quần áo trẻ em</a>
-                  <div class="price-buy-nc">Mua ngay</div>
+                  <div class="price-buy-nc">Xem</div>
               </div>
             </div>
             <div class="single-search-product d-flex">
@@ -248,7 +248,7 @@
               </a>
               <div class="desc">
                 <a href="#" class="title">Quần áo lao động</a>
-                <div class="price-buy-nc">Mua ngay</div>
+                <div class="price-buy-nc">Xem</div>
               </div>
             </div>
           </div>
@@ -261,7 +261,7 @@
               </a>
               <div class="desc">
                   <a href="#" class="title">Giày dép</a>
-                  <div class="price-buy-nc">Mua ngay</div>
+                  <div class="price-buy-nc">Xem</div>
               </div>
             </div>
             <div class="single-search-product d-flex">
@@ -270,7 +270,7 @@
               </a>
               <div class="desc">
                 <a href="#" class="title">Mũ thời trang</a>
-                <div class="price-buy-nc">Mua ngay</div>
+                <div class="price-buy-nc">Xem</div>
               </div>
             </div>
           </div>
@@ -283,7 +283,7 @@
               </a>
               <div class="desc">
                   <a href="#" class="title">Thời trang unisex</a>
-                  <div class="price-buy-nc">Mua ngay</div>
+                  <div class="price-buy-nc">Xem</div>
               </div>
             </div>
             <div class="single-search-product d-flex">
@@ -292,7 +292,7 @@
               </a>
               <div class="desc">
                 <a href="#" class="title">Cặp túi sách</a>
-                <div class="price-buy-nc">Mua ngay</div>
+                <div class="price-buy-nc">Xem</div>
               </div>
             </div>
           </div>
