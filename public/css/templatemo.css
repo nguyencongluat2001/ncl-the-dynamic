@@ -35,3 +35,19 @@
 .col-50nc{
     width: 50% !important;
 }
+/* chia tỉ lệ 50/50 khi ở màn mobile */
+.col-33nc{
+    width: 33.33% !important;
+}
+.blog_categorie_area_nc{
+    padding-top: 10px;
+}
+.categories_text-nc{
+    font-size: 12px !important;
+}
+.categories_details{
+    top:  15px !important;
+    left:  15px !important;
+    right:  15px !important;
+    bottom:  15px !important;
+}

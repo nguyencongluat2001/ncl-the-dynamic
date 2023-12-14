@@ -115,7 +115,7 @@
           <!-- Start Best Seller -->
           <section class="lattest-product-area pb-40 category-list">
             <div class="row">
-              <div class="col-md-6 col-lg-4">
+              <div class="col-50nc col-md-6 col-lg-4">
                 <div class="card text-center card-product">
                   <div class="card-product__img">
                     <img class="card-img" src="img/product/product1.png" alt="">
@@ -132,7 +132,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
+              <div class="col-50nc col-md-6 col-lg-4">
                 <div class="card text-center card-product">
                   <div class="card-product__img">
                     <img class="card-img" src="img/product/product2.png" alt="">
@@ -149,7 +149,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
+              <div class="col-50nc col-md-6 col-lg-4">
                 <div class="card text-center card-product">
                   <div class="card-product__img">
                     <img class="card-img" src="img/product/product3.png" alt="">
@@ -166,7 +166,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
+              <div class="col-50nc col-md-6 col-lg-4">
                 <div class="card text-center card-product">
                   <div class="card-product__img">
                     <img class="card-img" src="img/product/product4.png" alt="">
@@ -183,7 +183,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
+              <div class="col-50nc col-md-6 col-lg-4">
                 <div class="card text-center card-product">
                   <div class="card-product__img">
                     <img class="card-img" src="img/product/product5.png" alt="">
@@ -200,7 +200,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
+              <div class="col-50nc col-md-6 col-lg-4">
                 <div class="card text-center card-product">
                   <div class="card-product__img">
                     <img class="card-img" src="img/product/product6.png" alt="">
@@ -217,7 +217,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
+              <div class="col-50nc col-md-6 col-lg-4">
                 <div class="card text-center card-product">
                   <div class="card-product__img">
                     <img class="card-img" src="img/product/product7.png" alt="">
@@ -234,7 +234,7 @@
                   </div> 
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
+              <div class="col-50nc col-md-6 col-lg-4">
                 <div class="card text-center card-product">
                   <div class="card-product__img">
                     <img class="card-img" src="img/product/product8.png" alt="">
@@ -251,7 +251,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
+              <div class="col-50nc col-md-6 col-lg-4">
                 <div class="card text-center card-product">
                   <div class="card-product__img">
                     <img class="card-img" src="img/product/product1.png" alt="">

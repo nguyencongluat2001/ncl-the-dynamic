@@ -54,9 +54,103 @@
         </div>
       </div>
     </section>-->
-
+  <!--================Blog Categorie Area =================-->
+    <section class="blog_categorie_area_nc">
+      <div class="container">
+      <!-- <div class="section-intro pb-30px">
+          <h5> <span class="section-intro__style">Danh mục sản phẩm</span></h5>
+        </div> -->
+        <div class="row">
+          <div class="col-33nc col-sm-6 col-lg-4 mb-4 mb-lg-0">
+              <div class="categories_post">
+                  <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-3.jpg" alt="post">
+                  <div class="categories_details">
+                      <div class="categories_text-nc">
+                          <a href="single-blog.html">
+                              <span style="color: white;">Nam</span>
+                          </a>
+                          <!-- <div class="border_line"></div>
+                          <p>Enjoy your social life together</p> -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-33nc col-sm-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="categories_post">
+              <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-2.jpg" alt="post">
+              <div class="categories_details">
+                <div class="categories_text-nc">
+                  <a href="single-blog.html">
+                      <span style="color: white;">Nữ</span>
+                  </a>
+                  <!-- <div class="border_line"></div>
+                  <p>Be a part of politics</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-33nc col-sm-6 col-lg-4 mb-4 mb-lg-0">
+              <div class="categories_post">
+                  <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-1.jpg" alt="post">
+                  <div class="categories_details">
+                      <div class="categories_text-nc">
+                          <a href="single-blog.html">
+                              <span style="color: white;">Trẻ em</span>
+                          </a>
+                          <!-- <div class="border_line"></div>
+                          <p>Let the food be finished</p> -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-33nc col-sm-6 col-lg-4 mb-4 mb-lg-0">
+              <div class="categories_post">
+                  <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-3.jpg" alt="post">
+                  <div class="categories_details">
+                      <div class="categories_text-nc">
+                          <a href="single-blog.html">
+                              <span style="color: white;">Giày dép</span>
+                          </a>
+                          <!-- <div class="border_line"></div>
+                          <p>Enjoy your social life together</p> -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-33nc col-sm-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="categories_post">
+              <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-2.jpg" alt="post">
+              <div class="categories_details">
+                <div class="categories_text-nc">
+                  <a href="single-blog.html">
+                      <span style="color: white;">Mũ, đồ dùng</span>
+                  </a>
+                  <!-- <div class="border_line"></div>
+                  <p>Be a part of politics</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-33nc col-sm-6 col-lg-4 mb-4 mb-lg-0">
+              <div class="categories_post">
+                  <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-1.jpg" alt="post">
+                  <div class="categories_details">
+                      <div class="categories_text-nc">
+                          <a href="single-blog.html">
+                              <span style="color: white;">Sản phẩm giảm giá</span>
+                          </a>
+                          <!-- <div class="border_line"></div>
+                          <p>Let the food be finished</p> -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!--================Blog Categorie Area =================-->
      <!-- ================ Best Selling item  carousel ================= --> 
-     <section class="section-margin calc-60px">
+     <section class="blog_categorie_area_nc">
       <div class="container">
         <div class="section-intro pb-60px">
           <p>Mặt hàng phổ biến trên thị trường</p>
