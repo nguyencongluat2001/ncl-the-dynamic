@@ -30,3 +30,8 @@
 .padding-style{
     padding: 10px;
 }
+
+/* chia tỉ lệ 50/50 khi ở màn mobile */
+.col-50nc{
+    width: 50% !important;
+}
