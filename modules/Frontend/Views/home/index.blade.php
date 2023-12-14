@@ -21,7 +21,7 @@
   </div> -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
+      <section class="offer-image1" id="parallax-1" data-anchor-target="#parallax-1">
         <img src="../img/icon/icon-yeu-thich.png" style="width:50px" class="d-block" alt="...">
         <div class="container">
           <div class="row">
@@ -42,7 +42,7 @@
       </section>
     </div>
     <div class="carousel-item">
-      <section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
+      <section class="offer-image2" id="parallax-1" data-anchor-target="#parallax-1">
         <img src="../img/icon/icon-yeu-thich.png" style="width:50px" class="d-block" alt="...">
         <div class="container">
           <div class="row">
@@ -63,7 +63,7 @@
       </section>
     </div>
     <div class="carousel-item">
-      <section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
+      <section class="offer-image3" id="parallax-1" data-anchor-target="#parallax-1">
         <img src="../img/icon/icon-yeu-thich.png" style="width:50px" class="d-block" alt="...">
         <div class="container">
           <div class="row">
