@@ -11,7 +11,7 @@ use Modules\Core\Ncl\LoggerHelpers;
 /**
  * Chuyển liên thông
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class TransitionTransfer
 {

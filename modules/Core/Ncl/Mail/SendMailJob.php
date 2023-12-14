@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Mail;
 /**
  * Queue Job Send Mail
  * 
- * @author khuongtq
+ * @author luatnc
  * @updated 17/01/2023
  */
 class SendMailJob implements ShouldQueue

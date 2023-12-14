@@ -16,7 +16,9 @@
   <link rel="stylesheet" href="../css/assets/sweetalert2.min.css">
   <link rel="stylesheet" href="../css/assets/chosen.min.css">
 
-  <script src="../js/assets/jquery-3.7.0.min.js"></script>
+  <!-- <script src="../js/assets/jquery-3.7.0.min.js"></script> -->
+  <script src="../js/assets/jquery.min.js"></script>
+
   <script src="../js/assets/popper.min.js"></script>
   <script src="../assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
   <script src="../assets/fontawesome-free-5.15.4-web/js/all.min.js"></script>
@@ -29,9 +31,9 @@
 
   <script type="text/javascript">
         // Page has finished loading, hide the loading container
-        window.onload = function() {
-            document.getElementById("loading").style.display = "none";
-        };
+        // window.onload = function() {
+        //     document.getElementById("loading").style.display = "none";
+        // };
         jQuery.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
@@ -96,10 +98,9 @@
   <script src="../vendors/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="../vendors/skrollr.min.js"></script>
   <script src="../vendors/owl-carousel/owl.carousel.min.js"></script>
-  <!-- <script src="../vendors/nice-select/jquery.nice-select.min.js"></script> -->
   <script src="../vendors/jquery.ajaxchimp.min.js"></script>
   <script src="../vendors/mail-script.js"></script>
-  <script src="../js/main.js"></script>
+  <!-- <script src="../js/main.js"></script> -->
   <script src="../js/assets/chosen.min.js"></script>
 <script>
         setTimeout(() => {

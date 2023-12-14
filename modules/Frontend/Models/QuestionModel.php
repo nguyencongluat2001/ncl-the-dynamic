@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Bảng câu hỏi
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class QuestionModel extends Model
 {

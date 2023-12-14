@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Bảng đợt thi
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ContestModel extends Model
 {

@@ -5,7 +5,7 @@ namespace Modules\Core\Ncl\ConvertForm\Formly;
 /**
  * Formly interface
  * 
- * @author khuongtq
+ * @author luatnc
  */
 interface FormlyInterface
 {

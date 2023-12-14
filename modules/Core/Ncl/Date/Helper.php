@@ -289,7 +289,7 @@ class Helper
      * ---
      * $type = 'days' or 'hours'
      * 
-     * @editor khuongtq
+     * @editor luatnc
      */
     public function _dateAdd(string $dateInput, int $numberDay, string $type = 'days'): string
     {

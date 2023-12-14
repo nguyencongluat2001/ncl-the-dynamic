@@ -9,7 +9,7 @@ use Modules\Core\Ncl\Mail\SendMailJob;
  * Xử lý dữ liệu để gửi mail
  * 
  * 03/10/2022
- * @author khuongtq
+ * @author luatnc
  */
 class MailHelper
 {

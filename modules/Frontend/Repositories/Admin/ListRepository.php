@@ -8,7 +8,7 @@ use Modules\Frontend\Models\Admin\ListModel;
 /**
  * Repo đối tượng danh mục
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ListRepository extends BaseRepository
 {

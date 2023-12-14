@@ -11,7 +11,7 @@ use Modules\Frontend\Services\ExamService;
 /**
  * Controller thông tin khi thi
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ExamController extends Controller
 {

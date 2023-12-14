@@ -8,7 +8,7 @@ use Modules\Frontend\Models\SubjectModel;
 /**
  * Repo đối tượng thi
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class SubjectRepository extends BaseRepository
 {

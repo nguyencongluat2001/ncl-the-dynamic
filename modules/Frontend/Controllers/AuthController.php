@@ -20,7 +20,7 @@ use Str;
 /**
  * Controller đăng nhập, đăng ký ở Cổng
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class AuthController
 {
@@ -141,8 +141,10 @@ class AuthController
      */
     public function logOut(Request $request): RedirectResponse
     {
+        //Auth::guard('user')->logout();
         Auth::guard('frontend')->logout();
         if (!empty($_SESSION['id'])) {
+            session_unset();
             session_destroy();
         }
         $request->session()->invalidate();

@@ -8,7 +8,7 @@ use Modules\Frontend\Repositories\Admin\ListRepository;
 /**
  * Xử lý đối tượng danh mục
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ListService extends BaseService
 {

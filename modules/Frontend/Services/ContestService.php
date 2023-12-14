@@ -8,7 +8,7 @@ use Modules\Frontend\Repositories\ContestRepository;
 /**
  * Xử lý đợt thi
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ContestService extends BaseService
 {

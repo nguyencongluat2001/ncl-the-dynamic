@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 /**
  * Xử lý đối tượng danh mục
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class SubjectService extends BaseService
 {

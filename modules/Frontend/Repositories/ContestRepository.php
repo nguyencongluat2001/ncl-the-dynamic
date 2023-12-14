@@ -8,7 +8,7 @@ use Modules\Frontend\Models\ContestModel;
 /**
  * Repo đợt thi
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ContestRepository extends BaseRepository
 {

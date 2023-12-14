@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Bảng bài thi
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ExamModel extends Model
 {

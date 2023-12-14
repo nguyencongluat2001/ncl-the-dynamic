@@ -7,7 +7,7 @@ use PDO;
 /**
  * File Server
  * 
- * @author khuongtq
+ * @author luatnc
  * @created 20/12/2022
  */
 class FileServerPDO

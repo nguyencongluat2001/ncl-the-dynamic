@@ -10,7 +10,7 @@ use Modules\Core\Ncl\LoggerHelpers;
 /**
  * Liên thông trả lại
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class TransitionReturn
 {

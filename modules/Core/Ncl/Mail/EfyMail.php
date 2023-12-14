@@ -12,7 +12,7 @@ use Illuminate\Queue\SerializesModels;
 /**
  * Cấu hình gửi mail
  * 
- * @author khuongtq
+ * @author luatnc
  * @updated 17/01/2023
  */
 class NclMail extends Mailable

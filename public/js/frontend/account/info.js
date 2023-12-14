@@ -1,7 +1,7 @@
 /**
  * Thông tin tài khoản
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class Info {
     module;

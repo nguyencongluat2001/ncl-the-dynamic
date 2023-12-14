@@ -10,7 +10,7 @@ use Modules\Frontend\Services\Admin\ListService;
 /**
  * Lấy các dữ liệu chung
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class CommonController
 {

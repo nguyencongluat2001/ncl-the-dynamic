@@ -8,7 +8,7 @@ use stdClass;
 /**
  * Xem hoặc Lấy thông tin File Local
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ViewFileLocal extends BaseFile
 {

@@ -8,7 +8,7 @@ use Modules\Api\Services\Admin\UnitService;
 /**
  * Lấy thông tin chuyển liên thông xử lý tiếp
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ContinueUnitTransition
 {

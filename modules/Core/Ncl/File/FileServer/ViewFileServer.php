@@ -9,7 +9,7 @@ use PDO;
 /**
  * Xem hoặc Lấy thông tin File Server
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ViewFileServer extends BaseFile
 {

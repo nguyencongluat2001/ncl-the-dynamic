@@ -16,7 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  * - set sortable: setSortable()
  * - set per page: setPerPage()
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class DynamicModel extends Model
 {

@@ -52,7 +52,7 @@ class UnitService extends BaseService
 
     /**
      * Lấy đơn vị theo mã code
-     * khuongtq
+     * luatnc
      */
     public function getUnitByCode($code)
     {

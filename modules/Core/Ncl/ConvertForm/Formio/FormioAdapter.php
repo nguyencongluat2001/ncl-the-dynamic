@@ -7,7 +7,7 @@ use Modules\Core\Ncl\ConvertForm\Formly\FormlyInterface;
 /**
  * Adapter chuyển đổi Formio JSON sang Formly JSON
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class FormioAdapter implements FormlyInterface
 {

@@ -15,7 +15,7 @@ use Modules\Frontend\Repositories\ExamRepository;
 /**
  * Xử lý bài thi
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ExamService extends BaseService
 {

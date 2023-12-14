@@ -471,7 +471,7 @@ class FunctionHelper
 
     /**
      * Lấy danh sách file đính kèm từ tiến độ hồ sơ
-     * [khuongtq update 09/01/2023]
+     * [luatnc update 09/01/2023]
      * @param string $fileName Tên file đính kèm
      * @return array danh sách file đính kèm
      */
@@ -648,7 +648,7 @@ class FunctionHelper
 
     /**
      * Lấy hình thức trả kết quả
-     * [khuongtq 08/09/2022]
+     * [luatnc 08/09/2022]
      */
     public static function getTypeResult($typeResult, $currentStatus = null)
     {

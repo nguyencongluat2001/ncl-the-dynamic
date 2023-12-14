@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 /**
  * View file từ Dịch vụ công
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ViewFilePortal
 {

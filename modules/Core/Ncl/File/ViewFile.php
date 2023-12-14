@@ -9,7 +9,7 @@ use Modules\Core\Ncl\File\FileServer\ViewFileServer;
 /**
  * Xem/Lấy thông tin File Local hoặc File Server
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ViewFile
 {

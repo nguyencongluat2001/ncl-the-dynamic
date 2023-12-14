@@ -628,7 +628,7 @@ $(document).ready(function () {
  * 
  * @param {*} str 
  * @returns 
- * @author khuongtq
+ * @author luatnc
  */
 function isJSON(str) {
     try {

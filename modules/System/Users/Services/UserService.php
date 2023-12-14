@@ -17,7 +17,7 @@ use Modules\System\Users\Repositories\UserRepository;
 /**
  * Xử lý logic người dùng
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class UserService extends BaseService
 {

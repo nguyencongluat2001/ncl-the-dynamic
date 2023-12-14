@@ -8,7 +8,7 @@ use Modules\Frontend\Models\QuestionModel;
 /**
  * Repo câu hỏi
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class QuestionRepository extends BaseRepository
 {

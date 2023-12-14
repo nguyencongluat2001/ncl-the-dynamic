@@ -8,7 +8,7 @@ use Modules\Frontend\Repositories\QuestionRepository;
 /**
  * Xử lý Câu hỏi
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class QuestionService extends BaseService
 {

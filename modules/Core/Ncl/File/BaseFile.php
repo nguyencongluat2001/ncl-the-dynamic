@@ -10,7 +10,7 @@ use stdClass;
 /**
  * Base File class
  * 
- * @author khuongtq
+ * @author luatnc
  */
 abstract class BaseFile
 {

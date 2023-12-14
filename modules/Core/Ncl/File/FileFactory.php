@@ -8,7 +8,7 @@ use Modules\Core\Ncl\File\FileServer\UploadFileServer;
 /**
  * File Factory
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class FileFactory
 {
@@ -65,14 +65,14 @@ class FileFactory
             'filename'     => date('Y_m_d_His_') . time() . '!~!' . $_FILES["file"]["name"], Tên file <bắt buộc>
             'contentFile'  => file_get_contents($_FILES["file"]["tmp_name"]), Nội dung file <bắt buộc>
             'recordId'     => 'AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA', ID hồ sơ (một cửa) hoặc ID user (Dvc) <bắt buộc>
-            'rootDir'      => 'khuongtq', Thư mục gốc <bắt buộc>
+            'rootDir'      => 'luatnc', Thư mục gốc <bắt buộc>
             'codeTypeFile' => 'TL_KHAC', Mã tài liệu <không bắt buộc>
             'nameTypeFile' => 'Tài liệu khác', Tên tài liệu <không bắt buộc>
             'isOnegate'    => 1, Upload và cập nhật bảng files ở một cửa (1), cập nhật bảng t_files dịch vụ công (0) <không bắt buộc, mặc định là 1>
         ];
     >> Upload FILE LOCAL
         $params = [
-            'rootDir' => 'khuongtq',
+            'rootDir' => 'luatnc',
         ];
         - Nếu rootDir = '' thì sẽ lưu vào public/attach-file/$year/$month/$day
         - Nếu rootDir != '' thì sẽ lưu vào public/attach-file/$rootDir/$year/$month/$day
@@ -88,7 +88,7 @@ class FileFactory
         ];
     >> View FILE LOCAL
         $params = [
-            'rootDir' => 'khuongtq', Thư mục gốc <không bắt buộc>
+            'rootDir' => 'luatnc', Thư mục gốc <không bắt buộc>
             'filename' => '2023_04_27_151857_1682583537!~!HaNoi.pdf', Tên file <bắt buộc>
         ];
         - Nếu rootDir = '' thì sẽ lấy từ public/attach-file/$year/$month/$day
@@ -106,7 +106,7 @@ class FileFactory
         ];
     >> Delete FILE LOCAL
         $params = [
-            'rootDir' => 'khuongtq', Thư mục gốc <không bắt buộc>
+            'rootDir' => 'luatnc', Thư mục gốc <không bắt buộc>
             'filename' => '2023_04_27_151857_1682583537!~!HaNoi.pdf', Tên file <bắt buộc>
         ];
         - Nếu rootDir = '' thì sẽ lấy từ public/attach-file/$year/$month/$day

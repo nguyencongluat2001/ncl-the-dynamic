@@ -9,7 +9,7 @@ use PDO;
 /**
  * Tải lên hoặc Xóa File Server
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class UploadFileServer extends BaseFile
 {

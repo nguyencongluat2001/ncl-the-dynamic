@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Danh mục
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ListtypeModel extends Model
 {

@@ -5,7 +5,7 @@
 | Custom Global Function
 |-------------------------------------------------------------------------------
 | created at 16/08/2023
-| by khuongtq
+| by luatnc
 |
 */
 
@@ -14,7 +14,7 @@
  * 
  * @param object $query
  * @return string
- * @author khuongtq
+ * @author luatnc
  */
 function toSqlString(object $query): string
 {
@@ -34,7 +34,7 @@ function toSqlString(object $query): string
  * 
  * @param mixed $data
  * @return array
- * @author khuongtq
+ * @author luatnc
  */
 function toArray(mixed $data): array
 {
@@ -46,7 +46,7 @@ function toArray(mixed $data): array
  * 
  * @param string $str
  * @return bool
- * @author khuongtq
+ * @author luatnc
  */
 function is_json(mixed $str): bool
 {
@@ -63,7 +63,7 @@ function is_json(mixed $str): bool
  * 
  * @param int $length Độ dài chuỗi
  * @return string
- * @author khuongtq
+ * @author luatnc
  */
 function randomString(int $length = 20)
 {

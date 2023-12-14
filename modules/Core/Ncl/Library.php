@@ -7,7 +7,7 @@ namespace Modules\Core\Ncl;
  *
  * @author Toanph <skype: toanph1505>
  * @updated 26/12/2022
- * @editor khuongtq
+ * @editor luatnc
  */
 class Library
 {

@@ -10,7 +10,7 @@ use Monolog\Handler\StreamHandler;
  *  Thực hiện lưu file log
  * 
  * 17/03/2022
- * @author khuongtq
+ * @author luatnc
  * 
  * Lưu log
  * Đường dẫn: Y/m/d/ [Tên file]

@@ -10,7 +10,7 @@ use Modules\Frontend\Models\ExamModel;
 /**
  * Repo bài thi
  * 
- * @author khuongtq
+ * @author luatnc
  */
 class ExamRepository extends BaseRepository
 {
