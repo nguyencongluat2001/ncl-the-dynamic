@@ -41,27 +41,9 @@
         </div>
       </section>
     </div>
-    <!-- <div class="carousel-item">
-      <section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
-          <div class="container">
-            <div class="row">
-              <div class="col-xl-5">
-                <div class="offer__content text-center" style="padding: 10%;">
-                  <div style="background: #ffffffa8;border-radius: 10px;">
-                    <div style="padding: 2%;">
-                        <h3 style="color:#ffa600">Giảm giá đến 50%</h3>
-                        <p style="color:#2b495a;font-size: 20px;">Mua sắm thả ga, không lo về giá</p>
-                        <a style="background:#ffa700" class="button button--active mt-3 mt-xl-4" href="#">Mua ngay</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-    </div>
     <div class="carousel-item">
       <section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
+        <img src="../img/icon/icon-yeu-thich.png" style="width:50px" class="d-block" alt="...">
         <div class="container">
           <div class="row">
             <div class="col-xl-5">
@@ -69,8 +51,9 @@
                 <div style="background: #ffffffa8;border-radius: 10px;">
                   <div style="padding: 2%;">
                       <h3 style="color:#ffa600">Giảm giá đến 50%</h3>
-                      <p style="color:#2b495a;font-size: 20px;">Mua sắm thả ga, không lo về giá</p>
-                      <a style="background:#ffa700" class="button button--active mt-3 mt-xl-4" href="#">Mua ngay</a>
+                      <!-- <h4>Siêu ưu đãi</h4> -->
+                      <p style="color:#2b495a;font-size: 20px;font-family: emoji;">Mua sắm thả ga, không lo về giá</p>
+                      <a style="background:#ffa700" class="button button--active mt-3 mt-xl-4" href="#">Mua ngay <i style="color: #f6ff82;" class="fas fa-cart-plus"></i></a>
                   </div>
                 </div>
               </div>
@@ -78,7 +61,28 @@
           </div>
         </div>
       </section>
-    </div> -->
+    </div>
+    <div class="carousel-item">
+      <section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
+        <img src="../img/icon/icon-yeu-thich.png" style="width:50px" class="d-block" alt="...">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5">
+              <div class="offer__content text-center" style="padding: 10%;">
+                <div style="background: #ffffffa8;border-radius: 10px;">
+                  <div style="padding: 2%;">
+                      <h3 style="color:#ffa600">Giảm giá đến 50%</h3>
+                      <!-- <h4>Siêu ưu đãi</h4> -->
+                      <p style="color:#2b495a;font-size: 20px;font-family: emoji;">Mua sắm thả ga, không lo về giá</p>
+                      <a style="background:#ffa700" class="button button--active mt-3 mt-xl-4" href="#">Mua ngay <i style="color: #f6ff82;" class="fas fa-cart-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
   <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
