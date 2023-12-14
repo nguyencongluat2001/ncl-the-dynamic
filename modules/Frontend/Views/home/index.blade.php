@@ -50,7 +50,7 @@
               <div class="offer__content text-center" style="padding: 10%;">
                 <div style="background: #ffffffa8;border-radius: 10px;">
                   <div style="padding: 2%;">
-                      <h3 style="color:#ffa600">Giảm giá đến 50%</h3>
+                      <h3 style="color:#ffa600">Nhiều ưu đãi siêu khủng</h3>
                       <!-- <h4>Siêu ưu đãi</h4> -->
                       <p style="color:#2b495a;font-size: 20px;font-family: emoji;">Mua sắm thả ga, không lo về giá</p>
                       <a style="background:#ffa700" class="button button--active mt-3 mt-xl-4" href="#">Mua ngay <i style="color: #f6ff82;" class="fas fa-cart-plus"></i></a>
@@ -71,7 +71,7 @@
               <div class="offer__content text-center" style="padding: 10%;">
                 <div style="background: #ffffffa8;border-radius: 10px;">
                   <div style="padding: 2%;">
-                      <h3 style="color:#ffa600">Giảm giá đến 50%</h3>
+                      <h3 style="color:#ffa600">Giao hàng nhanh chóng</h3>
                       <!-- <h4>Siêu ưu đãi</h4> -->
                       <p style="color:#2b495a;font-size: 20px;font-family: emoji;">Mua sắm thả ga, không lo về giá</p>
                       <a style="background:#ffa700" class="button button--active mt-3 mt-xl-4" href="#">Mua ngay <i style="color: #f6ff82;" class="fas fa-cart-plus"></i></a>
