@@ -103,7 +103,7 @@
         </div>
       </div>
     </section> -->
-  <!--================Blog Categorie Area =================-->
+  {{--<!--================Blog Categorie Area =================-->
     <section class="blog_categorie_area_nc">
       <div class="container">
       <!-- <div class="section-intro pb-30px">
@@ -197,7 +197,90 @@
         </div>
       </div>
     </section>
-  <!--================Blog Categorie Area =================-->
+  <!--================Blog Categorie Area =================-->--}}
+  <!-- ================ top product area start ================= -->	
+	<section class="related-product-area">
+		<div class="container">
+      <div class="section-intro pb-40px">
+        <p>Danh mục phổ biến</p>
+      </div>
+			<div class="row mt-30">
+        <div class="col-50nc col-sm-12 col-xl-3 mb-4 mb-xl-0">
+          <div class="single-search-product-wrapper">
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-1.png" alt=""></a>
+              <div class="desc">
+                  <a href="#" class="title">Gray Coffee Cup</a>
+                  <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-2.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-50nc col-sm-12 col-xl-3 mb-4 mb-xl-0">
+          <div class="single-search-product-wrapper">
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-4.png" alt=""></a>
+              <div class="desc">
+                  <a href="#" class="title">Gray Coffee Cup</a>
+                  <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-5.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-50nc col-sm-6 col-xl-3 mb-4 mb-xl-0">
+          <div class="single-search-product-wrapper">
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-7.png" alt=""></a>
+              <div class="desc">
+                  <a href="#" class="title">Gray Coffee Cup</a>
+                  <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-8.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-50nc col-sm-6 col-xl-3 mb-4 mb-xl-0">
+          <div class="single-search-product-wrapper">
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-1.png" alt=""></a>
+              <div class="desc">
+                  <a href="#" class="title">Gray Coffee Cup</a>
+                  <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-2.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+		</div>
+	</section>
+	<!-- ================ top product area end ================= -->		
      <!-- ================ Best Selling item  carousel ================= --> 
      <section class="blog_categorie_area_nc">
       <div class="container">
