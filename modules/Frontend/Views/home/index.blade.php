@@ -63,7 +63,7 @@
         <div class="row">
           <div class="col-33nc col-sm-6 col-lg-4 mb-4 mb-lg-0">
               <div class="categories_post">
-                  <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-3.jpg" alt="post">
+                  <img class="card-img rounded-1" src="img/blog/cat-post/cat-post-3.jpg" alt="post">
                   <div class="categories_details">
                       <div class="categories_text-nc">
                           <a href="single-blog.html">
@@ -77,7 +77,7 @@
           </div>
           <div class="col-33nc col-sm-6 col-lg-4 mb-4 mb-lg-0">
             <div class="categories_post">
-              <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-2.jpg" alt="post">
+              <img class="card-img rounded-1" src="img/blog/cat-post/cat-post-2.jpg" alt="post">
               <div class="categories_details">
                 <div class="categories_text-nc">
                   <a href="single-blog.html">
@@ -91,7 +91,7 @@
           </div>
           <div class="col-33nc col-sm-6 col-lg-4 mb-4 mb-lg-0">
               <div class="categories_post">
-                  <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-1.jpg" alt="post">
+                  <img class="card-img rounded-1" src="img/blog/cat-post/cat-post-1.jpg" alt="post">
                   <div class="categories_details">
                       <div class="categories_text-nc">
                           <a href="single-blog.html">
@@ -105,7 +105,7 @@
           </div>
           <div class="col-33nc col-sm-6 col-lg-4 mb-4 mb-lg-0">
               <div class="categories_post">
-                  <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-3.jpg" alt="post">
+                  <img class="card-img rounded-1" src="img/blog/cat-post/cat-post-3.jpg" alt="post">
                   <div class="categories_details">
                       <div class="categories_text-nc">
                           <a href="single-blog.html">
@@ -119,7 +119,7 @@
           </div>
           <div class="col-33nc col-sm-6 col-lg-4 mb-4 mb-lg-0">
             <div class="categories_post">
-              <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-2.jpg" alt="post">
+              <img class="card-img rounded-1" src="img/blog/cat-post/cat-post-2.jpg" alt="post">
               <div class="categories_details">
                 <div class="categories_text-nc">
                   <a href="single-blog.html">
@@ -133,7 +133,7 @@
           </div>
           <div class="col-33nc col-sm-6 col-lg-4 mb-4 mb-lg-0">
               <div class="categories_post">
-                  <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-1.jpg" alt="post">
+                  <img class="card-img rounded-1" src="img/blog/cat-post/cat-post-1.jpg" alt="post">
                   <div class="categories_details">
                       <div class="categories_text-nc">
                           <a href="single-blog.html">
@@ -476,7 +476,7 @@
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="card card-blog">
               <div class="card-blog__img">
-                <img class="card-img rounded-0" src="../img/blog/blog1.png" alt="">
+                <img class="card-img rounded-1" src="../img/blog/blog1.png" alt="">
               </div>
               <div class="card-body">
                 <ul class="card-blog__info">
@@ -493,7 +493,7 @@
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="card card-blog">
               <div class="card-blog__img">
-                <img class="card-img rounded-0" src="../img/blog/blog2.png" alt="">
+                <img class="card-img rounded-1" src="../img/blog/blog2.png" alt="">
               </div>
               <div class="card-body">
                 <ul class="card-blog__info">
@@ -510,7 +510,7 @@
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="card card-blog">
               <div class="card-blog__img">
-                <img class="card-img rounded-0" src="../img/blog/blog3.png" alt="">
+                <img class="card-img rounded-1" src="../img/blog/blog3.png" alt="">
               </div>
               <div class="card-body">
                 <ul class="card-blog__info">
