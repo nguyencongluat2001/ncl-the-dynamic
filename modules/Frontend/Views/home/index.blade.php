@@ -21,13 +21,53 @@
   </div> -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../img/home/parallax-bg.png" class="d-block w-100" alt="...">
+      <!-- <img src="../img/home/parallax-bg.png" class="d-block w-100" alt="..."> -->
+      <section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-5">
+            <div class="offer__content text-center">
+              <h3>Giảm giá đến 50%</h3>
+              <h4>Siêu ưu đãi</h4>
+              <p style="color:#ffe51b;font-size: 20px;">Mua sắm thả ga, không lo về giá</p>
+              <a class="button button--active mt-3 mt-xl-4" href="#">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     </div>
     <div class="carousel-item">
-      <img src="../img/home/parallax-bg.png" class="d-block w-100" alt="...">
+      <section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-5">
+            <div class="offer__content text-center">
+              <h3>Giảm giá đến 50%</h3>
+              <h4>Siêu ưu đãi</h4>
+              <p style="color:#ffe51b;font-size: 20px;">Mua sắm thả ga, không lo về giá</p>
+              <a class="button button--active mt-3 mt-xl-4" href="#">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     </div>
     <div class="carousel-item">
-      <img src="../img/home/parallax-bg.png" class="d-block w-100" alt="...">
+      <section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-5">
+            <div class="offer__content text-center">
+              <h3>Giảm giá đến 50%</h3>
+              <h4>Siêu ưu đãi</h4>
+              <p style="color:#ffe51b;font-size: 20px;">Mua sắm thả ga, không lo về giá</p>
+              <a class="button button--active mt-3 mt-xl-4" href="#">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     </div>
   </div>
   <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -39,8 +79,7 @@
     <span class="visually-hidden">Next</span>
   </button> -->
 </div>
-<!-- ================ offer section start ================= 
-<section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
+<!-- <section class="offer" id="parallax-1" data-anchor-target="#parallax-1">
       <div class="container">
         <div class="row">
           <div class="col-xl-5">
@@ -53,7 +92,7 @@
           </div>
         </div>
       </div>
-    </section>-->
+    </section> -->
   <!--================Blog Categorie Area =================-->
     <section class="blog_categorie_area_nc">
       <div class="container">
