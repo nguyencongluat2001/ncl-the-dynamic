@@ -213,7 +213,7 @@
               </a>
               <div class="desc">
                   <a href="#" class="title">Quần áo nam</a>
-                  <div class="price">$170.00</div>
+                  <div class="price-buy-nc">Mua ngay</div>
               </div>
             </div>
             <div class="single-search-product d-flex">
@@ -222,7 +222,7 @@
               </a>
               <div class="desc">
                 <a href="#" class="title">Quần áo nữ</a>
-                <div class="price">$170.00</div>
+                <div class="price-buy-nc">Mua ngay</div>
               </div>
             </div>
           </div>
@@ -235,7 +235,7 @@
               </a>
               <div class="desc">
                   <a href="#" class="title">Quần áo trẻ em</a>
-                  <div class="price">$170.00</div>
+                  <div class="price-buy-nc">Mua ngay</div>
               </div>
             </div>
             <div class="single-search-product d-flex">
@@ -244,7 +244,7 @@
               </a>
               <div class="desc">
                 <a href="#" class="title">Quần áo lao động</a>
-                <div class="price">$170.00</div>
+                <div class="price-buy-nc">Mua ngay</div>
               </div>
             </div>
           </div>
@@ -257,7 +257,7 @@
               </a>
               <div class="desc">
                   <a href="#" class="title">Giày dép</a>
-                  <div class="price">$170.00</div>
+                  <div class="price-buy-nc">Mua ngay</div>
               </div>
             </div>
             <div class="single-search-product d-flex">
@@ -266,7 +266,7 @@
               </a>
               <div class="desc">
                 <a href="#" class="title">Mũ thời trang</a>
-                <div class="price">$170.00</div>
+                <div class="price-buy-nc">Mua ngay</div>
               </div>
             </div>
           </div>
@@ -279,7 +279,7 @@
               </a>
               <div class="desc">
                   <a href="#" class="title">Thời trang unisex</a>
-                  <div class="price">$170.00</div>
+                  <div class="price-buy-nc">Mua ngay</div>
               </div>
             </div>
             <div class="single-search-product d-flex">
@@ -288,7 +288,7 @@
               </a>
               <div class="desc">
                 <a href="#" class="title">Cặp túi sách</a>
-                <div class="price">$170.00</div>
+                <div class="price-buy-nc">Mua ngay</div>
               </div>
             </div>
           </div>
@@ -449,8 +449,8 @@
     <section class="section-margin calc-60px">
       <div class="container">
         <div class="section-intro pb-30px">
-          <p>Mặt hàng phổ biến trên thị trường</p>
-          <h5>  <span class="section-intro__style">Sản phẩm thịnh hành</span></h5>
+          <p>Mặt hàng phổ biến</p>
+          <h5>  <span class="section-intro__style">Thịnh hành</span></h5>
         </div>
         <div class="row">
           <div class="col-50nc col-md-6 col-lg-4 col-xl-3">

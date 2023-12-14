@@ -34,6 +34,8 @@
 /* chia tỉ lệ 50/50 khi ở màn mobile */
 .col-50nc{
     width: 50% !important;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
 }
 /* chia tỉ lệ 50/50 khi ở màn mobile */
 .col-33nc{
@@ -53,4 +55,13 @@
 }
 .title{
     font-size: 12px;
+}
+.price-buy-nc{
+    font-size: 12px;
+    background: #ff732d;
+    color: white;
+    padding: 2px;
+    padding-left: 4px;
+    width: 60px;
+    border-radius: 10px;
 }
