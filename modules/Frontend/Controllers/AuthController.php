@@ -58,7 +58,6 @@ class AuthController
             if ($request->input('query') && $request->input('query') != '') $nextUrl .= '?' . $request->input('query');
         }
         $data['nextUrl'] = $nextUrl;
-
         return view('Frontend::auth.sign-in', $data);
     }
 
@@ -87,6 +86,8 @@ class AuthController
         $arrResult           = $objLibrary->_getAllFileJavaScriptCssArray('js', 'assets/jquery.validate.js', ',', $arrResult);
         $data['stringJsCss'] = json_encode($arrResult);
         $data['tinh'] =  UnitsModel::whereNull('code_huyen')->get();
+        // dd($data);
+
         return view('Frontend::auth.sign-up',$data);
     }
 

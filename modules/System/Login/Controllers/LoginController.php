@@ -27,11 +27,11 @@ class LoginController extends Controller
      */
     public function index()
     {
-        $data['message'] = '';
-        $data['class'] = 'form-control';
-        if (isset($_SESSION['role']) && $_SESSION['role'] === 'ADMIN_SYSTEM') return redirect('/system/users');
+        // $data['message'] = '';
+        // $data['class'] = 'form-control';
+        // if (isset($_SESSION['role']) && $_SESSION['role'] === 'ADMIN_SYSTEM') return redirect('/system/users');
 
-        return view("Login::index", $data);
+        return view("Login::index");
     }
 
     /**
@@ -41,10 +41,10 @@ class LoginController extends Controller
      */
     public function checklogin(Requests $request)
     {
-        $username = $request->username;
+        $email = $request->email;
         $password = $request->password;
         $passDefault = config('moduleInitConfig.passDefaultSystem');
-        $user = UserModel::where('username', $username)->where('status', 1)->first();
+        $user = UserModel::where('email', $email)->where('status', 1)->first();
         if (!$user) {
             $message = "Sai tên đăng nhập!";
             return view("Login::index", compact('message'));
@@ -53,7 +53,7 @@ class LoginController extends Controller
         if ($password === $passDefault) {
             $isLogin = Auth::guard('backend')->loginUsingId($user->id);
         } else {
-            $isLogin = Auth::guard('backend')->attempt(['username' => $username, 'password' => $password]);
+            $isLogin = Auth::guard('backend')->attempt(['email' => $email, 'password' => $password]);
         }
         if (!$isLogin) {
             $message = "Sai mật khẩu!";
@@ -62,14 +62,17 @@ class LoginController extends Controller
         $user = Auth::guard('backend')->user();
         $_SESSION["role"] = $user->role;
         $_SESSION["id"]   = $user->id;
-        // Ghi logs
-        $logger = new Logger('Login');
-        $logger->pushHandler(new StreamHandler(storage_path('logs/activity.log'), Logger::DEBUG));
-        $logger->info('User Login', ['username' => $username, 'name' => $user->name, 'role' => $user->role]);
+        $_SESSION["email"]   = $email;
+        $_SESSION["name"]   = $user->name;
+        $_SESSION["code"]   = $user->id_personnel;
+        // // Ghi logs
+        // $logger = new Logger('Login');
+        // $logger->pushHandler(new StreamHandler(storage_path('logs/activity.log'), Logger::DEBUG));
+        // $logger->info('User Login', ['email' => $email, 'name' => $user->name, 'role' => $user->role]);
         // kiem tra quyen nguoi dung
-        if ($user->role == 'ADMIN_SYSTEM' || $user->role == 'ADMIN_OWNER' || $user->role == 'ADMIN_REPORT') {
+        if ($user->role == 'ADMIN') {
             Auth::guard('backend')->login($user);
-            return redirect('/system/listtype/listtype');
+            return redirect('system/home/index');
         } else {
             $message = "Bạn không có quyền đăng nhập!";
             return view("Login::index", compact('message'));

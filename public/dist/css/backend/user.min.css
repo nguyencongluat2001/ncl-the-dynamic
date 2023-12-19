@@ -1,0 +1,7 @@
+.dark-version .label-upload {
+    background-color: #fff;
+    color: #000 !important;
+    padding: 0.5rem;
+    border-radius: 0.5em;
+    cursor: pointer;
+}

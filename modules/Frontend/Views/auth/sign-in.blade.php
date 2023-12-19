@@ -1,6 +1,6 @@
 @extends('Frontend::layouts.index')
 
-@section('script')
+<!-- @section('script')
     <script type="text/javascript">
 
         var arrJsCss = $.parseJSON('<?php echo $stringJsCss; ?>');
@@ -11,7 +11,8 @@
             JS_Auth.loadIndex();
         })
     </script>
-@endsection
+@endsection -->
+<script type="text/javascript" src="{{ URL::asset('js\frontend\login\auth.js') }}"></script>
 
 @section('body-client')
   <!--================Login Box Area =================-->

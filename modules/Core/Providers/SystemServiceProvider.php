@@ -90,13 +90,8 @@ class SystemServiceProvider extends ServiceProvider
             $this->middleware = $middleware;
             $arrModules       = config('moduleSystem');
             // chức năng quản trị thủ tục hành chính đơn vi
-            if (isset($_SESSION['role']) && $_SESSION['role'] == 'ADMIN_OWNER') {
-                unset($arrModules['recordtype']['child']['recordtype']);
-                unset($arrModules['recordtype']['child']['recordtype_child']);
-                unset($arrModules['recordtype']['child']['syscRecordtype']);
-            }
             // chức năng quản trị thủ tục hành chính root
-            if (isset($_SESSION['role']) && $_SESSION['role'] == 'ADMIN_SYSTEM') {
+            if (isset($_SESSION['role']) && $_SESSION['role'] == 'ADMIN') {
                 unset($arrModules['recordtype']['child']['recordtypeUnit']);
             }
             // Get all Menu

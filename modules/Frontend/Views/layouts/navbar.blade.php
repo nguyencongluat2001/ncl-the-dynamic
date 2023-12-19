@@ -40,7 +40,7 @@
                     <li class="nav-item"><a class="button button-header" href="login">Đăng nhập</a></li>
                 </span>
             </a>
-            @elseif(!empty($_SESSION[['name']]))
+            @elseif(!empty($_SESSION['name']))
             <li class="nav-item submenu dropdown">
                 <a href="shop" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                 aria-expanded="false"><i class="fas fa-user-circle"></i> {{$_SESSION['name']}}</a>

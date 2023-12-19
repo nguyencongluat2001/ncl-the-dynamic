@@ -1,6 +1,6 @@
 @extends('Frontend::layouts.index')
 
-@section('script')
+<!-- @section('script')
     <script type="text/javascript">
 
         var arrJsCss = $.parseJSON('<?php echo $stringJsCss; ?>');
@@ -11,7 +11,9 @@
             JS_Auth.loadIndex();
         })
     </script>
-@endsection
+@endsection -->
+<script type="text/javascript" src="{{ URL::asset('js\frontend\login\auth.js') }}"></script>
+
 @section('body-client')
       <!--================Login Box Area =================-->
 	<section class="login_box_area">
@@ -41,7 +43,7 @@
 							</div>
 							<div class="row col-md-12">
 								<div class="col-md-6 form-group">
-								    <input type="text" class="form-control" id="email" name="email" placeholder="Số điện thoại" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
+								    <input type="text" class="form-control" id="email" name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
 								</div>
 								<div class="col-md-6"  style="padding-top:10px">
 									<input type="radio" value="1" name="sex" id="sex"/>  <span style="padding-left:5px" >Nam</span>&emsp;
