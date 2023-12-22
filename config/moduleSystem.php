@@ -1,33 +1,22 @@
 <?php
 
 return [
-    'cms' => [
-        'name' => 'Quản trị cms',
-        'icon' => 'fas fa-clipboard-list',
-        'check_permision' => 'ADMIN_SYSTEM',
-        'child' => [
-            'categories' => [
-                'name' => 'Quản trị chuyên mục',
-                'controller' => 'CategoriesController',
-                'icon' => 'fas fa-angle-double-right',
-            ],
-            'articles' => [
-                'name' => 'Quản trị bài viết',
-                'controller' => 'CmsArticlesController',
-                'icon' => 'fas fa-angle-double-right',
-            ],
-        ],
+    'home' => [
+        'name' => 'Trang chủ',
+        'icon' => 'fa fa-user-circle',
+        'child' => false,
+        'check_permision' => 'ADMIN'
     ],
-    'users' => [
+    'user' => [
         'name' => 'Quản trị người dùng',
         'icon' => 'fa fa-user-circle',
         'child' => false,
-        'check_permision' => 'ADMIN_SYSTEM,ADMIN_OWNER'
+        'check_permision' => 'ADMIN'
     ],
-    'listtype' => [
+    'category' => [
         'name' => 'Quản trị danh mục',
         'icon' => 'fa fa-list',
-        'check_permision' => 'ADMIN_SYSTEM',
+        'check_permision' => 'ADMIN',
         'child' => [
             'listtype' => [
                 'name' => 'Loại danh mục ',
@@ -42,7 +31,7 @@ return [
     'examinations' => [
         'name' => 'Quản trị câu hỏi',
         'icon' => 'fas fa-project-diagram',
-        'check_permision' => 'ADMIN_SYSTEM',
+        'check_permision' => 'ADMIN',
         // 'child' => [
         //     'examinations' => [
         //         'name' => 'Đợt thi',
@@ -53,7 +42,7 @@ return [
     'objects' => [
         'name' => 'Quản trị đối tượng',
         'icon' => 'fas fa-user-tag',
-        'check_permision' => 'ADMIN_SYSTEM',
+        'check_permision' => 'ADMIN',
         // 'child' => [
         //     'objects' => [
         //         'name' => 'Đối tượng',
@@ -61,10 +50,10 @@ return [
         //     ],
         // ]
         ],
-    'exams' => [
+    'sql' => [
         'name' => 'Quản trị Bài thi',
         'icon' => 'fas fa-address-card',
-        'check_permision' => 'ADMIN_SYSTEM',
+        'check_permision' => 'ADMIN',
         // 'child' => [
         //     'exams' => [
         //         'name' => 'Bài thi',

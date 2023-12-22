@@ -16,14 +16,10 @@ class CheckBackendLogin {
      * @return mixed
      */
     public function handle($request, Closure $next) {
-        if (isset($_SESSION["role"]) && ($_SESSION["role"] == 'ADMIN_OWNER' || $_SESSION["role"] == 'ADMIN_SYSTEM' || $_SESSION["role"] == 'ADMIN_REPORT')) {
+        if (isset($_SESSION["role"]) && ($_SESSION["role"] == 'ADMIN')) {
             return $next($request);
         } else {
-            if ($request->is('system/synthesis/*')) {
-                return $next($request);
-            } else {
-                return redirect('admin/login');
-            }
+            return redirect('system/login');
         }
     }
 

@@ -1,0 +1,444 @@
+/*
+
+TemplateMo 561 Purple Buzz
+
+https://templatemo.com/tm-561-purple-buzz
+
+---------------------------------------------
+Table of contents
+------------------------------------------------
+1. Typography
+2. Main Nav
+3. Home
+4. About
+5. Work
+6. Single Work
+7. Pricing
+8. Contact
+--------------------------------------------- */
+
+html {font-family: 'Open Sans', sans-serif;}
+/* Typography */
+p, a {font-weight: 400;}
+.h2 {font-size: 40px;}
+.h3 {font-size: 28px;}
+.light-300 {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 300;
+}
+.regular-400 {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 400;
+}
+.semi-bold-600 {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 600;
+}
+.typo-space-line::after,
+.typo-space-line-center::after {
+  content: "";
+  width: 150px;
+  display:block;
+  position: absolute;
+  border-bottom:  5px solid #6266ea;
+  padding-top: .5em;
+}
+.typo-space-line-center::after {
+  left: 50%;
+  margin-left: -75px;
+}
+/* Main Nav */
+#main_nav .nav-item .nav-link:hover {color: #fff;}
+/* Home */
+#index_banner {
+  /* background-image: url('../../clients/img/booking-cover-3.jpg'); */
+  background-image: url('../../clients/img/booking-cover-3.jpg');
+  background-position: center center; background-size: cover;
+  height: 100%;
+  /* min-height: 60vh; */
+  width: 100%;
+  /* opacity: 0.5; */
+}
+
+#index_banner_detail{
+  background-image: url('../../clients/img/pexels-photo-3938022.webp');
+  background-position: center center; background-size: cover;
+  height: 100%;
+  /* min-height: 60vh; */
+  width: 100%;
+  /* opacity: 0.5; */
+}
+#index_banner_facilities{
+  background-image: url('../../clients/img/pexels-photo-6129111.webp');
+  background-position: center center; background-size: cover;
+  height: 100%;
+  /* min-height: 60vh; */
+  width: 100%;
+  /* opacity: 0.5; */
+}
+#index_banner .carousel-item {
+  /* min-height: 60vh; */
+}
+#index_banner .carousel-control-prev i,
+#index_banner .carousel-control-next i {
+  color: #6266ea !important;
+  text-decoration: none;
+  font-size: 4em;
+}
+#index_banner .carousel-inner {
+  /* height: 80vh; */
+  background: #1d363d57;
+}
+#index_banner .carousel-indicators li,
+#index_banner .carousel-indicators.active {
+  background-color: #6266ea !important;
+}
+.service-wrapper .service-footer {
+  max-width: 720px;
+}
+.service-work.card {
+  border-radius: 10px !important;
+  cursor: pointer;
+}
+.service-work .service-work-vertical {
+	background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 33.33%, rgba(255,255,255,1) 66.66%, rgba(255,255,255,0) 99.99%);
+  background-size: 300% 300%;
+  background-position: 0% 100%;
+  transition: .5s;
+}
+.service-work .service-work-vertical:hover {
+  background-position: 0% 0%;
+  transition: .5s;
+}
+.service-work .service-work-vertical:hover * {
+  color: #000;
+  border-color: #000;
+  transition: .5s;
+}
+.recent-work.card{
+  border-radius: 10px !important;
+}
+.recent-work .recent-work-vertical {
+	/* background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgb(1 1 1 / 77%) 0%, rgb(243 243 243 / 0%) 33.333%, rgb(0 0 0 / 64%) 66.666%, rgb(254 254 254 / 0%) 99.999%); */
+  background-size: 300% 300%;
+  background-position: 0% 100%;
+  transition: .5s;
+  cursor: pointer;
+}
+.recent-work .recent-work-vertical:hover {
+  background-position: 0% 0%;
+  transition: .5s;
+}
+.recent-work .recent-work-vertical:hover div.recent-work-content {
+  top: 50%;
+  margin-top: -2.5em;
+  position: absolute;
+}
+.recent-work .recent-work-vertical:hover * {
+  color: white;
+  transition: .5s;
+}
+/* About */
+#work_banner {
+  background-image: url('./../img/banner-bg-02.jpg');
+  background-position: center center; background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.progress {
+  height: 8px;
+}
+.objective-icon {
+  border-radius: 13px;
+  width: 8rem;
+}
+.partner-wap {
+  background-color: #7276ec;
+  transition: 1s;
+  cursor: pointer;
+}
+.partner-wap:hover {
+  background-color: #b1b3f5;
+}
+.why-us {
+  background: rgb(239,239,253);
+  background: -moz-linear-gradient(0deg, rgba(239,239,253,1) 50%, rgba(255,255,255,1) 50%);
+  background: -webkit-linear-gradient(0deg, rgba(239,239,253,1) 50%, rgba(255,255,255,1) 50%);
+  background: linear-gradient(0deg, rgba(239,239,253,1) 50%, rgba(255,255,255,1) 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efeffd",endColorstr="#ffffff",GradientType=1);
+}
+.team-member-img {
+  transition-duration: 0.15s;
+}
+.team-member:hover .team-member-img {
+  padding: 10px !important;
+}
+
+/* Work */
+/* Singel Work */
+#work_single_banner {
+  background-image: url('./../img/banner-bg-02.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.related-content {
+  border-radius: 20px;
+  cursor: pointer;
+}
+/* Pricing */
+.pricing-list {
+  margin-bottom: 1px;
+}
+.pricing-table {
+  max-width: 350px;
+  margin: auto;
+}
+.pricing-table,
+.pricing-horizontal {
+  border-radius: 15px !important;
+}
+/* Contact */
+#floatingtextarea {
+  height: 150px
+}
+/* Footer */
+footer a.text-light:hover {
+  color: #bfbfbf !important;
+  transition-duration: 0.15s;
+}
+.text-12{
+  font-size: 12px;
+  color: #3a5061;
+}
+.text-title-home{
+  /* font-size: 33px; */
+  color: #ffffff;
+  font-family: serif;
+  font-weight: 600;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #93b4b487
+}
+@media (max-width: 3026px) and (min-width: 426px) {
+  .text-title-home{
+    font-size: 33px !important;
+  }
+}
+@media (max-width: 426px) {
+  .text-title-home{
+    font-size: 20px !important;
+  }
+}
+.list-hispital-home-one{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25),rgba(255, 255, 255, 0.1));
+}
+.list-hispital-home{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 1));
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.text-menu-header{
+  font-weight: 500;
+  color: #142d30;
+}
+.famous-saying{
+  font-size: 20px;
+  font-family: serif;
+}
+.card-title{
+  font-family: serif;
+  color: white;
+  font-size: 15 !important;
+}
+.popular-specialties{
+  background: #dbe7ff4a;
+}
+
+/* input search home*/
+.box{
+  position: relative;
+}
+.input {
+  padding: 10px;
+  width: 100%;
+  height: 50px;
+  background: #fff18bb5;
+  border: 4px solid #ffd52d;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-family: 'FontAwesome';
+  /* font-size: 14px; */
+  color: #5f8eb1;
+  outline: none;
+   transition: .5s;
+}
+.box i{
+  position: absolute;
+  top: 60%;
+  right: 15px;
+  transform: translate(-50%,-50%);
+  font-size: 26px;
+  color: #0c0c1e;
+  transition: .2s;
+}
+/* title */
+@keyframes lights {
+  0% {
+    color: #f6fbff;
+    text-shadow: 0 0 1em hsla(324, 19%, 95%, 0.823), 0 0 0.125em hsla(320, 100%, 60%, 0.3), -1em -0.125em 0.5em hsla(40, 100%, 60%, 0), 1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+}
+  
+30% {
+  color: hsl(0deg 0% 100%);
+  text-shadow: 0 0 1em hsl(330, 100%, 100%), 0 0 0.125em hsla(320, 100%, 60%, 0.5), -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2), 0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+}
+  
+40% {
+  color: hsl(0deg 0% 100%);
+  text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 90%, 0.5), -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2), 0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+}
+  
+70% {
+  color: hsl(208.37deg 100% 85.95%);
+  text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 60%, 0.5), 0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2), -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+}
+  
+100% {
+  color: #ffffff;
+  text-shadow: 0 0 1em hsl(319, 17%, 82%), 0 0 0.125em hsla(320, 100%, 96%, 0.803), 1em -0.125em 0.5em hsla(40, 100%, 60%, 0), -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+}
+  
+}
+.active-menuClient{
+  background: #a4b7d942;
+  color: #00b609 !important;
+}
+/* @media (min-width: 426px ) {
+  .icon-menu-home{
+    display: none;
+  }
+}
+@media (max-width: 426px) {
+  .icon-menu-home{
+    color: #f2ffff;
+    background: #ffffff0a;
+  }
+} */
+
+/* animetion */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+/* body {
+  text-align:center;
+  background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+  color:#555;
+  font-family:'Roboto';
+  font-weight:300;
+  font-size:32px;
+  padding-top:40vh;
+  height:100vh;
+  overflow:hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+} */
+
+.anime-title {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.anime-title:first-of-type {    /* For increasing performance 
+                       ID/Class should've been used. 
+                       For a small demo 
+                       it's okaish for now */
+  /* animation: showup 15s infinite; */
+}
+
+.anime-title:last-of-type {
+  /* width:0px; */
+  /* animation: reveal 15s infinite; */
+}
+
+.anime-title:last-of-type .anime-title-span {
+  margin-left:-355px;
+  animation: slidein 10s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+/* @media (max-width: 3026px) and (min-width: 426px) {
+  .anime-ca{
+    font-size: 33px !important;
+  }
+} */
+@media (min-width:1440px) and (max-width:2560px ) {
+ .image-logo{
+    width:8%
+ }
+}
+@media (min-width:768px) and (max-width:1439px ) {
+  .image-logo{
+    width:8%
+ }
+}
+@media (min-width:425px) and (max-width:767px ) {
+  .anime-car{
+    display: none !important;
+  }
+  .navbar-brand-text{
+    width: 40%;
+  }
+  .image-logo{
+    width:8%
+ }
+  
+}
+@media (min-width:375px) and (max-width:424px ) {
+  .navbar-brand-text{
+    width: 40%;
+  }
+  .image-logo{
+    width:10%
+ }
+}
+@media (min-width:321px) and (max-width:374px ) {
+  .navbar-brand-text{
+    width: 40%;
+  }
+  .image-logo{
+    width:10%
+ }
+}
+@media (max-width:319px ) {
+  .navbar-brand-text{
+    width: 40%;
+  }
+  .image-logo{
+    width:10%
+ }
+}

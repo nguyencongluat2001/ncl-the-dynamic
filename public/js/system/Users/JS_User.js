@@ -1,7 +1,7 @@
 /**
  * Xử lý Js về người dùng
  *
- * @author Toanph <skype: toanph155>
+ * @author Luatnc
  */
 function Js_User(baseUrl, module, controller) {
     this.objTree = $("#jstree-tree");

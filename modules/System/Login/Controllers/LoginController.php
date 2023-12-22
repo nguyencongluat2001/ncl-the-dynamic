@@ -6,7 +6,7 @@ use Modules\System\Login\Requests\Login as Requests;
 use Modules\System\Login\Requests\ChangePasswordRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use Modules\System\Users\Models\UserModel;
+use Modules\System\User\Models\UserModel;
 use Illuminate\Support\Facades\Hash;
 use DB;
 use Monolog\Logger;
@@ -65,6 +65,8 @@ class LoginController extends Controller
         $_SESSION["email"]   = $email;
         $_SESSION["name"]   = $user->name;
         $_SESSION["code"]   = $user->id_personnel;
+        $sideBarConfig = config('SidebarSystem.ADMIN');
+        $_SESSION["sidebar"] = $sideBarConfig;
         // // Ghi logs
         // $logger = new Logger('Login');
         // $logger->pushHandler(new StreamHandler(storage_path('logs/activity.log'), Logger::DEBUG));

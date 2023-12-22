@@ -1,5 +1,5 @@
 /*
-* Author: Toanph
+* Author: Luatnc
 * Idea: Class xu ly du lieu xml
 */
 var TableXml = function (dirxml) {

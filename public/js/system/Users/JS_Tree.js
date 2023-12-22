@@ -1,7 +1,7 @@
 /**
  * Zend Tree
  *
- * @author Toanph <skype: toanph155>
+ * @author Luatnc
  */
 function JS_Tree(baseUrl, module, controller, objTree) {
 	this.objTree = objTree;
