@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/system/login', function () {
-    return view('/system/login');
+    return view('system.Login.index');
 });
 
