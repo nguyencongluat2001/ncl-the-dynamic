@@ -39,12 +39,12 @@ return [
         'a'    => 'nav-link link-category',
         'href' => '/system/category/index',
     ],
-    // 'hospital' => [
-    //     'name' => 'Bệnh viện, phòng khám',
-    //     'icon' => 'fas fa-university',
-    //     'a'    => 'nav-link link-hospital',
-    //     'href' => '/system/hospital/index',
-    // ],
+    'login' => [
+        'name' => 'Bệnh viện, phòng khám',
+        'icon' => 'fas fa-university',
+        'a'    => 'nav-link link-hospital',
+        'href' => '/system/hospital/index',
+    ],
     // 'bloodtest' => [
     //     'name' => 'Gói xét nghiệm',
     //     'icon' => 'fas fa-university',
