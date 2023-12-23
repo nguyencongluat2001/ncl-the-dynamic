@@ -1,19 +1,19 @@
 <?php
 
 return [
-    'Home' => [
+    'home' => [
         'name' => 'Trang chủ',
         'icon' => 'fa fa-user-circle',
         'child' => false,
         'check_permision' => 'ADMIN'
     ],
-    'User' => [
+    'user' => [
         'name' => 'Quản trị người dùng',
         'icon' => 'fa fa-user-circle',
         'child' => false,
         'check_permision' => 'ADMIN'
     ],
-    'Category' => [
+    'category' => [
         'name' => 'Quản trị danh mục',
         'icon' => 'fa fa-list',
         'check_permision' => 'ADMIN',
@@ -28,7 +28,7 @@ return [
             ]
         ]
     ],
-    'Examinations' => [
+    'examinations' => [
         'name' => 'Quản trị câu hỏi',
         'icon' => 'fas fa-project-diagram',
         'check_permision' => 'ADMIN',
@@ -39,7 +39,7 @@ return [
         //     ],
         // ]
         ],
-    'Objects' => [
+    'objects' => [
         'name' => 'Quản trị đối tượng',
         'icon' => 'fas fa-user-tag',
         'check_permision' => 'ADMIN',
@@ -50,7 +50,7 @@ return [
         //     ],
         // ]
         ],
-    'Sql' => [
+    'sql' => [
         'name' => 'Quản trị Bài thi',
         'icon' => 'fas fa-address-card',
         'check_permision' => 'ADMIN',
@@ -60,10 +60,5 @@ return [
         //         'icon' => 'fa fa-angle-double-right',
         //     ],
         // ]
-        ],
-        'Login' => [
-            'name' => 'Quản trị Bài thi',
-            'icon' => 'fas fa-address-card',
-            'check_permision' => 'ADMIN',
-        ]
+    ]
 ];
