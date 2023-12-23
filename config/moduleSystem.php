@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'home' => [
+    'Home' => [
         'name' => 'Trang chủ',
         'icon' => 'fa fa-user-circle',
         'child' => false,
