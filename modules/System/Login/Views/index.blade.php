@@ -18,7 +18,7 @@
             <div class="col-md-7" style="padding-top:180px;">
                 <!-- <div class="card" style="background:#20364b94;"> -->
                     <div class="wrapper" style="display: flex; justify-content: center;background: #0d1c2573;border-radius: 15px;margin: 20px;">
-                        <form method="POST"  action="{{ route('system/login/checklogin') }}"  autocomplete="off" style="padding: 30px;">
+                        <form method="POST"  action="{{ route('system/login/checkLogin') }}"  autocomplete="off" style="padding: 30px;">
                             <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
                             <div class="form-group" align="center">
                                 <div class="col-md-12 mt-3 mb-3">
