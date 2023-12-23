@@ -16,10 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/system/login', function () {
-    return view('Login::index');
-});
-
 Route::get('system', function () {
     return redirect('system/login');
 });
