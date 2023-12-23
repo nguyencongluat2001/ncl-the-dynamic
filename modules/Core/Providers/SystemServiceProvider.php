@@ -114,7 +114,6 @@ class SystemServiceProvider extends ServiceProvider
                     $this->prefix    = $module;
                     $this->namespace = 'Modules' . "\\" . $layout . "\\" . ucfirst($module) . '\Controllers';
                     // Load routes
-                    dd($this->modules);
                     Route::group([
                         'namespace'  => $this->namespace,
                         'middleware' => $this->middleware,

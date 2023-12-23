@@ -7,13 +7,13 @@ return [
         'child' => false,
         'check_permision' => 'ADMIN'
     ],
-    'user' => [
+    'User' => [
         'name' => 'Quản trị người dùng',
         'icon' => 'fa fa-user-circle',
         'child' => false,
         'check_permision' => 'ADMIN'
     ],
-    'category' => [
+    'Category' => [
         'name' => 'Quản trị danh mục',
         'icon' => 'fa fa-list',
         'check_permision' => 'ADMIN',
@@ -28,7 +28,7 @@ return [
             ]
         ]
     ],
-    'examinations' => [
+    'Examinations' => [
         'name' => 'Quản trị câu hỏi',
         'icon' => 'fas fa-project-diagram',
         'check_permision' => 'ADMIN',
@@ -39,7 +39,7 @@ return [
         //     ],
         // ]
         ],
-    'objects' => [
+    'Objects' => [
         'name' => 'Quản trị đối tượng',
         'icon' => 'fas fa-user-tag',
         'check_permision' => 'ADMIN',
@@ -50,7 +50,7 @@ return [
         //     ],
         // ]
         ],
-    'sql' => [
+    'Sql' => [
         'name' => 'Quản trị Bài thi',
         'icon' => 'fas fa-address-card',
         'check_permision' => 'ADMIN',
@@ -60,5 +60,10 @@ return [
         //         'icon' => 'fa fa-angle-double-right',
         //     ],
         // ]
-    ]
+        ],
+        'Login' => [
+            'name' => 'Quản trị Bài thi',
+            'icon' => 'fas fa-address-card',
+            'check_permision' => 'ADMIN',
+        ]
 ];
