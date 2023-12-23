@@ -5,6 +5,7 @@ use Modules\Frontend\Controllers\HomeController;
 use Modules\Frontend\Controllers\ShopController;
 use Modules\Frontend\Controllers\BlogController;
 use Modules\Frontend\Controllers\ContactController;
+use Modules\System\Login\Controllers\LoginController;
 
 Route::controller(AuthController::class)->group(function ($router) {
     $router->get('login', 'getSignIn');
@@ -19,6 +20,12 @@ Route::controller(AuthController::class)->group(function ($router) {
     $router->get('getXa', 'getXa');
 
 });
+
+/** admin */
+Route::controller(LoginController::class)->group(function ($router) {
+    $router->get('/system/login', 'index');
+});
+
 
 /** Trang chủ */
 Route::controller(HomeController::class)->group(function ($router) {
