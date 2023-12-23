@@ -30,6 +30,7 @@ class LoginController extends Controller
         // $data['message'] = '';
         // $data['class'] = 'form-control';
         // if (isset($_SESSION['role']) && $_SESSION['role'] === 'ADMIN_SYSTEM') return redirect('/system/users');
+
         return view("Login::index");
     }
 
