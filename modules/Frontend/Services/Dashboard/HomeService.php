@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Modules\Core\Ncl\Http\BaseService;
 use Modules\Core\Ncl\Library;
-use Modules\Core\Ncl\LoggerHelpers;
+// use Modules\Core\Ncl\LoggerHelpers;
 use Modules\Frontend\Models\Dashboard\PositionModel;
 use Modules\Frontend\Models\Dashboard\UnitModel;
 use Modules\Frontend\Models\Dashboard\HomeModel;
@@ -22,14 +22,14 @@ use Modules\Frontend\Repositories\Dashboard\HomeRepository;
 class HomeService extends BaseService
 {
     private $HomeRepository;
-    private $logger;
+    // private $logger;
 
     public function __construct(
         HomeRepository $u,
-        LoggerHelpers $l
+        // LoggerHelpers $l
     ) {
         $this->HomeRepository = $u;
-        $this->logger = $l;
+        // $this->logger = $l;
         parent::__construct();
     }
     public function repository()
