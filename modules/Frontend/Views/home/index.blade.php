@@ -1,17 +1,5 @@
 
 @extends('Frontend::layouts.index')
-@section('script')
-    <script type="text/javascript">
-
-        var arrJsCss = $.parseJSON('<?php echo $stringJsCss; ?>');
-        NclLib.loadFileJsCss(arrJsCss);
-
-        var JS_Home = new Home('{{ url('') }}', '');
-        jQuery(document).ready(function($) {
-            JS_Home.loadIndex();
-        })
-    </script>
-@endsection
 @section('body-client')
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <!-- <div class="carousel-indicators">

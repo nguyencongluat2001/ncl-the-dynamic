@@ -27,20 +27,17 @@ class SystemServiceProvider extends ServiceProvider
     public function boot()
     {
         $layouts = config('moduleInitConfig.layouts');
-        //Kiem tra xem url se thuoc layout nao
         $checkFrontEnd = true;
-        // foreach ($layouts as $key => $value) {
-        //     if (Request::is($key) || Request::is($key . '/*')) {
-        //         if ($value == 'System') {
-        //             $checkFrontEnd = false;
-        //             dd(2);
-        //             $this->bootSystem($value, $key);
-        //         }
-        //     }
-        // }
-                            $this->bootSystem('Frontend');
-
-        // if ($checkFrontEnd) $this->bootFrontend('Frontend');
+        foreach ($layouts as $key => $value) {
+            if (Request::is($key) || Request::is($key . '/*')) {
+                if ($value == 'System') {
+                    $checkFrontEnd = false;
+                    $this->bootSystem('Frontend');
+                }
+            }
+        }
+        $this->bootSystem('Frontend');
+        if ($checkFrontEnd) $this->bootFrontend('Frontend');
     }
 
     public function bootFrontend($layout)

@@ -28,7 +28,7 @@ return [
             ]
         ]
     ],
-    'examinations' => [
+    'product' => [
         'name' => 'Quản trị câu hỏi',
         'icon' => 'fas fa-project-diagram',
         'check_permision' => 'ADMIN',
