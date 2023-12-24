@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\System\Login\Requests;
+namespace Modules\Frontend\Requests;
 
 use Modules\Core\Ncl\Http\Requests\Request;
 

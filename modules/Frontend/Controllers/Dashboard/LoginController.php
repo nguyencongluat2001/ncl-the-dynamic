@@ -1,12 +1,12 @@
 <?php
 
-namespace Modules\System\Login\Controllers;
+namespace Modules\Frontend\Controllers\Dashboard;
 
-use Modules\System\Login\Requests\Login as Requests;
-use Modules\System\Login\Requests\ChangePasswordRequest;
+use Modules\Frontend\Requests\Login as Requests;
+use Modules\Frontend\Requests\ChangePasswordRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use Modules\System\User\Models\UserModel;
+use Modules\Frontend\Models\Dashboard\UserModel;
 use Illuminate\Support\Facades\Hash;
 use DB;
 use Monolog\Logger;
@@ -31,7 +31,7 @@ class LoginController extends Controller
         // $data['class'] = 'form-control';
         // if (isset($_SESSION['role']) && $_SESSION['role'] === 'ADMIN_SYSTEM') return redirect('/system/users');
 
-        return view("Login::index");
+        return view("Frontend::Dashboard.Login.index");
     }
 
     /**

@@ -29,15 +29,18 @@ class SystemServiceProvider extends ServiceProvider
         $layouts = config('moduleInitConfig.layouts');
         //Kiem tra xem url se thuoc layout nao
         $checkFrontEnd = true;
-        foreach ($layouts as $key => $value) {
-            if (Request::is($key) || Request::is($key . '/*')) {
-                if ($value == 'System') {
-                    $checkFrontEnd = false;
-                    $this->bootSystem($value, $key);
-                }
-            }
-        }
-        if ($checkFrontEnd) $this->bootFrontend('Frontend');
+        // foreach ($layouts as $key => $value) {
+        //     if (Request::is($key) || Request::is($key . '/*')) {
+        //         if ($value == 'System') {
+        //             $checkFrontEnd = false;
+        //             dd(2);
+        //             $this->bootSystem($value, $key);
+        //         }
+        //     }
+        // }
+                            $this->bootSystem('Frontend');
+
+        // if ($checkFrontEnd) $this->bootFrontend('Frontend');
     }
 
     public function bootFrontend($layout)
@@ -66,68 +69,30 @@ class SystemServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom(base_path() . '/modules/' . $this->modules . '/Lang', ucfirst($this->modules));
     }
 
-    public function bootSystem($layout, $url)
+    public function bootSystem($layout)
     {
-        session_start();
-        // Kiem tra quyen dang nhap
-        if (
-            Request::is('system/login') || Request::is('system/login/*') ||
-            Request::is('system/logout') || Request::is('system/logout/*')
-        ) {
-            // Load routes
+            // session_start();
+            if (!isset($_SESSION)) session_start();
+            $this->namespace = 'Modules\\' . $layout . '\Controllers\Dashboard';
+            $this->modules = $layout;
+            $arrModules = [];
+            // $arrModules = CategoriesModel::select('*')->where('layout', 'LAYOUT_MENU_HEADER')->where('is_display_at_home', 1)->orderBy('order')->get();
+            $this->arrModules = $arrModules;
+            view()->composer('*', function ($view) {
+                $view->with('menuItems', $this->arrModules);
+                $view->with('module', $this->currentModule);
+            });
             Route::group([
-                'namespace'  => 'Modules\System\Login\Controllers',
-                'module'     => 'login',
-                'middleware' => 'web',
-                'prefix'     => 'system/login'
+                'namespace'  => $this->namespace,
+                'module'     => $this->modules,
+                'middleware' => ['web'],
+                // 'prefix'     => strtolower($this->prefix)
             ], function ($router) {
-                $this->loadRoutesFrom(base_path() . '/modules/System/Login/routes.php');
+                $this->loadRoutesFrom(base_path() . '/modules/' . $this->modules . '/routesAdmin.php');
             });
             // Load views
-            $this->loadViewsFrom(base_path() . '/modules/System/Login/Views', 'Login');
-        } else {
-            $this->namespace = 'Modules\\' . $layout . '\Controllers';
-            $middleware       = ['web', 'CheckAdminLogin'];
-            $this->middleware = $middleware;
-            $arrModules       = config('moduleSystem');
-            // chức năng quản trị thủ tục hành chính đơn vi
-            // chức năng quản trị thủ tục hành chính root
-            if (isset($_SESSION['role']) && $_SESSION['role'] == 'ADMIN') {
-                unset($arrModules['recordtype']['child']['recordtypeUnit']);
-            }
-            // Get all Menu
-            $this->arrModules = $arrModules;
-            foreach ($arrModules as $urlModule => $arrModule) {
-                $urlcheck = $url . '/' . $urlModule;
-                if (Request::is($urlcheck) || Request::is($urlcheck . '/*')) {
-                    $module              = $urlModule;
-                    $this->currentModule = $module;
-                    $segments            = Request::segments();
-                    view()->composer('*', function ($view) use ($segments) {
-                        $view->with('menuItems', $this->arrModules);
-                        $view->with('module', $this->currentModule);
-                        $view->with('childModule', $segments[2] ?? '');
-                    });
-                    $layout          = 'System';
-                    $this->layout    = $layout;
-                    $this->modules   = $module;
-                    $this->prefix    = $module;
-                    $this->namespace = 'Modules' . "\\" . $layout . "\\" . ucfirst($module) . '\Controllers';
-                    // Load routes
-                    Route::group([
-                        'namespace'  => $this->namespace,
-                        'middleware' => $this->middleware,
-                        'module'     => $this->modules,
-                        'prefix'     => $url . '/' . strtolower($this->prefix)
-                    ], function ($router) {
-                        $this->loadRoutesFrom(base_path() . '/modules/' . $this->layout . '/' . ucfirst($this->modules) . '/routes.php');
-                    });
-                    // Load views
-                    $this->loadViewsFrom(base_path() . '/modules/' . $this->layout . '/' . $this->modules . '/Views', ucfirst($this->modules));
-                    // Translations
-                    $this->loadTranslationsFrom(base_path() . '/resources/lang', "System");
-                }
-            }
+            $this->loadViewsFrom(base_path() . '/modules/' . $this->modules . '/Views', ucfirst($this->modules));
+            // Translations
+            $this->loadTranslationsFrom(base_path() . '/modules/' . $this->modules . '/Lang', ucfirst($this->modules));
         }
-    }
 }

@@ -13,7 +13,7 @@ return [
 
     'layouts' => [
         '/' => 'Frontend',     // Trang web
-        'system'   => 'System',     // Quản trị hệ thống
+        // 'system'   => 'System',     // Quản trị hệ thống
         'api'      => 'Api',
     ],
 

@@ -60,5 +60,16 @@ return [
         //         'icon' => 'fa fa-angle-double-right',
         //     ],
         // ]
-    ]
+        ],
+        'dashboard' => [
+            'name' => 'Quản trị Bài thi',
+            'icon' => 'fas fa-address-card',
+            'check_permision' => 'ADMIN',
+            // 'child' => [
+            //     'exams' => [
+            //         'name' => 'Bài thi',
+            //         'icon' => 'fa fa-angle-double-right',
+            //     ],
+            // ]
+        ]
 ];

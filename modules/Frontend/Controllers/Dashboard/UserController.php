@@ -1,18 +1,18 @@
 <?php
 
-namespace Modules\System\User\Controllers;
+namespace Modules\Frontend\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
-use Modules\System\User\Services\UserInfoService;
-use Modules\System\User\Services\UserService;
-use Modules\System\User\Models\AuthenticationOTPModel;
+use Modules\Frontend\Services\Dashboard\UserInfoService;
+use Modules\Frontend\Services\Dashboard\UserService;
+use Modules\Frontend\Models\Dashboard\AuthenticationOTPModel;
 use Modules\System\Helpers\PaginationHelper;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Modules\Base\Helpers\ForgetPassWordMailHelper;
-use Modules\System\User\Models\UserPassOldModel;
+use Modules\Frontend\Models\Dashboard\UserPassOldModel;
 
 /**
  *
@@ -35,7 +35,7 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        return view('User::index');
+        return view('Frontend::Dashboard.User.index');
     }
     /**
      * user_info
@@ -49,7 +49,7 @@ class UserController extends Controller
         $data['company'] = !empty($userInfo->company)?$userInfo->company:null;
         $data['position'] = !empty($userInfo->position)?$userInfo->position:null;
         $data['date_join'] = !empty($userInfo->date_join)?$userInfo->date_join:null;
-        return view('User::userInfor.index',compact('data'));
+        return view('Frontend::Dashboard.userInfor.index',compact('data'));
     }
      /**
      * thay đổi màu sắc trang web
@@ -90,7 +90,7 @@ class UserController extends Controller
     {
         $input = $request->all();
         $data = $this->userService->addUserDisplay($input);
-        return view('User::User.add', $data);
+        return view('Frontend::Dashboard.User.add', $data);
     }
      /**
      * Load màn hình them thông tin người dùng
@@ -102,7 +102,7 @@ class UserController extends Controller
     public function createForm(Request $request)
     {
         $input = $request->all();
-        return view('User::edit');
+        return view('Frontend::Dashboard.User.edit');
     }
     /**
      * Thêm thông tin người dùng
@@ -128,7 +128,7 @@ class UserController extends Controller
     {
         $input = $request->all();
         $data = $this->userService->editUser($input);
-        return view('User::edit',compact('data'));
+        return view('Frontend::Dashboard.User.edit',compact('data'));
     }
 
      /**
@@ -189,7 +189,7 @@ class UserController extends Controller
         $param = $arrInput;
         $objResult = $this->userService->filter($param);
         $data['datas'] = $objResult;
-        return view("User::loadlist", $data)->render();
+        return view("Frontend::Dashboard.User.loadlist", $data)->render();
     }
      /**
      * hiển thị modal đổi mật khẩu
@@ -204,7 +204,7 @@ class UserController extends Controller
         $data['id'] = $input['id'];
         $users = $this->userService->where('id',$input['id'])->first();
         $data['email_acc'] = $users['email'];
-        return view('User::userInfor.edit',compact('data'));
+        return view('Frontend::Dashboard.User.userInfor.edit',compact('data'));
     }
     /**
      * Cập nhật mật khẩu

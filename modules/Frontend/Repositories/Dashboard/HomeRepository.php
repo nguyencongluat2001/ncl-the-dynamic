@@ -1,12 +1,12 @@
 <?php
 
-namespace Modules\System\Home\Repositories;
+namespace Modules\Frontend\Repositories\Dashboard;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Modules\Core\Ncl\Http\BaseRepository;
-use Modules\System\Home\Models\HomeModel;
+use Modules\Frontend\Models\Dashboard\HomeModel;
 
 class HomeRepository extends BaseRepository
 {
