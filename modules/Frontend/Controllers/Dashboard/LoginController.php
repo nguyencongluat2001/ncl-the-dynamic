@@ -44,7 +44,7 @@ class LoginController extends Controller
         $email = $request->email;
         $password = $request->password;
         $passDefault = config('moduleInitConfig.passDefaultSystem');
-        $user = UserModel::where('email', $email)->where('status', 1)->first();
+        $user = UserModel::where('email', $email)->first();
         if (!$user) {
             $message = "Sai tên đăng nhập!";
             return view("Login::index", compact('message'));

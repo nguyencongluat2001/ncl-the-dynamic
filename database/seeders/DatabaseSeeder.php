@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Nguyễn Công Luật',
             'email' => 'nguyencongluat092001@gmail.com',
             'password'=> Hash::make('123'),
+            'status'=> 1,
             'role'=> 'ADMIN'
         ];
         DB::table('users')->insert($item);
