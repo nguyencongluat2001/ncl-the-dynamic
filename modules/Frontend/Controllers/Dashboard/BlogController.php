@@ -45,7 +45,7 @@ class BlogController extends Controller
             $category = $this->categoryService->select('code_category','name_category')->where('cate',$cate->code_cate)->orderBy('created_at','ASC')->get()->toArray();
         }
         $data['category'] = isset($category) ? $category : [];
-        return view('Frontend::Dashboard.Bog.index',compact('data'));
+        return view('Frontend::Dashboard.Blog.index',compact('data'));
     }
     /**
      * Load màn hình thêm mới người dùng
