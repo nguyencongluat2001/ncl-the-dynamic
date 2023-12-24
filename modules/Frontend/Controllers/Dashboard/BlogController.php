@@ -45,7 +45,7 @@ class BlogController extends Controller
             $category = $this->categoryService->select('code_category','name_category')->where('cate',$cate->code_cate)->orderBy('created_at','ASC')->get()->toArray();
         }
         $data['category'] = isset($category) ? $category : [];
-        return view('Frontend::Dashboard.blog.index',compact('data'));
+        return view('Frontend::Dashboard.Bog.index',compact('data'));
     }
     /**
      * Load màn hình thêm mới người dùng
@@ -73,7 +73,7 @@ class BlogController extends Controller
         $category = $this->categoryService->where('cate','DM_BLOG')->orderBy('order')->get()->toArray();
         $data['category'] = $category;
         $data['code'] = $input['category'];
-        return view('Frontend::Dashboard.blog.edit',compact('data'));
+        return view('Frontend::Dashboard.Blog.edit',compact('data'));
     }
     /**
      * Thêm thông tin người dùng
@@ -102,7 +102,7 @@ class BlogController extends Controller
         $category = $this->categoryService->where('cate','DM_BLOG')->get()->toArray();
         $data = $this->blogService->editBlog($input);
         $data['category'] = $category;
-        return view('Frontend::Dashboard.blog.edit',compact('data'));
+        return view('Frontend::Dashboard.Blog.edit',compact('data'));
     }
 
      /**
@@ -131,7 +131,7 @@ class BlogController extends Controller
         $input = $request->all();
         $dataInfor = $this->blogService->infor($input);
         // dd($dataInfor);
-        return view('Frontend::Dashboard.blog.infor',compact('dataInfor'));
+        return view('Frontend::Dashboard.Blog.infor',compact('dataInfor'));
     }
      /**
      * load màn hình danh sách
@@ -150,7 +150,7 @@ class BlogController extends Controller
         }
         $objResult = $this->blogService->filter($param);
         $data['datas']= $objResult;
-        return view("Frontend::Dashboard.blog.loadlist", $data)->render();
+        return view("Frontend::Dashboard.Blog.loadlist", $data)->render();
     }
     
     /**
