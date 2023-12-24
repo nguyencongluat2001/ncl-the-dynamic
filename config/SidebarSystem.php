@@ -20,23 +20,17 @@ return [
         'a'    => 'nav-link link-category',
         'href' => '/system/category/index',
     ],
-    'login' => [
-        'name' => 'Bệnh viện, phòng khám',
-        'icon' => 'fas fa-university',
-        'a'    => 'nav-link link-hospital',
-        'href' => '/system/hospital/index',
+    'product' => [
+        'name' => 'Kho Sản phẩm',
+        'icon' => 'fas fa-project-diagram',
+        'a'    => 'nav-link link-product',
+        'href' => '/system/product/index',
     ],
     'blog' => [
         'name' => 'Quản trị bài viết',
         'icon' => 'far fa-calendar-alt',
         'a'    => 'nav-link link-blog',
         'href' => '/system/blog/index',
-    ],
-    'product' => [
-        'name' => 'Quản trị Search',
-        'icon' => 'fas fa-medkit',
-        'a'    => 'nav-link link-urlsearch',
-        'href' => '/system/sql/index',
     ],
     'sql' => [
         'name' => 'Quản trị DATA',

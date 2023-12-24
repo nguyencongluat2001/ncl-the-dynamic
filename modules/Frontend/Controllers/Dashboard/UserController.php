@@ -49,7 +49,7 @@ class UserController extends Controller
         $data['company'] = !empty($userInfo->company)?$userInfo->company:null;
         $data['position'] = !empty($userInfo->position)?$userInfo->position:null;
         $data['date_join'] = !empty($userInfo->date_join)?$userInfo->date_join:null;
-        return view('Frontend::Dashboard.userInfor.index',compact('data'));
+        return view('Frontend::Dashboard..User.userInfor.index',compact('data'));
     }
      /**
      * thay đổi màu sắc trang web

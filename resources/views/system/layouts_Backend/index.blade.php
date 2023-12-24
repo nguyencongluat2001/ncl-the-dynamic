@@ -114,17 +114,12 @@
                                             {{ __('Thông tin cá nhân') }}
                                         </p>
                                 </a>
-                                <a class="dropdown-item" href=""
-                                    onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
+                                <a class="dropdown-item" href="{{ url('/system/logout') }}">
                                         <p>
                                             {{ __('Đăng xuất') }}
                                         </p>
                                 </a>
-                                <form id="logout-form" action="" method="POST"
-                                    class="d-none">
-                                    @csrf
-                                </form>
+                            </a>
                             </div>
                         </li>
                         @endif
@@ -179,17 +174,11 @@
                                                         {{ __('Thông tin cá nhân') }}
                                                     </p>
                                             </a>
-                                            <a class="dropdown-item" href=""
-                                                onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
+                                            <a class="dropdown-item" href="{{ url('/system/logout') }}">
                                                     <p>
                                                         {{ __('Đăng xuất') }}
                                                     </p>
                                             </a>
-                                            <form id="logout-form" action="" method="POST"
-                                                class="d-none">
-                                                @csrf
-                                            </form>
                                         </div>
                                     </li>
                                 @endif

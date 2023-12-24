@@ -418,3 +418,35 @@ JS_Blogs.prototype.checkValidate = function(){
         return false;
     }
 }
+/**
+ * Thay đổi trạng thái
+ */
+JS_Blogs.prototype.changeStatus = function(id){
+    var myClass = this;
+    var url = myClass.urlPath + '/changeStatus';
+    var data = '_token=' + $("#_token").val();
+    data += '&status=' + ($("#status_" + id).is(":checked") == true ? 0 : 1);
+    data += '&id=' + id;
+    $.ajax({
+        url: url,
+        type: "POST",
+        data: data,
+        success: function(arrResult){
+            if(arrResult['success'] == true){
+                NclLib.alertMessageBackend('success', 'Thông báo', arrResult['message']);
+            }else{
+                NclLib.alertMessageBackend('danger', 'Lỗi', arrResult['message']);
+            }
+            NclLib.successLoadding();
+        }, error: function(e){
+            console.log(e);
+            NclLib.successLoadding();
+        }
+    });
+}
+/**
+ * Tìm kiếm
+ */
+JS_Blogs.prototype.search = function(){
+    JS_Blogs.loadList();
+}
