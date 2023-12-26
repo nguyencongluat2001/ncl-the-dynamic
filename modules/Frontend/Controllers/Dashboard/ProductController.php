@@ -1,27 +1,29 @@
 <?php
-
-namespace Modules\System\Category\Controllers;
+namespace Modules\Frontend\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Modules\System\Category\Services\CateService;
+use Modules\Frontend\Services\Dashboard\CateService;
 use DB;
-use Modules\System\Category\Services\CategoryService;
+use Modules\Frontend\Services\Dashboard\CategoryService;
+use Modules\Frontend\Services\Dashboard\ProductService;
 
 /**
- * Quản trị danh mục
+ * Quản trị kho
  *
  * @author Luatnc
  */
-class CateController extends Controller
+class ProductController extends Controller
 {
 
     public function __construct(
         CateService $CateService,
-        CategoryService $categoryService
+        CategoryService $categoryService,
+        ProductService $ProductService
     ){
         $this->CateService = $CateService;
         $this->categoryService = $categoryService;
+        $this->ProductService = $ProductService;
     }
 
     /**
@@ -31,7 +33,7 @@ class CateController extends Controller
      */
     public function index(Request $request)
     {
-        return view('Category::cate.index');
+        return view('Frontend::Dashboard.Product.index');
     }
      /**
      * Load màn hình them thông tin người dùng
@@ -43,7 +45,7 @@ class CateController extends Controller
     public function createForm(Request $request)
     {
         $input = $request->all();
-        return view('Category::cate.edit');
+        return view('Frontend::Dashboard.Category.cate.edit');
     }
     /**
      * them danh mục
@@ -73,7 +75,7 @@ class CateController extends Controller
             return array('success' => false, 'message' => 'Không tồn tại đối tượng!');
         }
         $data['datas'] = $this->CateService->where('id', $input['id'])->first();
-        return view('Category::cate.edit', $data);
+        return view('Frontend::Dashboard.Category.cate.edit', $data);
     }
 
     /**
@@ -122,9 +124,9 @@ class CateController extends Controller
         $data = array();
         $arrInput['sort'] = 'order';
         $arrInput['sortType'] = 1;
-        $objResult = $this->CateService->filter($arrInput);
+        $objResult = $this->ProductService->filter($arrInput);
         $data['datas'] = $objResult;
-        return view("Category::cate.loadlist", $data)->render();
+        return view("Frontend::Dashboard.Category.cate.loadlist", $data)->render();
     }
     /**
      * Cập nhật thông tin màn hình index

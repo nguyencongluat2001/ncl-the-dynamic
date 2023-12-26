@@ -1,57 +1,27 @@
 <?php
-
-namespace Modules\System\Category\Services;
+namespace Modules\Frontend\Services\Dashboard;
 
 use Illuminate\Support\Facades\Hash;
 use Modules\Base\Service;
-use Modules\System\Category\Repositories\CateRepository;
+use Modules\Frontend\Repositories\Dashboard\ProductRepository;
+
 use Str;
 
-class CateService extends Service
+class ProductService extends Service
 {
 
     public function __construct(
-        CateRepository $CateRepository
+        ProductRepository $ProductRepository
         )
     {
         parent::__construct();
-        $this->CateRepository = $CateRepository;
+        $this->ProductRepository = $ProductRepository;
         parent::__construct();
     }
 
     public function repository()
     {
-        return CateRepository::class;
-    }
-
-    public function store($input){
-        $cates = $this->repository->select('*')->get();
-        if($input['id'] != ''){
-            $arrData = [
-                'name'=>$input['name'],
-                'code_cate'=>$input['code_cate'],
-                'decision'=>$input['decision'],
-                'order'=> isset($input['order']) && !empty($input['order']) ? $input['order'] :count($cates) + 1,
-                'status'=> isset($input['status']) && !empty($input['status']) ? 1 : 0,
-            ];
-            $create = $this->CateRepository->where('id',$input['id'])->update($arrData);
-        }else{
-            $countCate = $this->repository->select('*')->where('code_cate', $input['code_cate'])->count();
-            if($countCate > 0){
-                return array('success' => false, 'message' => 'Mã đối tượng đã tồn tại!');
-            }
-            $arrData = [
-                'id'=>(string)Str::uuid(),
-                'name'=>$input['name'],
-                'code_cate'=>$input['code_cate'],
-                'decision'=>$input['decision'],
-                'order'=> count($cates) + 1,
-                'status'=> isset($input['status']) && !empty($input['status']) ? 1 : 0,
-            ];
-            $create = $this->CateRepository->create($arrData);
-        }
-        
-        return array('success' => true, 'message' => 'Cập nhật thành công!');
+        return ProductRepository::class;
     }
     public function loadList($arrInput){
         $data = array();

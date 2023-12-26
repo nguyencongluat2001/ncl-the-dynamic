@@ -8,7 +8,7 @@ use Modules\Frontend\Controllers\Dashboard\CateController;
 use Modules\Frontend\Controllers\Dashboard\CategoryController;
 use Modules\Frontend\Controllers\Dashboard\BlogController;
 use Modules\Frontend\Controllers\Dashboard\SqlController;
-
+use Modules\Frontend\Controllers\Dashboard\ProductController;
 /** Login */
 Route::controller(LoginController::class)->group(function ($router) {
     $router->get('system/login', 'index');
@@ -73,16 +73,10 @@ Route::controller(BlogController::class)->group(function ($router) {
     $router->post('system/blog/changeStatus', 'changeStatus');
 });
 
-Route::controller(BlogController::class)->group(function ($router) {
-    $router->get('system/blog/index', 'index');
-    $router->get('system/blog/loadList', 'loadList');
-    $router->post('system/blog/edit', 'edit');
-    $router->post('system/blog/createForm', 'createForm');
-    $router->post('system/blog/create', 'create');
-    $router->post('system/blog/delete', 'delete');
-    $router->get('system/blog/infor', 'infor');
-    $router->post('system/blog/uploadFileCK', 'uploadFileCK');
-    $router->post('system/blog/changeStatus', 'changeStatus');
+//product
+Route::controller(ProductController::class)->group(function ($router) {
+    $router->get('system/product/index', 'index');
+    $router->get('system/product/loadList', 'loadList');
 });
 Route::controller(SqlController::class)->group(function ($router) {
     $router->get('/system/sql/index', 'index');
