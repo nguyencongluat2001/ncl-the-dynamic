@@ -194,7 +194,7 @@
 	<section class="related-product-area">
 		<div class="container">
       <div class="section-intro pb-40px">
-        <p>Danh mục phổ biến</p>
+        <p class="text-titel-nc">Danh mục phổ biến</p>
       </div>
 			<div class="row mt-30">
         <div class="col-50nc col-sm-12 col-xl-3 mb-4 mb-xl-0">
@@ -293,7 +293,7 @@
      <section class="blog_categorie_area_nc">
       <div class="container">
         <div class="section-intro pb-30px">
-          <p>Mặt hàng phổ biến trên thị trường</p>
+          <p class="text-titel-nc">Mặt hàng phổ biến trên thị trường</p>
           <h5> <span class="section-intro__style">Bán chạy nhất</span></h5>
         </div>
         <div class="row">
@@ -310,7 +310,7 @@
               <div class="card-body">
                 <p>Accessories</p>
                 <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div>
             </div>
           </div>
@@ -327,7 +327,7 @@
               <div class="card-body">
                 <p>Beauty</p>
                 <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div>
             </div>
           </div>
@@ -344,7 +344,7 @@
               <div class="card-body">
                 <p>Decor</p>
                 <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div>
             </div>
           </div>
@@ -361,7 +361,7 @@
               <div class="card-body">
                 <p>Decor</p>
                 <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div>
             </div>
           </div>
@@ -378,7 +378,7 @@
               <div class="card-body">
                 <p>Accessories</p>
                 <h4 class="card-product__title"><a href="single-product.html">Man Office Bag</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div>
             </div>
           </div>
@@ -395,7 +395,7 @@
               <div class="card-body">
                 <p>Kids Toy</p>
                 <h4 class="card-product__title"><a href="single-product.html">Charging Car</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div>
             </div>
           </div>
@@ -412,7 +412,7 @@
               <div class="card-body">
                 <p>Accessories</p>
                 <h4 class="card-product__title"><a href="single-product.html">Blutooth Speaker</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div> 
             </div>
           </div>
@@ -429,7 +429,7 @@
               <div class="card-body">
                 <p>Kids Toy</p>
                 <h4 class="card-product__title"><a href="#">Charging Car</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div>
             </div>
           </div>
@@ -441,7 +441,7 @@
     <section class="section-margin calc-60px">
       <div class="container">
         <div class="section-intro pb-30px">
-          <p>Mặt hàng phổ biến</p>
+          <p class="text-titel-nc">Mặt hàng phổ biến</p>
           <h5>  <span class="section-intro__style">Thịnh hành</span></h5>
         </div>
         <div class="row">
@@ -458,7 +458,7 @@
               <div class="card-body">
                 <p>Accessories</p>
                 <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div>
             </div>
           </div>
@@ -475,7 +475,7 @@
               <div class="card-body">
                 <p>Beauty</p>
                 <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div>
             </div>
           </div>
@@ -492,7 +492,7 @@
               <div class="card-body">
                 <p>Decor</p>
                 <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div>
             </div>
           </div>
@@ -509,7 +509,7 @@
               <div class="card-body">
                 <p>Decor</p>
                 <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div>
             </div>
           </div>
@@ -526,7 +526,7 @@
               <div class="card-body">
                 <p>Accessories</p>
                 <h4 class="card-product__title"><a href="single-product.html">Man Office Bag</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div>
             </div>
           </div>
@@ -543,7 +543,7 @@
               <div class="card-body">
                 <p>Kids Toy</p>
                 <h4 class="card-product__title"><a href="single-product.html">Charging Car</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div>
             </div>
           </div>
@@ -560,7 +560,7 @@
               <div class="card-body">
                 <p>Accessories</p>
                 <h4 class="card-product__title"><a href="single-product.html">Blutooth Speaker</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div> 
             </div>
           </div>
@@ -577,7 +577,7 @@
               <div class="card-body">
                 <p>Kids Toy</p>
                 <h4 class="card-product__title"><a href="#">Charging Car</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price">717,000 VNĐ </p>
               </div>
             </div>
           </div>
