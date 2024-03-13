@@ -162,7 +162,7 @@ class UserController extends Controller
      */
     public function loadList(Request $request)
     { 
-        $paginationHelper = new PaginationHelper();
+        // $paginationHelper = new PaginationHelper();
         if($_SESSION['role'] != 'ADMIN' && $_SESSION['role'] != 'MANAGE'){
             if($_SESSION['role'] == 'CV_ADMIN' ){
                 if($_SESSION['role'] == '' || $request['role'] == null){

@@ -74,7 +74,7 @@ return [
         ],
         'backend' => [
             'driver' => 'eloquent',
-            'model' => Modules\System\User\Models\CheckUserModel::class,
+            'model' =>  Modules\Frontend\Models\Dashboard\CheckUserModel::class,
         ],
 
         'frontend' => [
