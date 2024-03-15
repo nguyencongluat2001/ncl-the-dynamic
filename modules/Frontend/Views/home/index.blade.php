@@ -100,14 +100,14 @@
      <section class="blog_categorie_area_nc">
       <div class="container">
         <div class="section-intro pb-30px">
-          <p class="text-titel-nc">Mặt hàng phổ biến trên thị trường</p>
-          <h5> <span class="section-intro__style">Bán chạy nhất</span></h5>
+          <p class="text-titel-nc">Dịch vụ phổ biến</p>
+          <!-- <h5> <span class="section-intro__style">Dịch vụ công cộng</span></h5> -->
         </div>
         <div class="row">
           <div class="col-50nc col-md-6 col-lg-4 col-xl-6">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="../img/product/product1.png" alt="">
+                <img style="height: 50%;object-fit: cover;" class="card-img" src="../img/home/lam-giay-kham-suc-khoe-nhanh-chong.jpg" alt="">
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -115,16 +115,16 @@
                 </ul>
               </div>
               <div class="card-body">
-                <p>Accessories</p>
-                <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
-                <p class="card-product__price">717,000 VNĐ </p>
+                <!-- <p>Làm chuẩn, ship nhanh</p> -->
+                <h4 class="card-product__title"><a href="single-product.html">LÀM GIẤY KHÁM SỨC KHỎE LẤY NGAY</a></h4>
+                <p class="card-product__price">150,000 - 300,000 VND </p>
               </div>
             </div>
           </div>
           <div class="col-50nc col-md-6 col-lg-4 col-xl-6">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="../img/product/product2.png" alt="">
+                <img style="height: 50%;object-fit: cover;" class="card-img" src="../img/home/bang-c2-dh.jpg" alt="">
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -132,9 +132,9 @@
                 </ul>
               </div>
               <div class="card-body">
-                <p>Beauty</p>
-                <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
-                <p class="card-product__price">717,000 VNĐ </p>
+                <!-- <p>Chính xác, rõ ràng, hỏa tốc</p> -->
+                <h4 class="card-product__title"><a href="single-product.html">LÀM BẰNG LÁI XE, C2 - ĐẠI HỌC, TIẾN SĨ </a></h4>
+                <p class="card-product__price">150,000 - 1,500,000 VNĐ </p>
               </div>
             </div>
           </div>
@@ -144,7 +144,7 @@
 
 
     <!-- ================ offer section start ================= --> 
-    <section class="offer" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 20px 30px" data-top-bottom="background-position: 0 20px">
+    <!-- <section class="offer" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 20px 30px" data-top-bottom="background-position: 0 20px">
       <div class="container">
         <div class="row">
           <div class="col-xl-5">
@@ -157,64 +157,21 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- ================ offer section end ================= --> 
 
     <!-- ================ Blog section start ================= -->  
     <section class="blog">
       <div class="container">
-        <div class="section-intro pb-60px">
-          <p>Bài viết thời trang phổ biến</p>
-          <h5>Tin tức mới nhất <span class="section-intro__style"></span></h5>
-        </div>
         <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="card card-blog">
-              <div class="card-blog__img">
-                <img class="card-img rounded-1" src="../img/blog/blog1.png" alt="">
-              </div>
+          <div class="col-md-6 col-lg-12 mb-12 mb-lg-0">
+            <div class="card">
               <div class="card-body">
-                <ul class="card-blog__info">
-                  <li><a href="#">By Admin</a></li>
-                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
-                </ul>
-                <h4 class="card-blog__title"><a href="single-blog.html">The Richland Center Shooping News and weekly shooper</a></h4>
-                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
-                <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="card card-blog">
-              <div class="card-blog__img">
-                <img class="card-img rounded-1" src="../img/blog/blog2.png" alt="">
-              </div>
-              <div class="card-body">
-                <ul class="card-blog__info">
-                  <li><a href="#">By Admin</a></li>
-                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
-                </ul>
-                <h4 class="card-blog__title"><a href="single-blog.html">The Shopping News also offers top-quality printing services</a></h4>
-                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
-                <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="card card-blog">
-              <div class="card-blog__img">
-                <img class="card-img rounded-1" src="../img/blog/blog3.png" alt="">
-              </div>
-              <div class="card-body">
-                <ul class="card-blog__info">
-                  <li><a href="#">By Admin</a></li>
-                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
-                </ul>
-                <h4 class="card-blog__title"><a href="single-blog.html">Professional design staff and efficient equipment you’ll find we offer</a></h4>
-                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
-                <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
+                <div class="banner-content col-lg-12 col-12 m-lg-auto text-left content-reader" id="content-reader">
+                    <div style="color:#264451; width: 100%;" class="light-300 text-justify">
+                      {!! $blogs_details->decision !!}
+                    </div>
+                </div>
               </div>
             </div>
           </div>
