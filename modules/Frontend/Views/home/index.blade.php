@@ -110,7 +110,8 @@
                   <!-- <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
                   <li><button><i class="ti-heart"></i></button></li> -->
-                  <button  class="btn btn-success"  style="animation: lights 2s 750ms linear infinite;border-radius: 5px;">Đăng ký</button>
+                  <a class="nav-link" href="giay-kham-suc-khoe"><button class="btn btn-success"  style="animation: lights 2s 750ms linear infinite;border-radius: 5px;">Đăng ký</button></a>
+                  
                 </ul>
                 <br>
               </div>
@@ -129,7 +130,7 @@
                   <!-- <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
                   <li><button><i class="ti-heart"></i></button></li> -->
-                  <button  class="btn btn-success"  style="animation: lights 2s 750ms linear infinite;border-radius: 5px;">Đăng ký</button>
+                  <a class="nav-link" href="bang"><button class="btn btn-success"  style="animation: lights 2s 750ms linear infinite;border-radius: 5px;">Đăng ký</button></a>
                 </ul>
               </div>
               <div class="card-body">

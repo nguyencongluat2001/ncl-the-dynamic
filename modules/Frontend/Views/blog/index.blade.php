@@ -1,23 +1,6 @@
 
 @extends('Frontend::layouts.index')
 @section('body-client')
-  <!-- ================ start banner area ================= -->	
-  <section class="blog-banner-area" id="blog">
-    <div class="container h-100">
-      <div class="blog-banner">
-        <div class="text-center">
-          <h1>Our Blog</h1>
-          <nav aria-label="breadcrumb" class="banner-breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Blog</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ================ end banner area ================= -->
 
 
   <!--================Blog Categorie Area =================-->

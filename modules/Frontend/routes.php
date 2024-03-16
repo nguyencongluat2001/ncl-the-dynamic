@@ -32,9 +32,9 @@ Route::controller(ShopController::class)->group(function ($router) {
 });
 /** Trang chủ */
 Route::controller(BlogController::class)->group(function ($router) {
-    $router->get('blog', 'index');
+    $router->get('giay-kham-suc-khoe', 'index');
 });
 /** Trang chủ */
 Route::controller(ContactController::class)->group(function ($router) {
-    $router->get('contact', 'index');
+    $router->get('bang', 'index');
 });
