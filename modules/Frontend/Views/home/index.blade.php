@@ -39,7 +39,6 @@
                 <div style="background: #ffffffa8;border-radius: 10px;">
                   <div style="padding: 2%;">
                       <h3 style="color:#ffa600">Ưu đãi siêu khủng</h3>
-                      <!-- <h4>Siêu ưu đãi</h4> -->
                       <p style="color:#2b495a;font-size: 20px;font-family: emoji;">Mua sắm thả ga, không lo về giá</p>
                       <a style="background:#ffa700" class="button button--active mt-3 mt-xl-4" href="#">Mua ngay <i style="color: #f6ff82;" class="fas fa-cart-plus"></i></a>
                   </div>
@@ -60,7 +59,6 @@
                 <div style="background: #ffffffa8;border-radius: 10px;">
                   <div style="padding: 2%;">
                       <h3 style="color:#ffa600">Giao hàng nhanh chóng</h3>
-                      <!-- <h4>Siêu ưu đãi</h4> -->
                       <p style="color:#2b495a;font-size: 20px;font-family: emoji;">Mua sắm thả ga, không lo về giá</p>
                       <a style="background:#ffa700" class="button button--active mt-3 mt-xl-4" href="#">Mua ngay <i style="color: #f6ff82;" class="fas fa-cart-plus"></i></a>
                   </div>
@@ -100,7 +98,7 @@
      <section class="blog_categorie_area_nc">
       <div class="container">
         <div class="section-intro pb-30px">
-          <p class="text-titel-nc">Dịch vụ phổ biến</p>
+          <!-- <p class="text-titel-nc">Dịch vụ phổ biến</p> -->
           <!-- <h5> <span class="section-intro__style">Dịch vụ công cộng</span></h5> -->
         </div>
         <div class="row">
@@ -109,14 +107,16 @@
               <div class="card-product__img">
                 <img style="height: 50%;object-fit: cover;" class="card-img" src="../img/home/lam-giay-kham-suc-khoe-nhanh-chong.jpg" alt="">
                 <ul class="card-product__imgOverlay">
-                  <li><button><i class="ti-search"></i></button></li>
+                  <!-- <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
-                  <li><button><i class="ti-heart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li> -->
+                  <button  class="btn btn-success"  style="animation: lights 2s 750ms linear infinite;border-radius: 5px;">Đăng ký</button>
                 </ul>
+                <br>
               </div>
               <div class="card-body">
                 <!-- <p>Làm chuẩn, ship nhanh</p> -->
-                <h4 class="card-product__title"><a href="single-product.html">LÀM GIẤY KHÁM SỨC KHỎE LẤY NGAY</a></h4>
+                <h4 style="font-family: system-ui;" class="card-product__title"><a href="single-product.html" style="color: #9d0000;">LÀM GIẤY KHÁM SỨC KHỎE LẤY NGAY</a></h4>
                 <p class="card-product__price">150,000 - 300,000 VND </p>
               </div>
             </div>
@@ -126,14 +126,15 @@
               <div class="card-product__img">
                 <img style="height: 50%;object-fit: cover;" class="card-img" src="../img/home/bang-c2-dh.jpg" alt="">
                 <ul class="card-product__imgOverlay">
-                  <li><button><i class="ti-search"></i></button></li>
+                  <!-- <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
-                  <li><button><i class="ti-heart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li> -->
+                  <button  class="btn btn-success"  style="animation: lights 2s 750ms linear infinite;border-radius: 5px;">Đăng ký</button>
                 </ul>
               </div>
               <div class="card-body">
                 <!-- <p>Chính xác, rõ ràng, hỏa tốc</p> -->
-                <h4 class="card-product__title"><a href="single-product.html">LÀM BẰNG LÁI XE, C2 - ĐẠI HỌC, TIẾN SĨ </a></h4>
+                <h4 style="font-family: system-ui;" class="card-product__title"><a href="single-product.html" style="color: #9d0000;">LÀM BẰNG LÁI XE, C2 - ĐẠI HỌC, TIẾN SĨ </a></h4>
                 <p class="card-product__price">150,000 - 1,500,000 VNĐ </p>
               </div>
             </div>
@@ -165,7 +166,7 @@
         <div class="row">
           <div class="col-md-6 col-lg-12 mb-12 mb-lg-0">
             <div class="card">
-              <div class="card-body">
+              <div class="card-body" style="background: #f8f7f4">
                 <div class="banner-content col-lg-12 col-12 m-lg-auto text-left content-reader" id="content-reader">
                     <div style="color:#264451; width: 100%;" class="light-300 text-justify">
                       {!! $blogs_details_bang->decision !!}
@@ -186,7 +187,7 @@
         <div class="row">
           <div class="col-md-6 col-lg-12 mb-12 mb-lg-0">
             <div class="card">
-              <div class="card-body">
+              <div class="card-body" style="background: #f8f7f4">
                 <div class="banner-content col-lg-12 col-12 m-lg-auto text-left content-reader" id="content-reader">
                     <div style="color:#264451; width: 100%;" class="light-300 text-justify">
                       {!! $blogs_details->decision !!}
@@ -199,20 +200,21 @@
       </div>
     </section>
     <!-- ================ Blog section end ================= -->  
+    <br>
 
     <!-- ================ Subscribe section start ================= --> 
     <section class="subscribe-position">
       <div class="container">
         <div class="subscribe text-center">
-          <h5 class="subscribe__title">Get Update From Anywhere</h5>
-          <p>Bearing Void gathering light light his eavening unto dont afraid</p>
+          <!-- <h5 class="subscribe__title">Nhận cập nhật từ mọi nơi</h5> -->
+          <p>Quý khách vui lòng để lại thông tin liên hệ</p>
           <div id="mc_embed_signup">
             <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe-form form-inline mt-5 pt-1">
               <div class="form-group ml-sm-auto">
-                <input class="form-control mb-1" type="email" name="EMAIL" placeholder="Enter your email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '" >
+                <input class="form-control mb-1" type="email" name="email" placeholder="Email hoặc số điện thoại" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '" >
                 <div class="info"></div>
               </div>
-              <button class="button button-subscribe mr-auto mb-1" type="submit">Subscribe Now</button>
+              <button class="button button-subscribe mr-auto mb-1" type="submit">Gửi cộng tác viên</button>
               <div style="position: absolute; left: -5000px;">
                 <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
               </div>

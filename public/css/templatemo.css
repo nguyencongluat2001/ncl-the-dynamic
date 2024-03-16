@@ -68,16 +68,19 @@
 }
 
 .offer-image1{
+    opacity: 0.5;
     background: url(../img/home/giay-kham-suc-khoe-home.jpg) right center no-repeat;
     background-size: cover;
     background-position-x: center;
 }
 .offer-image2{
+    opacity: 0.5;
     background: url(../img/home/bang-tot-nghiep-home.jpg) right center no-repeat;
     background-size: cover;
     background-position-x: center;
 }
 .offer-image3{
+    opacity: 0.5;
     background: url(../img/home/lam-giay-kham-suc-khoe-uy-tin-o-dau-2.jpg) right center no-repeat;
     background-size: cover;
     background-position-x: center;
@@ -86,3 +89,51 @@
     color: #080f24;
     font-family: serif;
 }
+/* title */
+@keyframes lights {
+    0% {
+      color: #ffe600;
+      text-shadow:
+        0 0 1em hsla(324, 19%, 95%, 0.823),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+    30% { 
+      color: hsl(28.06deg 100% 50%);
+      text-shadow:
+        0 0 1em hsl(330, 100%, 100%),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    40% { 
+      color: hsl(0deg 0% 100%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 90%, 0.5),
+        -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+        0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    70% {
+      color: hsl(0deg 0% 100%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    100% {
+      color: #ffe802;
+      text-shadow:
+        0 0 1em hsl(319, 17%, 82%),
+        0 0 0.125em hsla(320, 100%, 96%, 0.803),
+        1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+  }
