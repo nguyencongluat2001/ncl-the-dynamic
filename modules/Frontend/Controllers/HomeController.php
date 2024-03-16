@@ -43,6 +43,8 @@ class HomeController extends Controller
         $data['stringJsCss'] = json_encode($arrResult);
         $data['getBlog'] = $this->BlogService->where('code_category','TT_01')->first();
         $data['blogs_details'] = $this->BlogDetailService->where('code_blog',$data['getBlog']->code_blog)->first();
+        $data['getBlog_bang'] = $this->BlogService->where('code_category','TT_02')->first();
+        $data['blogs_details_bang'] = $this->BlogDetailService->where('code_blog',$data['getBlog_bang']->code_blog)->first();
         return view('Frontend::home.index', $data);
     }
 

@@ -159,6 +159,25 @@
       </div>
     </section> -->
     <!-- ================ offer section end ================= --> 
+    <!-- ================ Blog section start ================= -->  
+    <section class="blog">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-12 mb-12 mb-lg-0">
+            <div class="card">
+              <div class="card-body">
+                <div class="banner-content col-lg-12 col-12 m-lg-auto text-left content-reader" id="content-reader">
+                    <div style="color:#264451; width: 100%;" class="light-300 text-justify">
+                      {!! $blogs_details_bang->decision !!}
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================ Blog section end ================= -->  
 
     <!-- ================ Blog section start ================= -->  
     <section class="blog">
