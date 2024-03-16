@@ -1,6 +1,8 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 use Modules\Frontend\Controllers\AuthController;
+use Modules\Frontend\Controllers\HealthCertificate;
 use Modules\Frontend\Controllers\HomeController;
 use Modules\Frontend\Controllers\ShopController;
 use Modules\Frontend\Controllers\BlogController;
@@ -17,7 +19,6 @@ Route::controller(AuthController::class)->group(function ($router) {
     $router->get('getUnitApi', 'getUnitApi');
     $router->get('getHuyen', 'getHuyen');
     $router->get('getXa', 'getXa');
-
 });
 
 /** Trang chủ */
@@ -37,4 +38,8 @@ Route::controller(BlogController::class)->group(function ($router) {
 /** Trang chủ */
 Route::controller(ContactController::class)->group(function ($router) {
     $router->get('bang', 'index');
+});
+
+Route::controller(HealthCertificate::class)->group(function ($router) {
+    $router->get('giaykham', 'index');
 });
