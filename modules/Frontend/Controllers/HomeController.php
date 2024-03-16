@@ -22,8 +22,7 @@ class HomeController extends Controller
         HomeService $s,
         BlogService $BlogService,
         BlogDetailService $BlogDetailService
-        )
-    {;
+    ) {;
         $this->BlogDetailService = $BlogDetailService;
         $this->BlogService = $BlogService;
         $this->homeService = $s;
@@ -41,10 +40,10 @@ class HomeController extends Controller
         $arrResult           = $objLibrary->_getAllFileJavaScriptCssArray('js', 'frontend/home/home.js', ',', $arrResult);
         $arrResult           = $objLibrary->_getAllFileJavaScriptCssArray('js', 'assets/jquery.validate.js', ',', $arrResult);
         $data['stringJsCss'] = json_encode($arrResult);
-        $data['getBlog'] = $this->BlogService->where('code_category','TT_01')->first();
-        $data['blogs_details'] = $this->BlogDetailService->where('code_blog',$data['getBlog']->code_blog)->first();
-        $data['getBlog_bang'] = $this->BlogService->where('code_category','TT_02')->first();
-        $data['blogs_details_bang'] = $this->BlogDetailService->where('code_blog',$data['getBlog_bang']->code_blog)->first();
+        $data['getBlog'] = $this->BlogService->where('code_category', 'TT_01')->first();
+        $data['blogs_details'] = $this->BlogDetailService->where('code_blog', $data['getBlog']->code_blog)->first();
+        $data['getBlog_bang'] = $this->BlogService->where('code_category', 'TT_02')->first();
+        $data['blogs_details_bang'] = $this->BlogDetailService->where('code_blog', $data['getBlog_bang']->code_blog)->first();
         return view('Frontend::home.index', $data);
     }
 
@@ -59,13 +58,14 @@ class HomeController extends Controller
         return response()->json($data);
     }
 
-        /**
+    /**
      * Lấy các dữ liệu màn hình trang chủ
      * 
      * @param string $contestId ID đợt thi
      * @return \Illuminate\Http\JsonResponse
      */
-    public function getRank(string $contestId) : JsonResponse {
+    public function getRank(string $contestId): JsonResponse
+    {
         $data = $this->homeService->getRank($contestId);
         return response()->json($data);
     }
