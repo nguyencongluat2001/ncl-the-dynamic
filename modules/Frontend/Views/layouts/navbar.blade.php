@@ -2,7 +2,7 @@
     <div class="container">
         
        
-       <div style="width:13%">
+       <div style="width: 200px">
           <a class="nav-link" href=""><img href="" class="card-img " src="../img/giay-kham-suc-khoe-ha-noi.png" alt="Card image"></a>
         </div>
         <!-- <span style="font-size: 20px;font-family: math;color: #55c2e6;">THE LIGHT</span> -->
@@ -28,7 +28,7 @@
             </li> -->
             <li class="nav-item"><a class="nav-link" href="blog">LÀM GIẤY KHÁM SỨC KHỎE</a></li>
             <!-- <li class="nav-item"><a class="nav-link" href="contact">Liên hệ</a></li> -->
-            <li class="nav-item"><a class="nav-link" href="contact">LÀM BẰNG LÁI XE - BẰNG C2,C3,CĐ,ĐẠI HỌC</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact">BẰNG LÁI XE - BẰNG C2,C3,ĐẠI HỌC,..</a></li>
         </ul>
 
         <ul class="nav-shop">

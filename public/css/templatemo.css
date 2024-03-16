@@ -68,17 +68,17 @@
 }
 
 .offer-image1{
-    background: url(../img/home/parallax-bg.png) right center no-repeat;
+    background: url(../img/home/giay-kham-suc-khoe-home.jpg) right center no-repeat;
     background-size: cover;
     background-position-x: center;
 }
 .offer-image2{
-    background: url(../img/home/image-home.jpg) right center no-repeat;
+    background: url(../img/home/bang-tot-nghiep-home.jpg) right center no-repeat;
     background-size: cover;
     background-position-x: center;
 }
 .offer-image3{
-    background: url(../img/home/image-home2.jpg) right center no-repeat;
+    background: url(../img/home/lam-giay-kham-suc-khoe-uy-tin-o-dau-2.jpg) right center no-repeat;
     background-size: cover;
     background-position-x: center;
 }

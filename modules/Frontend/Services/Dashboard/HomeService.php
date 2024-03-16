@@ -49,7 +49,6 @@ class HomeService extends BaseService
     }
 
     /**
-     * Lấy các đơn vị khi load lần đầu
      * 
      * @param array $input
      * @return array
