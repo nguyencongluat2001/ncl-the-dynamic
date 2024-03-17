@@ -42,4 +42,5 @@ Route::controller(ContactController::class)->group(function ($router) {
 
 Route::controller(HealthCertificate::class)->group(function ($router) {
     $router->get('giaykham', 'index');
+    $router->post('giaykham/create', 'create');
 });
