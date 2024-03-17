@@ -26,7 +26,7 @@
                 <li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
                 </ul>
             </li> -->
-            <li class="nav-item"><a class="nav-link" href="giay-kham-suc-khoe">LÀM GIẤY KHÁM SỨC KHỎE</a></li>
+            <li class="nav-item"><a class="nav-link" href="giaykham">LÀM GIẤY KHÁM SỨC KHỎE</a></li>
             <!-- <li class="nav-item"><a class="nav-link" href="contact">Liên hệ</a></li> -->
             <li class="nav-item"><a class="nav-link" href="bang">BẰNG LÁI XE - BẰNG C2,C3,ĐẠI HỌC,..</a></li>
         </ul>

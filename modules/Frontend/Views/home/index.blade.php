@@ -110,7 +110,7 @@
                   <!-- <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
                   <li><button><i class="ti-heart"></i></button></li> -->
-                  <a class="nav-link" href="giay-kham-suc-khoe"><button class="btn btn-success"  style="animation: lights 2s 750ms linear infinite;border-radius: 5px;">Đăng ký</button></a>
+                  <a class="nav-link" href="giaykham"><button class="btn btn-success"  style="animation: lights 2s 750ms linear infinite;border-radius: 5px;">Đăng ký</button></a>
                   
                 </ul>
                 <br>

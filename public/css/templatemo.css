@@ -88,17 +88,20 @@
         no-repeat;
     background-size: cover;
     background-position-x: center;
+    opacity: 0.5;
 }
 .offer-image2 {
     background: url(../img/home/bang-tot-nghiep-home.jpg) right center no-repeat;
     background-size: cover;
     background-position-x: center;
+    opacity: 0.5;
 }
 .offer-image3 {
     background: url(../img/home/lam-giay-kham-suc-khoe-uy-tin-o-dau-2.jpg) right
         center no-repeat;
     background-size: cover;
     background-position-x: center;
+    opacity: 0.5;
 }
 .text-titel-nc {
     color: #080f24;
