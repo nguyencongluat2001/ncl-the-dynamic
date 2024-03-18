@@ -5,9 +5,9 @@ namespace Modules\Frontend\Models\Dashboard;
 use Illuminate\Database\Eloquent\Model;
 // use Modules\Core\Ncl\Http\BaseModel;
 
-class ProductModel extends Model
+class BangCapModel extends Model
 {
-    protected $table = 'health_certificate';
+    protected $table = 'degree_education';
     public $incrementing = false;
     public $timestamps = false;
 
@@ -19,10 +19,14 @@ class ProductModel extends Model
         'date_of_birth',
         'sex',
         'address',
-        'height',
-        'weighed',
-        'history_of_pathology',
+        'school',
+        'industry',
+        'graduate_time',
+        'level',
+        'identity_time',
+        'identity_address',
         'image',
+        'image_transfer',
         'trang_thai',
         'created_at',
         'updated_at'

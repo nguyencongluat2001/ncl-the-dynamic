@@ -70,11 +70,7 @@ JS_Health.prototype.store = function (oFormCreate) {
         success: function (arrResult) {
             console.log(arrResult);
             if (arrResult["success"] == true) {
-                NclLib.alerMesageClient(
-                    "success",
-                    "Thông báo",
-                    arrResult["message"]
-                );
+                NclLib.alerMesageWeb(arrResult["message"], "success");
             } else {
                 NclLib.successLoadding();
                 NclLib.alerMesageWeb(arrResult["message"], "error");

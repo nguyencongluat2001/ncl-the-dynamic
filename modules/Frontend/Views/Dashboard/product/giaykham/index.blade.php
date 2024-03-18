@@ -1,6 +1,6 @@
 @extends('system.layouts_Backend.index')
 @section('body')
-    <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_Product.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_GiayKham.js') }}"></script>
     {{-- <link  href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" /> --}}
     <div class="container-fluid">
         <div class="row">
@@ -8,14 +8,14 @@
                 <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
                 <div class="breadcrumb-input-fix d-sm-flex align-items-center">
                     <span>
-                        <a href="{{ URL::asset('/system/category/index') }}">
+                        <a href="{{ URL::asset('/system/product/index') }}">
                             <button class="btn btn-light btn-sm shadow-sm" id=""
                                 type="button"data-toggle="tooltip" data-original-title="Thêm danh mục"><i
                                     class="fas fa-book-medical"></i> Giấy Khám</button>
                         </a>
                     </span>
                     <span>
-                        <a>
+                        <a href="{{ URL::asset('/system/product/indexBangCap') }}">
                             &nbsp;
                             <button class="btn btn-success btn-sm shadow-sm" id=""
                                 type="button"data-toggle="tooltip" data-original-title="Thêm danh mục"><i
@@ -35,10 +35,10 @@
                                                 class="fas fa-trash-alt"></i></i></button>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                {{-- <div class="col-md-2">
                                     <select class="form-control input-sm chzn-select" name="cate" id="cate">
                                     </select>
-                                </div>
+                                </div> --}}
                                 <div class="input-group" style="width:40%;height:10%">
                                     <input id="search" name="search" type="text" class="form-control"
                                         placeholder="Từ khóa tìm kiếm...">
@@ -61,9 +61,9 @@
     <script src='../assets/js/jquery.js'></script>
     <script type="text/javascript">
         var baseUrl = "{{ url('') }}";
-        var JS_Product = new JS_Product(baseUrl, 'system', 'product');
+        var JS_GiayKham = new JS_GiayKham(baseUrl, 'system', 'product');
         jQuery(document).ready(function($) {
-            JS_Product.loadIndex(baseUrl);
+            JS_GiayKham.loadIndex(baseUrl);
         })
     </script>
 @endsection

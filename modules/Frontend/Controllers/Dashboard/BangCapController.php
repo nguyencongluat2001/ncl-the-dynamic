@@ -6,22 +6,27 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Modules\Frontend\Services\Dashboard\CateService;
 use DB;
+use Illuminate\Http\JsonResponse;
+use Modules\Core\Ncl\Library;
 use Modules\Frontend\Services\Dashboard\CategoryService;
-use Modules\Frontend\Services\Dashboard\ProductService;
+use Modules\Frontend\Services\Dashboard\BangCapService;
 
 /**
  * Quản trị kho
  *
  * @author Luatnc
  */
-class ProductController extends Controller
+class BangCapController extends Controller
 {
 
-    private $productService;
+    private $bangCapService;
+    private $categoryService;
     public function __construct(
-        ProductService $ProductService
+        BangCapService $BangCapService,
+        CategoryService $categoryService
     ) {
-        $this->productService = $ProductService;
+        $this->bangCapService = $BangCapService;
+        $this->categoryService = $categoryService;
     }
 
     /**
@@ -31,7 +36,11 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        return view('Frontend::Dashboard.Product.giaykham.index');
+        $data['getCategory'] = $this->categoryService
+            ->whereIn('code_category', ['TT_02_N1', 'TT_03_N1'])
+            ->get();
+        // dd($data['getCategory']);
+        return view('Frontend::Dashboard.Product.bangCap.index', $data);
     }
     /**
      * Load màn hình chỉnh sửa thông tin danh mục
@@ -40,15 +49,15 @@ class ProductController extends Controller
      *
      * @return view
      */
-    public function viewGiayKham(Request $request)
+    public function viewbangCap(Request $request)
     {
         $input = $request->all();
-        $giayKham = $this->productService->where('id', $input['id'])->first();
-        if (empty($giayKham)) {
+        $bangCap = $this->bangCapService->where('id', $input['id'])->first();
+        if (empty($bangCap)) {
             return array('success' => false, 'message' => 'Không tồn tại đối tượng!');
         }
-        $data['datas'] = $this->productService->where('id', $input['id'])->first();
-        return view('Frontend::Dashboard.product.giaykham.view', $data);
+        $data['datas'] = $this->bangCapService->where('id', $input['id'])->first();
+        return view('Frontend::Dashboard.product.bangCap.view', $data);
     }
     /**
      * Xóa danh mục
@@ -64,7 +73,7 @@ class ProductController extends Controller
         $ids = explode(",", $listids);
         foreach ($ids as $id) {
             if ($id) {
-                $this->productService->where('id', $id)->delete();
+                $this->bangCapService->where('id', $id)->delete();
             }
         }
         return array('success' => true, 'message' => 'Xóa thành công');
@@ -79,9 +88,9 @@ class ProductController extends Controller
     public function loadList(Request $request)
     {
         $arrInput      = $request->input();
-        $objResult     = $this->productService->filter($arrInput);
+        $objResult     = $this->bangCapService->filter($arrInput);
         $data['datas'] = $objResult;
-        return view("Frontend::Dashboard.product.giaykham.loadListGiayKham", $data)->render();
+        return view("Frontend::Dashboard.product.bangCap.loadListbangCap", $data)->render();
     }
     /**
      * Cập nhật trạng thái
@@ -89,10 +98,10 @@ class ProductController extends Controller
     public function changeStatus(Request $request)
     {
         $arrInput = $request->all();
-        $giayKham = $this->productService->where('id', $arrInput['id']);
-        if (!empty($giayKham->first())) {
-            $this->productService->where('id', $giayKham->first()->id)->update(['trang_thai' => $arrInput['status']]);
-            $giayKham->update(['trang_thai' => $arrInput['status']]);
+        $bangCap = $this->bangCapService->where('id', $arrInput['id']);
+        if (!empty($bangCap->first())) {
+            $this->bangCapService->where('id', $bangCap->first()->id)->update(['trang_thai' => $arrInput['status']]);
+            $bangCap->update(['trang_thai' => $arrInput['status']]);
             return array('success' => true, 'message' => 'Cập nhật thành công!');
         } else {
             return array('success' => false, 'message' => 'Không tìm thấy dữ liệu!');
