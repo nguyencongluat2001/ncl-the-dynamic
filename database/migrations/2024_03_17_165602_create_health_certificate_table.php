@@ -14,15 +14,15 @@ return new class extends Migration
         Schema::create('health_certificate', function (Blueprint $table) {  // bằng c2- đến ĐH
             $table->uuid('id')->primary();
             $table->string('name', 100);
-            $table->string('email', 50)->nullable();
-            $table->string('phone', 15);
-            $table->dateTime('date_of_birth')->nullable();
-            $table->string('sex', 10);
-            $table->string('address', 500);
-            $table->string('height', 10);
-            $table->string('weighed', 10);
-            $table->string('history_of_pathology', 2000);
-            $table->string('image',200)->nullable();
+            $table->string('email', 50)->nullable(); // email
+            $table->string('phone', 15); // phone
+            $table->dateTime('date_of_birth')->nullable(); // ngày sinh
+            $table->string('sex', 10); // giois tính
+            $table->string('address', 500);  // địa chỉ
+            $table->string('height', 10); // chiều cao
+            $table->string('weighed', 10); // cân nặng
+            $table->string('history_of_pathology', 2000); // tiền sử bệnh lý
+            $table->string('image',200)->nullable(); //// ảnh
             $table->boolean('trang_thai')->default(1);
             $table->timestamps();
         });

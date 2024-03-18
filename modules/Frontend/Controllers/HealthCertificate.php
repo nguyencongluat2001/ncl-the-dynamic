@@ -41,7 +41,7 @@ class HealthCertificate extends Controller
         $arrResult            = $objLibrary->_getAllFileJavaScriptCssArray('js', 'frontend/home/home.js', ',', $arrResult);
         $arrResult            = $objLibrary->_getAllFileJavaScriptCssArray('js', 'assets/jquery.validate.js', ',', $arrResult);
         $data['stringJsCss']  = json_encode($arrResult);
-        $data['getBlog']      = $this->BlogService->where('code_category', 'TT_03_N1')->first();
+        $data['getBlog']      = $this->BlogService->where('code_category', 'TT_01_N1')->first();
         $data['blogs_health'] = $this->BlogDetailService->where('code_blog', $data['getBlog']->code_blog)->get();
         return view('Frontend::giayKham.index', $data);
     }
