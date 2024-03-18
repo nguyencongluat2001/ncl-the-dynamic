@@ -7,6 +7,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Modules\Core\Ncl\Library;
+use Modules\Frontend\Services\HealthCertificateService;
 use Modules\Frontend\Services\HomeService;
 use Modules\Frontend\Services\Dashboard\BlogService;
 use Modules\Frontend\Services\Dashboard\BlogDetailService;
@@ -16,16 +17,16 @@ use Modules\Frontend\Services\Dashboard\BlogDetailService;
  */
 class HealthCertificate extends Controller
 {
-    private $homeService;
+    private $healthService;
 
     public function __construct(
-        HomeService $s,
+        HealthCertificateService $s,
         BlogService $BlogService,
         BlogDetailService $BlogDetailService
     ) {;
         $this->BlogDetailService = $BlogDetailService;
         $this->BlogService = $BlogService;
-        $this->homeService = $s;
+        $this->healthService = $s;
     }
 
     /**
@@ -35,6 +36,27 @@ class HealthCertificate extends Controller
      */
     public function index(): View
     {
-        return view('Frontend::giayKham.index');
+        $objLibrary           = new Library();
+        $arrResult            = array();
+        $arrResult            = $objLibrary->_getAllFileJavaScriptCssArray('js', 'frontend/home/home.js', ',', $arrResult);
+        $arrResult            = $objLibrary->_getAllFileJavaScriptCssArray('js', 'assets/jquery.validate.js', ',', $arrResult);
+        $data['stringJsCss']  = json_encode($arrResult);
+        $data['getBlog']      = $this->BlogService->where('code_category', 'TT_03_N1')->first();
+        $data['blogs_health'] = $this->BlogDetailService->where('code_blog', $data['getBlog']->code_blog)->get();
+        return view('Frontend::giayKham.index', $data);
+    }
+
+    /**
+     * Thêm thông tin liên hệ người muốn làm giấy khám
+     *
+     * @param Request $request
+     *
+     * @return view
+     */
+    public function create(Request $request)
+    {
+        $input = $request->input();
+        $create = $this->healthService->store($input, $_FILES);
+        return $create;
     }
 }
