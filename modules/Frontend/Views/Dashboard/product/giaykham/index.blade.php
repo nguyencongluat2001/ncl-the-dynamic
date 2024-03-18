@@ -6,47 +6,40 @@
         <div class="row">
             <form action="" method="POST" id="frmProduct_index">
                 <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
-                {{-- <div class="breadcrumb-input-fix d-sm-flex align-items-center">
+                <div class="breadcrumb-input-fix d-sm-flex align-items-center">
                     <span>
                         <a href="{{ URL::asset('/system/category/index') }}">
-                            <button class="btn btn-light btn-sm shadow-sm" id="" type="button"data-toggle="tooltip"
-                            data-original-title="Thêm danh mục"><i class="fas fa-book-medical"></i> Danh mục</button>
+                            <button class="btn btn-light btn-sm shadow-sm" id=""
+                                type="button"data-toggle="tooltip" data-original-title="Thêm danh mục"><i
+                                    class="fas fa-book-medical"></i> Giấy Khám</button>
                         </a>
                     </span>
                     <span>
                         <a>
-                             &nbsp;
-                            <button class="btn btn-success btn-sm shadow-sm" id="" type="button"data-toggle="tooltip"
-                            data-original-title="Thêm danh mục"><i class="fas fa-list-alt"></i> Thể loại</button>
+                            &nbsp;
+                            <button class="btn btn-success btn-sm shadow-sm" id=""
+                                type="button"data-toggle="tooltip" data-original-title="Thêm danh mục"><i
+                                    class="fas fa-list-alt"></i> Bằng cấp</button>
                         </a>
                     </span>
-                   
-                </div> --}}
+
+                </div>
                 <section class="content-wrapper">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="row form-group">
                                 <div class="col-md-3">
-                                    {{-- @if (Auth::user()->role == 'ADMIN' || Auth::user()->role == 'MANAGE' || Auth::user()->role == 'STAFF') --}}
                                     <div class="breadcrumb-input-right">
-                                        <button class="btn btn-success shadow-sm" id="btn_add"
-                                            type="button"data-toggle="tooltip" data-original-title="Thêm thể loại"><i
-                                                class="fas fa-plus"></i></button>
-                                        {{-- <button class="btn btn-warning shadow-sm" id="btn_edit" type="button"data-toggle="tooltip"
-                                            data-original-title="SỬa thể loại"><i class="far fa-edit"></i></i></button> --}}
                                         <button class="btn btn-danger shadow-sm" id="btn_delete"
-                                            type="button"data-toggle="tooltip" data-original-title="Xóa thể loại"><i
+                                            type="button"data-toggle="tooltip" data-original-title="Xóa giấy khám"><i
                                                 class="fas fa-trash-alt"></i></i></button>
                                     </div>
-                                    {{--  @endif --}}
                                 </div>
                                 <div class="col-md-2">
                                     <select class="form-control input-sm chzn-select" name="cate" id="cate">
                                     </select>
                                 </div>
                                 <div class="input-group" style="width:40%;height:10%">
-                                    <!-- <span class="input-group-text text-body"><i class="fas fa-search"
-                                                aria-hidden="true"></i></span> -->
                                     <input id="search" name="search" type="text" class="form-control"
                                         placeholder="Từ khóa tìm kiếm...">
                                 </div>
