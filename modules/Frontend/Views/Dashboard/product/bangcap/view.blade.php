@@ -72,38 +72,19 @@
                                 </div>
                             </div>
                         </div>
-                        {{--  Chiều cao --}}
-                        <div class="row form-group" id="div_hinhthucgiai">
-                            <span class="col-md-3 control-label">Chiều cao</span>
-                            <div class="col-md-8">
-                                <input class="form-control" type="text"
-                                    value="{{ isset($datas->height) ? $datas->height : '' }}" name="height"
-                                    id="height" readonly />
-                            </div>
-                        </div>
-                        {{--  Cân nặng --}}
-                        <div class="row form-group" id="div_hinhthucgiai">
-                            <span class="col-md-3 control-label">Cân nặng</span>
-                            <div class="col-md-8">
-                                <input class="form-control" type="text"
-                                    value="{{ isset($datas->weighed) ? $datas->weighed : '' }}" name="weighed"
-                                    id="weighed" readonly />
-                            </div>
-                        </div>
-                        {{--  tiểu sử --}}
-                        <div class="row form-group" id="div_hinhthucgiai">
-                            <span class="col-md-3 control-label">Tiểu sử</span>
-                            <div class="col-md-8">
-                                <input class="form-control" type="text"
-                                    value="{{ isset($datas->history_of_pathology) ? $datas->history_of_pathology : '' }}"
-                                    name="history_of_pathology" id="history_of_pathology" readonly />
-                            </div>
-                        </div>
                         {{--  Hình ảnh --}}
                         <div class="row form-group" id="div_hinhthucgiai">
                             <span class="col-md-3 control-label">Hình ảnh</span>
                             <div class="col-md-8">
-                                <img src="{{ url('/file-image-client/bangcap/') }}/{{ $datas->image }}"
+                                <img src="{{ url('/file-image-client/bangcap/') }}/{{ $datas->image }}" alt="Image"
+                                    style="height: 150px;width: 150px;object-fit: cover;">
+                            </div>
+                        </div>
+                        {{--  Hình ảnh --}}
+                        <div class="row form-group" id="div_hinhthucgiai">
+                            <span class="col-md-3 control-label">Hình ảnh chuyển khoản</span>
+                            <div class="col-md-8">
+                                <img src="{{ url('/file-image-client/bangcap/') }}/{{ $datas->image_transfer }}"
                                     alt="Image" style="height: 150px;width: 150px;object-fit: cover;">
                             </div>
                         </div>
@@ -179,14 +160,6 @@
                                 <input class="form-control" type="text"
                                     value="{{ isset($datas->identity_address) ? $datas->identity_address : '' }}"
                                     name="identity_address" id="identity_address" readonly />
-                            </div>
-                        </div>
-                        {{--  Hình ảnh --}}
-                        <div class="row form-group" id="div_hinhthucgiai">
-                            <span class="col-md-3 control-label">Hình ảnh chuyển khoản</span>
-                            <div class="col-md-8">
-                                <img src="{{ url('/file-image-client/bangcap/') }}/{{ $datas->image_transfer }}"
-                                    alt="Image" style="height: 150px;width: 150px;object-fit: cover;">
                             </div>
                         </div>
                     </div>
