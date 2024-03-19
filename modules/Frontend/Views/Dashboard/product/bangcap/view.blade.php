@@ -4,7 +4,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content  card">
             <div class="modal-header">
-                <h5 class="modal-title">Xem giấy khám sức khỏe</h5>
+                <h5 class="modal-title">Xem bằng cấp</h5>
                 <button type="button" class="btn btn-sm" data-bs-dismiss="modal">
                     X
                 </button>
