@@ -39,13 +39,14 @@
                                     <select class="form-control input-sm chzn-select" name="cate" id="cate">
                                         <option value=''>---Chọn Bằng Cấp---</option>
                                         @foreach ($getCategory as $item)
-                                            <option value="{{ $item['code_cate'] }}">{{ $item['name_category'] }}</option>
+                                            <option value="{{ $item['code_category'] }}">{{ $item['name_category'] }}
+                                            </option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="input-group" style="width:40%;height:10%">
                                     <!-- <span class="input-group-text text-body"><i class="fas fa-search"
-                                                                                                        aria-hidden="true"></i></span> -->
+                                                                                                            aria-hidden="true"></i></span> -->
                                     <input id="search" name="search" type="text" class="form-control"
                                         placeholder="Từ khóa tìm kiếm...">
                                 </div>

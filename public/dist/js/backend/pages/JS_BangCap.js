@@ -37,7 +37,7 @@ JS_BangCap.prototype.loadIndex = function () {
     $(oForm)
         .find("#btn_delete")
         .click(function () {
-            myClass.deleteGiayKham(oForm);
+            myClass.deleteBangCap(oForm);
         });
 };
 JS_BangCap.prototype.loadevent = function (oForm) {
@@ -61,7 +61,7 @@ JS_BangCap.prototype.loadList = function (
     perPage = 15
 ) {
     var myClass = this;
-    var url = this.urlPath + "/loadList";
+    var url = this.urlPath + "/loadListBangCap";
     var data = "search=" + $("#search").val();
     var data = $(oForm).serialize();
     data += "&offset=" + numberPage;
@@ -104,8 +104,8 @@ JS_BangCap.prototype.loadList = function (
  *
  * @return void
  */
-JS_BangCap.prototype.infoGiayKham = function (id) {
-    var url = this.urlPath + "/infor";
+JS_BangCap.prototype.infoBangCap = function (id) {
+    var url = this.urlPath + "/inforBangCap";
     var myClass = this;
     var data = "_token=" + $("#frmProduct_index #_token").val();
     data += "&id=" + id;
@@ -122,7 +122,7 @@ JS_BangCap.prototype.infoGiayKham = function (id) {
     });
 };
 // Xoa mot doi tuong
-JS_BangCap.prototype.deleteGiayKham = function (oForm) {
+JS_BangCap.prototype.deleteBangCap = function (oForm) {
     var myClass = this;
     var listitem = "";
     var p_chk_obj = $("#table-data").find('input[name="chk_item_id"]');
@@ -235,9 +235,9 @@ JS_BangCap.prototype.updateCategoryCate = function (id, column, value = "") {
 /**
  * Thay đổi trạng thái
  */
-JS_BangCap.prototype.changeStatusGiayKham = function (id) {
+JS_BangCap.prototype.changeStatusBangCap = function (id) {
     var myClass = this;
-    var url = myClass.urlPath + "/changeStatus";
+    var url = myClass.urlPath + "/changeStatusBangCap";
     var data = "_token=" + $("#frmProduct_index #_token").val();
     data += "&status=" + ($("#status_" + id).is(":checked") == true ? 0 : 1);
     data += "&id=" + id;

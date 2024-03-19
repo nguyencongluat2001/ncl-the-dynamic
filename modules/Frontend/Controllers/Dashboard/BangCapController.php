@@ -90,7 +90,7 @@ class BangCapController extends Controller
         $arrInput      = $request->input();
         $objResult     = $this->bangCapService->filter($arrInput);
         $data['datas'] = $objResult;
-        return view("Frontend::Dashboard.product.bangCap.loadListbangCap", $data)->render();
+        return view("Frontend::Dashboard.product.bangCap.loadListBangCap", $data)->render();
     }
     /**
      * Cập nhật trạng thái

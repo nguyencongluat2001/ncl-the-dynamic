@@ -44,9 +44,9 @@ class BangCapModel extends Model
                         ->orWhere('address', 'like', '%' . $this->value . '%');
                 });
                 return $query;
-                // case 'role':
-                //     // $query->where('role', $value);
-                //     return $query;
+            case 'cate':
+                $query->where('code_category', $value);
+                return $query;
             default:
                 return $query;
         }

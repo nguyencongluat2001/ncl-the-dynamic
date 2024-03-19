@@ -25,7 +25,7 @@
                 <td align="center"><b>Phone</b></td>
                 <td align="center"><b>Nơi ở</b></td>
                 <td align="center"><b>Trạng thái</b></td>
-                <td align="center"><b><span onclick="JS_GiayKham.addrow()" class="text-cursor text-primary"><i
+                <td align="center"><b><span onclick="JS_BangCap.addrow()" class="text-cursor text-primary"><i
                                 class="fas fa-plus-square"></i></span></b></td>
             </tr>
         </thead>
@@ -65,15 +65,15 @@
                                     id="status_{{ $id }}" data-id="{{ $id }}"
                                     {{ $data->trang_thai == 1 ? 'checked' : '' }}>
                                 <span class="custom-control-indicator p-0 m-0"
-                                    onclick="JS_GiayKham.changeStatusGiayKham('{{ $id }}')"></span>
+                                    onclick="JS_BangCap.changeStatusBangCap('{{ $id }}')"></span>
                             </label>
                         </td>
                         <td style="width:5% ;vertical-align: middle;" align="center">
-                            <button onclick="JS_GiayKham.infoGiayKham('{{ $data['id'] }}')" class="btn btn-light"
+                            <button onclick="JS_BangCap.infoBangCap('{{ $data['id'] }}')" class="btn btn-light"
                                 type="button">
                                 <i style="color:#00740a" class="far fa-eye"></i>
                             </button>
-                            <button onclick="JS_GiayKham.deleteGiayKham('{{ $data['id'] }}')" class="btn btn-light"
+                            <button onclick="JS_BangCap.deleteBangCap('{{ $data['id'] }}')" class="btn btn-light"
                                 type="button">
                                 <i style="color:#00740a"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                         height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
