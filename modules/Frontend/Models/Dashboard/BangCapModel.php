@@ -13,6 +13,7 @@ class BangCapModel extends Model
 
     protected $fillable = [
         'id',
+        'code_category',
         'name',
         'email',
         'phone',
@@ -23,6 +24,8 @@ class BangCapModel extends Model
         'industry',
         'graduate_time',
         'level',
+        'permanent_residence',
+        'identity',
         'identity_time',
         'identity_address',
         'image',

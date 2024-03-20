@@ -78,38 +78,3 @@ JS_Health.prototype.store = function (oFormCreate) {
         },
     });
 };
-
-/**
- * Check Validate
- */
-JS_User.prototype.checkValidate = function () {
-    if ($("#name").val() == "") {
-        var nameMessage = "Tên người dùng không được để trống!";
-        NclLib.alertMessageBackend("warning", "Cảnh báo", nameMessage);
-        $("#name").focus();
-        return false;
-    }
-    if ($("#phone").val() == "") {
-        var nameMessage = "Số điện thoại không được để trống!";
-        NclLib.alertMessageBackend("warning", "Cảnh báo", nameMessage);
-        $("#phone").focus();
-        return false;
-    }
-    if ($("#email").val() == "") {
-        var nameMessage = "Địa chỉ email không được để trống!";
-        NclLib.alertMessageBackend("warning", "Cảnh báo", nameMessage);
-        $("#email").focus();
-        return false;
-    }
-    if ($("#dateBirth").val() == "") {
-        var nameMessage = "Ngày sinh không được để trống!";
-        NclLib.alertMessageBackend("warning", "Cảnh báo", nameMessage);
-        $("#dateBirth").focus();
-        return false;
-    }
-    if ($('input[name="is_checkbox_role"]:checked').val() == "") {
-        var nameMessage = "Quyền truy cập không được để trống!";
-        NclLib.alertMessageBackend("warning", "Cảnh báo", nameMessage);
-        return false;
-    }
-};

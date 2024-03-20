@@ -18,6 +18,8 @@ use Modules\Frontend\Services\Dashboard\BlogDetailService;
 class HealthCertificate extends Controller
 {
     private $healthService;
+    private $BlogDetailService;
+    private $BlogService;
 
     public function __construct(
         HealthCertificateService $s,

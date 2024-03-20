@@ -7,6 +7,7 @@ use Modules\Frontend\Controllers\HomeController;
 use Modules\Frontend\Controllers\ShopController;
 use Modules\Frontend\Controllers\BlogController;
 use Modules\Frontend\Controllers\ContactController;
+use Modules\Frontend\Controllers\DegressController;
 
 Route::controller(AuthController::class)->group(function ($router) {
     $router->get('login', 'getSignIn');
@@ -33,7 +34,9 @@ Route::controller(ShopController::class)->group(function ($router) {
 });
 /** Trang chủ */
 Route::controller(BlogController::class)->group(function ($router) {
-    $router->get('giay-kham-suc-khoe', 'index');
+    $router->get('blog-detail/{code_blog}', 'index');
+    $router->post('blog-detail/{code_blog}/createGiayKham', 'createGiayKham');
+    $router->post('blog-detail/{code_blog}/createBangCap', 'createBangCap');
 });
 /** Trang chủ */
 Route::controller(ContactController::class)->group(function ($router) {
@@ -42,5 +45,8 @@ Route::controller(ContactController::class)->group(function ($router) {
 
 Route::controller(HealthCertificate::class)->group(function ($router) {
     $router->get('giaykham', 'index');
-    $router->post('giaykham/create', 'create');
+});
+
+Route::controller(DegressController::class)->group(function ($router) {
+    $router->get('bang', 'index');
 });

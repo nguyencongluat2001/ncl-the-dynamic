@@ -72,6 +72,15 @@
                                 </div>
                             </div>
                         </div>
+                        {{--  Địa chỉ --}}
+                        <div class="row form-group" id="div_hinhthucgiai">
+                            <span class="col-md-3 control-label">Địa chỉ</span>
+                            <div class="col-md-8">
+                                <input class="form-control" type="text"
+                                    value="{{ isset($datas->address) ? $datas->address : '' }}" name="address"
+                                    id="address" readonly />
+                            </div>
+                        </div>
                         {{--  Hình ảnh --}}
                         <div class="row form-group" id="div_hinhthucgiai">
                             <span class="col-md-3 control-label">Hình ảnh</span>
@@ -131,7 +140,7 @@
                             <span class="col-md-3 control-label">Hộ khẩu cư trú</span>
                             <div class="col-md-8">
                                 <input class="form-control" type="text"
-                                    value="{{ isset($datas->permament_residence) ? $datas->permament_residence : '' }}"
+                                    value="{{ isset($datas->permanent_residence) ? $datas->permanent_residence : '' }}"
                                     name="phone" id="phone" readonly />
                             </div>
                         </div>
@@ -140,8 +149,8 @@
                             <span class="col-md-3 control-label">Căn cước</span>
                             <div class="col-md-8">
                                 <input class="form-control" type="text"
-                                    value="{{ isset($datas->indentity) ? $datas->indentity : '' }}" name="indentity"
-                                    id="indentity" readonly />
+                                    value="{{ isset($datas->identity) ? $datas->identity : '' }}" name="identity"
+                                    id="identity" readonly />
                             </div>
                         </div>
                         {{--  Ngày cấp căn cước --}}
