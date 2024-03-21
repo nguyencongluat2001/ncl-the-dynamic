@@ -40,7 +40,7 @@ class BangCapController extends Controller
             ->whereIn('code_category', ['TT_02_N1', 'TT_03_N1'])
             ->get();
         // dd($data['getCategory']);
-        return view('Frontend::Dashboard.Product.bangCap.index', $data);
+        return view('Frontend::Dashboard.product.bangCap.index', $data);
     }
     /**
      * Load màn hình chỉnh sửa thông tin danh mục
