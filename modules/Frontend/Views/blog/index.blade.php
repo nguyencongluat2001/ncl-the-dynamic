@@ -1,537 +1,351 @@
-
 @extends('Frontend::layouts.index')
 @section('body-client')
+    <script type="text/javascript" src="{{ URL::asset('dist\js\backend\client\JS_Blog.js') }}"></script>
+    <!-- ================ start banner area ================= -->
+    <section class="blog-banner-area" id="blog">
+        <div class="container h-100">
+            <div class="blog-banner">
+                <div class="text-center">
+                    <h1>Blog Details</h1>
+                    <nav aria-label="breadcrumb" class="banner-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================ end banner area ================= -->
 
 
-  <!--================Blog Categorie Area =================-->
-  <section class="blog_categorie_area">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="categories_post">
-                <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-3.jpg" alt="post">
-                <div class="categories_details">
-                    <div class="categories_text">
-                        <a href="single-blog.html">
-                            <h5>Social Life</h5>
-                        </a>
-                        <div class="border_line"></div>
-                        <p>Enjoy your social life together</p>
+
+    <!--================Blog Area =================-->
+    <section class="blog_area single-post-area py-80px section-margin--small">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 posts-list">
+                    <div class="single-post row">
+                        <div class="col-lg-12">
+                            <h2>{!! $blogs_health->title !!}</h2>
+                            {{-- <div class="feature-img">
+                                <img class="img-fluid" src="img/blog/feature-img1.jpg" alt="">
+                            </div> --}}
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="quotes">
+                                {!! $blogs_health->decision !!}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
-          <div class="categories_post">
-            <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-2.jpg" alt="post">
-            <div class="categories_details">
-              <div class="categories_text">
-                <a href="single-blog.html">
-                    <h5>Politics</h5>
-                </a>
-                <div class="border_line"></div>
-                <p>Be a part of politics</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="categories_post">
-                <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-1.jpg" alt="post">
-                <div class="categories_details">
-                    <div class="categories_text">
-                        <a href="single-blog.html">
-                            <h5>Food</h5>
-                        </a>
-                        <div class="border_line"></div>
-                        <p>Let the food be finished</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--================Blog Categorie Area =================-->
+    </section>
+    <!--================Blog Area =================-->
+    <!-- ================ Subscribe section start ================= -->
+    <section class="subscribe-position">
+        <div class="container">
+            <div class="subscribe">
+                <h5 class="subscribe__title text-center" style="color:#dd3333">THÔNG TIN LIÊN HỆ</h5>
+                <p class="text-center">Quý khách vui lòng để lại thông tin liên hệ</p>
+                <div id="mc_embed_signup">
+                    <form action="" role="form" method="POST" id="frmHealth_index" class="mt-3 pt-1"
+                        enctype="multipart/form-data">
+                        <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
+                        @if ($blogs_health->code_blog == '2024_03_15_1520000000665299')
+                            <div class="row px-5 mb-2">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Họ và tên</label>
+                                    <input type="text" class="form-control" id="name" name="name"
+                                        placeholder="Nhập họ và tên" required autofocus>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Số điện thoại</label>
+                                    <input type="tel" class="form-control " id="phone" name="phone"
+                                        placeholder="Nhập số điện thoại" required autofocus>
+                                </div>
+                            </div>
+                            <div class="row px-5 mb-2">
+                                <div class="col-md-6">
+                                    <label for="validationServer01" class="form-label">Giới tính</label>
+                                    <div class="d-flex">
+                                        <div class="form-check" style="margin-right: 20px;">
+                                            <input class="form-check-input" type="radio" name="sex" id="male"
+                                                value="male" checked>
+                                            <label class="form-check-label" for="male">
+                                                Nam
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="sex" id="female"
+                                                value="female">
+                                            <label class="form-check-label" for="female">
+                                                Nữ
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
 
-  <!--================Blog Area =================-->
-  <section class="blog_area">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-8">
-                  <div class="blog_left_sidebar">
-                      <article class="row blog_item">
-                          <div class="col-md-3">
-                              <div class="blog_info text-right">
-                                  <div class="post_tag">
-                                      <a href="#">Food,</a>
-                                      <a class="active" href="#">Technology,</a>
-                                      <a href="#">Politics,</a>
-                                      <a href="#">Lifestyle</a>
-                                  </div>
-                                  <ul class="blog_meta list">
-                                      <li>
-                                          <a href="#">Mark wiens
-                                              <i class="lnr lnr-user"></i>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#">12 Dec, 2017
-                                              <i class="lnr lnr-calendar-full"></i>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#">1.2M Views
-                                              <i class="lnr lnr-eye"></i>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#">06 Comments
-                                              <i class="lnr lnr-bubble"></i>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </div>
-                          </div>
-                          <div class="col-md-9">
-                              <div class="blog_post">
-                                  <img src="img/blog/main-blog/m-blog-1.jpg" alt="">
-                                  <div class="blog_details">
-                                      <a href="single-blog.html">
-                                          <h2>Astronomy Binoculars A Great Alternative</h2>
-                                      </a>
-                                      <p>MCSE boot camps have its supporters and its detractors. Some people do not understand
-                                          why you should have to spend money on boot camp when you can get the MCSE study
-                                          materials yourself at a fraction.</p>
-                                      <a class="button button-blog" href="single-blog.html">View More</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </article>
-                      <article class="row blog_item">
-                          <div class="col-md-3">
-                              <div class="blog_info text-right">
-                                  <div class="post_tag">
-                                      <a href="#">Food,</a>
-                                      <a class="active" href="#">Technology,</a>
-                                      <a href="#">Politics,</a>
-                                      <a href="#">Lifestyle</a>
-                                  </div>
-                                  <ul class="blog_meta list">
-                                      <li>
-                                          <a href="#">Mark wiens
-                                              <i class="lnr lnr-user"></i>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#">12 Dec, 2017
-                                              <i class="lnr lnr-calendar-full"></i>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#">1.2M Views
-                                              <i class="lnr lnr-eye"></i>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#">06 Comments
-                                              <i class="lnr lnr-bubble"></i>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </div>
-                          </div>
-                          <div class="col-md-9">
-                              <div class="blog_post">
-                                  <img src="img/blog/main-blog/m-blog-2.jpg" alt="">
-                                  <div class="blog_details">
-                                      <a href="single-blog.html">
-                                          <h2>The Basics Of Buying A Telescope</h2>
-                                      </a>
-                                      <p>MCSE boot camps have its supporters and its detractors. Some people do not understand
-                                          why you should have to spend money on boot camp when you can get the MCSE study
-                                          materials yourself at a fraction.</p>
-                                      <a href="single-blog.html" class="button button-blog">View More</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </article>
-                      <article class="row blog_item">
-                          <div class="col-md-3">
-                              <div class="blog_info text-right">
-                                  <div class="post_tag">
-                                      <a href="#">Food,</a>
-                                      <a class="active" href="#">Technology,</a>
-                                      <a href="#">Politics,</a>
-                                      <a href="#">Lifestyle</a>
-                                  </div>
-                                  <ul class="blog_meta list">
-                                      <li>
-                                          <a href="#">Mark wiens
-                                              <i class="lnr lnr-user"></i>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#">12 Dec, 2017
-                                              <i class="lnr lnr-calendar-full"></i>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#">1.2M Views
-                                              <i class="lnr lnr-eye"></i>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#">06 Comments
-                                              <i class="lnr lnr-bubble"></i>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </div>
-                          </div>
-                          <div class="col-md-9">
-                              <div class="blog_post">
-                                  <img src="img/blog/main-blog/m-blog-3.jpg" alt="">
-                                  <div class="blog_details">
-                                      <a href="single-blog.html">
-                                          <h2>The Glossary Of Telescopes</h2>
-                                      </a>
-                                      <p>MCSE boot camps have its supporters and its detractors. Some people do not understand
-                                          why you should have to spend money on boot camp when you can get the MCSE study
-                                          materials yourself at a fraction.</p>
-                                      <a href="single-blog.html" class="button button-blog">View More</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </article>
-                      <article class="row blog_item">
-                          <div class="col-md-3">
-                              <div class="blog_info text-right">
-                                  <div class="post_tag">
-                                      <a href="#">Food,</a>
-                                      <a class="active" href="#">Technology,</a>
-                                      <a href="#">Politics,</a>
-                                      <a href="#">Lifestyle</a>
-                                  </div>
-                                  <ul class="blog_meta list">
-                                      <li>
-                                          <a href="#">Mark wiens
-                                              <i class="lnr lnr-user"></i>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#">12 Dec, 2017
-                                              <i class="lnr lnr-calendar-full"></i>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#">1.2M Views
-                                              <i class="lnr lnr-eye"></i>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#">06 Comments
-                                              <i class="lnr lnr-bubble"></i>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </div>
-                          </div>
-                          <div class="col-md-9">
-                              <div class="blog_post">
-                                  <img src="img/blog/main-blog/m-blog-4.jpg" alt="">
-                                  <div class="blog_details">
-                                      <a href="single-blog.html">
-                                          <h2>The Night Sky</h2>
-                                      </a>
-                                      <p>MCSE boot camps have its supporters and its detractors. Some people do not understand
-                                          why you should have to spend money on boot camp when you can get the MCSE study
-                                          materials yourself at a fraction.</p>
-                                      <a href="single-blog.html" class="button button-blog">View More</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </article>
-                      <article class="row blog_item">
-                          <div class="col-md-3">
-                              <div class="blog_info text-right">
-                                  <div class="post_tag">
-                                      <a href="#">Food,</a>
-                                      <a class="active" href="#">Technology,</a>
-                                      <a href="#">Politics,</a>
-                                      <a href="#">Lifestyle</a>
-                                  </div>
-                                  <ul class="blog_meta list">
-                                      <li>
-                                          <a href="#">Mark wiens
-                                              <i class="lnr lnr-user"></i>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#">12 Dec, 2017
-                                              <i class="lnr lnr-calendar-full"></i>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#">1.2M Views
-                                              <i class="lnr lnr-eye"></i>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="#">06 Comments
-                                              <i class="lnr lnr-bubble"></i>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </div>
-                          </div>
-                          <div class="col-md-9">
-                              <div class="blog_post">
-                                  <img src="img/blog/main-blog/m-blog-5.jpg" alt="">
-                                  <div class="blog_details">
-                                      <a href="single-blog.html">
-                                          <h2>Telescopes 101</h2>
-                                      </a>
-                                      <p>MCSE boot camps have its supporters and its detractors. Some people do not understand
-                                          why you should have to spend money on boot camp when you can get the MCSE study
-                                          materials yourself at a fraction.</p>
-                                      <a href="single-blog.html" class="button button-blog">View More</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </article>
-                      <nav class="blog-pagination justify-content-center d-flex">
-                          <ul class="pagination">
-                              <li class="page-item">
-                                  <a href="#" class="page-link" aria-label="Previous">
-                                      <span aria-hidden="true">
-                                          <span class="lnr lnr-chevron-left"></span>
-                                      </span>
-                                  </a>
-                              </li>
-                              <li class="page-item">
-                                  <a href="#" class="page-link">01</a>
-                              </li>
-                              <li class="page-item active">
-                                  <a href="#" class="page-link">02</a>
-                              </li>
-                              <li class="page-item">
-                                  <a href="#" class="page-link">03</a>
-                              </li>
-                              <li class="page-item">
-                                  <a href="#" class="page-link">04</a>
-                              </li>
-                              <li class="page-item">
-                                  <a href="#" class="page-link">09</a>
-                              </li>
-                              <li class="page-item">
-                                  <a href="#" class="page-link" aria-label="Next">
-                                      <span aria-hidden="true">
-                                          <span class="lnr lnr-chevron-right"></span>
-                                      </span>
-                                  </a>
-                              </li>
-                          </ul>
-                      </nav>
-                  </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="blog_right_sidebar">
-                      <aside class="single_sidebar_widget search_widget">
-                          <div class="input-group">
-                              <input type="text" class="form-control" placeholder="Search Posts">
-                              <span class="input-group-btn">
-                                  <button class="btn btn-default" type="button">
-                                      <i class="lnr lnr-magnifier"></i>
-                                  </button>
-                              </span>
-                          </div>
-                          <!-- /input-group -->
-                          <div class="br"></div>
-                      </aside>
-                      <aside class="single_sidebar_widget author_widget">
-                          <img class="author_img rounded-circle" src="img/blog/author.png" alt="">
-                          <h4>Charlie Barber</h4>
-                          <p>Senior blog writer</p>
-                          <div class="social_icon">
-                              <a href="#">
-                                  <i class="fab fa-facebook-f"></i>
-                              </a>
-                              <a href="#">
-                                  <i class="fab fa-twitter"></i>
-                              </a>
-                              <a href="#">
-                                  <i class="fab fa-github"></i>
-                              </a>
-                              <a href="#">
-                                <i class="fab fa-behance"></i>
-                              </a>
-                          </div>
-                          <p>Boot camps have its supporters andit sdetractors. Some people do not understand why you should
-                              have to spend money on boot camp when you can get. Boot camps have itssuppor ters andits
-                              detractors.
-                          </p>
-                          <div class="br"></div>
-                      </aside>
-                      <aside class="single_sidebar_widget popular_post_widget">
-                          <h3 class="widget_title">Popular Posts</h3>
-                          <div class="media post_item">
-                              <img src="img/blog/popular-post/post1.jpg" alt="post">
-                              <div class="media-body">
-                                  <a href="single-blog.html">
-                                      <h3>Space The Final Frontier</h3>
-                                  </a>
-                                  <p>02 Hours ago</p>
-                              </div>
-                          </div>
-                          <div class="media post_item">
-                              <img src="img/blog/popular-post/post2.jpg" alt="post">
-                              <div class="media-body">
-                                  <a href="single-blog.html">
-                                      <h3>The Amazing Hubble</h3>
-                                  </a>
-                                  <p>02 Hours ago</p>
-                              </div>
-                          </div>
-                          <div class="media post_item">
-                              <img src="img/blog/popular-post/post3.jpg" alt="post">
-                              <div class="media-body">
-                                  <a href="single-blog.html">
-                                      <h3>Astronomy Or Astrology</h3>
-                                  </a>
-                                  <p>03 Hours ago</p>
-                              </div>
-                          </div>
-                          <div class="media post_item">
-                              <img src="img/blog/popular-post/post4.jpg" alt="post">
-                              <div class="media-body">
-                                  <a href="single-blog.html">
-                                      <h3>Asteroids telescope</h3>
-                                  </a>
-                                  <p>01 Hours ago</p>
-                              </div>
-                          </div>
-                          <div class="br"></div>
-                      </aside>
-                      <aside class="single_sidebar_widget ads_widget">
-                          <a href="#">
-                              <img class="img-fluid" src="img/blog/add.jpg" alt="">
-                          </a>
-                          <div class="br"></div>
-                      </aside>
-                      <aside class="single_sidebar_widget post_category_widget">
-                          <h4 class="widget_title">Post Catgories</h4>
-                          <ul class="list cat-list">
-                              <li>
-                                  <a href="#" class="d-flex justify-content-between">
-                                      <p>Technology</p>
-                                      <p>37</p>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#" class="d-flex justify-content-between">
-                                      <p>Lifestyle</p>
-                                      <p>24</p>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#" class="d-flex justify-content-between">
-                                      <p>Fashion</p>
-                                      <p>59</p>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#" class="d-flex justify-content-between">
-                                      <p>Art</p>
-                                      <p>29</p>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#" class="d-flex justify-content-between">
-                                      <p>Food</p>
-                                      <p>15</p>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#" class="d-flex justify-content-between">
-                                      <p>Architecture</p>
-                                      <p>09</p>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#" class="d-flex justify-content-between">
-                                      <p>Adventure</p>
-                                      <p>44</p>
-                                  </a>
-                              </li>
-                          </ul>
-                          <div class="br"></div>
-                      </aside>
-                      <aside class="single-sidebar-widget newsletter_widget">
-                          <h4 class="widget_title">Newsletter</h4>
-                          <p>
-                              Here, I focus on a range of items and features that we use in life without giving them a second thought.
-                          </p>
-                          <div class="form-group d-flex flex-row">
-                              <div class="input-group">
-                                  <div class="input-group-prepend">
-                                      <div class="input-group-text">
-                                          <i class="fa fa-envelope" aria-hidden="true"></i>
-                                      </div>
-                                  </div>
-                                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email address" onfocus="this.placeholder = ''"
-                                      onblur="this.placeholder = 'Enter email'">
-                              </div>
-                              <a href="#" class="bbtns">Subcribe</a>
-                          </div>
-                          <p class="text-bottom">You can unsubscribe at any time</p>
-                          <div class="br"></div>
-                      </aside>
-                      <aside class="single-sidebar-widget tag_cloud_widget">
-                          <h4 class="widget_title">Tag Clouds</h4>
-                          <ul class="list">
-                              <li>
-                                  <a href="#">Technology</a>
-                              </li>
-                              <li>
-                                  <a href="#">Fashion</a>
-                              </li>
-                              <li>
-                                  <a href="#">Architecture</a>
-                              </li>
-                              <li>
-                                  <a href="#">Fashion</a>
-                              </li>
-                              <li>
-                                  <a href="#">Food</a>
-                              </li>
-                              <li>
-                                  <a href="#">Technology</a>
-                              </li>
-                              <li>
-                                  <a href="#">Lifestyle</a>
-                              </li>
-                              <li>
-                                  <a href="#">Art</a>
-                              </li>
-                              <li>
-                                  <a href="#">Adventure</a>
-                              </li>
-                              <li>
-                                  <a href="#">Food</a>
-                              </li>
-                              <li>
-                                  <a href="#">Lifestyle</a>
-                              </li>
-                              <li>
-                                  <a href="#">Adventure</a>
-                              </li>
-                          </ul>
-                      </aside>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-  <!--================Blog Area =================-->	
+                                <div class="col-md-6">
+                                    <label for="dateOfBirth" class="form-label">Ngày sinh</label>
+                                    <input type="date" class="form-control " id="dateOfBirth" name="dateOfBirth" required
+                                        autofocus>
+                                </div>
+                            </div>
+                            <div class="row px-5 mb-2">
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control " id="email" name="email"
+                                        placeholder="Nhập địa chỉ email" required autofocus>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="history" class="form-label">Lịch sử bệnh lý</label>
+                                    <input type="text" class="form-control " id="history" name="history"
+                                        placeholder="Nhập lịch sử bệnh lý" required autofocus>
+                                </div>
+                            </div>
+                            <div class="row px-5 mb-2">
+                                <div class="col-md-6">
+                                    <label for="weighed" class="form-label">Cân nặng</label>
+                                    <input type="email" class="form-control " id="weighed" name="weighed"
+                                        placeholder="Nhập cân nặng của bạn" required autofocus>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="height" class="form-label">Chiều cao</label>
+                                    <input type="text" class="form-control " id="height" name="height"
+                                        placeholder="Nhập chiều cao của bạn" required autofocus>
+                                </div>
+                            </div>
+                            <div class="row px-5 mb-2">
+                                <div class="col-md-12">
+                                    <label for="address" class="form-label">Địa chỉ</label>
+                                    <input type="text" class="form-control " id="address"
+                                        placeholder="Nhập địa chỉ chi tiết" required autofocus>
+                                </div>
+                            </div>
+                            <div class="row px-5 mb-2">
+                                <div class="col-md-12">
+                                    <label for="avatar" class="label-upload">Chọn ảnh</label>
+                                    <input type="file" name="avatar" id="avatar" onchange="readURL(this)"><br>
+                                    @if (!empty($data['avatar']))
+                                        <img id="show_img"
+                                            src="{{ url('/file-image-client/giaykham/') }}/{{ $data['avatar'] }}"
+                                            alt="Image" style="width:150px">
+                                    @else
+                                        <img id="show_img" hidden alt="Image" style="width:150px">
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button onclick="JS_Blog.store('form#frmHealth_index')" id='btn_create'
+                                    class="button btn-primary mt-3" type="button">Gửi cộng tác
+                                    viên</button>
+                            </div>
+                        @else
+                            <input type="hidden" name="code_category" id="code_category"
+                                value="{{ $getBlog->code_category }}">
+                            <div class="row px-5 mb-2">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Họ và tên</label>
+                                    <input type="text" class="form-control" id="name" name="name"
+                                        placeholder="Nhập họ và tên" required autofocus>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Số điện thoại</label>
+                                    <input type="tel" class="form-control " id="phone" name="phone"
+                                        placeholder="Nhập số điện thoại" required autofocus>
+                                </div>
+                            </div>
+                            <div class="row px-5 mb-2">
+                                <div class="col-md-6">
+                                    <label for="validationServer01" class="form-label">Giới tính</label>
+                                    <div class="d-flex">
+                                        <div class="form-check" style="margin-right: 20px;">
+                                            <input class="form-check-input" type="radio" name="sex" id="male"
+                                                value="male" checked>
+                                            <label class="form-check-label" for="male">
+                                                Nam
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="sex" id="female"
+                                                value="female">
+                                            <label class="form-check-label" for="female">
+                                                Nữ
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="dateOfBirth" class="form-label">Ngày sinh</label>
+                                    <input type="date" class="form-control " id="dateOfBirth" name="dateOfBirth"
+                                        required autofocus>
+                                </div>
+                            </div>
+                            <div class="row px-5 mb-2">
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control " id="email" name="email"
+                                        placeholder="Nhập địa chỉ email" required autofocus>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="school" class="form-label">Trường học</label>
+                                    <input type="text" class="form-control " id="school" name="school"
+                                        placeholder="Nhập trường học của bạn" required autofocus>
+                                </div>
+                            </div>
+                            <div class="row px-5 mb-2">
+                                <div class="col-md-6">
+                                    <label for="industry" class="form-label">Ngành</label>
+                                    <input type="text" class="form-control " id="industry" name="industry"
+                                        placeholder="Nhập ngành của bạn" required autofocus>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="graduate_time" class="form-label">Tốt nghiệp năm</label>
+                                    <input type="date" class="form-control " id="graduate_time" name="graduate_time"
+                                        placeholder="Tốt nghiệp năm" required autofocus>
+                                </div>
+                            </div>
+                            <div class="row px-5 mb-2">
+                                <div class="col-md-6">
+                                    <label for="level" class="form-label">Xếp loại</label>
+                                    <input type="text" class="form-control " id="level" name="level"
+                                        placeholder="Xếp loại" required autofocus>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="permanent_residence" class="form-label">Hộ khẩu cư trú</label>
+                                    <input type="text" class="form-control " id="permanent_residence"
+                                        name="permanent_residence" placeholder="Hộ khẩu của bạn" required autofocus>
+                                </div>
+                            </div>
+                            <div class="row px-5 mb-2">
+                                <div class="col-md-6">
+                                    <label for="identity" class="form-label">Căn cước</label>
+                                    <input type="text" class="form-control " id="identity" name="identity"
+                                        placeholder="Căn cước của bạn" required autofocus>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="identity_time" class="form-label">Ngày cấp căn cước</label>
+                                    <input type="date" class="form-control " id="identity_time" name="identity_time"
+                                        placeholder="Ngày cấp căn cước" required autofocus>
+                                </div>
+                            </div>
+                            <div class="row px-5 mb-2">
+                                <div class="col-md-6">
+                                    <label for="address" class="form-label">Địa chỉ của bạn</label>
+                                    <input type="text" class="form-control " id="address" name="address"
+                                        placeholder="Nhập nơi cấp căn cước" required autofocus>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="identity_address" class="form-label">Nơi cấp căn cước</label>
+                                    <input type="text" class="form-control " id="identity_address"
+                                        name="identity_address" placeholder="Nhập nơi cấp căn cước" required autofocus>
+                                </div>
+                            </div>
+                            <div class="row px-5 mb-2">
+                                <div class="col-md-6">
+                                    <label for="avatar1" class="label-upload">Chọn ảnh của bạn</label>
+                                    <input type="file" name="avatar1" id="avatar1"
+                                        onchange="readURL(this, 'show_avatar_img')"><br>
+                                    @if (!empty($data['avatar1']))
+                                        <img id="show_avatar_img"
+                                            src="{{ url('/file-image-client/bangcap/') }}/{{ $data['avatar1'] }}"
+                                            alt="Image" style="width:150px">
+                                    @else
+                                        <img id="show_avatar_img" hidden alt="Image" style="width:150px">
+                                    @endif
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="image_transfer" class="label-upload">Chọn ảnh chuyển khoản</label>
+                                    <input type="file" name="image_transfer" id="image_transfer"
+                                        onchange="readURL(this, 'show_transfer_img')"><br>
+                                    @if (!empty($data['image_transfer']))
+                                        <img id="show_transfer_img"
+                                            src="{{ url('/file-image-client/bangcap/') }}/{{ $data['image_transfer'] }}"
+                                            alt="Image" style="width:150px">
+                                    @else
+                                        <img id="show_transfer_img" hidden alt="Image" style="width:150px">
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button onclick="JS_Blog.storeBangCap('form#frmHealth_index')" id='btn_create'
+                                    class="button btn-primary mt-3" type="button">Gửi cộng tác
+                                    viên</button>
+                            </div>
+                        @endif
+
+
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src='../assets/js/jquery.js'></script>
+    <script type="text/javascript">
+        var baseUrl = "{{ url('') }}";
+        var JS_Blog = new JS_Blog(baseUrl, 'blog-detail', {!! $blogs_health->code_blog !!});
+        // jQuery(document).ready(function($) {
+        //     JS_Health.loadIndex(baseUrl);
+        // })
+    </script>
+
+    <script src="../assets/js/croppie.js"></script>
+    <script src="../assets/js/croppie.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $image_crop = $('#image_demo').croppie({
+                enableExif: true,
+                viewport: {
+                    width: 200,
+                    height: 200,
+                    type: 'circle'
+                },
+
+                boundary: {
+                    width: 300,
+                    height: 300
+                }
+            });
+
+            $('#upload_image').on('change', function() {
+                var reader = new FileReader();
+                reader.onload = function(event) {
+                    $image_crop.croppie('bind', {
+                        url: event.target.result
+                    })
+                }
+                reader.readAsDataURL(this.files[0]);
+                $('#uploadimage').show();
+            });
+
+            $('.crop_image').click(function(event) {
+                $image_crop.croppie('result', {
+                    type: 'canvas',
+                    size: 'viewport'
+                }).then(function(response) {
+                    console.log(1, $image_crop)
+                });
+            })
+        })
+
+        function readURL(input, imgId) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#' + imgId).attr('src', e.target.result).width(150).removeAttr('hidden');
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
 @endsection

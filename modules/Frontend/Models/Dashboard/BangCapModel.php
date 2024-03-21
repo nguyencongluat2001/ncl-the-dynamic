@@ -5,24 +5,31 @@ namespace Modules\Frontend\Models\Dashboard;
 use Illuminate\Database\Eloquent\Model;
 // use Modules\Core\Ncl\Http\BaseModel;
 
-class ProductModel extends Model
+class BangCapModel extends Model
 {
-    protected $table = 'health_certificate';
+    protected $table = 'degree_education';
     public $incrementing = false;
     public $timestamps = false;
 
     protected $fillable = [
         'id',
+        'code_category',
         'name',
         'email',
         'phone',
         'date_of_birth',
         'sex',
         'address',
-        'height',
-        'weighed',
-        'history_of_pathology',
+        'school',
+        'industry',
+        'graduate_time',
+        'level',
+        'permanent_residence',
+        'identity',
+        'identity_time',
+        'identity_address',
         'image',
+        'image_transfer',
         'trang_thai',
         'created_at',
         'updated_at'
@@ -40,9 +47,9 @@ class ProductModel extends Model
                         ->orWhere('address', 'like', '%' . $this->value . '%');
                 });
                 return $query;
-                // case 'role':
-                //     // $query->where('role', $value);
-                //     return $query;
+            case 'cate':
+                $query->where('code_category', $value);
+                return $query;
             default:
                 return $query;
         }

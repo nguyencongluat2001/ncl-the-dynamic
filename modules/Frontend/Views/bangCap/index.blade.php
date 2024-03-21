@@ -1,57 +1,10 @@
 @extends('Frontend::layouts.index')
 @section('body-client')
-    <!-- ================ start banner area ================= -->
-    <section class="offer-image4">
-        <div class="bg-overlay large-image-v1-gradient"></div>
-        <div class="large-image-container">
-            <img src="{{ asset('img/giayKham/giayKham1.png') }}" class="img-fluid"
-                style="width: 100%; height: auto; object-fit: cover;">
-        </div>
-    </section>
-
-    <!-- ================ top product area start ================= -->
-    <section class="related-product-area">
-        <div class="container mt-3">
-            <div class="row mb-3">
-                <div class="col-6">
-                    <a href="#"><img src="img/giayKham/giayKham2.png" alt="" class="img-fluid"></a>
-                </div>
-                <div class="col-6">
-                    <a href="#"><img src="img/giayKham/giayKham2.png" alt="" class="img-fluid"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="container mt-5">
-            <div class="row mb-3">
-                <div class="col-md-5">
-                    <div class="image-card">
-                        <img src="img/giayKham/giayKham3.png" alt="Giấy Khám Sức Khỏe" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-md-7 d-flex align-items-center justify-content-center mt-3 mt-md-0 mb-3 mt-md-0">
-                    <div class="info-card">
-                        <h4>LÀM GIẤY</h4>
-                        <h1>Khám sức khỏe lấy ngay</h1>
-                        <ul style="list-style-type: inherit; font-size:15px" class="px-3">
-                            <li>Giấy khám sức khỏe xin việc, đi học, đi làm</li>
-                            <li>Giấy khám sức khỏe lái xe</li>
-                            <li>Giấy khám sức khỏe trẻ em</li>
-                            <li>Giấy khám sức khỏe song ngữ</li>
-                            <li>Giấy khám sức khỏe hoàn thiện hồ sơ</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary mt-2" style="width:100%; ">XEM MẪU CÁC LOẠI Ở ĐÂY</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
     <section class="health-blog mt-3 mb-3">
         <div class="container-lg" style="background-color: #FAF8F3">
             <div class="text-center mt-3 mb-2">
-                <h3 class="px-5 pt-3" style="line-height: normal">DỊCH VỤ LÀM GIẤY KHÁM SỨC KHỎE</h3>
+                <h6 class="px-5 pt-3" style="line-height: normal">Ở ĐÂY</h6>
+                <h3 class="px-5" style="line-height: normal">CHÚNG TÔI CÓ BẰNG CẤP</h3>
             </div>
             <div class="container">
                 <div class="row">

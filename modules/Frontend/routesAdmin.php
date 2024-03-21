@@ -1,6 +1,8 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 use Modules\Frontend\Controllers\AuthController;
+use Modules\Frontend\Controllers\Dashboard\BangCapController;
 use Modules\Frontend\Controllers\Dashboard\HomeController;
 use Modules\Frontend\Controllers\Dashboard\LoginController;
 use Modules\Frontend\Controllers\Dashboard\UserController;
@@ -9,6 +11,7 @@ use Modules\Frontend\Controllers\Dashboard\CategoryController;
 use Modules\Frontend\Controllers\Dashboard\BlogController;
 use Modules\Frontend\Controllers\Dashboard\SqlController;
 use Modules\Frontend\Controllers\Dashboard\ProductController;
+
 /** Login */
 Route::controller(LoginController::class)->group(function ($router) {
     $router->get('system/login', 'index');
@@ -73,13 +76,25 @@ Route::controller(BlogController::class)->group(function ($router) {
     $router->post('system/blog/changeStatus', 'changeStatus');
 });
 
-//product
+//giấy khám
 Route::controller(ProductController::class)->group(function ($router) {
     $router->get('system/product/index', 'index');
     $router->get('system/product/loadList', 'loadList');
+    $router->post('system/product/delete', 'delete');
+    $router->post('system/product/changeStatus', 'changeStatus');
+    $router->get('system/product/infor', 'viewGiayKham');
 });
+
+//bằng cấp
+Route::controller(BangCapController::class)->group(function ($router) {
+    $router->get('system/product/indexBangCap', 'index');
+    $router->get('system/product/loadListBangCap', 'loadList');
+    $router->post('system/product/deleteBangCap', 'delete');
+    $router->post('system/product/changeStatusBangCap', 'changeStatus');
+    $router->get('system/product/inforBangCap', 'viewBangCap');
+});
+
 Route::controller(SqlController::class)->group(function ($router) {
     $router->get('/system/sql/index', 'index');
     $router->get('/system/sql/loadList', 'loadList');
-
 });

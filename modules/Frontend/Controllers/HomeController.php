@@ -17,6 +17,8 @@ use Modules\Frontend\Services\Dashboard\BlogDetailService;
 class HomeController extends Controller
 {
     private $homeService;
+    private $BlogService;
+    private $BlogDetailService;
 
     public function __construct(
         HomeService $s,

@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('degree_education', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('name', 100);// họ tên
-            $table->string('email', 50)->nullable();//email
+            $table->string('code_category', 20); // code category
+            $table->string('name', 100); // họ tên
+            $table->string('email', 50)->nullable(); //email
             $table->string('phone', 15); // sdt
             $table->dateTime('date_of_birth')->nullable(); //ngày sinh
             $table->string('sex', 10); //giới tính
@@ -27,8 +28,8 @@ return new class extends Migration
             $table->string('identity', 20)->nullable(); //căn cước cđ
             $table->dateTime('identity_time')->nullable(); // ngày cấp căn cước 
             $table->string('identity_address')->nullable(); // nơi cấp căn cước 
-            $table->string('image',200)->nullable(); // ảnh
-            $table->string('image_transfer',200)->nullable(); // ảnh chuyển khoản
+            $table->string('image', 200)->nullable(); // ảnh
+            $table->string('image_transfer', 200)->nullable(); // ảnh chuyển khoản
             $table->boolean('trang_thai')->default(1);
             $table->timestamps();
         });
