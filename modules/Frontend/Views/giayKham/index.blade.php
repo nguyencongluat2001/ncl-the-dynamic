@@ -58,14 +58,14 @@
                     <div class="col-sm-12 col-xl-12 col-md-12 mt-3">
                         <section class="lattest-product-area pb-40 category-list">
                             <div class="row">
-                                @foreach ($blogs_health as $key => $blogDetail)
+                                @foreach ($getBlog as $key => $getBlog)
                                     <div class="col-md-6 col-lg-4">
                                         <div class="card text-center card-product">
                                             <div class="card-product__img">
                                                 <img class="card-img" src="img/giayKham/giayKham4.jpg" alt="">
                                                 <ul class="card-product__imgOverlay">
                                                     <a class="nav-link"
-                                                        href="{{ url('/blog-detail/' . $blogDetail->code_blog) }}"><button
+                                                        href="{{ url('/blog-detail/' . $getBlog['code_blog']) }}"><button
                                                             class="btn btn-primary"
                                                             style="animation: lights 2s 750ms linear infinite;border-radius: 5px;">Đăng
                                                             ký</button></a>
@@ -73,7 +73,7 @@
                                             </div>
                                             <div class="card-body">
                                                 <h4 class="card-product__title1"><a
-                                                        href="{{ url('/blog-detail/' . $blogDetail->code_blog) }}">{{ $blogDetail->title }}</a>
+                                                        href="{{ url('/blog-detail/' . $getBlog['code_blog']) }}">{{ $getBlog['blogs_detail'][0]['title'] }}</a>
                                                 </h4>
                                             </div>
                                         </div>
