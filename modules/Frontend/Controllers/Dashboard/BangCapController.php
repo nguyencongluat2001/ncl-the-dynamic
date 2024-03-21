@@ -40,7 +40,7 @@ class BangCapController extends Controller
             ->whereIn('code_category', ['TT_02_N1', 'TT_03_N1'])
             ->get();
         // dd($data['getCategory']);
-        return view('Frontend::Dashboard.product.bangCap.index', $data);
+        return view('Frontend::Dashboard.product.bangcap.index', $data);
     }
     /**
      * Load màn hình chỉnh sửa thông tin danh mục
@@ -57,7 +57,7 @@ class BangCapController extends Controller
             return array('success' => false, 'message' => 'Không tồn tại đối tượng!');
         }
         $data['datas'] = $this->bangCapService->where('id', $input['id'])->first();
-        return view('Frontend::Dashboard.product.bangCap.view', $data);
+        return view('Frontend::Dashboard.product.bangcap.view', $data);
     }
     /**
      * Xóa danh mục
@@ -90,7 +90,7 @@ class BangCapController extends Controller
         $arrInput      = $request->input();
         $objResult     = $this->bangCapService->filter($arrInput);
         $data['datas'] = $objResult;
-        return view("Frontend::Dashboard.product.bangCap.loadListBangCap", $data)->render();
+        return view("Frontend::Dashboard.product.bangcap.loadListBangCap", $data)->render();
     }
     /**
      * Cập nhật trạng thái
