@@ -31,7 +31,7 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        return view('Frontend::Dashboard.Product.giaykham.index');
+        return view('Frontend::Dashboard.product.giaykham.index');
     }
     /**
      * Load màn hình chỉnh sửa thông tin danh mục
