@@ -36,7 +36,7 @@ class DegressController extends Controller
     }
 
     /**
-     * Load màn hình LÀM GIẤY KHÁM SỨC KHỎE
+     * Load màn hình BẰNG CẤP
      * 
      * @return \Illuminate\Contracts\View\View
      */
@@ -47,8 +47,9 @@ class DegressController extends Controller
         $arrResult            = $objLibrary->_getAllFileJavaScriptCssArray('js', 'frontend/home/home.js', ',', $arrResult);
         $arrResult            = $objLibrary->_getAllFileJavaScriptCssArray('js', 'assets/jquery.validate.js', ',', $arrResult);
         $data['stringJsCss']  = json_encode($arrResult);
-        $data['getBlog'] = $this->BlogService
-            ->whereIn('code_category', ['TT_02_N1', 'TT_03_N1'])
+        $data['getBlog'] = $this->BlogService->where('status', 1)
+            ->where('code_category', 'LIKE', '%TT_02%')
+            ->where('code_category', '!=', 'TT_02')
             ->get();
         if ($data['getBlog']->isNotEmpty()) {
             $blogCodes = $data['getBlog']->pluck('code_blog');
@@ -58,7 +59,6 @@ class DegressController extends Controller
         } else {
             $data['blogs_health'] = collect();
         }
-        // dd($data['blogs_health']);
         return view('Frontend::bangCap.index', $data);
     }
 
