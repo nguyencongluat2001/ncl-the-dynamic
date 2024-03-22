@@ -70,8 +70,7 @@
                 </div>
                 <div class="col-md-7 d-flex align-items-center justify-content-center mt-3 mt-md-0 mb-3 mt-md-0">
                     <div class="info-card">
-                        <h4>LÀM GIẤY</h4>
-                        <h1>Khám sức khỏe lấy ngay</h1>
+                        <h4>Làm giấy Khám sức khỏe lấy ngay</h4>
                         <ul style="list-style-type: inherit; font-size:15px" class="px-3">
                             <li>Giấy khám sức khỏe xin việc, đi học, đi làm</li>
                             <li>Giấy khám sức khỏe lái xe</li>
