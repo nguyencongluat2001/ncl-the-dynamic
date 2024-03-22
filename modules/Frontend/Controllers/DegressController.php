@@ -47,7 +47,7 @@ class DegressController extends Controller
         $arrResult            = $objLibrary->_getAllFileJavaScriptCssArray('js', 'frontend/home/home.js', ',', $arrResult);
         $arrResult            = $objLibrary->_getAllFileJavaScriptCssArray('js', 'assets/jquery.validate.js', ',', $arrResult);
         $data['stringJsCss']  = json_encode($arrResult);
-        $data['getBlog'] = $this->BlogService
+        $data['getBlog'] = $this->BlogService->where('status', 1)
             ->whereIn('code_category', ['TT_02_N1', 'TT_03_N1'])
             ->get();
         if ($data['getBlog']->isNotEmpty()) {

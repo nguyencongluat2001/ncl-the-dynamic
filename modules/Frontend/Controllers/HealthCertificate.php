@@ -43,19 +43,12 @@ class HealthCertificate extends Controller
         $arrResult            = $objLibrary->_getAllFileJavaScriptCssArray('js', 'frontend/home/home.js', ',', $arrResult);
         $arrResult            = $objLibrary->_getAllFileJavaScriptCssArray('js', 'assets/jquery.validate.js', ',', $arrResult);
         $data['stringJsCss']  = json_encode($arrResult);
-        $getBlog     = $this->BlogService->where('status',1)->where('code_category','LIKE', '%TT_01%')->where('code_category','!=', 'TT_01')->get();
-        $data['blogs_health'] = [];
-        foreach($getBlog as $val){
-            $data['getBlog'][] = [
-                "id" => $val->id,
-                "user_id" => $val->id,
-                "code_blog" => $val->id,
-                "code_category" => $val->id,
-                "type_blog" => $val->id,
-                "status" => $val->id,
-                "blogs_detail" => $this->BlogDetailService->where('code_blog', $val->code_blog)->get(),
-            ];
-        }
+        $getBlog     = $this->BlogService->where('status', 1)->where('code_category', 'LIKE', '%TT_01%')->where('code_category', '!=', 'TT_01')->get();
+        $data['getBlog'] = $getBlog->map(function ($blog) {
+            $blogDetails = $this->BlogDetailService->where('code_blog', $blog->code_blog)->get();
+            $blog->details = $blogDetails;
+            return $blog;
+        });
         return view('Frontend::giayKham.index', $data);
     }
 

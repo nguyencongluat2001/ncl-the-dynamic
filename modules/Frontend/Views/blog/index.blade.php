@@ -54,7 +54,7 @@
                     <form action="" role="form" method="POST" id="frmHealth_index" class="mt-3 pt-1"
                         enctype="multipart/form-data">
                         <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
-                        @if ($blogs_health->code_blog == '2024_03_15_1520000000665299')
+                        @if ($getBlog->code_category == 'TT_01_N1')
                             <div class="row px-5 mb-2">
                                 <div class="col-md-6">
                                     <label for="name" class="form-label">Họ và tên</label>
