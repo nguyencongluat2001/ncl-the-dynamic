@@ -95,12 +95,6 @@
                 <div class="col-lg-12 posts-list">
                     <div class="single-post row">
                         <div class="col-lg-12">
-                            <h2>{!! $getBlogView->title !!}</h2>
-                            {{-- <div class="feature-img">
-                                <img class="img-fluid" src="img/blog/feature-img1.jpg" alt="">
-                            </div> --}}
-                        </div>
-                        <div class="col-lg-12">
                             <div class="quotes">
                                 {!! $getBlogView->decision !!}
                             </div>
