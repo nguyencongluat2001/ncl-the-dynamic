@@ -22,7 +22,8 @@ return new class extends Migration
             $table->string('height', 10); // chiều cao
             $table->string('weighed', 10); // cân nặng
             $table->string('history_of_pathology', 2000); // tiền sử bệnh lý
-            $table->string('image',200)->nullable(); //// ảnh
+            $table->text('text');
+            $table->string('image', 200)->nullable(); //// ảnh
             $table->boolean('trang_thai')->default(1);
             $table->timestamps();
         });

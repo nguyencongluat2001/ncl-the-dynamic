@@ -171,6 +171,14 @@
                                     name="identity_address" id="identity_address" readonly />
                             </div>
                         </div>
+                        <div class="row form-group" id="div_hinhthucgiai">
+                            <span class="col-md-3 control-label">Nội dung</span>
+                            <div class="col-md-8">
+                                <input class="form-control" type="text"
+                                    value="{{ isset($datas->text) ? $datas->text : '' }}" name="text"
+                                    id="text" readonly />
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default btn-sm" data-bs-dismiss="modal">

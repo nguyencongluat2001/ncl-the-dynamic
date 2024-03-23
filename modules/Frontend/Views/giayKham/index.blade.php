@@ -1,13 +1,18 @@
 @extends('Frontend::layouts.index')
 @section('body-client')
+    {{-- <style>
+        .dangkyngay {
+            font-size: calc(1vw + 0.1vh + 0.4vmin);
+        }
+    </style> --}}
     <!-- ================ start banner area ================= -->
     <!-- <section class="offer-image4">
-        <div class="bg-overlay large-image-v1-gradient"></div>
-        <div class="large-image-container">
-            <img src="{{ asset('img/giayKham/giayKham1.png') }}" class="img-fluid"
-                style="width: 100%; height: auto; object-fit: cover;">
-        </div>
-    </section> -->
+                                                                                        <div class="bg-overlay large-image-v1-gradient"></div>
+                                                                                        <div class="large-image-container">
+                                                                                            <img src="{{ asset('img/giayKham/giayKham1.png') }}" class="img-fluid"
+                                                                                                style="width: 100%; height: auto; object-fit: cover;">
+                                                                                        </div>
+                                                                                    </section> -->
     <section class="health-blog mt-3 mb-3">
         <div class="container-lg" style="background-color: #FAF8F3">
             <div class="text-center mt-3 mb-2">
@@ -22,7 +27,9 @@
                                     <div class="col-md-6 col-lg-4">
                                         <div class="card text-center card-product">
                                             <div class="card-product__img">
-                                                <img style="height: 170px;width: 100%;object-fit: cover;" class="card-img" src="{{url('/file-image-client/blogs/')}}/{{$getBlog->blogImage->name_image ?? ''}}" alt="">
+                                                <img style="height: 170px;width: 100%;object-fit: cover;" class="card-img"
+                                                    src="{{ url('/file-image-client/blogs/') }}/{{ $getBlog->blogImage->name_image ?? '' }}"
+                                                    alt="">
                                                 <ul class="card-product__imgOverlay">
                                                     <a class="nav-link"
                                                         href="{{ url('/blog-detail/' . $getBlog->code_blog) }}"><button
@@ -32,8 +39,8 @@
                                                 </ul>
                                             </div>
                                             <div class="card-body">
-                                                <h4 class="card-product__title1"><a
-                                                    style="font-weight:600;color: #1c3361;"    href="{{ url('/blog-detail/' . $getBlog->code_blog) }}">{{ $getBlog->details->title }}</a>
+                                                <h4 class="card-product__title1"><a style="font-weight:600;color: #1c3361;"
+                                                        href="{{ url('/blog-detail/' . $getBlog->code_blog) }}">{{ $getBlog->details->title }}</a>
                                                 </h4>
                                             </div>
                                         </div>
@@ -69,7 +76,7 @@
                     </div>
                 </div>
                 <div class="col-md-7 d-flex align-items-center justify-content-center mt-3 mt-md-0 mb-3 mt-md-0">
-                    <div class="info-card">
+                    <div class="info-card container">
                         <h3>Làm giấy Khám sức khỏe lấy ngay</h3>
                         <ul style="list-style-type: inherit; font-size:15px" class="px-3">
                             <li>Giấy khám sức khỏe xin việc, đi học, đi làm</li>
@@ -79,7 +86,9 @@
                             <li>Giấy khám sức khỏe hoàn thiện hồ sơ</li>
                         </ul>
                         <!-- <a class="btn btn-primary mt-2" style="width:100%; ">ĐĂNG KÝ NHANH, GIẤY KHÁM ĐẠT CHẤT LƯỢNG</a> -->
-                        <span class="btn btn-primary mt-2" style="width:100%; ">ĐĂNG KÝ NHANH, GIẤY KHÁM ĐẠT CHẤT LƯỢNG</span>
+                        <span class="btn btn-primary dangkyngay mt-2 fs-6 fs-md-5 fs-lg-3" style="width:100%;">ĐĂNG KÝ GIẤY
+                            KHÁM
+                            ĐẠT CHẤT LƯỢNG</span>
 
                     </div>
                 </div>
@@ -87,8 +96,8 @@
         </div>
 
     </section>
-        <!--================Blog Area =================-->
-        <section class="blog_area single-post-area py-80px section-margin--small">
+    <!--================Blog Area =================-->
+    <section class="blog_area single-post-area py-80px section-margin--small">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 posts-list">

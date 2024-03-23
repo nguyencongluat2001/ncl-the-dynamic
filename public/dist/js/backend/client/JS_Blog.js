@@ -51,6 +51,7 @@ JS_Blog.prototype.store = function (oFormCreate) {
     formdata.append("history", $("#history").val());
     formdata.append("weighed", $("#weighed").val());
     formdata.append("height", $("#height").val());
+    formdata.append("text", $("#text").val());
     formdata.append("sex", $("input[name='sex']:checked").val());
     $("form#frmHealth_index input[type=file]").each(function () {
         var count = $(this)[0].files.length;
