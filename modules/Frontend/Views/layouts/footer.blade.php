@@ -3,9 +3,10 @@
     <div class="footer-area">
         <div class="container">
             <div class="row section_gap">
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-7 col-md-8 col-sm-6">
                     <div class="single-footer-widget tp_widgets">
-                        <h4 class="footer_title large_title" style="line-height: 3rem">DỊCH VỤ LÀM GIẤY KHÁM SỨC KHỎE
+                        <h4 class="footer_title large_title" style="line-height: 3rem">DỊCH VỤ LÀM GIẤY KHÁM SỨC KHỎE,
+                            BẰNG CẤP
                             TOÀN QUỐC</h4>
                         <p>
                             Chuyên làm giấy khám sức khỏe các loại, giấy khám sức khỏe <strong>a3, a4 theo thông tư
@@ -14,20 +15,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
-                    <div class="single-footer-widget tp_widgets">
-                        <h4 class="footer_title">Quick Links</h4>
-                        <ul class="list">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Product</a></li>
-                            <li><a href="#">Brand</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
+                {{-- <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single-footer-widget instafeed">
                         <h4 class="footer_title">Gallery</h4>
                         <ul class="list instafeed d-flex flex-wrap">
@@ -39,8 +27,8 @@
                             <li><img src="../img/gallery/r8.jpg" alt=""></li>
                         </ul>
                     </div>
-                </div>
-                <div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
+                </div> --}}
+                <div class="offset-lg-1 col-lg-4 col-md-4 col-sm-6">
                     <div class="single-footer-widget tp_widgets">
                         <h4 class="footer_title">Contact Us</h4>
                         <div class="ml-40">
