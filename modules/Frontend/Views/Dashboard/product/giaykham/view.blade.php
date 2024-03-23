@@ -96,6 +96,14 @@
                             name="history_of_pathology" id="history_of_pathology" readonly />
                     </div>
                 </div>
+                <div class="row form-group" id="div_hinhthucgiai">
+                    <span class="col-md-3 control-label">Nội dung</span>
+                    <div class="col-md-8">
+                        <input class="form-control" type="text"
+                            value="{{ isset($datas->text) ? $datas->text : '' }}" name="text" id="text"
+                            readonly />
+                    </div>
+                </div>
                 {{--  Hình ảnh --}}
                 <div class="row form-group" id="div_hinhthucgiai">
                     <span class="col-md-3 control-label">Hình ảnh</span>
