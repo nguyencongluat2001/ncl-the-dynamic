@@ -28,7 +28,7 @@
                         enctype="multipart/form-data">
                         <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
                         @if ($getBlog->code_category == 'TT_01_N1')
-                            <div class="row px-5 mb-2">
+                            <div class="row px-2 mb-2">
                                 <div class="col-md-6">
                                     <label for="name" class="form-label">Họ và tên</label>
                                     <input type="text" class="form-control" id="name" name="name"
@@ -40,7 +40,7 @@
                                         placeholder="Nhập số điện thoại" required autofocus>
                                 </div>
                             </div>
-                            <div class="row px-5 mb-2">
+                            <div class="row px-2 mb-2">
                                 <div class="col-md-6">
                                     <label for="validationServer01" class="form-label">Giới tính</label>
                                     <div class="d-flex">
@@ -67,7 +67,7 @@
                                         autofocus>
                                 </div>
                             </div>
-                            <div class="row px-5 mb-2">
+                            <div class="row px-2 mb-2">
                                 <div class="col-md-6">
                                     <label for="email" class="form-label">Email</label>
                                     <input type="email" class="form-control " id="email" name="email"
@@ -79,7 +79,7 @@
                                         placeholder="Nhập lịch sử bệnh lý" required autofocus>
                                 </div>
                             </div>
-                            <div class="row px-5 mb-2">
+                            <div class="row px-2 mb-2">
                                 <div class="col-md-6">
                                     <label for="weighed" class="form-label">Cân nặng</label>
                                     <input type="email" class="form-control " id="weighed" name="weighed"
@@ -91,7 +91,7 @@
                                         placeholder="Nhập chiều cao của bạn" required autofocus>
                                 </div>
                             </div>
-                            <div class="row px-5 mb-2">
+                            <div class="row px-2 mb-2">
                                 <div class="col-md-6">
                                     <label for="address" class="form-label">Địa chỉ</label>
                                     <input type="text" class="form-control " id="address"
@@ -103,7 +103,7 @@
                                         placeholder="Nhập nội dung của bạn" autofocus>
                                 </div>
                             </div>
-                            <div class="row px-5 mb-2">
+                            <div class="row px-2 mb-2">
                                 <div class="col-md-12">
                                     <label for="avatar" class="label-upload">Chọn ảnh</label>
                                     <input type="file" name="avatar" id="avatar" onchange="readURL(this)"><br>
@@ -124,7 +124,7 @@
                         @else
                             <input type="hidden" name="code_category" id="code_category"
                                 value="{{ $getBlog->code_category }}">
-                            <div class="row px-5 mb-2">
+                            <div class="row px-2 mb-2">
                                 <div class="col-md-6">
                                     <label for="name" class="form-label">Họ và tên</label>
                                     <input type="text" class="form-control" id="name" name="name"
@@ -136,7 +136,7 @@
                                         placeholder="Nhập số điện thoại" required autofocus>
                                 </div>
                             </div>
-                            <div class="row px-5 mb-2">
+                            <div class="row px-2 mb-2">
                                 <div class="col-md-6">
                                     <label for="validationServer01" class="form-label">Giới tính</label>
                                     <div class="d-flex">
@@ -163,7 +163,7 @@
                                         required autofocus>
                                 </div>
                             </div>
-                            <div class="row px-5 mb-2">
+                            <div class="row px-2 mb-2">
                                 <div class="col-md-6">
                                     <label for="email" class="form-label">Email</label>
                                     <input type="email" class="form-control " id="email" name="email"
@@ -175,7 +175,7 @@
                                         placeholder="Nhập trường học của bạn" required autofocus>
                                 </div>
                             </div>
-                            <div class="row px-5 mb-2">
+                            <div class="row px-2 mb-2">
                                 <div class="col-md-6">
                                     <label for="industry" class="form-label">Ngành</label>
                                     <input type="text" class="form-control " id="industry" name="industry"
@@ -187,7 +187,7 @@
                                         placeholder="Tốt nghiệp năm" required autofocus>
                                 </div>
                             </div>
-                            <div class="row px-5 mb-2">
+                            <div class="row px-2 mb-2">
                                 <div class="col-md-6">
                                     <label for="level" class="form-label">Xếp loại</label>
                                     <input type="text" class="form-control " id="level" name="level"
@@ -199,7 +199,7 @@
                                         name="permanent_residence" placeholder="Hộ khẩu của bạn" required autofocus>
                                 </div>
                             </div>
-                            <div class="row px-5 mb-2">
+                            <div class="row px-2 mb-2">
                                 <div class="col-md-6">
                                     <label for="identity" class="form-label">Căn cước</label>
                                     <input type="text" class="form-control " id="identity" name="identity"
@@ -211,7 +211,7 @@
                                         placeholder="Ngày cấp căn cước" required autofocus>
                                 </div>
                             </div>
-                            <div class="row px-5 mb-2">
+                            <div class="row px-2 mb-2">
                                 <div class="col-md-6">
                                     <label for="address" class="form-label">Địa chỉ của bạn</label>
                                     <input type="text" class="form-control " id="address" name="address"
@@ -223,7 +223,7 @@
                                         name="identity_address" placeholder="Nhập nơi cấp căn cước" required autofocus>
                                 </div>
                             </div>
-                            <div class="row px-5 mb-2">
+                            <div class="row px-2 mb-2">
                                 <div class="col-md-6">
                                     <label for="avatar1" class="label-upload">Chọn ảnh của bạn</label>
                                     <input type="file" name="avatar1" id="avatar1"
