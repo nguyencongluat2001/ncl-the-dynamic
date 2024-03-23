@@ -12,6 +12,7 @@ use Modules\Frontend\Services\HealthCertificateService;
 use Modules\Frontend\Services\HomeService;
 use Modules\Frontend\Services\Dashboard\BlogService;
 use Modules\Frontend\Services\Dashboard\BlogDetailService;
+use Modules\Frontend\Services\Dashboard\BlogImagesService;
 
 /**
  * Home controller
@@ -23,12 +24,16 @@ class DegressController extends Controller
     private $BlogService;
     private $bangCapService;
 
+    private $BlogImagesService;
+
     public function __construct(
+        BlogImagesService $BlogImagesService,
         BangCapService $bangCapService,
         HealthCertificateService $s,
         BlogService $BlogService,
         BlogDetailService $BlogDetailService
     ) {
+        $this->BlogImagesService = $BlogImagesService;
         $this->bangCapService = $bangCapService;
         $this->BlogDetailService = $BlogDetailService;
         $this->BlogService = $BlogService;
@@ -56,6 +61,9 @@ class DegressController extends Controller
             $data['blogs_health'] = $this->BlogDetailService
                 ->whereIn('code_blog', $blogCodes)
                 ->get();
+            foreach ($data['blogs_health'] as $blog) {
+                $blog->blogImage = $this->BlogImagesService->where('code_blog', $blog->code_blog)->first();
+            }
         } else {
             $data['blogs_health'] = collect();
         }
