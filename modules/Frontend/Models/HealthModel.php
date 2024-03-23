@@ -21,6 +21,7 @@ class HealthModel extends Model
         'address',
         'height',
         'weighed',
+        'text',
         'history_of_pathology',
         'image',
         'trang_thai',

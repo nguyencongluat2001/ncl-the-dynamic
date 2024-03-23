@@ -71,6 +71,7 @@ class HealthCertificateService extends Service
                 'weighed' => $input['weighed'],
                 'height' => $input['height'],
                 'sex' => $input['sex'],
+                'text' => $input['text'],
                 'trang_thai' => 1,
             ];
             // nếu có ảnh mới thì cập nhật

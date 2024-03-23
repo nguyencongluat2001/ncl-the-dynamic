@@ -6,7 +6,7 @@
         <div class="container h-100">
             <div class="blog-banner">
                 <div class="text-center">
-                    <h1>Blog Details</h1>
+                    <h2>{!! $blogs_health->title !!}</h2>
                     <nav aria-label="breadcrumb" class="banner-breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -18,33 +18,6 @@
         </div>
     </section>
     <!-- ================ end banner area ================= -->
-
-
-
-    <!--================Blog Area =================-->
-    <section class="blog_area single-post-area py-80px section-margin--small">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 posts-list">
-                    <div class="single-post row">
-                        <div class="col-lg-12">
-                            <h2>{!! $blogs_health->title !!}</h2>
-                            {{-- <div class="feature-img">
-                                <img class="img-fluid" src="img/blog/feature-img1.jpg" alt="">
-                            </div> --}}
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="quotes">
-                                {!! $blogs_health->decision !!}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================Blog Area =================-->
-    <!-- ================ Subscribe section start ================= -->
     <section class="subscribe-position">
         <div class="container">
             <div class="subscribe">
@@ -119,10 +92,15 @@
                                 </div>
                             </div>
                             <div class="row px-5 mb-2">
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                     <label for="address" class="form-label">Địa chỉ</label>
                                     <input type="text" class="form-control " id="address"
                                         placeholder="Nhập địa chỉ chi tiết" required autofocus>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="text" class="form-label">Nội dung</label>
+                                    <input type="text" class="form-control " id="text"
+                                        placeholder="Nhập nội dung của bạn" autofocus>
                                 </div>
                             </div>
                             <div class="row px-5 mb-2">
@@ -288,6 +266,25 @@
         </div>
     </section>
 
+
+    <!--================Blog Area =================-->
+    <section class="blog_area single-post-area py-80px section-margin--small">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 posts-list">
+                    <div class="single-post row">
+                        <div class="col-lg-12">
+                            <div class="quotes">
+                                {!! $blogs_health->decision !!}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Blog Area =================-->
+    <!-- ================ Subscribe section start ================= -->
     <script src='../assets/js/jquery.js'></script>
     <script type="text/javascript">
         var baseUrl = "{{ url('') }}";
