@@ -15,7 +15,9 @@
                                     <div class="col-md-6 col-lg-4">
                                         <div class="card text-center card-product">
                                             <div class="card-product__img">
-                                                <img class="card-img" src="img/giayKham/giayKham4.jpg" alt="">
+                                                <img style="height: 170px;width: 100%;object-fit: cover;" class="card-img"
+                                                    src="{{ url('/file-image-client/blogs/') }}/{{ $blogDetail->blogImage->name_image }}"
+                                                    alt="">
                                                 <ul class="card-product__imgOverlay">
                                                     <a class="nav-link"
                                                         href="{{ url('/blog-detail/' . $blogDetail->code_blog) }}"><button
