@@ -3,8 +3,9 @@
     <section class="health-blog mt-3 mb-3">
         <div class="container-lg" style="background-color: #FAF8F3">
             <div class="text-center mt-3 mb-2">
-                <h6 class="px-5 pt-3" style="line-height: normal">Ở ĐÂY</h6>
-                <h3 class="px-5" style="line-height: normal">CHÚNG TÔI CÓ BẰNG CẤP</h3>
+                <h5 class="px-5 pt-3" style="line-height: normal">BẠN KHÔNG CÓ NĂNG LỰC LẤY BĂNG</h5>
+                <!-- <h6 class="px-5 pt-3" style="line-height: normal">ĐỪNG LO </h6> -->
+                <h4 class="px-5" style="line-height: normal">LÊ HOÀI SƠN CÓ BẰNG CẤP CHO BẠN</h4>
             </div>
             <div class="container">
                 <div class="row">
