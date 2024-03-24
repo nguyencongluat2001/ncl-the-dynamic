@@ -1,26 +1,26 @@
 <?php
 
 return [
-    /*
+  /*
       |----------------------------------------------------------------------
       | Authentication
       |----------------------------------------------------------------------
      */
-    'authFalse' => 'Đăng nhập thất bại',
-    /*
+  'authFalse' => 'Đăng nhập thất bại',
+  /*
       |----------------------------------------------------------------------
       | Thông báo thành công
       |----------------------------------------------------------------------
      */
-    'success_store' => 'Thêm mới thành công',
-    'success_update' => 'Cập nhật thành công',
-    'success_destroy' => 'Xóa thành công',
-    /*
+  'success_store' => 'Thêm mới thành công',
+  'success_update' => 'Cập nhật thành công',
+  'success_destroy' => 'Xóa thành công',
+  /*
       |----------------------------------------------------------------------
       | Thông báo Thất bại
       |----------------------------------------------------------------------
      */
-    'error_store' => 'Thêm mới thất bại',
-    'error_update' => 'Cập nhật thất bại',
-    'error_destroy' => 'Xóa thất bại',
+  'error_store' => 'Thêm mới thất bại',
+  'error_update' => 'Cập nhật thất bại',
+  'error_destroy' => 'Xóa thất bại',
 ];
