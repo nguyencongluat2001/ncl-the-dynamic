@@ -9,9 +9,10 @@
         <!-- <span style="font-size: 20px;font-family: math;color: #55c2e6;">THE LIGHT</span> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <!-- <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> -->
         </button>
         <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
@@ -27,14 +28,15 @@
                 <li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
                 </ul>
             </li> -->
+               <li class="nav-item"><a class="nav-link" href="">TRANG CHỦ</a></li>
                 <li class="nav-item"><a class="nav-link" href="giaykham">LÀM GIẤY KHÁM SỨC KHỎE</a></li>
                 <!-- <li class="nav-item"><a class="nav-link" href="contact">Liên hệ</a></li> -->
                 <li class="nav-item"><a class="nav-link" href="bang">BẰNG LÁI XE - BẰNG C2,C3,ĐẠI HỌC,..</a></li>
             </ul>
 
-            <ul class="nav-shop">
+            <!-- <ul class="nav-shop">
                 {{-- <li class="nav-item"><button><i class="ti-search"></i></button></li>
-        <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li> --}}
+               <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li> --}}
                 <div class="navbar-text text-end">
                     @if (empty($_SESSION['name']))
                         <a class="text-decoration-none" href="{{ url('login') }}">
@@ -56,7 +58,7 @@
                         </li>
                     @endif
                 </div>
-            </ul>
+            </ul> -->
         </div>
     </div>
 </nav>

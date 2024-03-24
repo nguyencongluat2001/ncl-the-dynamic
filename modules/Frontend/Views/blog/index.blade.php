@@ -92,15 +92,16 @@
                                 </div>
                             </div>
                             <div class="row px-2 mb-2">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label for="address" class="form-label">Địa chỉ</label>
                                     <input type="text" class="form-control " id="address"
                                         placeholder="Nhập địa chỉ chi tiết" required autofocus>
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="text" class="form-label">Nội dung</label>
-                                    <input type="text" class="form-control " id="text"
-                                        placeholder="Nhập nội dung của bạn" autofocus>
+                                <div class="col-md-12">
+                                    <label for="text" class="form-label">Nhập tên /năm sinh/giới tính/cccd/ người A -tên /năm sinh/giới tính/cccd/ người B</label>
+                                    <!-- <input type="text" class="form-control " id="text"
+                                        placeholder="Nhập tên /năm sinh/giới tính/cccd/ người A -tên /năm sinh/giới tính/cccd/ người B" autofocus> -->
+                                        <textarea class="form-control " id="text" name="text" rows="4" cols="50"></textarea>
                                 </div>
                             </div>
                             <div class="row px-2 mb-2">
