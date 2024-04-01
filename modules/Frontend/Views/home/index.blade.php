@@ -11,6 +11,146 @@
             background-color: 2px solid #df4e4e;
         }
     </style>
+    <section class="blog_categorie_area_nc mt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-50nc col-md-6 col-lg-4 col-xl-6">
+                    <div class="card text-center card-product">
+                        <div class="card-product__img">
+                            <img style="height: 50%;object-fit: cover;" class="card-img"
+                                src="../img/home/lam-giay-kham-suc-khoe-nhanh-chong.jpg" alt="">
+                            <ul class="card-product__imgOverlay">
+                                <!-- <li><button><i class="ti-search"></i></button></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li><button><i class="ti-shopping-cart"></i></button></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li><button><i class="ti-heart"></i></button></li> -->
+                                <a class="nav-link" href="giaykham"><button class="btn btn-success"
+                                        style="animation: lights 2s 750ms linear infinite;border-radius: 5px;">Đăng
+                                        ký</button></a>
+
+                            </ul>
+                            <br>
+                        </div>
+                        <div class="card-body">
+                            <!-- <p>Làm chuẩn, ship nhanh</p> -->
+                            <h4 style="font-family: system-ui;" class="card-product__title"><a href="single-product.html"
+                                    style="color: #9d0000;">LÀM GIẤY KHÁM SỨC KHỎE LẤY NGAY</a></h4>
+                            <p class="card-product__price">150,000 - 300,000 VND </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-50nc col-md-6 col-lg-4 col-xl-6">
+                    <div class="card text-center card-product">
+                        <div class="card-product__img">
+                            <img style="height: 50%;object-fit: cover;" class="card-img" src="../img/home/bang-c2-dh.jpg"
+                                alt="">
+                            <ul class="card-product__imgOverlay">
+                                <!-- <li><button><i class="ti-search"></i></button></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li><button><i class="ti-shopping-cart"></i></button></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li><button><i class="ti-heart"></i></button></li> -->
+                                <a class="nav-link" href="bang"><button class="btn btn-success"
+                                        style="animation: lights 2s 750ms linear infinite;border-radius: 5px;">Đăng
+                                        ký</button></a>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <!-- <p>Chính xác, rõ ràng, hỏa tốc</p> -->
+                            <h4 style="font-family: system-ui;" class="card-product__title"><a href="single-product.html"
+                                    style="color: #9d0000;">LÀM BẰNG LÁI XE, C2 - ĐẠI HỌC, TIẾN SĨ </a></h4>
+                            <p class="card-product__price">150,000 - 1,500,000 VNĐ </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="health-blog mt-3 mb-3">
+        <div class="container-lg" style="background-color: #FAF8F3">
+            <div class="text-center mt-3 mb-2">
+                <h3 class="px-5 pt-3" style="line-height: normal"></h3>
+            </div>
+            <div class="text-center mt-3 mb-2">
+                <h5 class="px-5 pt-3" style="line-height: normal">DỊCH VỤ LÀM GIẤY KHÁM SỨC KHỎE</h5>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-xl-12 col-md-12 mt-3">
+                        <section class="lattest-product-area pb-40 category-list">
+                            <div class="row">
+                                @foreach ($getBlog_list as $key => $getBlog)
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card text-center card-product">
+                                            <div class="card-product__img">
+                                                <img style="height: 170px;width: 100%;object-fit: cover;" class="card-img"
+                                                    src="{{ url('/file-image-client/blogs/') }}/{{ $getBlog->blogImage->name_image ?? '' }}"
+                                                    alt="">
+                                                <ul class="card-product__imgOverlay">
+                                                    <a class="nav-link"
+                                                        href="{{ url('/blog-detail/' . $getBlog->code_blog) }}"><button
+                                                            class="btn btn-primary"
+                                                            style="animation: lights 2s 750ms linear infinite;border-radius: 5px;">Đăng
+                                                            ký</button></a>
+                                                </ul>
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-product__title1"><a style="font-weight:600;color: #1c3361;"
+                                                        href="{{ url('/blog-detail/' . $getBlog->code_blog) }}">{{ $getBlog->details->title }}</a>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+
+                            </div>
+                        </section>
+                        <!-- End Best Seller -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="health-blog mt-3 mb-3">
+        <div class="container-lg" style="background-color: #FAF8F3">
+            <div class="text-center mt-3 mb-2">
+                <h5 class="px-5 pt-3" style="line-height: normal">BẠN CHƯA CÓ BẰNG?</h5>
+                <h4 class="px-5" style="line-height: normal">Ở ĐÂY CHÚNG TÔI CÓ BẰNG CẤP CHO BẠN.</h4>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-xl-12 col-md-12 mt-3">
+                        <section class="lattest-product-area pb-40 category-list">
+                            <div class="row">
+                                @foreach ($blogs_health as $key => $blogDetail)
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card text-center card-product">
+                                            <div class="card-product__img">
+                                                <img style="height: 170px;width: 100%;object-fit: cover;" class="card-img"
+                                                    src="{{ url('/file-image-client/blogs/') }}/{{ $blogDetail->blogImage->name_image }}"
+                                                    alt="">
+                                                <ul class="card-product__imgOverlay">
+                                                    <a class="nav-link"
+                                                        href="{{ url('/blog-detail/' . $blogDetail->code_blog) }}"><button
+                                                            class="btn btn-primary"
+                                                            style="animation: lights 2s 750ms linear infinite;border-radius: 5px;">Đăng
+                                                            ký</button></a>
+                                                </ul>
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-product__title1"><a
+                                                        href="{{ url('/blog-detail/' . $blogDetail->code_blog) }}">{{ $blogDetail->title }}</a>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+
+                            </div>
+                        </section>
+                        <!-- End Best Seller -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="blog_categorie_area_nc">
         <div class="container">
             <div class="row">
@@ -124,58 +264,6 @@
     </section>
     <!-- ================ top product area end ================= -->
     <!-- ================ Best Selling item  carousel ================= -->
-    <section class="blog_categorie_area_nc mt-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-50nc col-md-6 col-lg-4 col-xl-6">
-                    <div class="card text-center card-product">
-                        <div class="card-product__img">
-                            <img style="height: 50%;object-fit: cover;" class="card-img"
-                                src="../img/home/lam-giay-kham-suc-khoe-nhanh-chong.jpg" alt="">
-                            <ul class="card-product__imgOverlay">
-                                <!-- <li><button><i class="ti-search"></i></button></li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li><button><i class="ti-shopping-cart"></i></button></li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li><button><i class="ti-heart"></i></button></li> -->
-                                <a class="nav-link" href="giaykham"><button class="btn btn-success"
-                                        style="animation: lights 2s 750ms linear infinite;border-radius: 5px;">Đăng
-                                        ký</button></a>
-
-                            </ul>
-                            <br>
-                        </div>
-                        <div class="card-body">
-                            <!-- <p>Làm chuẩn, ship nhanh</p> -->
-                            <h4 style="font-family: system-ui;" class="card-product__title"><a href="single-product.html"
-                                    style="color: #9d0000;">LÀM GIẤY KHÁM SỨC KHỎE LẤY NGAY</a></h4>
-                            <p class="card-product__price">150,000 - 300,000 VND </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-50nc col-md-6 col-lg-4 col-xl-6">
-                    <div class="card text-center card-product">
-                        <div class="card-product__img">
-                            <img style="height: 50%;object-fit: cover;" class="card-img" src="../img/home/bang-c2-dh.jpg"
-                                alt="">
-                            <ul class="card-product__imgOverlay">
-                                <!-- <li><button><i class="ti-search"></i></button></li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li><button><i class="ti-shopping-cart"></i></button></li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li><button><i class="ti-heart"></i></button></li> -->
-                                <a class="nav-link" href="bang"><button class="btn btn-success"
-                                        style="animation: lights 2s 750ms linear infinite;border-radius: 5px;">Đăng
-                                        ký</button></a>
-                            </ul>
-                        </div>
-                        <div class="card-body">
-                            <!-- <p>Chính xác, rõ ràng, hỏa tốc</p> -->
-                            <h4 style="font-family: system-ui;" class="card-product__title"><a href="single-product.html"
-                                    style="color: #9d0000;">LÀM BẰNG LÁI XE, C2 - ĐẠI HỌC, TIẾN SĨ </a></h4>
-                            <p class="card-product__price">150,000 - 1,500,000 VNĐ </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="blog">
         <div class="container">
             <div class="row">

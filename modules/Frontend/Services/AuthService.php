@@ -109,7 +109,6 @@ class AuthService
             $updated = $this->subjectService->where('email', $email)->update(['password' => $hashPassword]);
             if ($updated) {
                 $data['mailto'] = $email;
-                $data['subject'] = 'Hội thi trực tuyến tìm hiểu về công tác CCHC tỉnh Hải Dương thông báo cấp lại mật khẩu!';
                 $data['password'] = $password;
                 $data['view'] = 'emails.forgot-password';
                 (new ForgetPassWordMailHelper())->send_otp($data);

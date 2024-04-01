@@ -8,7 +8,7 @@ use Modules\Core\Ncl\Exceptions\ResponseExeption;
 use Modules\Api\Models\Admin\UnitModel;
 
 /**
- * @author: Toanph
+ * @author: test
  * Ket noi CSDL su dung Pdo
  */
 class Connection

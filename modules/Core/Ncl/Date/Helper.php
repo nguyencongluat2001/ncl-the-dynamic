@@ -5,7 +5,7 @@ namespace Modules\Core\Ncl\Date;
 /**
  * Lớp xử lý về ngày tháng, thời gian.
  *
- * @author Toanph <skype: toanph1505>
+ * @author test <skype: test1505>
  */
 class Helper
 {

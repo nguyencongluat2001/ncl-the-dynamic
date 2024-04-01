@@ -49,8 +49,6 @@
                 <p>Họ và tên: <b>{{ $data['ho_ten'] }}</b></p>
                 <p>Email: <b>{{ $data['mailto'] }}</b></p>
                 <p>Mật khẩu: <b>{{ $data['password'] }}</b></p>
-                <p>Quý khách có thể tiến hành đăng nhập với đường dẫn sau: https://thitructuyen.haiduong/dang-nhap</p>
-                <p>Thông báo này được gửi tự động từ Hội thi trực truyến tìm hiểu về cải cách hành chính tỉnh Hải Dương, vui lòng không phản hồi lại email này.</p>
                 <p>Trân trọng cảm ơn!</p>
             </div>
         </div>

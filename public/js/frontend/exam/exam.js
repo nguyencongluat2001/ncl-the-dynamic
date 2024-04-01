@@ -89,7 +89,7 @@ class Exam {
                 // Gán câu hỏi ban đầu là câu 1
                 myClass.question = myClass.questions[0];
                 myClass.question.index = 0;
-                $('#title').text(`Bài thi trực tuyến tìm hiểu công tác cải cách hành chính trong cán bộ, công chức, viên chức tỉnh Hải Dương năm ${contest.nam} ${contest.ten}`);
+                $('#title').text(`${contest.nam} ${contest.ten}`);
                 // Khởi tạo control
                 myClass.updateControl();
                 // Tạo câu hỏi

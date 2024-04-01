@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Lang;
 /**
  * Base ApiController.
  * 
- * @author Toanph <skype: toanph1505>
+ * @author test <skype: test1505>
  */
 class ApiController extends BaseController
 {

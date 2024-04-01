@@ -9,7 +9,7 @@ use Modules\Core\Ncl\Generate;
 /**
  * Thư viện xử lý Xml
  *
- * @author Toanph <skype: toanph1505>
+ * @author test <skype: test1505>
  */
 class Xml
 {

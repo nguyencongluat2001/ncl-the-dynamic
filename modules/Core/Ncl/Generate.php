@@ -8,7 +8,7 @@ use Modules\System\Listtype\Helpers\ListtypeHelper;
 /**
  * Thư viện xử lý Xml
  *
- * @author Toanph <skype: toanph1505>
+ * @author test <skype: test1505>
  */
 class Generate {
 

@@ -11,7 +11,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Illuminate\Support\Facades\DB;
 
 /**
-	* Author: Toanph
+	* Author: test
     * Date: 17/01/2017
 */
 class MakeModuleCommand extends Command

@@ -11,7 +11,7 @@ use Modules\Core\Ncl\Db\Connection as Ncl_Db_Connection;
 /**
  * Khoi tao cac lop he thong.
  *
- * @author Toanph <skype: toanph1505>
+ * @author test <skype: test1505>
  */
 class Factory
 {

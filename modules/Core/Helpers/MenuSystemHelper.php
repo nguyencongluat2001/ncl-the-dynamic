@@ -5,7 +5,7 @@ namespace Modules\Core\Helpers;
 /**
  * Helper xử lý liên quan việc zend menu ra html.
  *
- * @author Toanph <skype: toanph1505>
+ * @author test <skype: test1505>
  */
 class MenuSystemHelper
 {

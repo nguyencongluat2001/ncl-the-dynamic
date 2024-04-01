@@ -7,7 +7,7 @@ use XmlParser;
 /**
  * Thư viện xử lý fillter.
  *
- * @author Toanph <skype: toanph1505>
+ * @author test <skype: test1505>
  */
 class Fillter {
 	 

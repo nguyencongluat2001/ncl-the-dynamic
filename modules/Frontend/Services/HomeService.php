@@ -8,7 +8,7 @@ use Modules\Frontend\Services\Admin\ListService;
 /**
  * HomeService
  *
- * @author Toanph <skype: toanph1505>
+ * @author test <skype: test1505>
  */
 class HomeService
 {
