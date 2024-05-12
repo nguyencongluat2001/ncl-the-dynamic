@@ -1,18 +1,4 @@
 @extends('Frontend::layouts.index')
-
-<!-- @section('script')
-    <script type="text/javascript">
-
-        var arrJsCss = $.parseJSON('<?php echo $stringJsCss; ?>');
-        NclLib.loadFileJsCss(arrJsCss);
-
-        var JS_Auth = new Auth('{{ url('') }}', '');
-        jQuery(document).ready(function($) {
-            JS_Auth.loadIndex();
-        })
-    </script>
-@endsection -->
-
 @section('body-client')
   <!--================Login Box Area =================-->
 	<section class="login_box_area">

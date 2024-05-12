@@ -1,0 +1,1 @@
+Chưa nhập thông tin bệnh nhân

@@ -10,7 +10,7 @@ use Modules\Frontend\Controllers\ContactController;
 use Modules\Frontend\Controllers\DegressController;
 Route::controller(AuthController::class)->group(function ($router) {
     $router->get('login', 'getSignIn');
-    $router->post('checkLogin', 'c');
+    $router->post('checkLogin', 'checkLogin');
     $router->get('register', 'getSignUp');
     $router->post('checkRegister', 'signUp');
     $router->get('quen-mat-khau', 'getForgotPassword');
@@ -19,13 +19,14 @@ Route::controller(AuthController::class)->group(function ($router) {
     $router->get('getUnitApi', 'getUnitApi');
     $router->get('getHuyen', 'getHuyen');
     $router->get('getXa', 'getXa');
+    $router->get('loadata', 'index');
 });
 
 /** Trang chủ */
 Route::controller(HomeController::class)->group(function ($router) {
     $router->get('', 'index');
     $router->get('/trang-chu', 'index');
-    $router->get('home-data', 'index');
+    $router->get('/bang', 'getData');
 });
 /** Trang chủ */
 Route::controller(ShopController::class)->group(function ($router) {

@@ -46,19 +46,7 @@ class AuthController
      */
     public function getSignIn(Request $request): View
     {
-        $objLibrary          = new Library();
-        $arrResult           = array();
-        $arrResult           = $objLibrary->_getAllFileJavaScriptCssArray('js', 'frontend/login/auth.js', ',', $arrResult);
-        $arrResult           = $objLibrary->_getAllFileJavaScriptCssArray('js', 'assets/jquery.validate.js', ',', $arrResult);
-        $data['stringJsCss'] = json_encode($arrResult);
-        $nextUrl = '';
-        if ($request->input('path') && $request->input('path') != '') {
-            $nextUrl = '/' . $request->input('path');
-            if ($request->input('param') && $request->input('param') != '') $nextUrl .= '/' . $request->input('param');
-            if ($request->input('query') && $request->input('query') != '') $nextUrl .= '?' . $request->input('query');
-        }
-        $data['nextUrl'] = $nextUrl;
-        return view('Frontend::auth.sign-in', $data);
+        return view('Frontend::auth.sign-in');
     }
        /**
      * login  file kết quả
@@ -85,4 +73,21 @@ class AuthController
 
             }
     } 
+       /**
+     * dang xuat
+     *
+     * @param Request $request
+     *
+     * @return json $return
+     */
+    public function logout(Request $request)
+    { 
+        if(!empty($_SESSION['username'])){
+            session_destroy();
+        }
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return view('Frontend::auth.sign-in');
+    } 
+    
 }

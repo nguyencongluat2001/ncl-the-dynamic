@@ -4,6 +4,7 @@ namespace Modules\Frontend\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Modules\Core\Ncl\Library;
@@ -43,31 +44,22 @@ class DegressController extends Controller
     /**
      * Load màn hình BẰNG CẤP
      * 
-     * @return \Illuminate\Contracts\View\View
      */
-    public function index(): View
+    public function index()
     {
-        $objLibrary           = new Library();
-        $arrResult            = array();
-        $arrResult            = $objLibrary->_getAllFileJavaScriptCssArray('js', 'frontend/home/home.js', ',', $arrResult);
-        $arrResult            = $objLibrary->_getAllFileJavaScriptCssArray('js', 'assets/jquery.validate.js', ',', $arrResult);
-        $data['stringJsCss']  = json_encode($arrResult);
-        $data['getBlog'] = $this->BlogService->where('status', 1)
-            ->where('code_category', 'LIKE', '%TT_02%')
-            ->where('code_category', '!=', 'TT_02')
-            ->get();
-        if ($data['getBlog']->isNotEmpty()) {
-            $blogCodes = $data['getBlog']->pluck('code_blog');
-            $data['blogs_health'] = $this->BlogDetailService
-                ->whereIn('code_blog', $blogCodes)
-                ->get();
-            foreach ($data['blogs_health'] as $blog) {
-                $blog->blogImage = $this->BlogImagesService->where('code_blog', $blog->code_blog)->first();
-            }
-        } else {
-            $data['blogs_health'] = collect();
+        if(!empty($_SESSION['username'])){
+            $mabn = 'mabn='.$_SESSION['username'];
+            $response = Http::withBody('','application/json')->get('118.70.182.89:89/api/PACS/ViewChiDinh?'.$mabn.'');
+            $response = $response->getBody()->getContents();
+            $response = json_decode($response,true);
+            $data = $response['results'];
+            $data['benhnhan'] = $response['results']['benhnhan'];
+            $data['chidinhct'] = $response['results']['chidinhct'];
+            return view('Frontend::home.loadlist', $data)->render();
+
+        }else{
+            return view('Frontend::home.loadlistNotFound')->render();
         }
-        return view('Frontend::bangCap.index', $data);
     }
 
     /**

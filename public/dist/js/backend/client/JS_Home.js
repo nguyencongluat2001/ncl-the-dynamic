@@ -21,16 +21,8 @@ JS_Home.prototype.alerMesage = function(nameMessage,icon,color){
  */
 JS_Home.prototype.loadIndex = function () {
     var myClass = this;
-    var oForm = 'form#frmLoadlist_list_tap1';
     var oFormBlog = 'form#frmLoadlist_blog';
-    NclLib.menuActive('.link-home');
-    $('.chzn-select').chosen({ height: '100%', width: '100%' });    
-    $('form#frmAdd').find('#btn_create').click(function () {
-        myClass.store('form#frmAdd');
-    })
-    $("#myInput").click(function(){
-        $("#overSearch").toggleClass('closed');
-    });
+    this.loadata(oFormBlog);
 }
 JS_Home.prototype.loadevent = function (oForm) {
     var myClass = this;
@@ -105,35 +97,15 @@ JS_Home.prototype.signIn = function () {
     });
 }
 /**
- * Load màn hình chỉ số top
- *
- * @param oForm (tên form)
- *
- * @return void
- */
-JS_Home.prototype.loadListTop = function () {
-    var myClass = this;
-    var oForm = 'form#frmLoadlist_list';
-    var url = this.urlPath + '/loadListTop';
-    $.ajax({
-        url: url,
-        type: "GET",
-        success: function (arrResult) {
-            $("#table-container-loadListTop").html(arrResult);
-            myClass.loadevent(oForm);
-        }
-    });
-}
-/**
  * Load màn hình danh sách
  *
  * @param oForm (tên form)
  *
  * @return void
  */
-JS_Home.prototype.loadListBlog = function (oFormBlog,numberPage = 1, perPage = 15) {
+JS_Home.prototype.loadata = function (oFormBlog,numberPage = 1, perPage = 15) {
     var myClass = this;
-    var url = this.urlPath + '/loadListBlog';
+    var url = this.urlPath + '/bang';
     var data = $(oFormBlog).serialize();
     data += '&offset=' + numberPage;
     data += '&limit=' + perPage;
@@ -142,7 +114,7 @@ JS_Home.prototype.loadListBlog = function (oFormBlog,numberPage = 1, perPage = 1
         type: "GET",
         data: data,
         success: function (arrResult) {
-            $("#table-blog-container").html(arrResult);
+            $("#table-container").html(arrResult);
             $(oFormBlog).find('.main_paginate .pagination a').click(function () {
                 var page = $(this).attr('page');
                 var perPage = $('#cbo_nuber_record_page').val();
@@ -156,75 +128,4 @@ JS_Home.prototype.loadListBlog = function (oFormBlog,numberPage = 1, perPage = 1
             myClass.loadevent(oFormBlog);
         }
     });
-}
-/**
- * Load màn hình danh sách
- *
- * @param oForm (tên form)
- *
- * @return void
- */
-JS_Home.prototype.loadListTap1 = function (oForm, numberPage = 1, perPage = 15) {
-    var myClass = this;
-    // var loadding = NclLib.loadding();
-    var url = this.urlPath + '/loadListTap1';
-    data = 'offset=' + numberPage;
-    data += '&limit=' + perPage;
-    var oForm = 'form#frmLoadlist_Bank'
-    var data = $(oForm).serialize();
-    $.ajax({
-        url: url,
-        type: "GET",
-        // cache: true,
-        data: data,
-        success: function (arrResult) {
-            $("#table-container-bank").html(arrResult);
-            // phan trang
-            $(oForm).find('.main_paginate .pagination a').click(function () {
-                var page = $(this).attr('page');
-                var perPage = $('#cbo_nuber_record_page').val();
-                myClass.loadListTap1(oForm, page, perPage);
-            });
-            $(oForm).find('#cbo_nuber_record_page').change(function () {
-                var page = $(oForm).find('#_currentPage').val();
-                var perPages = $(oForm).find('#cbo_nuber_record_page').val();
-                myClass.loadListTap1(oForm, page, perPages);
-            });
-            // loadding.go(100);
-            myClass.loadevent(oForm);
-        }
-    });
-}
-/**
- * Load màn hình danh sách
- *
- * @param oForm (tên form)
- *
- * @return void
- */
-JS_Home.prototype.inFor = function (id) {
-    var myClass = this;
-    console.log(id)
-    var url = this.urlPath + '/inForFacilities';
-    $.ajax({
-        url: url,
-        type: "GET",
-        cache: true,
-        data: id,
-        success: function (arrResult) {
-            $("#table-container").html(arrResult);
-        }
-    });
-}
-/**
- * Load màn hình chỉ số top
- *
- * @param oForm (tên form)
- *
- * @return void
- */
-JS_Home.prototype.getSearch = function (url) {
-    console.log(url)
-    var myClass = this;
-    // window.location.replace(myClass.baseUrl+'/searchschedule');
 }

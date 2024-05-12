@@ -1,125 +1,13 @@
 @extends('Frontend::layouts.index')
 @section('body-client')
-<div class="panel panel-default panel-wrapper body-content">
-      <!-- Start Banner Hero -->
-      <section class="bg-light w-100">
-        <div class="">
-            <div class="row d-flex align-items-center">
-                <div class="col-lg-12 text-start" style="padding-top: 30px">
-                  <h2 class="card-title" style="font-weight: 600;;padding:10px;font-size: 15px !important;font-family: auto;font-size: 20px !important;"><i class="fas fa-dollar-sign"></i> THÔNG TIN KHÁCH HÀNG:</h2>
-
-                    <div class="row g-lg-5">
-                        <!-- Start Recent Work -->
-                        <div class="col-md-4">
-                            <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <h3 class="card-title" style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"><i class="fas fa-dollar-sign"></i> Họ tên: <span style="font-weight: 600;">{{benhnhan.tenbn}}</span></h3>
-                          </div>
-                        </div>
-                        <!-- End Recent Work -->
-                        <!-- Start Recent Work -->
-                        <div class="col-md-4">
-                          <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <h3 class="card-title" style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"><i class="fas fa-dollar-sign"></i> Giới tính: <span style="font-weight: 600;">{{benhnhan.gioitinh}}</span></h3>
-                          </div>
-                        </div>
-                        <!-- End Recent Work -->
-                          <!-- Start Recent Work -->
-                          <div class="col-md-4">
-                          <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <h3 class="card-title" style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"><i class="fas fa-dollar-sign"></i> Ngày sinh: <span style="font-weight: 600;">{{benhnhan.namsinh}}</span></h3>
-                          </div>
-                        </div>
-                        <!-- End Recent Work -->
-                        <!-- Start Recent Work -->
-                        <div class="col-md-4">
-                          <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <h3 class="card-title" style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"><i class="fas fa-dollar-sign"></i> Mã số PID:  <span style="font-weight: 600;">{{benhnhan.mabn}}</span></h3>
-                          </div>
-                        </div>
-                        <!-- End Recent Work -->
-                        <!-- Start Recent Work -->
-                        <div class="col-md-4">
-                          <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <h3 class="card-title" style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"><i class="fas fa-dollar-sign"></i> Mã BHYT : <span style="font-weight: 600;">{{benhnhan.mabhyt}}</span></h3>
-                          </div>
-                        </div>
-                        <!-- End Recent Work -->
-                          <!-- Start Recent Work -->
-                          <div class="col-md-4">
-                          <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <h3 class="card-title" style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"><i class="fas fa-dollar-sign"></i> Số điện thoại: <span style="font-weight: 600;">{{benhnhan.dienthoai}}</span></h3>
-                          </div>
-                        </div>
-                        <!-- End Recent Work -->
-                          <!-- Start Recent Work -->
-                          <div class="col-md-12">
-                          <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <h3 class="card-title" style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"><i class="fas fa-dollar-sign"></i> Địa chỉ: <span style="font-weight: 600;">{{benhnhan.diachi}}</span> </h3>
-                          </div>
-                        </div>
-                        <!-- End Recent Work -->
-                    </div>
-                </div>
-            </div>
-        </div>
-      </section>
-      <!-- End Banner Hero -->
-      
-      <!-- <div *ngFor="let data of chidinhct" style="width: 100%;height: 100%;border-color: #000 !important;border: 1px solid #ccc !important;">
-        <div style="width: 100%;height: 50px;background: #12dc51;">
-          <div class="row d-flex align-items-center">
-            <div class="col-lg-12 text-start" >
-                <div class="row g-lg-5">
-                    <div class="col-md-9">
-                        <div style="border-radius: 5px;padding: 16px;font-size: 16px;font-weight: 700;color: white;" class="recent-work-content text-start">
-                          <i class="fa fa-plus-square-o" aria-hidden="true"></i>
-                          <span> {{data.tendichvu}}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div style="border-radius: 5px;padding: 16px;font-size: 16px;font-weight: 700;color: white;" class="recent-work-content text-start">
-                          <span>{{data.ngaychidinh}}</span>
-                      </div>
-                    </div>
-                </div>
-            </div>
-           </div>
-        </div>
-        <div style="color: rgba(0, 0, 0, .85);display: block;">
-          <div class="row d-flex align-items-center">
-            <div class="col-lg-12 text-start" >
-                <div class="row g-lg-5">
-                    <div class="col-md-6" style="padding-left: 40px;padding-bottom: 25px;">
-                        <div style="border-radius: 5px;padding: 10px;" class="recent-work-content text-start text-dark">
-                          <div [innerHTML]="data.noidunghtml"></div>
-                        </div>
-                        <br>
-                        <div>
-                          <div style="padding: 5px;">Kết luận: <span style="font-weight: 600;">{{data.ketluan}}</span></div><br>
-                          <div style="padding: 5px;">Khuyến nghị: <span style="font-weight: 600;">{{data.denghi}}</span></div><br>
-                          <div style="padding: 5px;">Thời gian thực hiện: <span style="font-weight: 600;">{{data.ngaychidinh}}</span></div> <br>
-                          <div style="padding: 5px;">Bác sĩ chỉ định: <span style="font-weight: 600;">{{data.bschidinh}}</span></div> <br>
-                          <div style="padding: 5px;">Thời gian duyệt: <span style="font-weight: 600;">{{data.ngayduyetketqua}}</span></div> <br>
-                          <div style="padding: 5px;">Bác sĩ duyệt: <span style="font-weight: 600;">{{data.bsduyetketqua}}</span> </div><br>
-                          <div style="padding: 5px;">Bác sĩ đọc: <span style="font-weight: 600;">{{data.bsdocketqua}}</span> </div><br>
-                          <div style="padding: 5px;">Kỹ thuật viên: <span style="font-weight: 600;">{{data.ktvthuchien}}</span></div> <br>
-                        </div>
-                    </div>
-                    <div class="col-md-3"> </div>
-                    <div class="col-md-3">
-                      <div style="border-radius: 5px;" class="recent-work-content">
-                        <dx-button style="opacity: 1 !important;" (onClick)="xemketqua()" id="define" icon="fa fa-sitemap" 
-                          text="Xem kết quả thực tế ảo">
-                        </dx-button>
-                        <dx-button style="opacity: 1 !important;" (onClick)="xemanh()" id="define"icon="fa fa-user" 
-                          text="Xem ảnh">
-                        </dx-button>
-                      </div>
-                    </div>
-                </div>
-            </div>
-           </div>
-        </div>
-      </div> -->
-</div>
+<script type="text/javascript" src="{{ URL::asset('dist/js/backend/client/JS_Home.js') }}"></script>
+<script src='../assets/js/jquery.js'></script>
+<div id="table-container"></div>
+<script type="text/javascript">
+    var baseUrl = "{{ url('') }}";
+    var JS_Home = new JS_Home(baseUrl);
+    $(document).ready(function($) {
+        JS_Home.loadIndex(baseUrl);
+    })
+</script>
 @endsection

@@ -10,10 +10,14 @@
     </div>
     <div style="width:30%;display:flex">
         <div style="width: 170px;background: #4abf6a;color: white;border-radius: 5px">
-          <center>Đổi mật khẩu</center>  
+            <center>
+            <a href="{{ url('/logout') }}"> <span style="color:#ffff"><i class="fas fa-key"></i> Đổi mật khẩu </span> <br> <span class="text-12"></span></a>  
+            </center>
         </div>
         <div style="width: 150px;background: #4abf6a;color: white;border-radius: 5px">
-         <center>Thoát</center>  
+            <center>
+            <a href="{{ url('/logout') }}"> <span style="color:#ffff"><i class="fas fa-sign-out-alt"></i> Thoát </span> <br> <span class="text-12"></span></a>
+            </center>  
         </div>
     </div>
 </nav>
