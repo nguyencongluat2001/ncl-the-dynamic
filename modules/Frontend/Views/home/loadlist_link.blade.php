@@ -27,8 +27,8 @@
       <section class="bg-light w-100">
         <div class="">
             <div class="row d-flex align-items-center">
-                <div class="col-lg-12 text-start" style="padding-top: 30px">
-                  <h2 class="card-title" style="font-weight: 600;;padding:10px;font-size: 15px !important;font-family: auto;font-size: 20px !important;"> THÔNG TIN KHÁCH HÀNG:</h2>
+                <div class="col-lg-12 text-start">
+                  <h2 class="card-title" style="font-weight: 600;;padding:10px;font-size: 15px !important;font-family: auto;font-size: 20px !important;color:#ff7b00"> Thông tin khách hàng</h2>
 
                     <div class="row g-lg-5">
                         <!-- Start Recent Work -->
@@ -94,13 +94,13 @@
               <div class="row g-lg-5">
                   <div class="col-md-9">
                       <div style="border-radius: 5px;padding: 16px;font-size: 16px;font-weight: 700;color: white;" class="recent-work-content text-start">
-                        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                      <i class="fas fa-folder-open"></i>
                         <span> {{$data['tendichvu']}}</span>
                       </div>
                   </div>
                   <div class="col-md-3">
                     <div style="border-radius: 5px;padding: 16px;font-size: 16px;font-weight: 700;color: white;" class="recent-work-content text-start">
-                        <span>{{$data['ngaychidinh']}}</span>
+                        <span style="color: ;">{{$data['ngaychidinh']}}</span>
                     </div>
                   </div>
               </div>
