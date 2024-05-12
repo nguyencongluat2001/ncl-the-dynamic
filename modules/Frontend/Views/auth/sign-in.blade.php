@@ -7,16 +7,15 @@
 					<div class="login_box_img" style="padding-top:150px">
 						<div class="login_form_inner">
 							<center>
-							<div class="col-lg-6" style="background: white;padding: 25px;">
-								<div style="    color: #4700ff;font-weight: 700;font-size: 20px;">CỔNG TRẢ KẾT QUẢ CHẨN ĐOÁN HÌNH ẢNH</div>
+							<div class="col-lg-6" style="background: white;padding: 50px;border-radius: 10px;">
+								<div style="color: #4700ff;font-weight: 700;font-size: 25px;font-family:serif">CỔNG TRẢ KẾT QUẢ <br> CHẨN ĐOÁN HÌNH ẢNH</div>
 								<form class="row login_form"  action="" id="frm_sign_in" >
 									<input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
 									<div class="col-md-12 form-group">
-										<input type="text" class="form-control" id="username" name="username" placeholder="Mã bệnh nhân" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Số điện thoại hoặc email'">
+										<input type="text" class="form-control" id="username" name="username" placeholder="Mã bệnh nhân" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mã bệnh nhân'">
 									</div>
 									<div class="col-md-12 form-group">
 										<input type="text" class="form-control" id="password" name="password" placeholder="Mật khẩu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mật khẩu'">
-									</div>
 									</div>
 									<div class="col-md-12 form-group">
 										<button style="background:#37a956" type="button" class="button button-login w-100" onclick="JS_Home.signIn()">Tra cứu</button>

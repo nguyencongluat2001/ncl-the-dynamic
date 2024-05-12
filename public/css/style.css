@@ -3669,7 +3669,7 @@ a {
     /* background: #384aeb; */
     background-image: url("../../img/login/image-login.jpg");
     background-size: 100%;
-
+    background-repeat: no-repeat;
     opacity: 0.9;
 }
 
@@ -4905,5 +4905,23 @@ a {
             0 0 0.125em hsla(320, 100%, 96%, 0.803),
             1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
             -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+}
+.tab1 {
+    width:80%;
+    display:flex
+}
+.tab2 {
+    width:20%;
+    display:flex
+}
+@media (max-width: 1000px) {
+    .tab1 {
+        width:50%;
+        display:flex
+    }
+    .tab2 {
+        width:50%;
+        display:flex
     }
 }
