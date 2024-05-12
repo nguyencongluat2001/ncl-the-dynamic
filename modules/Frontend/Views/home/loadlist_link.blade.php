@@ -34,49 +34,49 @@
                         <!-- Start Recent Work -->
                         <div class="col-md-4">
                             <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <h3 class="card-title" style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"> Họ tên: <span style="font-weight: 600;">{{$benhnhan['tenbn']}}</span></h3>
+                              <h3 style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"> Họ tên: <span style="font-weight: 600;">{{$benhnhan['tenbn']}}</span></h3>
                           </div>
                         </div>
                         <!-- End Recent Work -->
                         <!-- Start Recent Work -->
                         <div class="col-md-4">
                           <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <h3 class="card-title" style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"> Giới tính: <span style="font-weight: 600;">{{$benhnhan['gioitinh']}}</span></h3>
+                              <h3 style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"> Giới tính: <span style="font-weight: 600;">{{$benhnhan['gioitinh']}}</span></h3>
                           </div>
                         </div>
                         <!-- End Recent Work -->
                           <!-- Start Recent Work -->
                           <div class="col-md-4">
                           <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <h3 class="card-title" style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"> Ngày sinh: <span style="font-weight: 600;">{{$benhnhan['namsinh']}}</span></h3>
+                              <h3 style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"> Ngày sinh: <span style="font-weight: 600;">{{$benhnhan['namsinh']}}</span></h3>
                           </div>
                         </div>
                         <!-- End Recent Work -->
                         <!-- Start Recent Work -->
                         <div class="col-md-4">
                           <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <h3 class="card-title" style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"> Mã số PID:  <span style="font-weight: 600;">{{$benhnhan['mabn']}}</span></h3>
+                              <h3 style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"> Mã số PID:  <span style="font-weight: 600;">{{$benhnhan['mabn']}}</span></h3>
                           </div>
                         </div>
                         <!-- End Recent Work -->
                         <!-- Start Recent Work -->
                         <div class="col-md-4">
                           <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <h3 class="card-title" style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"> Mã BHYT : <span style="font-weight: 600;">{{$benhnhan['mabhyt']}}</span></h3>
+                              <h3 style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"> Mã BHYT : <span style="font-weight: 600;">{{$benhnhan['mabhyt']}}</span></h3>
                           </div>
                         </div>
                         <!-- End Recent Work -->
                           <!-- Start Recent Work -->
                           <div class="col-md-4">
                           <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <h3 class="card-title" style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"> Số điện thoại: <span style="font-weight: 600;">{{$benhnhan['dienthoai']}}</span></h3>
+                              <h3 style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"> Số điện thoại: <span style="font-weight: 600;">{{$benhnhan['dienthoai']}}</span></h3>
                           </div>
                         </div>
                         <!-- End Recent Work -->
                           <!-- Start Recent Work -->
                           <div class="col-md-12">
                           <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <h3 class="card-title" style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"> Địa chỉ: <span style="font-weight: 600;">{{$benhnhan['diachi']}}</span> </h3>
+                              <h3 style="padding:10px;font-size: 15px !important;font-family: auto;font-size: 18px !important;"> Địa chỉ: <span style="font-weight: 600;">{{$benhnhan['diachi']}}</span> </h3>
                           </div>
                         </div>
                         <!-- End Recent Work -->
