@@ -11,7 +11,6 @@ use Modules\Frontend\Controllers\Dashboard\CategoryController;
 use Modules\Frontend\Controllers\Dashboard\BlogController;
 use Modules\Frontend\Controllers\Dashboard\SqlController;
 use Modules\Frontend\Controllers\Dashboard\ProductController;
-
 /** Login */
 Route::controller(LoginController::class)->group(function ($router) {
     $router->get('system/login', 'index');

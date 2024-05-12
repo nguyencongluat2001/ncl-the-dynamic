@@ -8,10 +8,9 @@ use Modules\Frontend\Controllers\ShopController;
 use Modules\Frontend\Controllers\BlogController;
 use Modules\Frontend\Controllers\ContactController;
 use Modules\Frontend\Controllers\DegressController;
-
 Route::controller(AuthController::class)->group(function ($router) {
     $router->get('login', 'getSignIn');
-    $router->post('checkLogin', 'signIn');
+    $router->post('checkLogin', 'c');
     $router->get('register', 'getSignUp');
     $router->post('checkRegister', 'signUp');
     $router->get('quen-mat-khau', 'getForgotPassword');

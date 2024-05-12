@@ -1,19 +1,15 @@
-function JS_Home(baseUrl, module, controller) {
-    this.module = module;
-    this.baseUrl = baseUrl;
-    this.controller = controller;
-    NclLib.menuActive('.link-home');
+function JS_Home(baseUrl) {
     NclLib.loadding();
-    this.urlPath = baseUrl + '/' + module + '/' + controller;//Biên public lưu tên module
+    this.urlPath = baseUrl;
 }
 JS_Home.prototype.alerMesage = function(nameMessage,icon,color){
     Swal.fire({
-        position: 'top-start',
+        position: 'top-end',
         icon: icon,
         title: nameMessage,
         color: color,
         showConfirmButton: false,
-        width:'30%',
+        width:'50%',
         timer: 2500
       })
 }
@@ -28,11 +24,7 @@ JS_Home.prototype.loadIndex = function () {
     var oForm = 'form#frmLoadlist_list_tap1';
     var oFormBlog = 'form#frmLoadlist_blog';
     NclLib.menuActive('.link-home');
-    $('.chzn-select').chosen({ height: '100%', width: '100%' });
-
-    //lấy danh sách bài viết
-    myClass.loadListBlog(oFormBlog);
-    
+    $('.chzn-select').chosen({ height: '100%', width: '100%' });    
     $('form#frmAdd').find('#btn_create').click(function () {
         myClass.store('form#frmAdd');
     })
@@ -65,8 +57,7 @@ JS_Home.prototype.loadList = function () {
         // cache: true,
         data: data,
         success: function (arrResult) {
-            $("#table-container").html(arrResult);
-            myClass.loadevent(oForm);
+            window.location.href = "{{ route('trang-chu')}}";
         }
     });
 }
@@ -77,18 +68,39 @@ JS_Home.prototype.loadList = function () {
  *
  * @return void
  */
-JS_Home.prototype.loadListChartNen = function () {
+JS_Home.prototype.signIn = function () {
     var myClass = this;
-    var oForm = 'form#frmLoadlist_chart_nen';
-    var url = this.urlPath + '/loadListChartNen';
+    var oForm = 'form#frm_sign_in';
+    if ($("#username").val() == '') {
+        var nameMessage = 'Mã bệnh nhân không được để trống!';
+        var icon = 'warning';
+        var color = '#f5ae67';
+        this.alerMesage(nameMessage,icon,color);
+        return false;
+    }
+    if ($("#password").val() == '') {
+        var nameMessage = 'Mật khẩu không được để trống!';
+        var icon = 'warning';
+        var color = '#f5ae67';
+        this.alerMesage(nameMessage,icon,color);
+        return false;
+    }
+    var url = this.urlPath + '/checkLogin';
     var data = $(oForm).serialize();
     $.ajax({
         url: url,
-        type: "GET",
+        type: "POSt",
         data: data,
         success: function (arrResult) {
-            $("#table-container-chart_nen").html(arrResult);
-            myClass.loadevent(oForm);
+            if(arrResult.status == true){
+               window.location.href = "/";
+            }else{
+                    var nameMessage = 'Thông tin chưa chính xác!';
+                    var icon = 'warning';
+                    var color = '#f5ae67';
+                    NclLib.alerMesage(nameMessage,icon,color);
+                    return false;
+            }
         }
     });
 }
