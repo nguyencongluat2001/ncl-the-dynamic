@@ -17,11 +17,6 @@
 									<div class="col-md-12 form-group">
 										<input type="text" class="form-control" id="password" name="password" placeholder="Mật khẩu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mật khẩu'">
 									</div>
-									<div class="col-md-12 form-group">
-										<div class="creat_account">
-											<input type="checkbox" id="f-option2" name="selector">
-											<label for="f-option2">Đồng ý chấp nhận điều khoản bảo mật của chúng tôi!</label>
-										</div>
 									</div>
 									<div class="col-md-12 form-group">
 										<button style="background:#37a956" type="button" class="button button-login w-100" onclick="JS_Home.signIn()">Tra cứu</button>
