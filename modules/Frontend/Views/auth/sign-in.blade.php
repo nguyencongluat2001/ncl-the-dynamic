@@ -7,7 +7,7 @@
 					<div class="login_box_img" style="padding-top:150px">
 						<div class="login_form_inner">
 							<center>
-							<div class="col-lg-6" style="background: white;padding: 50px;border-radius: 10px;">
+							<div class="col-lg-6" style="background: white;padding: 30px;border-radius: 10px;">
 								<div style="color: #4700ff;font-weight: 700;font-size: 25px;font-family:serif">CỔNG TRẢ KẾT QUẢ <br> CHẨN ĐOÁN HÌNH ẢNH</div>
 								<form class="row login_form"  action="" id="frm_sign_in" >
 									<input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
