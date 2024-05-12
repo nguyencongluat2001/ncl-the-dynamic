@@ -45,9 +45,20 @@ class DegressController extends Controller
      * Load màn hình BẰNG CẤP
      * 
      */
-    public function index()
+    public function index(Request $request)
     {
-        if(!empty($_SESSION['username'])){
+        $input = $request->all();
+        if(!empty($input['username'])){
+            $mabn = 'mabn='.$input['username'];
+            $response = Http::withBody('','application/json')->get('118.70.182.89:89/api/PACS/ViewChiDinh?'.$mabn.'');
+            $response = $response->getBody()->getContents();
+            $response = json_decode($response,true);
+            $data = $response['results'];
+            $data['benhnhan'] = $response['results']['benhnhan'];
+            $data['chidinhct'] = $response['results']['chidinhct'];
+            $data['getLayout'] = 1;
+            return view('Frontend::home.loadlist_link', $data)->render();
+        }else if(!empty($_SESSION['username'])){
             $mabn = 'mabn='.$_SESSION['username'];
             $response = Http::withBody('','application/json')->get('118.70.182.89:89/api/PACS/ViewChiDinh?'.$mabn.'');
             $response = $response->getBody()->getContents();
@@ -55,8 +66,8 @@ class DegressController extends Controller
             $data = $response['results'];
             $data['benhnhan'] = $response['results']['benhnhan'];
             $data['chidinhct'] = $response['results']['chidinhct'];
+            $data['getLayout'] = 2;
             return view('Frontend::home.loadlist', $data)->render();
-
         }else{
             return view('Frontend::home.loadlistNotFound')->render();
         }

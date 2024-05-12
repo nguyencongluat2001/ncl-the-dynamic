@@ -27,6 +27,7 @@ Route::controller(HomeController::class)->group(function ($router) {
     $router->get('', 'index');
     $router->get('/trang-chu', 'index');
     $router->get('/bang', 'getData');
+
 });
 /** Trang chủ */
 Route::controller(ShopController::class)->group(function ($router) {
