@@ -10,7 +10,7 @@ use Modules\Frontend\Controllers\ContactController;
 use Modules\Frontend\Controllers\DegressController;
 Route::controller(AuthController::class)->group(function ($router) {
     $router->get('login', 'getSignIn');
-    $router->post('checkLogin', 'checkLogin');
+    $router->post('checkLogin', 'signIn');
     $router->get('register', 'getSignUp');
     $router->post('checkRegister', 'signUp');
     $router->get('quen-mat-khau', 'getForgotPassword');
