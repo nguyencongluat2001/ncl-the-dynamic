@@ -83,6 +83,7 @@
       </section>
       <!-- End Banner Hero -->
       @foreach ($chidinhct as $key => $data)
+      
       <div style="width: 100%;height: 100%;border-color: #000 !important;border: 1px solid #ccc !important;">
 
       <button type="button" class="collapsible" style="background:#37a956">
@@ -102,7 +103,11 @@
               </div>
           </div>
       </button>
-      <div class="content">
+          @if($key == 0)
+            <div class="content" style="display:block">
+          @else
+            <div class="content">
+          @endif
                 <div style="color: rgba(0, 0, 0, .85);display: block;">
                   <div class="row d-flex align-items-center">
                     <div class="col-lg-12 text-start" >
@@ -115,14 +120,14 @@
                                 </div>
                                 <br>
                                 <div>
-                                  <div style="padding: 5px;">Kết luận: <span style="font-weight: 600;">{{$data['ketluan']}}</span></div><br>
-                                  <div style="padding: 5px;">Khuyến nghị: <span style="font-weight: 600;">{{$data['denghi']}}</span></div><br>
-                                  <div style="padding: 5px;">Thời gian thực hiện: <span style="font-weight: 600;">{{$data['ngaychidinh']}}</span></div> <br>
-                                  <div style="padding: 5px;">Bác sĩ chỉ định: <span style="font-weight: 600;">{{$data['bschidinh']}}</span></div> <br>
-                                  <div style="padding: 5px;">Thời gian duyệt: <span style="font-weight: 600;">{{$data['ngayduyetketqua']}}</span></div> <br>
-                                  <div style="padding: 5px;">Bác sĩ duyệt: <span style="font-weight: 600;">{{$data['bsduyetketqua']}}</span> </div><br>
-                                  <div style="padding: 5px;">Bác sĩ đọc: <span style="font-weight: 600;">{{$data['bsdocketqua']}}</span> </div><br>
-                                  <div style="padding: 5px;">Kỹ thuật viên: <span style="font-weight: 600;">{{$data['ktvthuchien']}}</span></div> <br>
+                                  <div style="padding: 5px;">Kết luận: <span style="font-weight: 600;">{{$data['ketluan']}}</span></div>
+                                  <div style="padding: 5px;">Khuyến nghị: <span style="font-weight: 600;">{{$data['denghi']}}</span></div>
+                                  <div style="padding: 5px;">Thời gian thực hiện: <span style="font-weight: 600;">{{$data['ngaychidinh']}}</span></div> 
+                                  <div style="padding: 5px;">Bác sĩ chỉ định: <span style="font-weight: 600;">{{$data['bschidinh']}}</span></div> 
+                                  <div style="padding: 5px;">Thời gian duyệt: <span style="font-weight: 600;">{{$data['ngayduyetketqua']}}</span></div> 
+                                  <div style="padding: 5px;">Bác sĩ duyệt: <span style="font-weight: 600;">{{$data['bsduyetketqua']}}</span> </div>
+                                  <div style="padding: 5px;">Bác sĩ đọc: <span style="font-weight: 600;">{{$data['bsdocketqua']}}</span> </div>
+                                  <div style="padding: 5px;">Kỹ thuật viên: <span style="font-weight: 600;">{{$data['ktvthuchien']}}</span></div> 
                                 </div>
                             </div>
                             <div class="col-md-3"> </div>
