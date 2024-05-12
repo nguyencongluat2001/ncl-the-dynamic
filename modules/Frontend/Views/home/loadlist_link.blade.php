@@ -117,11 +117,8 @@
                         <div class="row g-lg-5">
                             <div class="col-md-6" style="padding-left: 40px;padding-bottom: 25px;">
                                 <div style="border-radius: 5px;padding: 10px;" class="recent-work-content text-start text-dark">
-                                  <div>
                                   {!! $data['noidunghtml'] !!}
-                                  </div>
                                 </div>
-                                <br>
                                 <div>
                                   <div style="padding: 5px;">Kết luận: <span style="font-weight: 600;">{{$data['ketluan']}}</span></div>
                                   <div style="padding: 5px;">Khuyến nghị: <span style="font-weight: 600;">{{$data['denghi']}}</span></div>
