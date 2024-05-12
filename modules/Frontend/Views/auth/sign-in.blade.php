@@ -7,8 +7,8 @@
 					<div class="login_box_img" style="padding-top:150px">
 						<div class="login_form_inner">
 							<center>
-							<div class="col-lg-6" style="background: white;padding: 30px;border-radius: 10px;">
-								<div style="color: #4700ff;font-weight: 700;font-size: 22px;font-family:serif">CỔNG TRẢ KẾT QUẢ <br> CHẨN ĐOÁN HÌNH ẢNH</div>
+							<div class="col-lg-6 block-login">
+								<div class="title-login">CỔNG TRẢ KẾT QUẢ <br> CHẨN ĐOÁN HÌNH ẢNH</div>
 								<form class="row login_form"  action="" id="frm_sign_in" >
 									<input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
 									<div class="col-md-12 form-group">
@@ -18,8 +18,11 @@
 										<input type="text" class="form-control" id="password" name="password" placeholder="Mật khẩu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mật khẩu'">
 									</div>
 									<div class="col-md-12 form-group">
-										<button style="background:#37a956" type="button" class="button button-login w-100" onclick="JS_Home.signIn()">Tra cứu</button>
+										<button style="background: linear-gradient(-135deg, #c850c0, #4158d0);" type="button" class="button w-100" onclick="JS_Home.signIn()">Tra cứu</button>
 									</div>
+									<a class="btn btn-link"  style="color: #8b9ac5;">
+										{{ __('Quên mật khẩu?') }}
+									</a>
 								</form>
 							</div>	
 							</center>

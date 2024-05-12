@@ -4915,6 +4915,17 @@ a {
     width:20%;
     display:flex
 }
+.title-login{
+    color: #4700ff;
+    font-weight: 700;
+    font-size: 25px;
+    font-family:serif
+}
+.block-login{
+    background: white;
+    padding: 50px;
+    border-radius: 10px;
+}
 @media (max-width: 1000px) {
     .tab1 {
         width:30%;
@@ -4923,5 +4934,17 @@ a {
     .tab2 {
         width:70%;
         display:flex
+    }
+    .title-login{
+        color: #4700ff;
+        font-weight: 700;
+        font-size: 16px;
+        font-family:serif
+    }
+    .block-login{
+        background: white;
+        padding: 0px;
+        padding-top: 30px;
+        border-radius: 10px;
     }
 }
