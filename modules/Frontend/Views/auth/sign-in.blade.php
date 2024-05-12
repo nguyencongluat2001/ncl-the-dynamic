@@ -15,7 +15,7 @@
 										<input type="text" class="form-control" id="username" name="username" placeholder="Mã bệnh nhân" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mã bệnh nhân'">
 									</div>
 									<div class="col-md-12 form-group">
-										<input type="text" class="form-control" id="password" name="password" placeholder="Mật khẩu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mật khẩu'">
+										<input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mật khẩu'">
 									</div>
 									<div class="col-md-12 form-group">
 										<button style="background: linear-gradient(-135deg, #c850c0, #4158d0);" type="button" class="button w-100" onclick="JS_Home.signIn()">Tra cứu</button>
