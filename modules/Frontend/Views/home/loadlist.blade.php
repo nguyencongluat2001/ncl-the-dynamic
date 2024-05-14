@@ -3,6 +3,7 @@
   color: white;
   cursor: pointer;
   width: 100%;
+  height: 36px;
   border: none;
   text-align: left;
   outline: none;
@@ -24,7 +25,7 @@
         <div class="">
             <div class="row d-flex align-items-center">
                 <div class="col-lg-12 text-start">
-                  <h2 class="card-title" style="font-weight: 600;;padding:10px 0px 0px 10px;font-size: 15px !important;font-family: auto;font-size: 20px !important;color:#ff7b00"> Thông tin khách hàng</h2>
+                <h2 class="card-title" style="font-weight: 600;padding-left:10px;padding-top:10px;font-size: 15px !important;font-family: auto;font-size: 20px !important;color:#37a956"> Thông tin khách hàng</h2>
 
                     <div class="row g-lg-5">
                         <!-- Start Recent Work -->
@@ -88,16 +89,17 @@
 
       <button type="button" class="collapsible" style="background:#37a956">
         <div class="col-lg-12 text-start" >
-              <div class="row g-lg-5">
-                  <div class="col-md-9">
-                      <div style="border-radius: 5px;font-size: 16px;font-weight: 700;color: white;" class="recent-work-content text-start">
+              <div class="row g-lg-5" style="display:flex">
+                  <div style="width:70%">
+                      <div style="border-radius: 5px;padding: 5px;font-size: 16px;font-weight: 700;color: white;" class="recent-work-content text-start">
                       <i class="fas fa-chevron-right"></i>
+                      <!-- <i class="fas fa-chevron-down"></i> -->
                         <span> {{$data['tendichvu']}}</span>
                       </div>
                   </div>
-                  <div class="col-md-3">
-                    <div style="border-radius: 5px;font-size: 16px;font-weight: 700;color: white;" class="recent-work-content text-start">
-                        <span style="color: ;">{{$data['ngaychidinh']}}</span>
+                  <div style="width:30%">
+                    <div style="border-radius: 5px;padding: 5px;font-size: 16px;font-weight: 700;color: white;" class="recent-work-content text-start">
+                        <span>{{$data['ngaychidinh']}}</span>
                     </div>
                   </div>
               </div>
