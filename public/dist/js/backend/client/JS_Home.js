@@ -140,3 +140,23 @@ JS_Home.prototype.openLink = function (url) {
     window.open(url, '_blank');
 
 }
+/**
+ * Load màn hình danh sách
+ *
+ * @param oForm (tên form)
+ *
+ * @return void
+ */
+JS_Home.prototype.openicon = function (id,number) {
+    // console.log(document.getElementById(id).getAttribute('value'));
+    if(document.getElementById(id).getAttribute('value') == 1){
+        $("#"+id).removeClass("show");
+        $("#"+id).addClass("hiddel");
+    }
+    if(document.getElementById(id).getAttribute('value') == 2){
+        $("#"+id).removeClass("hiddel");
+        $("#"+id).addClass("show");
+    }
+}
+// $('#bank').addClass("hiddel");
+// $('#tienmat').addClass("show");

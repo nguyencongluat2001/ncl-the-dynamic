@@ -1,6 +1,11 @@
 <style>
 
-
+.hiddel{
+  display:none
+}
+.show{
+  display:block
+}
 .content {
   padding: 0 18px;
   display: none;
@@ -11,6 +16,9 @@
   color:white !important;
 }
 </style>
+
+
+</script>
 <div class="panel panel-default panel-wrapper body-content" style="">
       <!-- Start Banner Hero -->
       <section class="bg-light w-100" style="padding: 0px 10px 0px 10px;">
@@ -77,12 +85,14 @@
       @foreach ($chidinhct as $key => $data)
       <div style="padding:0px 15px 0px 20px">
           <div style="width: 98%;height: 100%;border-color: #000 !important;border: 1px solid #ccc !important;">
-              <button type="button" class="collapsible" style="background:#37a956">
+              <button type="button" class="collapsible" style="background:#37a956" onclick="JS_Home.openicon('{{$data['idchidinhct']}}')">
+              <!-- <i class="fas fa-chevron-right" id="{{$data['idchidinhct']}}" value="1"></i> -->
                 <div class="col-lg-12 text-start" >
                       <div class="row g-lg-5" style="display:flex">
                           <div style="width:70%">
                               <div style="border-radius: 5px;padding: 5px;font-size: 16px;font-weight: 700;color: white;" class="recent-work-content text-start">
-                              <i class="fas fa-chevron-right"></i>
+                              <i class="fas fa-chevron-right" id="{{$data['idchidinhct']}}"></i>
+                              <i class="fas fa-chevron-down" id="{{$data['idchidinhct']}}.1" style="display:none"></i>
                               <!-- <i class="fas fa-chevron-down"></i> -->
                                 <span style="font-family: -apple-system, BlinkMacSystemFont !important"> {{$data['tendichvu']}}</span>
                               </div>
