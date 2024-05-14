@@ -109,7 +109,7 @@
                       <div class="row d-flex align-items-center">
                         <div class="col-lg-12 text-start" >
                             <div class="row g-lg-5">
-                                <div class="col-md-8" style="padding-left: 40px;padding-bottom: 25px;">
+                                <div class="col-md-8" style="padding-left: 20px;padding-bottom: 25px;">
                                     <div style="border-radius: 5px;padding: 10px;font-size:14px !important;font-family: -apple-system, BlinkMacSystemFont !important" class="recent-work-content text-start text-dark">
                                       {!! $data['noidunghtml'] !!}
                                     </div>
