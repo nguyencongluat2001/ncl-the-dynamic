@@ -9,12 +9,12 @@
         </div>
     </div>
     <div class="tab2">
-        <div style="width: 170px;background: #4abf6a;color: white;border-radius: 5px">
+        <div style="width: 170px;background: #4abf6a;color: white;border-radius: 5px;margin:10px">
             <center>
             <a href=""> <span style="color:#ffff;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 14px !important;"><i class="fas fa-key"></i> Đổi mật khẩu </span> <br> <span class="text-12"></span></a>  
             </center>
         </div>
-        <div style="width: 150px;background: #4abf6a;color: white;border-radius: 5px">
+        <div style="width: 150px;background: #4abf6a;color: white;border-radius: 5px;margin:10px">
             <center>
             <a href="{{ url('/logout') }}"> <span style="color:#ffff;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 14px !important;"><i class="fas fa-sign-out-alt"></i> Thoát </span> <br> <span class="text-12"></span></a>
             </center>  

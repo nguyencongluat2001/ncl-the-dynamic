@@ -4936,6 +4936,9 @@ a {
     outline: none;
     font-size: 15px;
   }
+  .padding-index{
+    padding-left: 24px;
+}
 @media (max-width: 1000px) {
     .tab1 {
         width:30%;
@@ -4970,4 +4973,7 @@ a {
         outline: none;
         font-size: 15px;
       }
+    .padding-index{
+        padding-left: 24px;
+    }
 }
