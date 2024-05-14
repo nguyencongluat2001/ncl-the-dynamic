@@ -132,20 +132,12 @@
                             <div class="col-md-3"> </div>
                             <div class="col-md-3">
                               <div style="border-radius: 5px;" class="recent-work-content">
-                                <dx-button style="opacity: 1 !important;" (onClick)="xemketqua()" id="define" icon="fa fa-sitemap" 
-                                  text="Xem kết quả thực tế ảo">
-                                </dx-button>
-                                <dx-button style="opacity: 1 !important;" (onClick)="xemanh()" id="define"icon="fa fa-user" 
-                                  text="Xem ảnh">
-                                </dx-button>
+                                <button style="background:#ffffff" type="button" onclick="JS_Home.openLink('{{$data['pacslink']}}')" class="btn">
+                                  <span style="text-decoration: underline;font-size: 16px;color: #4169e1">Xem ảnh</span>
+                                </button>
                               </div>
                             </div>
                         </div>
-                        <div lass="col-lg-12" style="padding-left:40px">
-                          <button type="button" onclick="JS_Home.openLink('{{$data['pacslink']}}')" class="btn">
-                            <span style="text-decoration: underline;font-size: 16px;color: #4169e1">Xem ảnh</span>
-                          </button>
-                      </div>
                     </div>
                   </div>
                 </div>
