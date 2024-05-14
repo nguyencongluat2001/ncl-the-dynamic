@@ -97,7 +97,7 @@
                       </div>
                   </div>
                   <div style="width:30%">
-                    <div style="border-radius: 5px;padding: 5px;font-size: 16px;font-weight: 700;color: white;" class="recent-work-content text-start">
+                    <div style="border-radius: 5px;padding: 5px;font-size: 16px;font-weight: 700;color: white;text-align: end;" class="recent-work-content text-start">
                         <span>{{$data['ngaychidinh']}}</span>
                     </div>
                   </div>
