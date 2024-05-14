@@ -91,7 +91,7 @@
               <div class="row g-lg-5">
                   <div class="col-md-9">
                       <div style="border-radius: 5px;font-size: 16px;font-weight: 700;color: white;" class="recent-work-content text-start">
-                      <i class="fas fa-folder-open"></i>
+                      <i class="fas fa-chevron-right"></i>
                         <span> {{$data['tendichvu']}}</span>
                       </div>
                   </div>
