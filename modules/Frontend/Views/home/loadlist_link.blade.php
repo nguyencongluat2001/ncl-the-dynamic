@@ -117,18 +117,18 @@
                     <div class="col-lg-12 text-start" >
                         <div class="row g-lg-5">
                             <div class="col-md-6" style="padding-left: 40px;padding-bottom: 25px;">
-                                <div style="border-radius: 5px;padding: 10px;" class="recent-work-content text-start text-dark">
+                                <div style="border-radius: 5px;padding: 10px;font-size:14px !important" class="recent-work-content text-start text-dark">
                                   {!! $data['noidunghtml'] !!}
                                 </div>
                                 <div>
-                                  <div style="padding: 5px;font-weight: 600;">Kết luận: <span style="font-weight: 500;">{{$data['ketluan']}}</span></div>
-                                  <div style="padding: 5px;font-weight: 600;">Khuyến nghị: <span style="font-weight: 500;">{{$data['denghi']}}</span></div>
-                                  <div style="padding: 5px;font-weight: 600;">Thời gian thực hiện: <span style="font-weight: 500;">{{$data['ngaychidinh']}}</span></div> 
-                                  <div style="padding: 5px;font-weight: 600;">Bác sĩ chỉ định: <span style="font-weight: 500;">{{$data['bschidinh']}}</span></div> 
-                                  <div style="padding: 5px;font-weight: 600;">Thời gian duyệt: <span style="font-weight: 500;">{{$data['ngayduyetketqua']}}</span></div> 
-                                  <div style="padding: 5px;font-weight: 600;">Bác sĩ duyệt: <span style="font-weight: 500;">{{$data['bsduyetketqua']}}</span> </div>
-                                  <div style="padding: 5px;font-weight: 600;">Bác sĩ đọc: <span style="font-weight: 500;">{{$data['bsdocketqua']}}</span> </div>
-                                  <div style="padding: 5px;font-weight: 600;">Kỹ thuật viên: <span style="font-weight: 500;">{{$data['ktvthuchien']}}</span></div> 
+                                  <div style="padding: 5px;font-weight: 600;font-size: 14px;">Kết luận: <span style="font-weight: 500;">{{$data['ketluan']}}</span></div>
+                                  <div style="padding: 5px;font-weight: 600;font-size: 14px;">Khuyến nghị: <span style="font-weight: 500;">{{$data['denghi']}}</span></div>
+                                  <div style="padding: 5px;font-weight: 600;font-size: 14px;">Thời gian thực hiện: <span style="font-weight: 500;">{{$data['ngaychidinh']}}</span></div> 
+                                  <div style="padding: 5px;font-weight: 600;font-size: 14px;">Bác sĩ chỉ định: <span style="font-weight: 500;">{{$data['bschidinh']}}</span></div> 
+                                  <div style="padding: 5px;font-weight: 600;font-size: 14px;">Thời gian duyệt: <span style="font-weight: 500;">{{$data['ngayduyetketqua']}}</span></div> 
+                                  <div style="padding: 5px;font-weight: 600;font-size: 14px;">Bác sĩ duyệt: <span style="font-weight: 500;">{{$data['bsduyetketqua']}}</span> </div>
+                                  <div style="padding: 5px;font-weight: 600;font-size: 14px;">Bác sĩ đọc: <span style="font-weight: 500;">{{$data['bsdocketqua']}}</span> </div>
+                                  <div style="padding: 5px;font-weight: 600;font-size: 14px;">Kỹ thuật viên: <span style="font-weight: 500;">{{$data['ktvthuchien']}}</span></div> 
                                 </div>
                             </div>
                             <div class="col-md-3"> </div>
