@@ -4,7 +4,7 @@
 	<section class="login_box_area">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="login_box_img" style="padding-top:150px">
+					<div class="login_box_img" >
 						<div class="login_form_inner">
 							<center>
 							<div class="col-lg-6 block-login">

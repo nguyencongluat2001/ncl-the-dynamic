@@ -60,15 +60,16 @@ class AuthController
         $arrInput = $request->input();
             $param = [
                 'username'=> $arrInput['username'],
-                // 'pwd'=> $arrInput['pwd']
+                // $arrInput['pwd']
+                'pwd'=> $arrInput['password']
             ];
             $response = Http::withBody(json_encode($param),'application/json')->post('118.70.182.89:89/api/PACS/login');
             $response = $response->getBody()->getContents();
             $response = json_decode($response,true);
             if($response['status'] == true){
                 $_SESSION["username"] = $response['loginModel']['username'];
-                // return view('Frontend::home.index');
-                // return view("Frontend::home.index");
+                $_SESSION["pwd"] = $param['pwd'];
+                $_SESSION["accessionnumber"] = -1;
                 return $response;
 
             }
