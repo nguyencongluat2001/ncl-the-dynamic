@@ -17,7 +17,7 @@
 }
 .xemanh:hover{
   background: #37a956 !important;
-  color:white;
+  color:white !important;
 }
 </style>
 
