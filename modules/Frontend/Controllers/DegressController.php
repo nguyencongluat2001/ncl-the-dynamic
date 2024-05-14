@@ -63,7 +63,6 @@ class DegressController extends Controller
             $response = Http::withBody('','application/json')->get('118.70.182.89:89/api/PACS/ViewChiDinh?'.$mabn.'');
             $response = $response->getBody()->getContents();
             $response = json_decode($response,true);
-            dd($response);
             $data = $response['results'];
             $data['benhnhan'] = $response['results']['benhnhan'];
             $data['chidinhct'] = $response['results']['chidinhct'];
