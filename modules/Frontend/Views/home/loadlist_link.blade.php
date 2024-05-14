@@ -3,16 +3,6 @@
 <script type="text/javascript" src="{{ URL::asset('dist/js/backend/client/JS_Home.js') }}"></script>
 <script src='../assets/js/jquery.js'></script>
 <style>
-.collapsible {
-  color: white;
-  cursor: pointer;
-  width: 100%;
-  height: 36px;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
 
 .content {
   padding: 0 18px;
@@ -24,63 +14,60 @@
   color:white !important;
 }
 </style>
-
-
-
 <div class="panel panel-default panel-wrapper body-content" style="">
       <!-- Start Banner Hero -->
       <section class="bg-light w-100" style="padding: 0px 10px 0px 10px;">
         <div class="">
             <div class="row d-flex align-items-center">
                 <div class="col-lg-12 text-start">
-                <h2 class="card-title" style="font-weight: 600;padding-left:10px;padding-top:10px;font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 20px !important;color:#37a956"> Thông tin khách hàng</h2>
+                <h2 class="card-title" style="font-weight: 600;padding-top:10px;font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 20px !important;color:#37a956"> Thông tin khách hàng</h2>
                     <div class="row g-lg-5">
                         <!-- Start Recent Work -->
                         <div class="col-md-4">
                             <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <span style="padding-left:10px;font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 18px !important;"> Họ tên: <span style="font-weight: 600;">{{$benhnhan['tenbn']}}</span></span>
+                              <span style="font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 18px !important;"> Họ tên: <span style="font-weight: 600;">{{$benhnhan['tenbn']}}</span></span>
                           </div>
                         </div>
                         <!-- End Recent Work -->
                         <!-- Start Recent Work -->
                         <div class="col-md-4">
                           <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <span style="padding-left:10px;font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 18px !important;"> Giới tính: <span style="font-weight: 600;">{{$benhnhan['gioitinh']}}</span></span>
+                              <span style="font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 18px !important;"> Giới tính: <span style="font-weight: 600;">{{$benhnhan['gioitinh']}}</span></span>
                           </div>
                         </div>
                         <!-- End Recent Work -->
                           <!-- Start Recent Work -->
                           <div class="col-md-4">
                           <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <span style="padding-left:10px;font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 18px !important;"> Ngày sinh: <span style="font-weight: 600;">{{$benhnhan['namsinh']}}</span></span>
+                              <span style="font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 18px !important;"> Ngày sinh: <span style="font-weight: 600;">{{$benhnhan['namsinh']}}</span></span>
                           </div>
                         </div>
                         <!-- End Recent Work -->
                         <!-- Start Recent Work -->
                         <div class="col-md-4">
                           <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <span style="padding-left:10px;font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 18px !important;"> Mã số PID:  <span style="font-weight: 600;">{{$benhnhan['mabn']}}</span></span>
+                              <span style="font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 18px !important;"> Mã số PID:  <span style="font-weight: 600;">{{$benhnhan['mabn']}}</span></span>
                           </div>
                         </div>
                         <!-- End Recent Work -->
                         <!-- Start Recent Work -->
                         <div class="col-md-4">
                           <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <span style="padding-left:10px;font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 18px !important;"> Mã BHYT : <span style="font-weight: 600;">{{$benhnhan['mabhyt']}}</span></span>
+                              <span style="font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 18px !important;"> Mã BHYT : <span style="font-weight: 600;">{{$benhnhan['mabhyt']}}</span></span>
                           </div>
                         </div>
                         <!-- End Recent Work -->
                           <!-- Start Recent Work -->
                           <div class="col-md-4">
                           <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <span style="padding-left:10px;font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 18px !important;"> Số điện thoại: <span style="font-weight: 600;">{{$benhnhan['dienthoai']}}</span></span>
+                              <span style="font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 18px !important;"> Số điện thoại: <span style="font-weight: 600;">{{$benhnhan['dienthoai']}}</span></span>
                           </div>
                         </div>
                         <!-- End Recent Work -->
                           <!-- Start Recent Work -->
                           <div class="col-md-12">
                           <div style="border-radius: 5px" class="recent-work-content text-start text-dark">
-                              <span style="padding-left:10px;font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 18px !important;"> Địa chỉ: <span style="font-weight: 600;">{{$benhnhan['diachi']}}</span> </span>
+                              <span style="font-size: 15px !important;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 18px !important;"> Địa chỉ: <span style="font-weight: 600;">{{$benhnhan['diachi']}}</span> </span>
                           </div>
                         </div>
                         <!-- End Recent Work -->
