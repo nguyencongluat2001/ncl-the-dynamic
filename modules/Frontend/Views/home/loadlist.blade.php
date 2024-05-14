@@ -1,5 +1,4 @@
 <style>
-
 .hiddel{
   display:none
 }
@@ -16,9 +15,6 @@
   color:white !important;
 }
 </style>
-
-
-</script>
 <div class="panel panel-default panel-wrapper body-content" style="">
       <!-- Start Banner Hero -->
       <section class="bg-light w-100" style="padding: 0px 10px 0px 10px;">

@@ -148,7 +148,7 @@ a {
     position: sticky;
     width: 100%;
     z-index: 99;
-    top: 0;
+    /* top: 0; */
     transition: background 0.4s, all 0.3s linear;
     /* box-shadow: 0px 10px 27px 3px rgba(221, 221, 221, 0.3) */
 }
