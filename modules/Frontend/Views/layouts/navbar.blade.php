@@ -2,7 +2,7 @@
     <div class="tab1">
         <div>
             <a class="nav-link" href=""><img href="" style="width: 50%;"
-                    src="../img/logo_index.jpg" alt="Card image"></a>
+                    src="../img/logo.png" alt="Card image"></a>
         </div>
         <div>
             <div class="title-index" style="padding-top: 8px;font-size: 20px;color: white;font-weight: 600;">KHOA CHẨN ĐOÁN HÌNH ẢNH</div>
