@@ -118,14 +118,14 @@
                                   {!! $data['noidunghtml'] !!}
                                 </div>
                                 <div>
-                                  <div style="padding: 5px;">Kết luận: <span style="font-weight: 600;">{{$data['ketluan']}}</span></div>
-                                  <div style="padding: 5px;">Khuyến nghị: <span style="font-weight: 600;">{{$data['denghi']}}</span></div>
-                                  <div style="padding: 5px;">Thời gian thực hiện: <span style="font-weight: 600;">{{$data['ngaychidinh']}}</span></div> 
-                                  <div style="padding: 5px;">Bác sĩ chỉ định: <span style="font-weight: 600;">{{$data['bschidinh']}}</span></div> 
-                                  <div style="padding: 5px;">Thời gian duyệt: <span style="font-weight: 600;">{{$data['ngayduyetketqua']}}</span></div> 
-                                  <div style="padding: 5px;">Bác sĩ duyệt: <span style="font-weight: 600;">{{$data['bsduyetketqua']}}</span> </div>
-                                  <div style="padding: 5px;">Bác sĩ đọc: <span style="font-weight: 600;">{{$data['bsdocketqua']}}</span> </div>
-                                  <div style="padding: 5px;">Kỹ thuật viên: <span style="font-weight: 600;">{{$data['ktvthuchien']}}</span></div> 
+                                  <div style="padding: 5px;font-weight: 600;">Kết luận: <span style="font-weight: 500;">{{$data['ketluan']}}</span></div>
+                                  <div style="padding: 5px;font-weight: 600;">Khuyến nghị: <span style="font-weight: 500;">{{$data['denghi']}}</span></div>
+                                  <div style="padding: 5px;font-weight: 600;">Thời gian thực hiện: <span style="font-weight: 500;">{{$data['ngaychidinh']}}</span></div> 
+                                  <div style="padding: 5px;font-weight: 600;">Bác sĩ chỉ định: <span style="font-weight: 500;">{{$data['bschidinh']}}</span></div> 
+                                  <div style="padding: 5px;font-weight: 600;">Thời gian duyệt: <span style="font-weight: 500;">{{$data['ngayduyetketqua']}}</span></div> 
+                                  <div style="padding: 5px;font-weight: 600;">Bác sĩ duyệt: <span style="font-weight: 500;">{{$data['bsduyetketqua']}}</span> </div>
+                                  <div style="padding: 5px;font-weight: 600;">Bác sĩ đọc: <span style="font-weight: 500;">{{$data['bsdocketqua']}}</span> </div>
+                                  <div style="padding: 5px;font-weight: 600;">Kỹ thuật viên: <span style="font-weight: 500;">{{$data['ktvthuchien']}}</span></div> 
                                 </div>
                             </div>
                             <div class="col-md-3"> </div>
