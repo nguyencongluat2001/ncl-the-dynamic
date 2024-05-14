@@ -161,9 +161,9 @@
                             </div>
                             <div class="col-md-1"> </div>
                             <div class="col-md-3">
-                              <div style="border-radius: 5px;" class="recent-work-content">
+                              <div style="border-radius: 5px;padding-top:10px" class="recent-work-content">
                                 <button style="background:#ffffff;color: #4169e1" type="button" onclick="JS_Home.openLink('{{$data['pacslink']}}')" class="btn xemanh">
-                                  <span style="text-decoration: underline;font-size: 16px;color: #4169e1">Xem ảnh</span>
+                                  <span style="text-decoration: underline;font-size: 16px;">Xem ảnh</span>
                                 </button>
                               </div>
                             </div>
