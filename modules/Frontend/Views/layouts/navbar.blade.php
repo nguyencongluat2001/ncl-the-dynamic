@@ -5,18 +5,18 @@
                     src="../img/logo.png" alt="Card image"></a>
         </div>
         <div>
-            <div class="title-index" style="padding-top: 7px;font-size: 20px;color: white;font-weight: 600;">KHOA CHẨN ĐOÁN HÌNH ẢNH</div>
+            <div class="title-index" style="padding-top: 7px;font-size: 20px;color: white;font-weight: 600;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 20px !important;">KHOA CHẨN ĐOÁN HÌNH ẢNH</div>
         </div>
     </div>
     <div class="tab2">
         <div style="width: 170px;background: #4abf6a;color: white;border-radius: 5px">
             <center>
-            <a href=""> <span style="color:#ffff"><i class="fas fa-key"></i> Đổi mật khẩu </span> <br> <span class="text-12"></span></a>  
+            <a href=""> <span style="color:#ffff;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 20px !important;"><i class="fas fa-key"></i> Đổi mật khẩu </span> <br> <span class="text-12"></span></a>  
             </center>
         </div>
         <div style="width: 150px;background: #4abf6a;color: white;border-radius: 5px">
             <center>
-            <a href="{{ url('/logout') }}"> <span style="color:#ffff"><i class="fas fa-sign-out-alt"></i> Thoát </span> <br> <span class="text-12"></span></a>
+            <a href="{{ url('/logout') }}"> <span style="color:#ffff;font-family: -apple-system, BlinkMacSystemFont !important;font-size: 20px !important;"><i class="fas fa-sign-out-alt"></i> Thoát </span> <br> <span class="text-12"></span></a>
             </center>  
         </div>
     </div>
