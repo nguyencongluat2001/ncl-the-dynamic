@@ -139,6 +139,9 @@
                               </div>
                             </div>
                         </div>
+                        <div lass="col-lg-12" style="padding-left:40px">
+                          <button type="button" onclick="JS_Home.openLink('{{$data['pacslink']}}')" style="color: white;font-weight: 700;" class="btn btn-warning">Xem ảnh</button>
+                      </div>
                     </div>
                   </div>
                 </div>

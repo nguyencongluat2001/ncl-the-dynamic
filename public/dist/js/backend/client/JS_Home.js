@@ -129,3 +129,14 @@ JS_Home.prototype.loadata = function (oFormBlog,numberPage = 1, perPage = 15) {
         }
     });
 }
+/**
+ * Load màn hình danh sách
+ *
+ * @param oForm (tên form)
+ *
+ * @return void
+ */
+JS_Home.prototype.openLink = function (url) {
+    window.open(url, '_blank');
+
+}

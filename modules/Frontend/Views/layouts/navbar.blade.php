@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg" style="font-family: serif;background:#37a956">
     <div class="tab1">
         <div>
-            <a class="nav-link" href=""><img href="" style="width: 65%;"
-                    src="../img/favicon.ico" alt="Card image"></a>
+            <a class="nav-link" href=""><img href="" style="width: 50%;"
+                    src="../img/logo_index.jpg" alt="Card image"></a>
         </div>
         <div>
             <div class="title-index" style="padding-top: 8px;font-size: 20px;color: white;font-weight: 600;">KHOA CHẨN ĐOÁN HÌNH ẢNH</div>
