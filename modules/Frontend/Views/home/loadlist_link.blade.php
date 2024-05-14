@@ -27,7 +27,7 @@
 
 
 
-<div class="panel panel-default panel-wrapper body-content">
+<div class="panel panel-default panel-wrapper body-content" style="padding: 0px 10px 0px 10px;">
       <!-- Start Banner Hero -->
       <section class="bg-light w-100">
         <div class="">
