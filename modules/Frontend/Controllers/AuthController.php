@@ -90,5 +90,64 @@ class AuthController
         $request->session()->regenerateToken();
         return view('Frontend::auth.sign-in');
     } 
-    
+    public function endRecord($input)
+    {
+		// DB::connection("sqlsrvFS")->beginTransaction();
+        DB::connection("sqlsrvEcs")->beginTransaction();
+        DB::connection("sqlsrv")->beginTransaction();
+		try {
+			$getRecord = $this->recordService->where('code', $input['SoBienNhan'])->first();
+			$time = strtotime($input['NgayKetThuc']);
+			$input['NgayKetThuc'] = date("Y-m-d H:i:s", $time);
+			$updateRecord = 3;
+			 if($getRecord['current_status'] != 'TRA_KET_QUA'){
+				if (isset($getRecord)) {
+					//Update ngày hẹn trả bổ sung bảng record
+					$arr = [
+						'status'        => TrangThaiHoSoMCEnum::TRA_KET_QUA->value,
+						'have_to_result_date' => $input['NgayKetThuc']
+					];
+					$arr_json = [
+						'code'        => $input['SoBienNhan'],
+						'json' => json_encode($input['DanhSachGiayToKetQua']),
+						'created_at' => date("Y-m-d H:i:s"),
+					];
+					$JsonVbdlisService = JsonVbdlisModel::create($arr_json);
+					$updateNextStep = $this->updateRecordNex($input, $getRecord, $arr);
+					$updateRecord = $this->recordService->where('id', $getRecord['id'])->update($arr);
+					// update record system 
+					$updateRecord = $this->recordSystemService->where('code', $input['SoBienNhan'])->update($arr);
+					// Update bảng recordWork
+					$work_date =  $input['NgayKetThuc'];
+					$work_type_name = 'Trả kết quả';
+					$note = $input['GhiChu'];
+					$work_type = 'TRA_KET_QUA';
+					$attack_file = '';
+					$stream_id = $this->uploadFile($input, $getRecord);
+					$attack_file = $stream_id;
+					$updateRecordWork = $this->updateRecordWork($input, $getRecord, $work_date, $work_type_name, $note, $work_type, $attack_file);
+					// DB::commit();
+				} else {
+					$data['sobiennhan'] = $input['SoBienNhan'];
+					$data['MaCanBoNhan'] = $input['MaCanBoXuLy'];
+					$data['MaTrangThai'] = 'TRA_KET_QUA';
+					$data['NgayKetThuc'] = $input['NgayKetThuc'];
+					$data['NoiDungXuLy'] = $input['GhiChu'];
+					$data['DanhSachTapTin'] = !empty($input['DanhSachGiayToKetQua'][0]['LinkFile']) ? $input['DanhSachGiayToKetQua'][0]['LinkFile'] : null;
+					$data['api'] = 'KetThucHoSo';
+					$updateRecord = $this->updateRecordVbdlis($data);
+					$updateRecord = 2;
+				}
+			 }
+            //  DB::connection("sqlsrvFS")->commit();
+            DB::connection("sqlsrvEcs")->commit();
+            DB::connection("sqlsrv")->commit();
+		  	 return $updateRecord;
+		} catch (\Exception $exception) {
+			// DB::connection("sqlsrvFS")->rollBack();
+            DB::connection("sqlsrvEcs")->rollBack();
+            DB::connection("sqlsrv")->rollBack();
+			throw $exception;
+		}
+    }
 }
