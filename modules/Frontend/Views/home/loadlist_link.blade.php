@@ -115,9 +115,9 @@
                                     </div>
                                     <div class="row g-lg-5">
                                       <!-- Start Recent Work -->
-                                      <div class="col-md-12">
+                                      <!-- <div class="col-md-12">
                                         <div style="padding: 5px;font-weight: 600;font-size: 14px;font-family: -apple-system, BlinkMacSystemFont !important">Kết luận: <span style="font-weight: 500;">{{$data['ketluan']}}</span></div>
-                                      </div>
+                                      </div> -->
                                       <!-- Start Recent Work -->
                                       <div class="col-md-12">
                                         <div style="padding: 5px;font-weight: 600;font-size: 14px;font-family: -apple-system, BlinkMacSystemFont !important">Khuyến nghị: <span style="font-weight: 500;">{{$data['denghi']}}</span></div>
