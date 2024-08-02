@@ -119,21 +119,21 @@
                                         <div style="padding: 5px;font-weight: 600;font-size: 14px;font-family: -apple-system, BlinkMacSystemFont !important">Kết luận: <span style="font-weight: 500;">{{$data['ketluan']}}</span></div>
                                       </div> -->
                                       <!-- Start Recent Work -->
-                                      <div class="col-md-12">
+                                      <!-- <div class="col-md-12">
                                         <div style="padding: 5px;font-weight: 600;font-size: 14px;font-family: -apple-system, BlinkMacSystemFont !important">Khuyến nghị: <span style="font-weight: 500;">{{$data['denghi']}}</span></div>
-                                      </div>
+                                      </div> -->
                                       <!-- Start Recent Work -->
-                                      <div class="col-md-12">
+                                      <!-- <div class="col-md-12">
                                         <div style="padding: 5px;font-weight: 600;font-size: 14px;font-family: -apple-system, BlinkMacSystemFont !important">Thời gian thực hiện: <span style="font-weight: 500;">{{$data['ngaychidinh']}}</span></div> 
-                                      </div>
+                                      </div> -->
                                       <!-- Start Recent Work -->
                                       <!-- <div class="col-md-6">
                                         <div style="padding: 5px;font-weight: 600;font-size: 14px;font-family: -apple-system, BlinkMacSystemFont !important">Bác sĩ chỉ định: <span style="font-weight: 500;">{{$data['bschidinh']}}</span></div> 
                                       </div> -->
                                       <!-- Start Recent Work -->
-                                      <div class="col-md-6">
+                                      <!-- <div class="col-md-6">
                                         <div style="padding: 5px;font-weight: 600;font-size: 14px;font-family: -apple-system, BlinkMacSystemFont !important">Thời gian duyệt: <span style="font-weight: 500;">{{$data['ngayduyetketqua']}}</span></div> 
-                                      </div>
+                                      </div> -->
                                       <!-- Start Recent Work -->
                                       <div class="col-md-6">
                                           <div style="padding: 5px;font-weight: 600;font-size: 14px;font-family: -apple-system, BlinkMacSystemFont !important">Bác sĩ duyệt: <span style="font-weight: 500;">{{$data['bsduyetketqua']}}</span> </div>
