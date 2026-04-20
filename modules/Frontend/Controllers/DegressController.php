@@ -50,7 +50,7 @@ class DegressController extends Controller
         $input = $request->all();
         if(!empty($input['username'])){
             $mabn = 'mabn='.$input['username'].'&pwd='.$input['pwd'].'&accessionnumber='.$input['accessionnumber'];
-            $response = Http::withBody('','application/json')->get('118.70.182.89:89/api/PACS/ViewChiDinh?'.$mabn.'');
+            $response = Http::withBody('','application/json')->get('meditecclinic.com:89/api/PACS/ViewChiDinh?'.$mabn.'');
             $response = $response->getBody()->getContents();
             $response = json_decode($response,true);
             $data = $response['results'];
@@ -60,7 +60,7 @@ class DegressController extends Controller
             return view('Frontend::home.loadlist_link', $data)->render();
         }else if(!empty($_SESSION['username'])){
             $mabn = 'mabn='.$_SESSION['username'].'&pwd='.$_SESSION['pwd'].'&accessionnumber='.$_SESSION['accessionnumber'];
-            $response = Http::withBody('','application/json')->get('118.70.182.89:89/api/PACS/ViewChiDinh?'.$mabn.'');
+            $response = Http::withBody('','application/json')->get('meditecclinic.com:89/api/PACS/ViewChiDinh?'.$mabn.'');
             $response = $response->getBody()->getContents();
             $response = json_decode($response,true);
             $data = $response['results'];
